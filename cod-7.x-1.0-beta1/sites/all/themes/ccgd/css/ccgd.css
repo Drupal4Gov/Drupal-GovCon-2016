@@ -6,6 +6,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 body.admin-menu { margin-top: 29px !important; }
+p { font-size: 1.2em; font-family: Georgia,Serif; margin-bottom: 1em; color: #666; line-height: 150%; }
 
 /* -- Headings -- */
 
@@ -22,6 +23,11 @@ h2 { font-size: 2.2em; padding-bottom: 15px; }
 #main #content { background: #fff; display: inline-block; width: 100%; }
 #main #content .panel-panel.header { display: none; }
 .region-header { margin: 5px 0; }
+
+/* -- Body -- */
+.field-name-submitted-by, .meta.submitted { font-size: 1em; font-style: italic; padding-bottom: 10px; }
+.pane-cod-news ul { margin: 0; padding: 0; }
+.pane-cod-news li { list-style: none; }
 
 /* -- Branding -- */
 
