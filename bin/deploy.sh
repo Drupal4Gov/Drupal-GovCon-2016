@@ -9,13 +9,14 @@ project=drupal4gov
 branch=`git describe --contains --all HEAD`
 #branch=`git branch 2>/dev/null| sed -n '/^\*/s/^\* //p'`
 host=`hostname`
+prod_host=drupal4gov.sqm.io
 
 echo "Deploying $branch from $host"
 
 case "$branch" in
   *HEAD|*master)
-    echo "Deploying master to drupal4gov.sqm.io from $host"
-    ssh -T -o ForwardAgent=yes -o StrictHostKeyChecking=no -i /home/gitlab_ci_runner/.ssh/staging_id_rsa -p 22421 gitlab_ci_runner@drupal4gov.sqm.io "~/auto-deploy/auto-deploy-gitlab.sh $client $project master" || exit $?
+    echo "Deploying master to $prod_host from $host"
+    ssh -T -o ForwardAgent=yes -o StrictHostKeyChecking=no -i /home/gitlab_ci_runner/.ssh/staging_id_rsa -p 22421 gitlab_ci_runner@${prod_host} "~/auto-deploy/auto-deploy-gitlab.sh $client $project master" || exit $?
     ;;
   *staging)
     echo "Deploying to staging from $host"
