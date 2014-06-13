@@ -1,4 +1,4 @@
-modules/contrib
-themes/adaptivetheme
-themes/sky
-libraries
+#modules/contrib
+#themes/adaptivetheme
+#themes/sky
+#libraries
