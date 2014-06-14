@@ -6,8 +6,6 @@ base theme = responsive_bartik
 
 stylesheets[all][] = css/ccgd.css
 
-scripts[] = js/collapsible-menu.js
-
 regions[ccgd_menu] = CCGD Menu
 regions[header] = Header
 regions[page_hero] = Hero
