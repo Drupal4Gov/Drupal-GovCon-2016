@@ -89,8 +89,7 @@
 ?>
 <div id="page-wrapper"><div id="page">
 
-  <header id="header" role="banner" class="<?php print $secondary_menu ? 'with-secondary-menu': 'without-secondary-menu'; ?>"><div class="section clearfix">
-    <?php if ($secondary_menu): ?>
+  <?php if ($secondary_menu): ?>
       <nav id="secondary-menu" role="navigation" class="navigation">
         <?php print theme('links__system_secondary_menu', array(
           'links' => $secondary_menu,
@@ -106,7 +105,8 @@
         )); ?>
       </nav> <!-- /#secondary-menu -->
     <?php endif; ?>
-    
+
+  <header id="header" role="banner" class="<?php print $secondary_menu ? 'with-secondary-menu': 'without-secondary-menu'; ?>"><div class="section clearfix">
     
     <?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
