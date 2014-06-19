@@ -1,6 +1,7 @@
 /* Colors 
 *  blue = #5a7ce4
 *  light blue = #70a3eb
+*  lighter blue = #8cb7f2
 *  gray = #b7b9bb
 *  light gray = #eeefef
 *  red = #d7434a
@@ -43,7 +44,7 @@ input.form-submit:hover, a.button:hover {
 #page-wrapper { background-color: #70a3eb; }
 #main #content { background: #fff; display: inline-block; width: 100%; }
 #main #content .panel-panel.header { display: none; }
-.region-header { margin: 5px 0; }
+.region-header { margin: 0; }
 .unit .inside, .lastUnit .inside { margin: 0 0.5em 0.5em 1em; }
 
 /* -- Lists -- */
@@ -73,11 +74,24 @@ ul.primary { border-bottom: 1px solid #ccc; }
 
 /* -- Menus -- */
 
+#block-nice-menus-1 { display: none; }
+ul.nice-menu { border: none; overflow: visible; }
+ul.nice-menu li { background-color: transparent; border: none; }
+ul.nice-menu-down li.menuparent { background-color: transparent; }
+ul.nice-menu-down .menuparent a { padding-right: 20px; }
+ul.nice-menu li a { background: none; border: none; text-decoration: none !important; }
 #main-menu { clear: none; float: right; }
 #main-menu h2 { display: none; }
 #main-menu #main-menu-links li { float: left; width: auto; display: block; margin-right: 0; }
-#main-menu ul li a { color: #b7b9bb; text-transform: uppercase; font-weight: bold; text-shadow: none; font-size: 1.1em; height: 24px; line-height: 24px; padding: 20px 6px; display: inline-block; white-space: nowrap; display: block; }
-#main-menu ul li a:hover, #main-menu ul li a:focus { color: #70a3eb; }
+ul.nice-menu li a, #main-menu ul li a { color: #b7b9bb; text-transform: uppercase; font-weight: bold; text-shadow: none; font-size: 1.1em; height: 24px; line-height: 24px; padding: 20px 6px; white-space: nowrap; display: block; }
+ul.nice-menu li a:hover, ul.nice-menu li a:focus, ul.nice-menu li a.active,
+#main-menu ul li a:hover, #main-menu ul li a:focus, #main-menu ul li a.active { background-color: transparent; color: #70a3eb; border: none; }
+ul.nice-menu-down li.menuparent:hover { background-color: transparent; }
+ul.nice-menu li.over, ul.nice-menu li.over ul { border-left: 2px solid #8cb7f2; }
+ul.nice-menu li.over ul { margin-left: -2px; }
+ul.nice-menu ul { top: 54px; border: none; background-color: #fff; width: 300px; }
+ul.nice-menu ul li { width: auto !important; }
+ul.nice-menu ul li a { color: #b7b9bb; font-weight: bold; text-shadow: none; font-size: 1.1em; height: auto; line-height: 1.1; padding: 5px 6px; white-space: normal; display: block; }
 a#menu-toggle { background-color: #70a3eb; overflow: hidden; text-indent: -99999px; width: 42px; height: 32px; position: absolute; top: 6px; right: 8px; }
 a#menu-toggle:after { top: 14px; right: 14px; }
 #secondary-menu { background-color: #333; }
@@ -136,7 +150,7 @@ visibility: hidden;
   .front #main-wrapper { padding-top: 170px; background: url(../images/ccgd-banner-home-s.png) #70a3eb no-repeat 50% top;}
   #header { background: #fff; }
   #logo { width: auto; }
-  #main-menu #main-menu-links li a { height: 64px; line-height: 64px; padding: 0; }
+  #main-menu #main-menu-links li a, ul.nice-menu li a { height: 64px; line-height: 64px; padding: 0; }
   .front .node-event form .description  { float: right; width: 40%; position: relative; top: -14px; }
   .front .node-event form input.form-text,
   .front .node-event form label { width: 50%; float: left; margin-right: 20px; }
@@ -154,8 +168,8 @@ visibility: hidden;
   #header { background: #fff; }
   #logo { width: auto; padding-top: 20px;}
   #logo img { width: 300px; }
-  #main-menu #main-menu-links li { display: inline-block; margin-right: 5px; }
-  #main-menu #main-menu-links li a { display: inline-block; height: 64px; line-height: 64px; padding: 0 4px; }
+  #main-menu #main-menu-links li, ul.nice-menu li { display: inline-block; margin-right: 5px; }
+  #main-menu #main-menu-links li a, ul.nice-menu li a { display: inline-block; height: 64px; line-height: 64px; padding: 0 4px; }
   .front .node-event form .description  { float: right; width: 40%; position: relative; top: -20px; }
   .front .node-event form input.form-text,
   .front .node-event form label { width: 50%; float: left; margin-right: 20px; }
@@ -172,8 +186,8 @@ visibility: hidden;
   #block-system-main .right { width: 37%; }
   #header { background: #fff; }
   #logo { width: auto; }
-  #main-menu #main-menu-links li { display: inline-block; margin-right: 5px; }
-  #main-menu #main-menu-links li a { font-size: 1.2em; display: inline-block; height: 64px; line-height: 64px; padding: 0; padding: 0 9px; }
+  #main-menu #main-menu-links li, ul.nice-menu li { display: inline-block; margin-right: 5px; }
+  #main-menu #main-menu-links li a, ul.nice-menu li a { font-size: 1.2em; display: inline-block; height: 64px; line-height: 64px; padding: 0; padding: 0 9px; }
   .front .node-event form .description  { float: right; width: 40%; position: relative; top: -14px; }
   .front .node-event form input.form-text,
   .front .node-event form label { width: 50%; float: left; margin-right: 20px; }
@@ -192,6 +206,11 @@ visibility: hidden;
   #main-menu #main-menu-links li.active a { background-color: #dadbdd; color: #70a3eb; }
   a#menu-toggle { display:block; }
   #main-menu-links { display: none; height: auto; text-align: center; clear: both; padding-top: 8px; }
+}
+/* -- Not Mobile menu -- */
+@media (min-width: 900px) {
+  #block-nice-menus-1 { display: block; }
+  #main-menu { display: none; }
 }
 
 /* -- Main wrapper -- */
