@@ -44,6 +44,17 @@ input.form-submit:hover, a.button:hover {
 #main #content { background: #fff; display: inline-block; width: 100%; }
 #main #content .panel-panel.header { display: none; }
 .region-header { margin: 5px 0; }
+.unit .inside, .lastUnit .inside { margin: 0 0.5em 0.5em 1em; }
+
+/* -- Lists -- */
+.item-list ul li { padding: 0.2em 0 0;}
+
+/* -- Tabs -- */
+.tabs {}
+ul.primary { border-bottom: 1px solid #ccc; }
+.tabs ul.tabs.primary li {}
+.tabs ul.primary li a { padding: 3px 12px 6px; border-radius: 0; border-top: none; border-left: none; border-right: none; }
+.tabs ul.primary li.active a { border-top: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; }
 
 /* -- Body -- */
 .field-name-submitted-by, .meta.submitted { font-size: 1em; font-style: italic; padding-bottom: 10px; }
@@ -86,6 +97,10 @@ a#menu-toggle:after { top: 14px; right: 14px; }
 .front .node-event form label { width: 100%; float: none; }
 .front .node-event form .description { float: none; font-style: italic; }
 
+/* -- Twitter Feed -- */
+.twitter-widget { background-color: #eeefef; padding: 20px; }
+.twitter-timeline { width: 100% !important; }
+
 /* -- Panels -- */
 
 .panel-panel.unit { width: 100%; }
@@ -117,7 +132,8 @@ visibility: hidden;
 @media all and (min-width: 560px) and (max-width: 850px) {
   
   #messages { position: absolute; width: 100%; }
-  #main-wrapper { padding-top: 170px; background: url(../images/ccgd-banner-home-s.png) #70a3eb no-repeat 50% top;}
+  #main-wrapper { padding-top: 170px; background: url(../images/ccgd-banner-s.png) #70a3eb no-repeat 50% top;}
+  .front #main-wrapper { padding-top: 170px; background: url(../images/ccgd-banner-home-s.png) #70a3eb no-repeat 50% top;}
   #header { background: #fff; }
   #logo { width: auto; }
   #main-menu #main-menu-links li a { height: 64px; line-height: 64px; padding: 0; }
@@ -125,12 +141,14 @@ visibility: hidden;
   .front .node-event form input.form-text,
   .front .node-event form label { width: 50%; float: left; margin-right: 20px; }
   .front .node-event form .form-type-textfield { width: 70%; float: left; }
+  .unit .inside, .lastUnit .inside { margin: 0 1em 1em 1em; }
 }
 
 @media all and (min-width: 851px) and (max-width: 1100px) {
   
   #messages { position: absolute; width: 100%; }
-  #main-wrapper { padding-top: 280px; background: url(../images/ccgd-banner-home-m.png) #70a3eb no-repeat 50% top; }
+  #main-wrapper { padding-top: 280px; background: url(../images/ccgd-banner-m.png) #70a3eb no-repeat 50% top; }
+  .front #main-wrapper { padding-top: 280px; background: url(../images/ccgd-banner-home-m.png) #70a3eb no-repeat 50% top; }
   #block-system-main .left { width: 63%; }
   #block-system-main .right { width: 37%; }
   #header { background: #fff; }
@@ -142,12 +160,14 @@ visibility: hidden;
   .front .node-event form input.form-text,
   .front .node-event form label { width: 50%; float: left; margin-right: 20px; }
   .front .node-event form .form-type-textfield { width: 70%; float: left; }
+  .unit .inside, .lastUnit .inside { margin: 0 1em 1em 1em; }
 }
 
 @media all and (min-width: 1101px) {
   
   #messages #messages { position: absolute; width: 100%; }
-  #main-wrapper { padding-top: 390px; background: url(../images/ccgd-banner-home-l.png) #70a3eb no-repeat 50% top; }
+  #main-wrapper { padding-top: 390px; background: url(../images/ccgd-banner-l.png) #70a3eb no-repeat 50% top; }
+  .front #main-wrapper { padding-top: 390px; background: url(../images/ccgd-banner-home-l.png) #70a3eb no-repeat 50% top; }
   #block-system-main .left { width: 63%; }
   #block-system-main .right { width: 37%; }
   #header { background: #fff; }
@@ -158,6 +178,7 @@ visibility: hidden;
   .front .node-event form input.form-text,
   .front .node-event form label { width: 50%; float: left; margin-right: 20px; }
   .front .node-event form .form-type-textfield { width: 70%; float: left; }
+  .unit .inside, .lastUnit .inside { margin: 0 1em 1em 1em; }
 }
 
 /* -- Mobile menu -- */
