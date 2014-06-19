@@ -132,7 +132,7 @@ visibility: hidden;
 @media all and (min-width: 560px) and (max-width: 850px) {
   
   #messages { position: absolute; width: 100%; }
-  #main-wrapper { padding-top: 170px; background: url(../images/ccgd-banner-s.png) #70a3eb no-repeat 50% top;}
+  #main-wrapper { padding-top: 60px; background: url(../images/ccgd-banner-s.png) #70a3eb no-repeat 50% top;}
   .front #main-wrapper { padding-top: 170px; background: url(../images/ccgd-banner-home-s.png) #70a3eb no-repeat 50% top;}
   #header { background: #fff; }
   #logo { width: auto; }
@@ -147,7 +147,7 @@ visibility: hidden;
 @media all and (min-width: 851px) and (max-width: 1100px) {
   
   #messages { position: absolute; width: 100%; }
-  #main-wrapper { padding-top: 280px; background: url(../images/ccgd-banner-m.png) #70a3eb no-repeat 50% top; }
+  #main-wrapper { padding-top: 60px; background: url(../images/ccgd-banner-m.png) #70a3eb no-repeat 50% top; }
   .front #main-wrapper { padding-top: 280px; background: url(../images/ccgd-banner-home-m.png) #70a3eb no-repeat 50% top; }
   #block-system-main .left { width: 63%; }
   #block-system-main .right { width: 37%; }
@@ -166,7 +166,7 @@ visibility: hidden;
 @media all and (min-width: 1101px) {
   
   #messages #messages { position: absolute; width: 100%; }
-  #main-wrapper { padding-top: 390px; background: url(../images/ccgd-banner-l.png) #70a3eb no-repeat 50% top; }
+  #main-wrapper { padding-top: 100px; background: url(../images/ccgd-banner-l.png) #70a3eb no-repeat 50% top; }
   .front #main-wrapper { padding-top: 390px; background: url(../images/ccgd-banner-home-l.png) #70a3eb no-repeat 50% top; }
   #block-system-main .left { width: 63%; }
   #block-system-main .right { width: 37%; }
