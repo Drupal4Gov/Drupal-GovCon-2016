@@ -24,6 +24,9 @@ h1#page-title { font-size: 3em; }
 .front h1#page-title { text-indent: -99999px; height: 0px; }
 
 /* -- Buttons -- */
+
+a.button:link, a.button:visited, a.button:hover, a.button:focus, a.button:active { color: #fff; }
+
 input.form-submit, a.button {
   background-image: none;
   background-color: #5a7ce4;
@@ -114,6 +117,7 @@ a#menu-toggle:after { top: 14px; right: 14px; }
 /* -- Twitter Feed -- */
 .twitter-widget { background-color: #eeefef; padding: 20px; }
 .twitter-timeline { width: 100% !important; }
+a.twitter-follow { position: absolute; right: 10px; top: 30px; }
 
 /* -- Panels -- */
 
