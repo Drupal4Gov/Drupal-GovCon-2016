@@ -124,19 +124,22 @@ a#menu-toggle:after { top: 14px; right: 14px; }
 .views-field-field-sponsor-logo { width: 140px; height: 140px; position: relative; }
 .views-field-field-sponsor-logo .field-content { position: absolute; left: 10px; top: 10px; width: 120px; height: 120px; display: table; }
 .views-field-field-sponsor-logo a { display: table-cell; vertical-align: middle; text-align: center; }
-.views-field-field-sponsor-logo img { max-width: 100%; }
+.views-field-field-sponsor-logo img { width: 120px; }
 .view-cod-sponsors .views-row { position: relative; }
 .view-cod-sponsors .views-field-title { display: none; text-align: center; color: #fff; position: absolute; top: 130px; padding: 10px; background-color: #70a3eb; left: -20px; width: 160px; }
 .view-cod-sponsors .views-field-title a { color: #fff; }
 .view-cod-sponsors .views-field-title:after { position: absolute; content: ""; width: 0; height: 0; border-bottom: 12px solid #70a3eb; border-right: 12px solid transparent; border-left: 12px solid transparent; top: -12px; left: 50%; margin-left:-12px; }
-.view-cod-sponsors .views-row:hover { background-color: #cdcdcd;}
-.view-cod-sponsors .views-row:hover .views-field-title { display: block; }
+.view-cod-sponsors .views-row .views-field { border: 1px solid #fff; }
+.view-cod-sponsors .views-row:hover .views-field { border: 1px solid #ddd; }
+.view-cod-sponsors .views-row:hover .views-field-title { z-index: 100; display: block; background-color: #70a3eb; border: none; }
 .view-cod-sponsors .view-results { background-color: #eeefef; padding: 20px; }
 .view-cod-sponsors h3 { display: block; clear: both; margin: 30px 0 0; font-size: 1.4em; font-weight: bold; letterspacing: normal; }
 .view-cod-sponsors h3 a { color: #666;}
+.pane-cod-sponsors { background-color: #eeefef; padding: 20px; }
+.pane-cod-sponsors .view-cod-sponsors .view-results { background-color: #fff; padding: 10px; }
 
 /* -- Twitter Feed -- */
-.twitter-widget { background-color: #eeefef; padding: 20px; position: relative; }
+.twitter-widget { background-color: #eeefef; padding: 20px; position: relative; margin-bottom: 60px; }
 .twitter-timeline { width: 100% !important; }
 a.twitter-follow { position: absolute; right: 10px; top: 30px; background-color: #55ACEE; }
 
