@@ -1,0 +1,47 @@
+From 3b3ea4eec8a1a65db079e290b5d57e833f64c0d5 Mon Sep 17 00:00:00 2001
+From: jyee
+Date: Fri, 06 Jun 2014 20:33:27 +0000
+Subject: roll back redirect and use simple setting. temporary fix.
+
+---
+diff --git a/cod_events/cod_events.module b/cod_events/cod_events.module
+index c1cc445..de4b6fc 100644
+--- a/cod_events/cod_events.module
++++ b/cod_events/cod_events.module
+@@ -258,7 +258,15 @@ function cod_events_flag_unflag($flag, $entity_id, $account, $flagging) {
+ function cod_events_form_alter(&$form, &$form_state, $form_id) {
+   if (isset($form['og_group_ref'])) {
+     // Set the default value if there is none.
+-    $default_event = isset($_GET['og_group_ref']) ? $_GET['og_group_ref'] : variable_get('cod_events_default_event', 0);
++    $default_event = &drupal_static(__FUNCTION__);
++    if (empty($default_event)) {
++      if (!empty($_GET['og_group_ref'])) {
++        $default_event = $_GET['og_group_ref'];
++      }
++      else {
++        $default_event = $_GET['og_group_ref'] = variable_get('cod_events_default_event', 0);
++      }
++    }
+ 
+     // Hide the group ref field from non admins.
+     if ($default_event && !user_access('administer content')) {
+@@ -267,8 +275,8 @@ function cod_events_form_alter(&$form, &$form_state, $form_id) {
+ 
+     // If there's a default event and the form doesn't have a default value, reload with the default event.
+     // TODO: This would probably be better with just a drupal_rebuild_form, but I couldn't get that to work. :(
+-    if ($default_event && empty($form['og_group_ref']['und'][0]['default']['#default_value'])) {
+-      drupal_goto(current_path(), array('query' => array('og_group_ref' => $default_event)));
++    if ($default_event && empty($form['og_group_ref'][LANGUAGE_NONE][0]['default']['#default_value'])) {
++      $form['og_group_ref'][LANGUAGE_NONE][0]['default']['#default_value'] = $default_event;
+     }
+   }
+ }
+@@ -322,4 +330,4 @@ function cod_events_add_term($event, $vocabulary) {
+     drupal_set_message("Vocabulary '$vocabulary' was not found.", 'warning');
+     drupal_goto($options['query']['destination']);
+   }
+-}
+\ No newline at end of file
++}
+--
+cgit v0.9.2
