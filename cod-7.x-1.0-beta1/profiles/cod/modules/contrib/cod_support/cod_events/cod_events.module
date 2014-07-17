@@ -257,7 +257,15 @@ function cod_events_flag_unflag($flag, $entity_id, $account, $flagging) {
 function cod_events_form_alter(&$form, &$form_state, $form_id) {
   if (isset($form['og_group_ref'])) {
     // Set the default value if there is none.
-    $default_event = isset($_GET['og_group_ref']) ? $_GET['og_group_ref'] : variable_get('cod_events_default_event', 0);
+    $default_event = &drupal_static(__FUNCTION__);
+    if (empty($default_event)) {
+      if (!empty($_GET['og_group_ref'])) {
+        $default_event = $_GET['og_group_ref'];
+      }
+      else {
+        $default_event = $_GET['og_group_ref'] = variable_get('cod_events_default_event', 0);
+      }
+    }
 
     // Hide the group ref field from non admins.
     if ($default_event && !user_access('administer content')) {
@@ -266,8 +274,8 @@ function cod_events_form_alter(&$form, &$form_state, $form_id) {
 
     // If there's a default event and the form doesn't have a default value, reload with the default event.
     // TODO: This would probably be better with just a drupal_rebuild_form, but I couldn't get that to work. :(
-    if ($default_event && empty($form['og_group_ref']['und'][0]['default']['#default_value'])) {
-      drupal_goto(current_path(), array('query' => array('og_group_ref' => $default_event)));
+    if ($default_event && empty($form['og_group_ref'][LANGUAGE_NONE][0]['default']['#default_value'])) {
+      $form['og_group_ref'][LANGUAGE_NONE][0]['default']['#default_value'] = $default_event;
     }
   }
 }

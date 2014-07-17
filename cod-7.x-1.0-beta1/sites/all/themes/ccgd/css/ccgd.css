@@ -36,6 +36,7 @@ input.form-submit, a.button {
   -webkit-appearance: none;
   border-radius: 0;
   border: none;
+  display: inline-block;
 }
 input.form-submit:hover, a.button:hover {
   opacity: 0.7;
@@ -106,6 +107,8 @@ a#menu-toggle:after { top: 14px; right: 14px; }
 #secondary-menu-links li.last a { background: #d7434a; }
 #secondary-menu-links li.last a:hover { background: #fc4e56; text-decoration: none; }
 
+/* -- Views -- */
+.view-footer { margin-top: 20px; }
 
 /* -- Homepage -- */
 .front .node-event .field-name-field-dates { display: none; }
@@ -118,6 +121,8 @@ a#menu-toggle:after { top: 14px; right: 14px; }
 .front .node-event form input.form-text,
 .front .node-event form label { width: 100%; float: none; }
 .front .node-event form .description { float: none; font-style: italic; }
+.front h1 { margin: 0; }
+.front #content { padding-top: 20px; }
 
 /* -- Sponsor block -- */
 .view-cod-sponsors.view-display-id-block .views-row { display: inline-block; width: 140px; height: 140px; margin: 20px; float: left; }
@@ -184,6 +189,10 @@ a.twitter-follow { position: absolute; right: 10px; top: 30px; background-color:
 .rounded-corner .wrap-corner .l { 
   background: none; padding: 0; 
 }
+
+/* -- Bandaid for organic groups showing tabs to anonymous -- */
+.not-logged-in.node-type-event .tabs { display: none; }
+
 /* Other clearfix elements */
 .front .node-event form:after {
 content: ".";
