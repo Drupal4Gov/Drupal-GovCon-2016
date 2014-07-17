@@ -138,6 +138,30 @@ a#menu-toggle:after { top: 14px; right: 14px; }
 .pane-cod-sponsors { background-color: #eeefef; padding: 20px; }
 .pane-cod-sponsors .view-cod-sponsors .view-results { background-color: #fff; padding: 10px; }
 
+/* -- Session Schedule -- */
+#content .view-session-schedule h3 { font-size: 2em; }
+#content .view-session-schedule h2, #content .view-session-schedule h2 a { margin: 0; padding-bottom: 0; }
+.view-session-schedule .view-content { margin-bottom: 30px; }
+.view-session-schedule .view-results { padding: 10px; margin: 0; background-color: #eeefef; }
+.view-session-schedule .views-row { margin-bottom: 30px; }
+.view-session-schedule .views-row-last { margin-bottom: 0; }
+.view-session-schedule .session-room,
+.view-session-schedule .session-time,
+.view-session-schedule .session-track  { margin-right: 1em; }
+.page-sessions-schedule ul.tabs.primary { padding: 0; margin: 0; background: none; }
+.page-sessions-schedule ul.tabs.primary li a { 
+  background-image: none;
+  background-color: #eeefef;;
+  padding: 0.5em;
+  -webkit-appearance: none;
+  border-radius: 0;
+  border: none;
+  text-shadow: none;
+  font-size: 1.3em;
+}
+.page-sessions-schedule ul.tabs.primary li a:hover, .page-sessions-schedule ul.tabs.primary li a:focus { background-color: #70a3eb; }
+.page-sessions-schedule ul.tabs.primary li a.active { background-color: #5a7ce4; color: #fff; }
+
 /* -- Twitter Feed -- */
 .twitter-widget { background-color: #eeefef; padding: 20px; position: relative; margin-bottom: 60px; }
 .twitter-timeline { width: 100% !important; }
@@ -190,6 +214,7 @@ visibility: hidden;
   .front .node-event form label { width: 50%; float: left; margin-right: 20px; }
   .front .node-event form .form-type-textfield { width: 70%; float: left; }
   .unit .inside, .lastUnit .inside { margin: 0 1em 1em 1em; }
+  .view-session-schedule .view-results { padding: 20px; }
 }
 
 @media all and (min-width: 851px) and (max-width: 1100px) {
@@ -209,6 +234,7 @@ visibility: hidden;
   .front .node-event form label { width: 50%; float: left; margin-right: 20px; }
   .front .node-event form .form-type-textfield { width: 70%; float: left; }
   .unit .inside, .lastUnit .inside { margin: 0 1em 1em 1em; }
+  .view-session-schedule .view-results { padding: 30px; }
 }
 
 @media all and (min-width: 1101px) {
@@ -227,6 +253,7 @@ visibility: hidden;
   .front .node-event form label { width: 50%; float: left; margin-right: 20px; }
   .front .node-event form .form-type-textfield { width: 70%; float: left; }
   .unit .inside, .lastUnit .inside { margin: 0 1em 1em 1em; }
+  .view-session-schedule .view-results { padding: 30px; }
 }
 
 /* -- Mobile menu -- */
