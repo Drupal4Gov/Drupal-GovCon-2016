@@ -164,8 +164,9 @@ a#menu-toggle:after { top: 14px; right: 14px; }
   text-shadow: none;
   font-size: 1.3em;
 }
-.page-sessions-schedule ul.tabs.primary li a:hover, .page-sessions-schedule ul.tabs.primary li a:focus { background-color: #70a3eb; }
-.page-sessions-schedule ul.tabs.primary li a.active { background-color: #5a7ce4; color: #fff; }
+.page-sessions-schedule ul.tabs.primary li a:hover, .page-sessions-schedule ul.tabs.primary li a:focus { background-color: #8cb7f2; }
+.page-sessions-schedule ul.tabs.primary li a.active { background-color: #70a3eb; color: #fff; }
+.page-sessions-schedule .breadcrumb { display: none; }
 
 /* -- Twitter Feed -- */
 .twitter-widget { background-color: #eeefef; padding: 20px; position: relative; margin-bottom: 60px; }
