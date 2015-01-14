@@ -1,0 +1,262 @@
+/* fonts */
+
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  text-align: center;
+  font-family: 'Source Sans Pro',serif;
+  line-height: 1.3;
+  position: relative;
+}
+
+/* Elements */
+h2.block-title {
+  font-size: 1.2em;
+  font-style: italic;
+  font-weight: normal;
+  margin: 0;
+  color: #00aeef;
+}
+a, a:link, a:visited {
+  color: #109cdd;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: #13448d;
+}
+
+/* -- Form elements -- */
+
+.button {
+  font-size: 1em;
+  border: none;
+  padding: .5em;
+  background-color: #00aeef;
+  color: #fff;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px; /* future proofing */
+  -khtml-border-radius: 4px; /* for old Konqueror browsers */
+  cursor: pointer;
+  margin: .4em;
+  -moz-box-shadow:    1px 2px 6px 0 #000;
+  -webkit-box-shadow: 1px 2px 6px 0 #000;
+  box-shadow:         1px 2px 6px 0 #000;
+  -webkit-appearance: none;
+}
+.button:hover {
+  background-color: #1c9ccc;
+  -moz-box-shadow:    0 1px 3px 0 #000;
+  -webkit-box-shadow: 0 1px 3px 0 #000;
+  box-shadow:         0 1px 3px 0 #000;
+}
+input[type=email] {
+  font-size: 1em;
+  padding: .1em;
+}
+input[type=submit] {
+  background-image: none !important;
+  -webkit-appearance: none;
+}
+
+/* -- Header -- */
+header {
+  background: #09446e;
+  background-image:
+    radial-gradient(
+      #09446e,
+      #053458
+    );
+  color: #fff;
+  clear: both;
+  display: block;
+  position: relative; 
+  height: 270px;
+}
+header .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+#slogan {
+  background: #de2432;
+  padding: 12px;
+  font-style: italic;
+}
+
+#logo {
+  background: #fff;
+  background-image:
+    radial-gradient(
+      #fff,
+      #efefef,
+      #aaa
+    );
+  width: 300px;
+  height: 300px;
+  -moz-border-radius: 150px;
+  -webkit-border-radius: 150px;
+  border-radius: 150px;
+  position: absolute;
+  top: 56px;
+  left: 50%;
+  margin-left: -150px;
+  -moz-box-shadow:    1px 2px 6px 0 #000;
+  -webkit-box-shadow: 1px 2px 6px 0 #000;
+  box-shadow:         1px 2px 6px 0 #000;
+  z-index: 100;
+}
+#logo img {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  top: 60px;
+  left: 66px;
+}
+#logo .year {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 300px;
+  color: #999;
+  font-size: 24px;
+}
+#featured {
+  background: #03294d;
+  color: #fff;
+}
+.featured {
+  padding: 30px 0 10px;
+}
+.featured.item-2 .button, .featured.item-2 input[type=email] {
+  width: 200px;
+}
+
+/* -- Main content area -- */
+main {
+  padding: 90px 0 0;
+  color: #666;
+  overflow: hidden;
+  display: block;
+}
+
+.info {
+  font-size: 1.3em;
+  line-height: 2;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+.date {
+  font-style: italic;
+}
+.place {
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  color: #0b4874;
+  font-weight: 700;
+}
+.city {
+  font-style: italic;
+}
+
+/* -- Footer -- */
+footer {
+  background: #eee;
+  padding: 60px 0;
+}
+.social {
+  margin: 0 0 20px 0;
+  font-weight: 700;
+}
+
+/* -- Utility -- */
+.invisible {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+.rule {
+  position: relative;
+}
+.rule span {
+  background: #fff;
+  padding: 0 20px;
+  position: relative;
+  z-index: 5;
+}
+.rule:before {
+  content: "";
+  display: block;
+  border-top: solid 1px #ccc;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+.large {
+  font-size: 1.8em;
+  font-weight: 700;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+  }
+
+/* Responsive */
+@media all and (min-width: 650px) {
+  #slogan {
+    height: 320px;
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    background: url('../images/tape.png') no-repeat 0 20px transparent;
+    text-indent: -99999px;
+    width: 1200px;
+    max-width: 1600px;
+    margin-left: -900px;
+  }
+  header { 
+   height: 400px;
+  }
+  #logo {
+    top: 200px;
+  }
+  main {
+    padding-top: 120px;
+  }
+}
+
+
+@media all and (min-width: 900px) {
+  #featured {
+    height: 140px;
+  }
+#featured {
+  position: absolute;
+  top: 300px;
+  right: 0;
+  left: 0;
+}
+.featured {
+  width: 50%;
+}
+.featured.item-1 {
+  float: left;
+  padding-right: 150px;
+}
+.featured.item-2 {
+  float: right;
+  padding-left: 150px;
+}
+}
