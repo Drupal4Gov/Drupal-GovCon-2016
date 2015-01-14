@@ -116,6 +116,7 @@ DirectoryIndex index.php index.html index.htm
   RewriteRule ^(.*)$ http%{ENV:protossl}://capitalcampandgovdays.com/$1 [L,R=301]
 
   RewriteCond %{HTTP_HOST} ^(www.|)drupalgovcon\.org [NC]
+  RewriteCond %{REQUEST_URI} !/soon(/.*) [NC]
   RewriteRule ^ http%{ENV:protossl}://drupalgovcon.org/soon [L,R=301]
 
   # Pass all requests not referring directly to files in the filesystem to
