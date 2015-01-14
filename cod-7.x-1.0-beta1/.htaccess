@@ -109,13 +109,7 @@ DirectoryIndex index.php index.html index.htm
   # uncomment the following line:
   # RewriteBase /
 
-  RewriteCond %{HTTP_HOST} ^(www.|)(capitalcamp|drupalgovdays|drupalforgov)(.org) [NC]
-  RewriteRule ^ http%{ENV:protossl}://2014.capitalcampandgovdays.com%{REQUEST_URI} [L,R=301]
-
-  RewriteCond %{HTTP_HOST} ^www\.capitalcampandgovdays\.com [NC]
-  RewriteRule ^(.*)$ http%{ENV:protossl}://capitalcampandgovdays.com/$1 [L,R=301]
-
-  RewriteCond %{HTTP_HOST} ^(www.|)drupalgovcon\.org [NC]
+  RewriteCond %{HTTP_HOST} ^(www.|)(drupalgovcon|capitalcamp|drupalgovdays|drupalforgov|capitalcampandgovdays)(.org|.com) [NC]
   RewriteCond %{REQUEST_URI} !/soon(|/.*) [NC]
   RewriteRule ^ http%{ENV:protossl}://drupalgovcon.org/soon [L,R=301]
 
