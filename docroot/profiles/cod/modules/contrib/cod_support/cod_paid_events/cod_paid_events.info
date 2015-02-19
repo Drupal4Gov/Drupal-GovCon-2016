@@ -25,7 +25,6 @@ dependencies[] = options
 dependencies[] = ticket
 dependencies[] = ticket_state
 dependencies[] = views
-dependencies[] = rules
 features[commerce_product_type][] = cod_paid_event
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
@@ -44,11 +43,11 @@ features[user_permission][] = view own field_checkout_complete_state
 features[views_view][] = order_registrations
 features_exclude[dependencies][field_permissions] = field_permissions
 install_option = cod
+mtime = 1418080752
 
-
-; Information added by drush on 2015-02-14
-version = "7.x-1.0-beta7+5-dev"
+; Information added by Drupal.org packaging script on 2015-01-28
+version = "7.x-1.0-beta7"
 core = "7.x"
 project = "cod_support"
-datestamp = "1423898094"
+datestamp = "1422486193"
 

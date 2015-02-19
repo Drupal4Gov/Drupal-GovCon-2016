@@ -20,10 +20,9 @@ features[field_instance][] = commerce_product-sponsor-og_group_ref
 files[] = views/cod_sponsors_commerce.views.inc
 files[] = views/cod_sponsors_commerce_views_handler_field_order_link.inc
 
-
-; Information added by drush on 2015-02-14
-version = "7.x-1.0-beta7+5-dev"
+; Information added by Drupal.org packaging script on 2015-01-28
+version = "7.x-1.0-beta7"
 core = "7.x"
 project = "cod_support"
-datestamp = "1423898094"
+datestamp = "1422486193"
 

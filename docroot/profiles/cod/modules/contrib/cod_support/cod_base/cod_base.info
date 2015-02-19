@@ -51,10 +51,9 @@ features[variable][] = admin_toolbar
 features[variable][] = date_format_date_no_time
 files[] = cod_base.module
 
-
-; Information added by drush on 2015-02-14
-version = "7.x-1.0-beta7+5-dev"
+; Information added by Drupal.org packaging script on 2015-01-28
+version = "7.x-1.0-beta7"
 core = "7.x"
 project = "cod_support"
-datestamp = "1423898094"
+datestamp = "1422486193"
 

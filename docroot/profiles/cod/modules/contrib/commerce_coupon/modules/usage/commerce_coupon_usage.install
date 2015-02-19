@@ -51,15 +51,15 @@ function commerce_coupon_usage_schema() {
     'foreign keys' => array(
       'uid' => array(
         'table' => 'users',
-        'columns' => array('uid' => 'uid')
+        'column' => array('uid' => 'uid')
       ),
       'coupon_id' => array(
         'table' => 'commerce_coupon',
-        'columns' => array('coupon_id' => 'coupon_id')
+        'column' => array('coupon_id' => 'coupon_id')
       ),
       'order_id' => array(
         'table' => 'commerce_order',
-        'columns' => array('order_id' => 'order_id')
+        'column' => array('order_id' => 'order_id')
       ),
     ),
   );

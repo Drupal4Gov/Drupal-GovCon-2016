@@ -4,8 +4,8 @@ core = 7.x
 
 
 
-; Information added by drush on 2015-02-14
+; Information added by drush on 2015-01-29
 version = ""
 project = "admin_icons"
-datestamp = "1423898091"
+datestamp = "1422502765"
 

@@ -241,14 +241,15 @@ function ticket_register_form_submit($form, &$form_state) {
 
     // Set the default registrant uid if not set.
     if (empty($entity->user_uid)) {
-      $entity->user_uid = 0;
+      $entity->user_uid = $GLOBALS['user']->uid;
     }
 
     // TODO: We should probably do this in hook_entity insert or something.
     if (module_exists('ticket_state')) {
       $ticket_type = $entity->ticket_type();
-      if (!empty($ticket_type->ticket_type_default_state)) {
-        $entity->state = $ticket_type->ticket_type_default_state[LANGUAGE_NONE][0]['value'];
+      if (!empty($ticket_type->ticket_type_default_tsid)) {
+        $ts = ticket_state_load($ticket_type->ticket_type_default_tsid[LANGUAGE_NONE][0]['target_id']);
+        $entity->state = $ts->name;
       }
     }
 

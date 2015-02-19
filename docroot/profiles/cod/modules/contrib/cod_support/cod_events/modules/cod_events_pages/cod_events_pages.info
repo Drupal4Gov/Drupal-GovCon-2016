@@ -14,10 +14,9 @@ features[page_manager_pages][] = conference_admin
 features[page_manager_pages][] = program
 features[panelizer_defaults][] = node:event:default:default
 
-
-; Information added by drush on 2015-02-14
-version = "7.x-1.0-beta7+5-dev"
+; Information added by Drupal.org packaging script on 2015-01-28
+version = "7.x-1.0-beta7"
 core = "7.x"
 project = "cod_support"
-datestamp = "1423898094"
+datestamp = "1422486193"
 

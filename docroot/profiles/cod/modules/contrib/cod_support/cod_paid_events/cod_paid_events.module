@@ -11,9 +11,6 @@ include_once 'cod_paid_events.features.inc';
  */
 function cod_paid_events_ticket_registered_redirect_alter(&$redirect, &$registrations) {
   global $user;
-  // Reset the cart for a new order.
-  commerce_cart_order_new($user->uid);
-
   foreach ($registrations as $registration) {
     $ticket_type = $registration->ticket_type();
     if (!empty($ticket_type->field_ticket_related_product) && $product = commerce_product_load($ticket_type->field_ticket_related_product[LANGUAGE_NONE][0]['product_id'])) {
@@ -26,9 +23,6 @@ function cod_paid_events_ticket_registered_redirect_alter(&$redirect, &$registra
         // Set the ticket registration's order id.
         $registration->field_ticket_order[LANGUAGE_NONE][0]['target_id'] = $line_item->order_id;
         ticket_registration_save($registration);
-
-        // Remove 'completed registration' messages before going to cart
-        unset($_SESSION['messages']['status']);
 
         $redirect = 'checkout';
       }
@@ -136,19 +130,6 @@ function cod_paid_events_form_event_node_form_alter(&$form, &$form_state) {
           $element => array('value' => '_none'),
         ),
       );
-    }
-  }
-}
-
-/**
- * Implements hook_form_BASE_FORM_ID_alter().
- */
-function cod_paid_events_form_ticket_register_form_alter(&$form, &$form_state, $form_id) {
-  if (isset($form['#entity_form_keys'])) {
-    foreach ($form['#entity_form_keys'] AS $field) {
-      if (isset($form[$field]['field_ticket_order'])) {
-        $form[$field]['field_ticket_order']['#access'] = FALSE;
-      }
     }
   }
 }
