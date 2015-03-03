@@ -19,3 +19,18 @@ function cod_profile_base_form_user_login_alter(&$form, &$form_state, $form_id) 
 function cod_profile_base_menu_alter(&$items) {
   $items['user/register']['title'] = 'Sign up';
 }
+
+/**
+ * Implements hook_field_widget_form_alter().
+ * Custom code to prevent location fields from being required
+ */
+function cod_profile_base_field_widget_form_alter(&$element, &$form_state, $context) {
+  if ($context['field']['type'] == 'addressfield') {
+    $element['name_block']['name_line']['#required'] = FALSE;
+    $element['street_block']['thoroughfare']['#required'] = FALSE;
+    $element['locality_block']['dependent_locality']['#required'] = FALSE;
+    $element['locality_block']['locality']['#required'] = FALSE;
+    $element['locality_block']['administrative_area']['#required'] = FALSE;
+    $element['locality_block']['postal_code']['#required'] = FALSE;
+  }
+}
