@@ -113,6 +113,9 @@ DirectoryIndex index.php index.html index.htm
   RewriteCond %{REQUEST_URI} !/soon(|/.*) [NC]
   RewriteRule ^ http%{ENV:protossl}://drupalgovcon.org/soon [L,R=301]
 
+  # Redirect requests for / to current govcon
+  RewriteRule ^ http%{ENV:protossl}://%{HTTP_HOST}/drupal-govcon-2015 [L,R=301]
+
   # Pass all requests not referring directly to files in the filesystem to
   # index.php. Clean URLs are handled in drupal_environment_initialize().
   RewriteCond %{REQUEST_FILENAME} !-f
