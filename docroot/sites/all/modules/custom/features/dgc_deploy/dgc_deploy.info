@@ -1,0 +1,12 @@
+name = Drupal GovCon Deploy
+description = Deploy feature module for Drupal GovCon sites. Any settings that should be codified can go here.
+core = 7.x
+package = DGC
+version = 7.x-1.0-beta1
+project = dgc_deploy
+dependencies[] = ctools
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = user_email_verification
+features[variable][] = user_register
