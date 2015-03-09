@@ -17,3 +17,10 @@ function dgc_deploy_update_7000() {
 function dgc_deploy_update_7001() {
   module_enable(array('logintoboggan'));
 }
+
+/**
+ * Improve user registration with external sources via hybridauth social login module
+ */
+function dgc_deploy_update_7002() {
+  module_enable(array('hybridauth'));
+}
