@@ -24,3 +24,11 @@ function dgc_deploy_update_7001() {
 function dgc_deploy_update_7002() {
   module_enable(array('hybridauth'));
 }
+
+/**
+ * Disable hybridauth for now due to complexity of using it with external services
+ * needing to register for each
+ */
+function dgc_deploy_update_7003() {
+  module_disable(array('hybridauth'));
+}
