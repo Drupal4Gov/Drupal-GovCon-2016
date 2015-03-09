@@ -10,3 +10,10 @@
 function dgc_deploy_update_7000() {
   module_enable(array('super_login'));
 }
+
+/**
+ * Improve usability of registration and login actions with logintoboggan module
+ */
+function dgc_deploy_update_7001() {
+  module_enable(array('logintoboggan'));
+}
