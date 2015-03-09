@@ -13,6 +13,20 @@ function dgc_deploy_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'logintoboggan_confirm_email_at_registration';
+  $strongarm->value = '1';
+  $export['logintoboggan_confirm_email_at_registration'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'logintoboggan_login_successful_message';
+  $strongarm->value = '1';
+  $export['logintoboggan_login_successful_message'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'og_context_negotiation_group_context';
   $strongarm->value = array(
     'url' => array(),
@@ -38,8 +52,15 @@ function dgc_deploy_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'site_403';
+  $strongarm->value = 'toboggan/denied';
+  $export['site_403'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'user_email_verification';
-  $strongarm->value = 1;
+  $strongarm->value = TRUE;
   $export['user_email_verification'] = $strongarm;
 
   $strongarm = new stdClass();
