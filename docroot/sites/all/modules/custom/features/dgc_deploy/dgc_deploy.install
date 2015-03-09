@@ -1,0 +1,12 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the dgc_deploy module.
+ */
+
+/**
+ * Improve usability of login form with super_login module
+ */
+function example_deploy_update_7000() {
+  module_enable(array('super_login'));
+}
