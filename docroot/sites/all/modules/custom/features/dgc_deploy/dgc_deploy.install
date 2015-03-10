@@ -103,6 +103,7 @@ function dgc_deploy_update_7005() {
   $default_theme = variable_get('theme_default', 'govcon');
   db_update('block')
     ->fields(array(
+      'region' => 'navigation',
       'status' => '1',
     )
   )
