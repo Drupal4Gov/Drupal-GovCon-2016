@@ -32,3 +32,66 @@ function dgc_deploy_update_7002() {
 function dgc_deploy_update_7003() {
   module_disable(array('hybridauth'));
 }
+
+/**
+ * Enable responsive_dropdown_menus module and govcon theme. Set theme as default. Add responsive main menu block to navigation region. Add log in, logout, my account and register links to main menu.
+ */
+function dgc_deploy_update_7004() {
+  module_enable(array('responsive_dropdown_menus'));
+  theme_enable(array('govcon'));
+  variable_set('theme_default', 'govcon');
+
+  // Enable Responsive menu main menu block and set title to <none>.
+  $default_theme = variable_get('theme_default', 'govcon');
+  db_update('block')
+    ->fields(array(
+      'region' => 'navigation',
+      'title' => '<none>',
+    )
+  )
+  ->condition('module', 'responsive_dropdown_menus')
+  ->condition('delta', 'main-menu')
+  ->condition('theme', $default_theme)
+  ->execute();
+
+  // Add Log in link to main menu
+  $item = array (
+    'link_title' => 'Log in',
+    'link_path' => 'user/login',
+    'menu_name' => 'main-menu',
+    'weight' => 11,
+    'plid' => 0,
+  );
+  menu_link_save($item);
+
+  // Add Log out link to main menu
+  $item = array (
+    'link_title' => 'Log out',
+    'link_path' => 'user/logout',
+    'menu_name' => 'main-menu',
+    'weight' => 11,
+    'plid' => 0,
+  );
+  menu_link_save($item);
+
+  // Add My account link to main menu
+  $item = array (
+    'link_title' => 'My account',
+    'link_path' => 'user',
+    'menu_name' => 'main-menu',
+    'weight' => 10,
+    'plid' => 0,
+  );
+  menu_link_save($item);
+
+  // Add Register link to main menu
+  $item = array (
+    'link_title' => 'Register',
+    'link_path' => 'user/register',
+    'menu_name' => 'main-menu',
+    'weight' => 10,
+    'plid' => 0,
+  );
+  menu_link_save($item);
+  } 
+}
