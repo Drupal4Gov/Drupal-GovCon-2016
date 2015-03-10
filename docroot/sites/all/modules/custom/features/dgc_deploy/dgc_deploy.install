@@ -93,5 +93,4 @@ function dgc_deploy_update_7004() {
     'plid' => 0,
   );
   menu_link_save($item);
-  } 
 }
