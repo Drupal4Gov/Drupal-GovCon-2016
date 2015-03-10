@@ -94,3 +94,20 @@ function dgc_deploy_update_7004() {
   );
   menu_link_save($item);
 }
+
+/**
+ * Actually enable the responsive main menu block this time
+ */
+function dgc_deploy_update_7005() {
+  // Enable Responsive menu main menu block. 
+  $default_theme = variable_get('theme_default', 'govcon');
+  db_update('block')
+    ->fields(array(
+      'status' => '1',
+    )
+  )
+  ->condition('module', 'responsive_dropdown_menus')
+  ->condition('delta', 'main-menu')
+  ->condition('theme', $default_theme)
+  ->execute();
+}
