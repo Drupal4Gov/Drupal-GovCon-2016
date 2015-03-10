@@ -1,0 +1,183 @@
+/* Slick nav from Adminiimal toolbar */
+.slicknav_menu { 
+	position: absolute;
+	top: 0;
+	width: 100%;
+	left: 0; 
+	z-index: 20;
+}
+
+/* Main menu dropdowns */
+#block-responsive-dropdown-menus-main-menu {
+	position: relative;
+	z-index: 10;
+}
+.responsive-menu,
+.responsive-menu.links.inline {
+  max-height: 0;
+  overflow:hidden;
+  }
+  .responsive-menu.menu-toggled,
+  .responsive-menu.links.inline.menu-toggled {
+    max-height: none;
+  }
+.responsive-menu li,
+.responsive-menu.inline li {
+  position: relative;
+  display: block;
+}
+ul.main-menu {
+	text-align: center;
+	padding: 0 10px;
+	margin: 0;
+	background: $texture $pale-blue;
+	li {
+		display: block;
+		margin-left: 2px;
+		text-align: left;
+		position: relative;
+	}
+}
+ul.main-menu > li > a {
+	padding: 20px 10px 6px 0;
+	display: inline-block; 
+	font-size: 1.2em;
+}
+ul.main-menu > li.last { margin-bottom: 10px; }
+ul.main-menu > li.active_trail,
+ul.main-menu > li.active-trail,
+ul.main-menu > li:hover {
+	position: relative;
+  background: transparent;
+  color: $red;
+}
+ul.main-menu > li.active_trail > a,
+ul.main-menu > li.active-trail > a,
+ul.main-menu > li:hover > a {
+	color: $red;
+}
+ul.main-menu > li:hover { z-index: 1; }
+ul.main-menu > li:hover:after { z-index: 10; }
+ul.main-menu > li.menu-parent:hover:after {
+  background: none;
+}
+ul.tier-two {
+	left: -16px;
+	margin: 0;
+  padding: 0;
+  width: 100%;
+  background: $texture $ecru;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
+  border-left: 16px solid $red;
+  &:after {
+  	background-color: $red;
+  	background: linear-gradient(-45deg, transparent 4px, $red 0), linear-gradient(45deg, transparent 4px, $red 0);
+    background-position: left-bottom;
+    background-repeat: repeat-x;
+    background-size: 6px 6px;
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 16px;
+    height: 6px;
+  }
+	li {
+		margin: 0;
+    display: block;
+    a { border: none; display: inline-block; padding: 6px 10px 6px 4px; }
+	}
+	li.first a { padding-top: 12px; }
+	li.last a { padding-bottom: 12px; }
+}
+.menu-toggle {
+	margin-top: 40px;
+	margin-left: 10px;
+	background: $texture $red;
+	width: 70px;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 10px;
+	color: $ecru;
+	text-transform: uppercase;
+	display: inline-block;
+	@include border-radius(4px);
+}
+.menu-toggle:hover {
+  color: $ecru;
+  background: $texture $blue;
+}
+
+@include breakpoint($tab, true) {
+	.menu-toggle {
+    display: none;
+  }
+	#block-responsive-dropdown-menus-main-menu {
+		z-index: 12;
+	}
+	.responsive-menu,
+  .responsive-menu.links.inline {
+    max-height: none;
+    overflow: visible;
+  }
+  .responsive-menu li {
+    display: inherit;
+  }
+  .responsive-menu.inline li {
+    display: inline-block;
+  }
+  .responsive-menu .sub-menu {
+    position: absolute;
+    z-index: 100;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .responsive-menu .sub-menu.active {
+    max-height: none;
+    overflow: visible;
+  }
+  .responsive-menu .sub-menu li {
+    display: block;
+  }
+  ul.main-menu > li.last { margin-bottom: 0; }
+	ul.main-menu {
+		padding: 0;
+		background: none;
+		li.menu-item-primary.active_trail,
+	  li.menu-item-primary.active-trail,
+	  li.menu-item-primary:hover {
+      border-left: 16px solid $red;
+      &:after { display: inline-block; }
+	  }
+	  li.menu-item-primary:hover { z-index: 101; }
+	  li.menu-item-primary { border-left: 16px solid transparent; display: inline-block; }
+    li.menu-item-primary:after {
+		  background: linear-gradient(-45deg, transparent 4px, $red 0), linear-gradient(45deg, transparent 4px, $red 0);
+		  background-position: left-bottom;
+		  background-repeat: repeat-x;
+		  background-size: 6px 6px;
+		  content: " ";
+		  position: absolute;
+		  bottom: -6px;
+		  left: -16px;
+		  width: 16px;
+		  height: 6px;
+		  display: none;
+		}
+	  ul:after { left: -16px; bottom: -6px; }
+	  ul { width: 300px; }
+	  li.menu-item-primary > a { padding: 30px 10px 4px 4px; font-size: 1em; }
+  }
+}
+
+
+li.menu-item {
+  a {
+  	text-transform: uppercase;
+  }
+  a:hover, a.active {
+		color: $red;
+	}
+}

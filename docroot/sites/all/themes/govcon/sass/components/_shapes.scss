@@ -1,0 +1,31 @@
+/* header background shapes */
+
+.header-bg {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  z-index: -1;
+  background: $pale-blue;
+  height: 250px;
+  background-image: $texture;
+  overflow: hidden;
+}
+.header-bg--cutout {
+  content: "";
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  margin-left: -800px;
+  display: block;
+  width: 1600px;
+  height: 400px;
+   @include border-radius(#{1600px} / 400px);
+  background-color: $ecru;
+  background-image: $texture;
+}
+body.admin-menu, 
+body.admin-menu.adminimal-menu.adminimal-backend, 
+body.admin-menu.adminimal-menu.adminimal-frontend { 
+  .header-bg { top: 70px; }
+}
