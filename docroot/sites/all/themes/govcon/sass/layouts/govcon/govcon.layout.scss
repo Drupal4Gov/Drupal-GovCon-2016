@@ -11,7 +11,7 @@
 @import "../../variables/**/*";
 
 .l-constrained {
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
   max-width: 1400px;
   @include pie-clearfix;
@@ -22,6 +22,8 @@
 /* Header */
 .l-header {
   position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 .l-region--header {
   padding: $vert-spacing-unit 0;
@@ -58,7 +60,7 @@
 
 @include breakpoint($tab, true) {
   .l-constrained {
-    width: 100%;
+    width: 90%;
   }
   .l-region--navigation { height: 60px; }
   /* Sidebars */
@@ -76,6 +78,10 @@
 }
 
 @include breakpoint($desk, true) {
+
+  .l-constrained {
+    width: 80%;
+  }
 
   /* Sidebars */
   .has-one-sidebar {

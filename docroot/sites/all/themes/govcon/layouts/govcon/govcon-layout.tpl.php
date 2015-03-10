@@ -1,5 +1,5 @@
 <div<?php print $attributes; ?>>
-  <header class="l-header l-constrained" role="banner">
+  <header class="l-header" role="banner">
       <div class="header-bg">
         <div class="header-bg--cutout"></div> 
       </div>
