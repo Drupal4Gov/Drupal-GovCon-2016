@@ -26,6 +26,7 @@
   position: relative;
   display: block;
 }
+ul.main-menu.menu-toggled { padding-top: 40px; }
 ul.main-menu {
 	text-align: center;
 	padding: 0 10px;
@@ -92,18 +93,18 @@ ul.tier-two {
 	li.last a { padding-bottom: 12px; }
 }
 .menu-toggle {
-	margin-top: 40px;
+	margin-top: 10px;
 	margin-left: 10px;
 	background: $texture $red;
-	width: 70px;
 	text-align: center;
 	height: 40px;
 	line-height: 40px;
-	padding: 0 10px;
+	padding: 0 6px;
 	color: $ecru;
 	text-transform: uppercase;
 	display: inline-block;
 	@include border-radius(4px);
+	font-size: 0.9em;
 }
 .menu-toggle:hover {
   color: $ecru;
@@ -144,6 +145,7 @@ ul.tier-two {
   ul.main-menu > li.last { margin-bottom: 0; }
 	ul.main-menu {
 		padding: 0;
+		margin: 0;
 		background: none;
 		li.menu-item-primary.active_trail,
 	  li.menu-item-primary.active-trail,
@@ -168,7 +170,7 @@ ul.tier-two {
 		}
 	  ul:after { left: -16px; bottom: -6px; }
 	  ul { width: 300px; }
-	  li.menu-item-primary > a { padding: 30px 10px 4px 4px; font-size: 1em; }
+	  li.menu-item-primary > a { padding: 20px 10px 4px 4px; font-size: 1em; }
   }
 }
 

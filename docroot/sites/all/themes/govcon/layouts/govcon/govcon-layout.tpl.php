@@ -1,6 +1,6 @@
 <div<?php print $attributes; ?>>
-  <header class="l-header" role="banner">
-      <div class="header-bg l-constrained">
+  <header class="l-header l-constrained" role="banner">
+      <div class="header-bg">
         <div class="header-bg--cutout"></div> 
       </div>
       <?php print render($page['navigation']); ?>
