@@ -112,3 +112,10 @@ function dgc_deploy_update_7005() {
   ->condition('theme', $default_theme)
   ->execute();
 }
+
+/**
+ * Enable redirect module
+ */
+function dgc_deploy_update_7006() {
+  module_enable(array('redirect'));
+}
