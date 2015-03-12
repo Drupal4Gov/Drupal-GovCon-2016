@@ -119,3 +119,21 @@ function dgc_deploy_update_7005() {
 function dgc_deploy_update_7006() {
   module_enable(array('redirect'));
 }
+
+/**
+ * Set site_frontpage. Redirect front to 2015 event page. Redirect user/register to event registration page.
+ */
+function dgc_deploy_update_7007() {
+  variable_set('site_frontpage', 'node');
+  $urls = array(    
+    array('source' => '<front>', 'redirect' => 'drupal-govcon-2015'),
+    array('source' => 'user/register', 'redirect' => 'drupal-govcon-2015/registration'),
+  );
+ 
+  // Add redirects.
+  foreach ($urls as $url) {
+    $redirect = new stdClass();
+    redirect_object_prepare($redirect, $url);
+    redirect_save($redirect);
+  }
+}
