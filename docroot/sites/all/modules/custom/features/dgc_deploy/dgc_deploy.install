@@ -126,8 +126,8 @@ function dgc_deploy_update_7006() {
 function dgc_deploy_update_7007() {
   variable_set('site_frontpage', 'node');
   $urls = array(    
-    array('source' => '<front>', 'redirect' => 'drupal-govcon-2015'),
-    array('source' => 'user/register', 'redirect' => 'drupal-govcon-2015/registration'),
+    array('source' => '<front>', 'redirect' => 'node/1'),
+    array('source' => 'user/register', 'redirect' => 'node/1/registration'),
   );
  
   // Add redirects.
