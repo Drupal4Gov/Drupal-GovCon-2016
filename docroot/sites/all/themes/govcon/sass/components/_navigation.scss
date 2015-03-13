@@ -121,22 +121,31 @@ ul.tier-two {
 			a {padding: 10px 0; }
 		}
 		li.first {
-			-webkit-transform: rotate(-10deg);
-			-moz-transform: rotate(-10deg);
-			-ms-transform: rotate(-10deg);
-			-o-transform: rotate(-10deg);
       a { 
-      	color: #fff;
       	padding: 10px 10px 14px;
       	background: url(../images/ticket.svg) no-repeat top left;
 			  background-size: contain;
 			  position: relative;
 			  top: 4px;
 			  display: inline-block;
+			  color: #fff;
+			  -webkit-transform: rotate(-10deg);
+			  -moz-transform: rotate(-10deg);
+			  -ms-transform: rotate(-10deg);
+			  -o-transform: rotate(-10deg);
+			  -webkit-transition: 0.5s ease-in-out;
+		    -moz-transition: 0.5s ease-in-out;
+		    -o-transition: 0.5s ease-in-out;
+		    transition: 0.5s ease-in-out;
 			  &:after {
 			  	@include overlay-texture;
 			  } 
-			  &:hover { color: $blue; }
+			  &:hover { 
+			  	-webkit-transform: rotate(3deg);
+				  -moz-transform: rotate(3deg);
+				  -ms-transform: rotate(3deg);
+				  -o-transform: rotate(3deg);
+			  }
       }
 		}
 	}
