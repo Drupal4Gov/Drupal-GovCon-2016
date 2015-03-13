@@ -59,6 +59,17 @@ body.admin-menu.adminimal-menu.adminimal-frontend {
 }
 .login-title { @include hide-text; }
 
+.user-profile {
+  background: $texture $pale-blue;
+  padding: 20px;
+    .user-picture { 
+      background: $ecru; 
+      display: inline-block;
+      line-height: 0;
+      border: 10px solid $blue; 
+    }
+}
+
 
 @include breakpoint($tab, true) {
   body { padding: 20px; }

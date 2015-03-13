@@ -1,5 +1,14 @@
 .form-item {
-  margin: 2em 0;
+  margin: 2em 1em 2em 0;
+}
+
+.filters .form-item {
+  margin: 0.5em 1em;
+  float: left;
+}
+.filters.form-wrapper {
+  @include clearfix;
+  float: left;
 }
 
 input[type=text] {
@@ -40,4 +49,11 @@ form.user-login {
   input[type=text], input[type=password] {
     max-width: 400px;
   }
+}
+
+/* Drop downs */
+.form-type-select select {
+  background: transparent;
+}
+.form-type-select {
 }
