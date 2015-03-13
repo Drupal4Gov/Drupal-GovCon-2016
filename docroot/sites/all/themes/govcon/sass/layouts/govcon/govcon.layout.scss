@@ -23,10 +23,13 @@
 .l-header {
   position: relative;
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 30px auto 0;
 }
 .l-region--header {
-  padding: $vert-spacing-unit 0;
+  position: absolute;
+  top: -56px;
+  right: 0;
+  z-index: 13;
 }
 
 /* Content Area */

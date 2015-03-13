@@ -4,6 +4,7 @@
         <div class="header-bg--cutout"></div> 
       </div>
       <?php print render($page['navigation']); ?>
+      <?php print render($page['header']); ?>
       <div class="l-constrained">
       <div class="l-branding site-branding">
         <?php if ($logo): ?>
@@ -17,7 +18,6 @@
         <?php endif; ?>
         <?php print render($page['branding']); ?>
       </div>
-      <?php print render($page['header']); ?>
     </div>
   </header>
 
