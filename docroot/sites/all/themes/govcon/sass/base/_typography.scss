@@ -6,19 +6,21 @@ h1 {
 	text-transform: uppercase;
 	font-weight: 900;
 	color: $blue;
-	font-size: 3em;
+	font-size: 2em;
 	line-height: 1.1;
 	position: relative;
 	@include letterpress;
 }
 h1:after {
-	@include overlay-texture;
+	@include texture-text;
 }
 h2 {
 	font-family: $script;
 	color: $red;
 	font-size: 2em;
 	font-weight: normal;
+  letter-spacing: 0;
+  margin-bottom: 0;
 }
 a {
 	color: $blue;
@@ -27,6 +29,12 @@ a {
 }
 a:hover, a:focus {
 	color: $red;
+}
+
+@include breakpoint($tab, true) {
+  h1 {
+		font-size: 3em;
+	}
 }
 
 @include breakpoint($tab, true) {

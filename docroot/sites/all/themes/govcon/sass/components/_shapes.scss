@@ -27,3 +27,49 @@
 @include breakpoint($tab, true) {
   .header-bg--cutout { top: 120px; }
 }
+.bevel {
+  background-color: $pale-blue;
+  padding: 2em;
+  position: relative;
+  * { position: relative; }
+  .bg {
+     background-color: $pale-blue;
+     position: absolute;
+     top: 0;
+     right: 0;
+     left: 0;
+     bottom: 0;
+  }
+  .bg-overlay {
+     @include texture-solid;
+  }
+  .tl,.tr,.bl,.br {
+    width: 0; 
+    height: 0;
+    position: absolute;
+  }
+  .tl {
+    top: 0;
+    left: 0;
+    border-top: 15px solid $ecru; 
+    border-right: 15px solid transparent;
+  }
+  .tr {
+    top: 0;
+    right: 0;
+    border-top: 15px solid $ecru; 
+    border-left: 15px solid transparent;
+  }
+  .bl {
+    bottom: 0; 
+    left: 0; 
+    border-bottom: 15px solid $ecru; 
+    border-right: 15px solid transparent; 
+  }
+  .br {
+    bottom: 0;
+    right: 0;
+    border-bottom: 15px solid $ecru; 
+    border-left: 15px solid transparent;
+  }
+}

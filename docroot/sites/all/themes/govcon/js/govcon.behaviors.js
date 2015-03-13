@@ -15,6 +15,17 @@
     return $('<a href="' + path + '" title="' + title + '">' + title + '</a>');
   };
 
+  Drupal.theme.prototype.govconBevelBox = function (e) {
+    // Create bevel markup
+    $(e).prepend('<div class="bg-overlay"></div>')
+      .prepend('<div class="tr"></div>')
+      .prepend('<div class="tl"></div>')
+      .prepend('<div class="br"></div>')
+      .prepend('<div class="bl"></div>')
+      .prepend('<div class="bg"></div>');
+
+  };
+
   /**
    * Behaviors are Drupal's way of applying JavaScript to a page. In short, the
    * advantage of Behaviors over a simple 'document.ready()' lies in how it
@@ -53,6 +64,14 @@
 
         // The anchor is then appended to the current element.
         $anchor.appendTo(this);
+      });
+    }
+  };
+
+  Drupal.behaviors.govconBevelBox = {
+    attach: function (context, settings) {
+      $('.bevel', context).once('bevel', function () {
+        Drupal.theme('govconBevelBox', this);
       });
     }
   };

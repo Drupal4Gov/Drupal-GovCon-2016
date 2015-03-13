@@ -49,6 +49,17 @@ body.admin-menu.adminimal-menu.adminimal-frontend {
 .site-branding__name {
 	@include hide-text;
 }
+.l-region--footer {
+  background: $texture lighten($gold, 20%);
+}
+
+/* get rid of background for all panel layouts running this theme */
+.not-front .l-content, .not-front .l-region--sidebar .block {
+  background: none;
+}
+.login-title { @include hide-text; }
+
+
 @include breakpoint($tab, true) {
   body { padding: 20px; }
   .site-branding { top: 70px; }

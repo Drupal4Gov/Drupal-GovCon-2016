@@ -37,6 +37,7 @@ ul.main-menu {
 		margin-left: 2px;
 		text-align: left;
 		position: relative;
+	  a:hover, a:focus { color: $red; text-decoration: none; }
 	}
 }
 ul.main-menu > li > a {
@@ -109,6 +110,7 @@ ul.tier-two {
 .menu-toggle:hover {
   color: $ecru;
   background: $texture $blue;
+  text-decoration: none;
 }
 /* user menu */
 .l-region--header {
@@ -142,7 +144,7 @@ ul.tier-two {
 		    -o-transition: 0.5s ease-in-out;
 		    transition: 0.5s ease-in-out;
 			  &:after {
-			  	@include overlay-texture;
+			  	@include texture-text;
 			  } 
 			  &:hover { 
 			  	-webkit-transform: rotate(3deg);
@@ -157,6 +159,7 @@ ul.tier-two {
 
 /* Login Tobaggan */
 .toboggan-login-link { padding: 10px; display: inline-block; }
+
 
 @include breakpoint($tab, true) {
 	.menu-toggle {
