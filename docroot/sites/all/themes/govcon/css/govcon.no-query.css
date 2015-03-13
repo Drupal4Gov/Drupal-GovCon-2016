@@ -216,112 +216,119 @@ ul.tier-two {
   margin: 0 0 0 0.8em; }
   /* line 121, ../sass/components/_navigation.scss */
   .l-region--header ul.menu li a {
-    padding: 10px 0; }
-/* line 124, ../sass/components/_navigation.scss */
-.l-region--header ul.menu li.first a {
-  padding: 10px 10px 14px;
-  background: url(../images/ticket.svg) no-repeat top left;
-  background-size: contain;
-  position: relative;
-  top: 4px;
-  display: inline-block;
-  color: #fff;
-  -webkit-transform: rotate(-10deg);
-  -moz-transform: rotate(-10deg);
-  -ms-transform: rotate(-10deg);
-  -o-transform: rotate(-10deg);
-  -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out; }
-  /* line 140, ../sass/components/_navigation.scss */
-  .l-region--header ul.menu li.first a:after {
-    content: "";
-    background: url(../images/texture_font2.png) repeat transparent;
-    background-size: 100px 100px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0; }
-  /* line 143, ../sass/components/_navigation.scss */
-  .l-region--header ul.menu li.first a:hover {
-    -webkit-transform: rotate(3deg);
-    -moz-transform: rotate(3deg);
-    -ms-transform: rotate(3deg);
-    -o-transform: rotate(3deg); }
+    padding: 10px 0;
+    display: inline-block; }
+/* line 123, ../sass/components/_navigation.scss */
+.l-region--header ul.menu li.first {
+  position: absolute;
+  top: 62px;
+  right: 10px; }
+  /* line 127, ../sass/components/_navigation.scss */
+  .l-region--header ul.menu li.first a {
+    padding: 10px 10px 14px;
+    font-size: .9em;
+    background: url(../images/ticket.svg) no-repeat top left;
+    background-size: contain;
+    position: relative;
+    top: 4px;
+    display: inline-block;
+    color: #fff;
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out; }
+    /* line 144, ../sass/components/_navigation.scss */
+    .l-region--header ul.menu li.first a:after {
+      content: "";
+      background: url(../images/texture_font2.png) repeat transparent;
+      background-size: 100px 100px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0; }
+    /* line 147, ../sass/components/_navigation.scss */
+    .l-region--header ul.menu li.first a:hover {
+      -webkit-transform: rotate(3deg);
+      -moz-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+      -o-transform: rotate(3deg); }
 
 /* Login Tobaggan */
-/* line 155, ../sass/components/_navigation.scss */
+/* line 159, ../sass/components/_navigation.scss */
 .toboggan-login-link {
   padding: 10px;
   display: inline-block; }
 
-/* line 158, ../sass/components/_navigation.scss */
+/* line 162, ../sass/components/_navigation.scss */
 .menu-toggle {
   display: none; }
 
-/* line 161, ../sass/components/_navigation.scss */
+/* line 165, ../sass/components/_navigation.scss */
 #block-responsive-dropdown-menus-main-menu {
   z-index: 12; }
 
-/* line 164, ../sass/components/_navigation.scss */
+/* line 168, ../sass/components/_navigation.scss */
 .responsive-menu,
 .responsive-menu.links.inline {
   max-height: none;
   overflow: visible; }
 
-/* line 169, ../sass/components/_navigation.scss */
+/* line 173, ../sass/components/_navigation.scss */
 .responsive-menu li {
   display: inherit; }
 
-/* line 172, ../sass/components/_navigation.scss */
+/* line 176, ../sass/components/_navigation.scss */
 .responsive-menu.inline li {
   display: inline-block; }
 
-/* line 175, ../sass/components/_navigation.scss */
+/* line 179, ../sass/components/_navigation.scss */
 .responsive-menu .sub-menu {
   position: absolute;
   z-index: 100;
   max-height: 0;
   overflow: hidden; }
 
-/* line 181, ../sass/components/_navigation.scss */
+/* line 185, ../sass/components/_navigation.scss */
 .responsive-menu .sub-menu.active {
   max-height: none;
   overflow: visible; }
 
-/* line 185, ../sass/components/_navigation.scss */
+/* line 189, ../sass/components/_navigation.scss */
 .responsive-menu .sub-menu li {
   display: block; }
 
-/* line 188, ../sass/components/_navigation.scss */
+/* line 192, ../sass/components/_navigation.scss */
 ul.main-menu > li.last {
   margin-bottom: 0; }
 
-/* line 189, ../sass/components/_navigation.scss */
+/* line 193, ../sass/components/_navigation.scss */
 ul.main-menu {
   padding: 0;
   margin: 0;
   background: none; }
-  /* line 193, ../sass/components/_navigation.scss */
+  /* line 197, ../sass/components/_navigation.scss */
   ul.main-menu li.menu-item-primary.active_trail,
   ul.main-menu li.menu-item-primary.active-trail,
   ul.main-menu li.menu-item-primary:hover {
     border-left: 16px solid #e02d3b; }
-    /* line 197, ../sass/components/_navigation.scss */
+    /* line 201, ../sass/components/_navigation.scss */
     ul.main-menu li.menu-item-primary.active_trail:after,
     ul.main-menu li.menu-item-primary.active-trail:after,
     ul.main-menu li.menu-item-primary:hover:after {
       display: inline-block; }
-  /* line 199, ../sass/components/_navigation.scss */
+  /* line 203, ../sass/components/_navigation.scss */
   ul.main-menu li.menu-item-primary:hover {
     z-index: 101; }
-  /* line 200, ../sass/components/_navigation.scss */
+  /* line 204, ../sass/components/_navigation.scss */
   ul.main-menu li.menu-item-primary {
     border-left: 16px solid transparent;
     display: inline-block; }
-  /* line 201, ../sass/components/_navigation.scss */
+  /* line 205, ../sass/components/_navigation.scss */
   ul.main-menu li.menu-item-primary:after {
     background: linear-gradient(-45deg, rgba(0, 0, 0, 0) 4px, #e02d3b 0%), linear-gradient(45deg, rgba(0, 0, 0, 0) 4px, #e02d3b 0%);
     background-position: left-bottom;
@@ -334,22 +341,31 @@ ul.main-menu {
     width: 16px;
     height: 6px;
     display: none; }
-  /* line 214, ../sass/components/_navigation.scss */
+  /* line 218, ../sass/components/_navigation.scss */
   ul.main-menu ul:after {
     left: -16px;
     bottom: -6px; }
-  /* line 215, ../sass/components/_navigation.scss */
+  /* line 219, ../sass/components/_navigation.scss */
   ul.main-menu ul {
     width: 300px; }
-  /* line 216, ../sass/components/_navigation.scss */
+  /* line 220, ../sass/components/_navigation.scss */
   ul.main-menu li.menu-item-primary > a {
     padding: 20px 10px 4px 4px;
     font-size: 1em; }
 
 /* line 222, ../sass/components/_navigation.scss */
+.l-region--header ul.menu li.first {
+  position: relative;
+  top: auto;
+  right: auto; }
+  /* line 226, ../sass/components/_navigation.scss */
+  .l-region--header ul.menu li.first a {
+    font-size: 1em; }
+
+/* line 232, ../sass/components/_navigation.scss */
 li.menu-item a {
   text-transform: uppercase; }
-/* line 225, ../sass/components/_navigation.scss */
+/* line 235, ../sass/components/_navigation.scss */
 li.menu-item a:hover, li.menu-item a.active {
   color: #e02d3b; }
 

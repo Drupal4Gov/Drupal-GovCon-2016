@@ -118,11 +118,15 @@ ul.tier-two {
 			display: inline-block;
 			list-style: none;
 			margin: 0 0 0 0.8em; 
-			a {padding: 10px 0; }
+			a {padding: 10px 0; display: inline-block; }
 		}
 		li.first {
+			position: absolute;
+			top: 62px;
+			right: 10px;
       a { 
       	padding: 10px 10px 14px;
+      	font-size: .9em;
       	background: url(../images/ticket.svg) no-repeat top left;
 			  background-size: contain;
 			  position: relative;
@@ -215,6 +219,12 @@ ul.tier-two {
 	  ul { width: 300px; }
 	  li.menu-item-primary > a { padding: 20px 10px 4px 4px; font-size: 1em; }
   }
+  .l-region--header ul.menu li.first {
+			position: relative;
+			top: auto;
+			right: auto;
+			a { font-size: 1em; }
+		}
 }
 
 
