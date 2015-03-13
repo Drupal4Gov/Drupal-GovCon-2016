@@ -74,6 +74,11 @@ form input:focus {
 form .description {
   color: #666; }
 
+/* Special forms */
+/* line 40, ../sass/base/_forms.scss */
+form.user-login input[type=text], form.user-login input[type=password] {
+  max-width: 400px; }
+
 /* line 1, ../sass/base/_media.scss */
 img, media {
   max-width: 100%; }

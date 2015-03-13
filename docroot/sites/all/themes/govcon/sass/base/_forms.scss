@@ -34,3 +34,10 @@ form input:focus {
 form .description {
   color: #666;
 }
+
+/* Special forms */
+form.user-login {
+  input[type=text], input[type=password] {
+    max-width: 400px;
+  }
+}
