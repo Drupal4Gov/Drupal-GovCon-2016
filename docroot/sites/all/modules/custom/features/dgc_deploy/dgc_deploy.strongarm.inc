@@ -64,7 +64,7 @@ function dgc_deploy_strongarm() {
       'default' => array(
         'status' => 1,
         'default' => 1,
-        'choice' => 0,
+        'choice' => 1,
       ),
       'teaser' => array(
         'status' => 0,
