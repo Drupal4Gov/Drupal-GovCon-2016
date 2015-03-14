@@ -136,7 +136,12 @@ function dgc_deploy_panelizer_defaults() {
     $pane->subtype = 'cod_news-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'items_per_page' => '3',
+      'arguments' => array(
+        'gid' => '',
+      ),
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,

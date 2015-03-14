@@ -68,6 +68,19 @@ function dgc_deploy_strongarm_alter(&$data) {
  * Implements hook_views_default_views_alter().
  */
 function dgc_deploy_views_default_views_alter(&$data) {
+  if (isset($data['cod_news'])) {
+    $data['cod_news']->display['panel_pane_1']->display_options['allow'] = array(
+      'use_pager' => 0,
+      'items_per_page' => 'items_per_page',
+      'offset' => 0,
+      'link_to_view' => 0,
+      'more_link' => 0,
+      'path_override' => 0,
+      'title_override' => 0,
+      'exposed_form' => 0,
+      'fields_override' => 0,
+    ); /* WAS: '' */
+  }
   if (isset($data['cod_session_tracks'])) {
     $data['cod_session_tracks']->display['panel_pane_2'] = unserialize('O:13:"views_display":7:{s:15:"display_options";a:8:{s:5:"query";a:2:{s:4:"type";s:11:"views_query";s:7:"options";a:0:{}}s:8:"defaults";a:5:{s:12:"style_plugin";b:0;s:13:"style_options";b:0;s:10:"row_plugin";b:0;s:11:"row_options";b:0;s:6:"fields";b:0;}s:12:"style_plugin";s:7:"default";s:10:"row_plugin";s:6:"fields";s:6:"fields";a:1:{s:4:"name";a:6:{s:2:"id";s:4:"name";s:5:"table";s:18:"taxonomy_term_data";s:5:"field";s:4:"name";s:5:"label";s:0:"";s:5:"alter";a:2:{s:13:"word_boundary";b:0;s:8:"ellipsis";b:0;}s:16:"link_to_taxonomy";b:1;}}s:10:"pane_title";s:20:"Event Session Tracks";s:5:"allow";a:9:{s:9:"use_pager";i:0;s:14:"items_per_page";i:0;s:6:"offset";i:0;s:12:"link_to_view";i:0;s:9:"more_link";i:0;s:13:"path_override";i:0;s:14:"title_override";s:14:"title_override";s:12:"exposed_form";i:0;s:15:"fields_override";i:0;}s:14:"argument_input";a:1:{s:12:"machine_name";a:6:{s:4:"type";s:4:"user";s:7:"context";s:21:"entity:comment.author";s:16:"context_optional";i:0;s:5:"panel";s:1:"0";s:5:"fixed";s:0:"";s:5:"label";s:33:"Taxonomy vocabulary: Machine name";}}}s:8:"db_table";s:13:"views_display";s:3:"vid";i:0;s:2:"id";s:12:"panel_pane_2";s:13:"display_title";s:12:"Content pane";s:14:"display_plugin";s:10:"panel_pane";s:8:"position";i:0;}'); /* WAS: '' */
   }
