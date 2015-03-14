@@ -10,6 +10,7 @@ dependencies[] = cod_news
 dependencies[] = cod_registration_pages
 dependencies[] = cod_session
 dependencies[] = ctools
+dependencies[] = dgc_extras
 dependencies[] = features
 dependencies[] = features_override
 dependencies[] = logintoboggan

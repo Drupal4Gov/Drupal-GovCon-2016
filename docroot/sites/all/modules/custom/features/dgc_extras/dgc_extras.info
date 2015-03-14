@@ -1,0 +1,10 @@
+name = Drupal GovCon Extras
+description = Extra stuff for Drupal GovCon on top of COD
+core = 7.x
+package = DGC
+version = 7.x-1.0-beta1
+project = dgc_extras
+dependencies[] = features
+dependencies[] = list
+features[features_api][] = api:2
+features[field_base][] = field_government_employee

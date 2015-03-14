@@ -146,3 +146,11 @@ function dgc_deploy_update_7008() {
   ->condition('theme', $default_theme)
   ->execute();
 }
+
+/**
+ * Enable dgc_extras feature module
+ */
+function dgc_deploy_update_7009() {
+  module_enable(array('dgc_extras'));
+}
+
