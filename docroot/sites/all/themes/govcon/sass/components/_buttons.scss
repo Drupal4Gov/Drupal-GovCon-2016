@@ -21,7 +21,9 @@ input[type=submit], button, .button {
 /* big buttons */
 .form-actions input[type=submit], 
 .ticket-field-formatter-view-form input[type=submit], 
-.exposed-filters input[type=submit].form-submit {
+.exposed-filters input[type=submit].form-submit,
+.ticket-register-form input[type=submit],
+.pane-node-field-event-tickets input[type=submit] {
 	text-transform: uppercase;
 	padding: 0.5em;
 	font-size: 1rem;

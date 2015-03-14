@@ -132,25 +132,31 @@ input[type=submit], button, .button {
 /* line 22, ../sass/components/_buttons.scss */
 .form-actions input[type=submit],
 .ticket-field-formatter-view-form input[type=submit],
-.exposed-filters input[type=submit].form-submit {
+.exposed-filters input[type=submit].form-submit,
+.ticket-register-form input[type=submit],
+.pane-node-field-event-tickets input[type=submit] {
   text-transform: uppercase;
   padding: 0.5em;
   font-size: 1rem;
   background: #e02d3b; }
-  /* line 29, ../sass/components/_buttons.scss */
+  /* line 31, ../sass/components/_buttons.scss */
   .form-actions input[type=submit]:hover, .form-actions input[type=submit]:focus,
   .ticket-field-formatter-view-form input[type=submit]:hover,
   .ticket-field-formatter-view-form input[type=submit]:focus,
   .exposed-filters input[type=submit].form-submit:hover,
-  .exposed-filters input[type=submit].form-submit:focus {
+  .exposed-filters input[type=submit].form-submit:focus,
+  .ticket-register-form input[type=submit]:hover,
+  .ticket-register-form input[type=submit]:focus,
+  .pane-node-field-event-tickets input[type=submit]:hover,
+  .pane-node-field-event-tickets input[type=submit]:focus {
     background-color: #fff;
     color: #e02d3b; }
 
-/* line 34, ../sass/components/_buttons.scss */
+/* line 36, ../sass/components/_buttons.scss */
 .exposed-filters input[type=submit].form-submit {
   margin: 0.5em 1em; }
 
-/* line 37, ../sass/components/_buttons.scss */
+/* line 39, ../sass/components/_buttons.scss */
 .views-ui-display-tab-actions .ctools-button-processed li a,
 .views-ui-display-tab-actions .ctools-button-processed input {
   color: #095380; }
