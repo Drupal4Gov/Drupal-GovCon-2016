@@ -74,4 +74,6 @@ body.admin-menu.adminimal-menu.adminimal-frontend {
 @include breakpoint($tab, true) {
   body { padding: 20px; }
   .site-branding { top: 70px; }
+  .page-node-1 .site-branding { top: 148px; width: 200px; margin-left: -100px; }
+  .page-node-1 .site-branding__logo img { width: 200px; }
 }
