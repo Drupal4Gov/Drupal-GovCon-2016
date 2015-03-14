@@ -12,6 +12,8 @@ function dgc_deploy_features_override_default_overrides() {
   $overrides = array();
 
   // Exported overrides for: page_manager_pages
+  $overrides["page_manager_pages.event_registration.access|settings"] = NULL;
+  $overrides["page_manager_pages.event_registration.access|type"] = 'none';
   $overrides["page_manager_pages.event_registration.default_handlers|page_event_registration__panel_context_ef9c7edf-6676-4d39-b6ef-3c7ce98858b7"] = (object) array(
       'disabled' => FALSE,
       'api_version' => 1,

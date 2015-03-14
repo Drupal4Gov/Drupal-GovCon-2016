@@ -100,16 +100,22 @@ function dgc_deploy_strongarm() {
   $strongarm->name = 'user_mail_register_admin_created_body';
   $strongarm->value = 'Hi [user:name]. Welcome to [site:name]!
 
-Someone registered you for [site:name]. You may now log in by clicking this link or copying and pasting it to your browser:
-
+You\'ve been registered for [site:name] and have secured a ticket to the event. You may now log in by clicking this link or copying and pasting it to your browser:
 [user:one-time-login-url]
 
-This link can only be used once to log in and will lead you to a page where you can set your password, change your username if you choose and fill out your profile.
+This link can only be used once to log in and will lead you to a page where you can set your password, change your username if you choose, and fill out your profile.
 
-After setting your password, you will be able to log in at [site:login-url] in the future using:
-
+After setting your password, you will be able to log in at [site:login-url] in the future. Make sure to visit the website for updates leading up to the event.
 email or username: [user:name]
 password: Your password (that you set)
+
+Subscribe to our newsletter:
+http://eepurl.com/bbJASn
+
+Follow us on social media:
+https://twitter.com/drupalgovcon
+https://plus.google.com/+Drupal4Gov
+https://www.facebook.com/DrupalGovCon
 
 --  [site:name] team';
   $export['user_mail_register_admin_created_body'] = $strongarm;
@@ -118,7 +124,7 @@ password: Your password (that you set)
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'user_mail_register_admin_created_subject';
-  $strongarm->value = 'Your new account at [site:name]';
+  $strongarm->value = 'Your new account at [site:name] and ticket!';
   $export['user_mail_register_admin_created_subject'] = $strongarm;
 
   $strongarm = new stdClass();
