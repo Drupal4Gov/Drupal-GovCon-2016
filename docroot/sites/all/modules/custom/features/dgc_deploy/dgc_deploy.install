@@ -126,7 +126,7 @@ function dgc_deploy_update_7006() {
 function dgc_deploy_update_7007() {
   variable_set('site_frontpage', 'node');
   $urls = array(    
-    array('source' => '<front>', 'redirect' => 'node/1'),
+    array('source' => '', 'redirect' => 'node/1'),
     array('source' => 'user/register', 'redirect' => 'node/1/registration'),
   );
  
@@ -136,4 +136,23 @@ function dgc_deploy_update_7007() {
     redirect_object_prepare($redirect, $url);
     redirect_save($redirect);
   }
+}
+
+/**
+ * Enable system user-menu block to header region.
+ */
+function dgc_deploy_update_7008() {
+  // Enable user menu menu block and set title to <none>.
+  $default_theme = variable_get('theme_default', 'govcon');
+  db_update('block')
+    ->fields(array(
+      'region' => 'header',
+      'title' => '<none>',
+      'status' => '1',
+    )
+  )
+  ->condition('module', 'system')
+  ->condition('delta', 'user-menu')
+  ->condition('theme', $default_theme)
+  ->execute();
 }
