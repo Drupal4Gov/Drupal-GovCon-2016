@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the Drupal GovCon Extras feature.
  */
+
+include_once 'dgc_extras.features.inc';
