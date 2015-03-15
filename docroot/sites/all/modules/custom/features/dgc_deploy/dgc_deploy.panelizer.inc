@@ -93,7 +93,7 @@ function dgc_deploy_panelizer_defaults() {
     $display->content['new-b7f97f39-e53f-4356-8dea-f36c0e63ad6b'] = $pane;
     $display->panels['footer'][0] = 'new-b7f97f39-e53f-4356-8dea-f36c0e63ad6b';
     $pane = new stdClass();
-    $pane->pid = 'new-591a99fa-021a-4d45-8d38-05d2e39c82e9';
+    $pane->pid = 'new-d8a15e90-c296-4f34-8855-56168f2aabb9';
     $pane->panel = 'footer';
     $pane->type = 'views';
     $pane->subtype = 'cod_sponsors';
@@ -111,12 +111,13 @@ function dgc_deploy_panelizer_defaults() {
       'link_to_view' => 0,
       'args' => '',
       'url' => '',
-      'display' => 'block',
+      'display' => 'page',
       'context' => array(
-        0 => 'panelizer.field-sponsor-sponsorship-level',
+        0 => 'panelizer.nid',
       ),
       'override_title' => 0,
       'override_title_text' => '',
+      'override_title_heading' => 'h2',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -126,9 +127,9 @@ function dgc_deploy_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = '591a99fa-021a-4d45-8d38-05d2e39c82e9';
-    $display->content['new-591a99fa-021a-4d45-8d38-05d2e39c82e9'] = $pane;
-    $display->panels['footer'][1] = 'new-591a99fa-021a-4d45-8d38-05d2e39c82e9';
+    $pane->uuid = 'd8a15e90-c296-4f34-8855-56168f2aabb9';
+    $display->content['new-d8a15e90-c296-4f34-8855-56168f2aabb9'] = $pane;
+    $display->panels['footer'][1] = 'new-d8a15e90-c296-4f34-8855-56168f2aabb9';
     $pane = new stdClass();
     $pane->pid = 'new-4bc6da4d-dc2c-490f-bc69-4b740e4a4c98';
     $pane->panel = 'left_content';
