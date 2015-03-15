@@ -96,7 +96,7 @@ ul.tier-two {
 .menu-toggle {
 	margin-top: 10px;
 	margin-left: 10px;
-	background: $texture $red;
+	background: $texture $blue;
 	text-align: center;
 	height: 40px;
 	line-height: 40px;
@@ -128,12 +128,12 @@ ul.tier-two {
 			top: 62px;
 			right: 10px;
       a { 
-      	padding: 10px 10px 14px;
-      	font-size: .9em;
+      	padding: 6px 6px 8px;
+      	font-size: .8em;
       	background: url(../images/ticket.svg) no-repeat top left;
 			  background-size: contain;
 			  position: relative;
-			  top: 4px;
+			  top: 6px;
 			  display: inline-block;
 			  color: #fff;
 			  -webkit-transform: rotate(-10deg);
@@ -227,7 +227,7 @@ ul.tier-two {
 			position: relative;
 			top: auto;
 			right: auto;
-			a { font-size: 1em; }
+			a { font-size: 1em; padding: 10px 10px 14px; }
 		}
 }
 
