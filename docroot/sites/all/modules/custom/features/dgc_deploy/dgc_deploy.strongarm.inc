@@ -275,6 +275,7 @@ You\'ve been registered for [site:name] and have secured a ticket to the event. 
 This link can only be used once to log in and will lead you to a page where you can set your password, change your username if you choose, and fill out your profile.
 
 After setting your password, you will be able to log in at [site:login-url] in the future. Make sure to visit the website for updates leading up to the event.
+
 email or username: [user:name]
 password: Your password (that you set)
 
