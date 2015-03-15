@@ -90,8 +90,9 @@ DirectoryIndex index.php index.html index.htm
   # (http://example.com/... will be redirected to http://www.example.com/...)
   # uncomment the following:
   # RewriteCond %{HTTP_HOST} .
-  # RewriteCond %{HTTP_HOST} !^www\. [NC]
-  # RewriteRule ^ http%{ENV:protossl}://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  RewriteCond %{HTTP_HOST} ^(www.|)(drupalgovcon.org) [NC]
+  RewriteCond %{HTTP_HOST} !^www\. [NC]
+  RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
   #
   # To redirect all users to access the site WITHOUT the 'www.' prefix,
   # (http://www.example.com/... will be redirected to http://example.com/...)
@@ -140,4 +141,13 @@ DirectoryIndex index.php index.html index.htm
       Header append Vary Accept-Encoding
     </FilesMatch>
   </IfModule>
+
+  # Custom redirects for old hostnames
+  RewriteCond %{HTTP_HOST} ^(www.|)(capitalcamp|drupalgovdays|drupalforgov|capitalcampandgovdays)(.org|.com) [NC]
+  RewriteRule ^ https://drupalgovcon.org/ [L,R=301]
+
+  # Redirect all requests to https
+  RewriteCond %{HTTP_HOST} ^(www.|)(drupalgovcon.org) [NC]
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://www.drupalgovcon.org%{REQUEST_URI} [L,R=301]
 </IfModule>
