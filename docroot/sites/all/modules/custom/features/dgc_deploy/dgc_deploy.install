@@ -154,3 +154,9 @@ function dgc_deploy_update_7009() {
   module_enable(array('dgc_extras'));
 }
 
+/**
+ * Enable googleanalytics module
+ */
+function dgc_deploy_update_7010() {
+  module_enable(array('googleanalytics'));
+}
