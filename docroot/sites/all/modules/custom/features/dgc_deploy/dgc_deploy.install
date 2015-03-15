@@ -160,3 +160,10 @@ function dgc_deploy_update_7009() {
 function dgc_deploy_update_7010() {
   module_enable(array('googleanalytics'));
 }
+
+/**
+ * Enable mollom module
+ */
+function dgc_deploy_update_7011() {
+  module_enable(array('mollom'));
+}
