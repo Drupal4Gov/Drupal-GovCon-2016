@@ -11,6 +11,9 @@ function dgc_deploy_features_override_default_overrides() {
   // This code is only used for UI in features. Exported alters hooks do the magic.
   $overrides = array();
 
+  // Exported overrides for: field_base
+  $overrides["field_base.field_ticket_attendee_listing.field_permissions|type"] = 0;
+
   // Exported overrides for: filter
   $overrides["filter.filtered_html.filters|filter_html|settings|allowed_html"] = '<a> <em> <strong> <u> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <h2> <h3> <h4> <h5> <h6>  <p> <br> <img> <strike>';
 

@@ -17,6 +17,15 @@ function dgc_deploy_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_field_default_field_bases_alter().
+ */
+function dgc_deploy_field_default_field_bases_alter(&$data) {
+  if (isset($data['field_ticket_attendee_listing'])) {
+    $data['field_ticket_attendee_listing']['field_permissions']['type'] = 0; /* WAS: 1 */
+  }
+}
+
+/**
  * Implements hook_filter_default_formats_alter().
  */
 function dgc_deploy_filter_default_formats_alter(&$data) {
