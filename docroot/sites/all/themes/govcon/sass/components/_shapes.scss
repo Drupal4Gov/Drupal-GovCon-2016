@@ -32,9 +32,9 @@
 
   .header-bg { height: 250px; }
   .header-bg--cutout { top: 120px; }
-  .page-node-1 .header-bg--cutout { top: 240px; }
-  .page-node-1 .header-bg { height: 400px; }
-  .page-node-1 .header-bg--buildings {
+  .page-node-1.node-type-event .header-bg--cutout { top: 240px; }
+  .page-node-1.node-type-event .header-bg { height: 400px; }
+  .page-node-1.node-type-event .header-bg--buildings {
     display: block;
     background: url(../images/buildings.png) center center no-repeat transparent;
     background-size: 667px 201px;

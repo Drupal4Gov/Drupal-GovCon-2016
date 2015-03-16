@@ -70,7 +70,7 @@ body.admin-menu.adminimal-menu.adminimal-frontend {
     }
 }
 /* Homepage */
-.page-node-1 {
+.page-node-1.node-type-event {
   .breadcrumb { display: none; }
   .l-content > h1 { @include hide-text; }
   .pane-node-body {
@@ -86,6 +86,6 @@ body.admin-menu.adminimal-menu.adminimal-frontend {
 @include breakpoint($tab, true) {
   body { padding: 20px; }
   .site-branding { top: 70px; }
-  .page-node-1 .site-branding { top: 148px; width: 200px; margin-left: -100px; }
-  .page-node-1 .site-branding__logo img { width: 200px; }
+  .page-node-1.node-type-event .site-branding { top: 148px; width: 200px; margin-left: -100px; }
+  .page-node-1.node-type-event .site-branding__logo img { width: 200px; }
 }

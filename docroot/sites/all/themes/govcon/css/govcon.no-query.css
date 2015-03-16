@@ -699,15 +699,15 @@ li.menu-item a:hover, li.menu-item a.active {
   top: 120px; }
 
 /* line 35, ../sass/components/_shapes.scss */
-.page-node-1 .header-bg--cutout {
+.page-node-1.node-type-event .header-bg--cutout {
   top: 240px; }
 
 /* line 36, ../sass/components/_shapes.scss */
-.page-node-1 .header-bg {
+.page-node-1.node-type-event .header-bg {
   height: 400px; }
 
 /* line 37, ../sass/components/_shapes.scss */
-.page-node-1 .header-bg--buildings {
+.page-node-1.node-type-event .header-bg--buildings {
   display: block;
   background: url(../images/buildings.png) center center no-repeat transparent;
   background-size: 667px 201px;
@@ -892,10 +892,10 @@ body.admin-menu.adminimal-menu.adminimal-frontend {
 
 /* Homepage */
 /* line 74, ../sass/govcon.styles.scss */
-.page-node-1 .breadcrumb {
+.page-node-1.node-type-event .breadcrumb {
   display: none; }
 /* line 75, ../sass/govcon.styles.scss */
-.page-node-1 .l-content > h1 {
+.page-node-1.node-type-event .l-content > h1 {
   overflow: hidden;
   text-indent: -9000px;
   display: block;
@@ -903,21 +903,21 @@ body.admin-menu.adminimal-menu.adminimal-frontend {
   margin: 0;
   line-height: 0; }
 /* line 76, ../sass/govcon.styles.scss */
-.page-node-1 .pane-node-body {
+.page-node-1.node-type-event .pane-node-body {
   text-align: center;
   line-height: 1; }
   /* line 79, ../sass/govcon.styles.scss */
-  .page-node-1 .pane-node-body h1 {
+  .page-node-1.node-type-event .pane-node-body h1 {
     color: #e02d3b;
     margin: 0; }
   /* line 80, ../sass/govcon.styles.scss */
-  .page-node-1 .pane-node-body h3 {
+  .page-node-1.node-type-event .pane-node-body h3 {
     color: #095380;
     font-size: 1.6em;
     letter-spacing: 0.2;
     margin: 0.5em 0; }
   /* line 81, ../sass/govcon.styles.scss */
-  .page-node-1 .pane-node-body h4 {
+  .page-node-1.node-type-event .pane-node-body h4 {
     color: #095380;
     font-size: 1.2em;
     text-transform: uppercase;
@@ -933,13 +933,13 @@ body {
   top: 70px; }
 
 /* line 89, ../sass/govcon.styles.scss */
-.page-node-1 .site-branding {
+.page-node-1.node-type-event .site-branding {
   top: 148px;
   width: 200px;
   margin-left: -100px; }
 
 /* line 90, ../sass/govcon.styles.scss */
-.page-node-1 .site-branding__logo img {
+.page-node-1.node-type-event .site-branding__logo img {
   width: 200px; }
 
 /*# sourceMappingURL=govcon.no-query.css.map */
