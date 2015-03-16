@@ -867,20 +867,30 @@ li.menu-item a:hover, li.menu-item a.active {
   padding: 10px; }
 /* line 14, ../sass/components/_sponsors.scss */
 .view-cod-sponsors ul li.views-row, .view-cod-sponsors .sponsor {
-  display: inline-block;
+  display: block;
   list-style: none;
-  margin: 24px; }
-/* line 19, ../sass/components/_sponsors.scss */
+  margin: 28px auto;
+  text-align: center; }
+/* line 20, ../sass/components/_sponsors.scss */
 .view-cod-sponsors .views-field-field-sponsor-logo img, .view-cod-sponsors .sponsor img {
   width: auto;
   height: auto;
-  max-height: 130px;
-  max-width: 220px; }
+  max-height: 120px;
+  max-width: 200px; }
 
-/* line 27, ../sass/components/_sponsors.scss */
+/* line 28, ../sass/components/_sponsors.scss */
 .pane-cod-sponsors-panel-pane-2 {
   display: none; }
 
+@media (min-width: 44em) {
+  /* line 34, ../sass/components/_sponsors.scss */
+  .view-cod-sponsors ul li.views-row, .view-cod-sponsors .sponsor {
+    margin: 24px;
+    display: inline-block; }
+  /* line 38, ../sass/components/_sponsors.scss */
+  .view-cod-sponsors .views-field-field-sponsor-logo img, .view-cod-sponsors .sponsor img {
+    max-height: 130px;
+    max-width: 220px; } }
 /* Tabs */
 /* line 3, ../sass/components/_tabs.scss */
 .not-logged-in ul.tabs--primary {
