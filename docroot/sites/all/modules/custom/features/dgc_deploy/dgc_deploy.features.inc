@@ -58,9 +58,24 @@ function dgc_deploy_default_page_manager_pages_alter(&$data) {
 }
 
 /**
+ * Implements hook_panelizer_defaults_override_alter().
+ */
+function dgc_deploy_panelizer_defaults_override_alter(&$data) {
+  if (isset($data['node:bof_session:default:default'])) {
+    $data['node:bof_session:default:default']->pipeline = 'standard'; /* WAS: 'ipe' */
+  }
+  if (isset($data['node:session:default:default'])) {
+    $data['node:session:default:default']->link_to_entity = FALSE; /* WAS: TRUE */
+  }
+}
+
+/**
  * Implements hook_user_default_permissions_alter().
  */
 function dgc_deploy_user_default_permissions_alter(&$data) {
+  if (isset($data['view schedule'])) {
+    $data['view schedule']['roles']['anonymous user'] = 'anonymous user'; /* WAS: '' */
+  }
   if (isset($data['view sponsors'])) {
     $data['view sponsors']['roles']['anonymous user'] = 'anonymous user'; /* WAS: '' */
   }

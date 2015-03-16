@@ -46,7 +46,12 @@ function dgc_deploy_features_override_default_overrides() {
     );
   $overrides["page_manager_pages.event_registration.default_handlers|page_event_registration_panel_context|weight"] = -29;
 
+  // Exported overrides for: panelizer_defaults
+  $overrides["panelizer_defaults.node:bof_session:default:default.pipeline"] = 'standard';
+  $overrides["panelizer_defaults.node:session:default:default.link_to_entity"] = FALSE;
+
   // Exported overrides for: user_permission
+  $overrides["user_permission.view schedule.roles|anonymous user"] = 'anonymous user';
   $overrides["user_permission.view sponsors.roles|anonymous user"] = 'anonymous user';
 
   // Exported overrides for: variable
