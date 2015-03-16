@@ -26,6 +26,11 @@ input[type=text], input[type=password], textarea {
   line-height: 2em;
   @include border-radius(2px);
 }
+input[type=text].form-autocomplete {
+  padding: 2px;
+  height: auto;
+  line-height: 1;
+}
 
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   &:focus { -webkit-box-shadow: 0 0 0px 1000px white inset; }
@@ -55,4 +60,20 @@ form.user-login {
   background: transparent;
 }
 .form-type-select {
+}
+/* Autocomplete */
+form .field-multiple-table td.field-multiple-drag { width: 30px; padding-right: 0; }
+form .field-multiple-table td.field-multiple-drag a.tabledrag-handle { padding-right: 0.5em; }
+.draggable a.tabledrag-handle {
+  cursor: move;
+  float: left;
+  height: 1.7em;
+  overflow: hidden;
+  text-decoration: none;
+}
+a.tabledrag-handle .handle {
+  background-position: 8px 8px;
+  height: 26px;
+  width: 26px;
+  margin: 0;
 }

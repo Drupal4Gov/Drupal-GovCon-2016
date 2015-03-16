@@ -1,7 +1,7 @@
 table {
-	width: 100%;
+	width: 99.9%;
 	@include box-shadow(0 0 0 2px $gold);
-	margin: 4px;
+	margin: 2px;
 	th {
 		background: lighten($gold,20%);
 		padding: 0.5em;
