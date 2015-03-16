@@ -187,7 +187,6 @@ function dgc_deploy_views_default_views_alter(&$data) {
         'display_type' => 1,
         'enable_select_all_pages' => 1,
         'force_single' => 0,
-        'entity_load_capacity' => 10,
       ),
       'vbo_operations' => array(
         'action::views_bulk_operations_delete_item' => array(
@@ -379,9 +378,6 @@ function dgc_deploy_views_default_views_alter(&$data) {
         ),
       ),
     ); /* WAS: '' */
-    $data['ticket_registration']->display['default']->display_options['pager']['options']['id'] = 0; /* WAS: '' */
-    $data['ticket_registration']->display['default']->display_options['pager']['options']['offset'] = 0; /* WAS: '' */
-    $data['ticket_registration']->display['default']->display_options['pager']['options']['quantity'] = 9; /* WAS: '' */
     $data['ticket_registration']->display['default']->display_options['relationships']['user_uid'] = array(
       'id' => 'user_uid',
       'table' => 'ticket_registration',
