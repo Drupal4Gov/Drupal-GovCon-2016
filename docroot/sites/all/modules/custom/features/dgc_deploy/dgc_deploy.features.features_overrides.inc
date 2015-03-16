@@ -78,6 +78,328 @@ function dgc_deploy_features_override_default_overrides() {
     'type' => 'link_absolute',
   );
   $overrides["views_view.ticket_attendee.display|panel_pane_1"] = unserialize('O:13:"views_display":7:{s:15:"display_options";a:6:{s:5:"query";a:2:{s:4:"type";s:11:"views_query";s:7:"options";a:0:{}}s:8:"defaults";a:2:{s:5:"empty";b:0;s:6:"fields";b:0;}s:5:"empty";a:1:{s:4:"area";a:6:{s:2:"id";s:4:"area";s:5:"table";s:5:"views";s:5:"field";s:4:"area";s:5:"empty";b:1;s:7:"content";s:27:"You haven\'t registered yet!";s:6:"format";s:13:"filtered_html";}}s:6:"fields";a:4:{s:6:"entity";a:5:{s:2:"id";s:6:"entity";s:5:"table";s:11:"ticket_type";s:5:"field";s:6:"entity";s:12:"relationship";s:16:"ticket_type_ttid";s:5:"label";s:5:"Event";}s:17:"ticket_type_label";a:4:{s:2:"id";s:17:"ticket_type_label";s:5:"table";s:28:"field_data_ticket_type_label";s:5:"field";s:17:"ticket_type_label";s:12:"relationship";s:16:"ticket_type_ttid";}s:4:"name";a:5:{s:2:"id";s:4:"name";s:5:"table";s:5:"users";s:5:"field";s:4:"name";s:12:"relationship";s:10:"author_uid";s:5:"label";s:10:"Registrant";}s:7:"created";a:4:{s:2:"id";s:7:"created";s:5:"table";s:19:"ticket_registration";s:5:"field";s:7:"created";s:11:"date_format";s:4:"long";}}s:5:"allow";a:9:{s:9:"use_pager";i:0;s:14:"items_per_page";i:0;s:6:"offset";i:0;s:12:"link_to_view";i:0;s:9:"more_link";i:0;s:13:"path_override";i:0;s:14:"title_override";s:14:"title_override";s:12:"exposed_form";i:0;s:15:"fields_override";i:0;}s:14:"argument_input";a:1:{s:8:"user_uid";a:6:{s:4:"type";s:7:"context";s:7:"context";s:15:"entity:user.uid";s:16:"context_optional";i:0;s:5:"panel";s:1:"0";s:5:"fixed";s:0:"";s:5:"label";s:29:"Ticket registration: User_uid";}}}s:8:"db_table";s:13:"views_display";s:3:"vid";i:0;s:2:"id";s:12:"panel_pane_1";s:13:"display_title";s:12:"Content pane";s:14:"display_plugin";s:10:"panel_pane";s:8:"position";i:0;}');
+  $overrides["views_view.ticket_registration.display|default|display_options|exposed_form|options"] = array(
+    'reset_button' => TRUE,
+  );
+  $overrides["views_view.ticket_registration.display|default|display_options|fields|field_profile_first"] = array(
+    'id' => 'field_profile_first',
+    'table' => 'field_data_field_profile_first',
+    'field' => 'field_profile_first',
+    'relationship' => 'author_uid',
+    'ui_name' => 'Registrant first name',
+    'label' => '',
+    'element_label_colon' => FALSE,
+  );
+  $overrides["views_view.ticket_registration.display|default|display_options|fields|field_profile_first_1"] = array(
+    'id' => 'field_profile_first_1',
+    'table' => 'field_data_field_profile_first',
+    'field' => 'field_profile_first',
+    'relationship' => 'user_uid',
+    'label' => '',
+    'exclude' => TRUE,
+    'element_label_colon' => FALSE,
+  );
+  $overrides["views_view.ticket_registration.display|default|display_options|fields|field_profile_last"] = array(
+    'id' => 'field_profile_last',
+    'table' => 'field_data_field_profile_last',
+    'field' => 'field_profile_last',
+    'relationship' => 'author_uid',
+    'ui_name' => 'Registrant last name',
+    'label' => '',
+    'element_label_colon' => FALSE,
+  );
+  $overrides["views_view.ticket_registration.display|default|display_options|fields|field_profile_last_1"] = array(
+    'id' => 'field_profile_last_1',
+    'table' => 'field_data_field_profile_last',
+    'field' => 'field_profile_last',
+    'relationship' => 'user_uid',
+    'label' => '',
+    'exclude' => TRUE,
+    'element_label_colon' => FALSE,
+  );
+  $overrides["views_view.ticket_registration.display|default|display_options|fields|mail_1"] = array(
+    'id' => 'mail_1',
+    'table' => 'users',
+    'field' => 'mail',
+    'relationship' => 'author_uid',
+    'ui_name' => 'Registrant e-mail mailto link',
+    'label' => 'Registrant',
+    'alter' => array(
+      'alter_text' => TRUE,
+      'text' => '([mail_1])',
+    ),
+    'element_label_colon' => FALSE,
+  );
+  $overrides["views_view.ticket_registration.display|default|display_options|fields|mail|label"] = 'Attendee E-mail';
+  $overrides["views_view.ticket_registration.display|default|display_options|fields|mail|relationship"] = 'user_uid';
+  $overrides["views_view.ticket_registration.display|default|display_options|fields|mail|ui_name"] = 'Attendee e-mail mailto link';
+  $overrides["views_view.ticket_registration.display|default|display_options|fields|name|alter"] = array(
+    'alter_text' => TRUE,
+    'text' => '[field_profile_first_1] [field_profile_last_1]',
+    'make_link' => TRUE,
+  );
+  $overrides["views_view.ticket_registration.display|default|display_options|fields|name|label"] = 'Attendee';
+  $overrides["views_view.ticket_registration.display|default|display_options|fields|name|link_to_user"] = FALSE;
+  $overrides["views_view.ticket_registration.display|default|display_options|fields|name|relationship"] = 'user_uid';
+  $overrides["views_view.ticket_registration.display|default|display_options|fields|name|ui_name"] = 'Attendee first+last name linked to user entity';
+  $overrides["views_view.ticket_registration.display|default|display_options|fields|views_bulk_operations"] = array(
+    'id' => 'views_bulk_operations',
+    'table' => 'ticket_registration',
+    'field' => 'views_bulk_operations',
+    'label' => 'Select',
+    'element_label_colon' => FALSE,
+    'vbo_settings' => array(
+      'display_type' => 1,
+      'enable_select_all_pages' => 1,
+      'force_single' => 0,
+    ),
+    'vbo_operations' => array(
+      'action::views_bulk_operations_delete_item' => array(
+        'selected' => 1,
+        'postpone_processing' => 0,
+        'skip_confirmation' => 0,
+        'override_label' => 1,
+        'label' => 'Delete ticket',
+      ),
+      'action::views_bulk_operations_delete_revision' => array(
+        'selected' => 0,
+        'postpone_processing' => 0,
+        'skip_confirmation' => 0,
+        'override_label' => 0,
+        'label' => '',
+      ),
+      'action::views_bulk_operations_script_action' => array(
+        'selected' => 0,
+        'postpone_processing' => 0,
+        'skip_confirmation' => 0,
+        'override_label' => 0,
+        'label' => '',
+      ),
+      'action::views_bulk_operations_modify_action' => array(
+        'selected' => 0,
+        'postpone_processing' => 0,
+        'skip_confirmation' => 0,
+        'override_label' => 0,
+        'label' => '',
+        'settings' => array(
+          'show_all_tokens' => 1,
+          'display_values' => array(
+            '_all_' => '_all_',
+          ),
+        ),
+      ),
+      'action::views_bulk_operations_argument_selector_action' => array(
+        'selected' => 0,
+        'skip_confirmation' => 0,
+        'override_label' => 0,
+        'label' => '',
+        'settings' => array(
+          'url' => '',
+        ),
+      ),
+      'action::system_send_email_action' => array(
+        'selected' => 0,
+        'postpone_processing' => 0,
+        'skip_confirmation' => 0,
+        'override_label' => 0,
+        'label' => '',
+      ),
+      'action::panelizer_set_status_action' => array(
+        'selected' => 0,
+        'postpone_processing' => 0,
+        'skip_confirmation' => 0,
+        'override_label' => 0,
+        'label' => '',
+      ),
+    ),
+  );
+  $overrides["views_view.ticket_registration.display|default|display_options|filters"] = array(
+    'field_dietary_needs_value' => array(
+      'id' => 'field_dietary_needs_value',
+      'table' => 'field_data_field_dietary_needs',
+      'field' => 'field_dietary_needs_value',
+      'relationship' => 'user_uid',
+      'ui_name' => 'Dietary needs',
+      'group' => 1,
+      'exposed' => TRUE,
+      'expose' => array(
+        'operator_id' => 'field_dietary_needs_value_op',
+        'label' => 'Dietary',
+        'operator' => 'field_dietary_needs_value_op',
+        'identifier' => 'a_dietary_needs',
+        'multiple' => TRUE,
+        'remember_roles' => array(
+          2 => 2,
+          1 => 0,
+          21 => 0,
+          11 => 0,
+          26 => 0,
+          31 => 0,
+          16 => 0,
+        ),
+      ),
+    ),
+    'field_government_employee_value' => array(
+      'id' => 'field_government_employee_value',
+      'table' => 'field_data_field_government_employee',
+      'field' => 'field_government_employee_value',
+      'relationship' => 'user_uid',
+      'ui_name' => 'Government employee checkbox',
+      'group' => 1,
+      'exposed' => TRUE,
+      'expose' => array(
+        'operator_id' => 'field_government_employee_value_op',
+        'label' => 'Govie?',
+        'operator' => 'field_government_employee_value_op',
+        'identifier' => 'govie',
+        'remember_roles' => array(
+          2 => 2,
+          1 => 0,
+          21 => 0,
+          11 => 0,
+          26 => 0,
+          31 => 0,
+          16 => 0,
+        ),
+      ),
+    ),
+    'field_t_shirt_size_value' => array(
+      'id' => 'field_t_shirt_size_value',
+      'table' => 'field_data_field_t_shirt_size',
+      'field' => 'field_t_shirt_size_value',
+      'relationship' => 'user_uid',
+      'ui_name' => 'T-shirt size',
+      'group' => 1,
+      'exposed' => TRUE,
+      'expose' => array(
+        'operator_id' => 'field_t_shirt_size_value_op',
+        'label' => 'T-shirt',
+        'operator' => 'field_t_shirt_size_value_op',
+        'identifier' => 'tshirt',
+        'multiple' => TRUE,
+        'remember_roles' => array(
+          2 => 2,
+          1 => 0,
+          21 => 0,
+          11 => 0,
+          26 => 0,
+          31 => 0,
+          16 => 0,
+        ),
+      ),
+    ),
+    'mail' => array(
+      'id' => 'mail',
+      'table' => 'users',
+      'field' => 'mail',
+      'relationship' => 'user_uid',
+      'ui_name' => 'E-mail',
+      'operator' => 'contains',
+      'group' => 1,
+      'exposed' => TRUE,
+      'expose' => array(
+        'operator_id' => 'mail_op',
+        'label' => 'Attendee e-mail',
+        'description' => 'Operator: contains',
+        'operator' => 'mail_op',
+        'identifier' => 'mail',
+        'remember_roles' => array(
+          2 => 2,
+          1 => 0,
+          21 => 0,
+          11 => 0,
+          26 => 0,
+          31 => 0,
+          16 => 0,
+        ),
+      ),
+    ),
+    'combine' => array(
+      'id' => 'combine',
+      'table' => 'views',
+      'field' => 'combine',
+      'ui_name' => 'Name combined',
+      'operator' => 'contains',
+      'exposed' => TRUE,
+      'expose' => array(
+        'operator_id' => 'combine_op',
+        'label' => 'Attendee Name',
+        'description' => 'Operator: contains',
+        'operator' => 'combine_op',
+        'identifier' => 'name',
+        'remember_roles' => array(
+          2 => 2,
+          1 => 0,
+          21 => 0,
+          11 => 0,
+          26 => 0,
+          31 => 0,
+          16 => 0,
+        ),
+      ),
+      'fields' => array(
+        'field_profile_first_1' => 'field_profile_first_1',
+        'field_profile_last_1' => 'field_profile_last_1',
+      ),
+    ),
+  );
+  $overrides["views_view.ticket_registration.display|default|display_options|relationships|user_uid"] = array(
+    'id' => 'user_uid',
+    'table' => 'ticket_registration',
+    'field' => 'user_uid',
+  );
+  $overrides["views_view.ticket_registration.display|default|display_options|style_options|columns|active"]["DELETED"] = TRUE;
+  $overrides["views_view.ticket_registration.display|default|display_options|style_options|columns|field_profile_first"] = 'mail_1';
+  $overrides["views_view.ticket_registration.display|default|display_options|style_options|columns|field_profile_last"] = 'mail_1';
+  $overrides["views_view.ticket_registration.display|default|display_options|style_options|columns|mail_1"] = 'mail_1';
+  $overrides["views_view.ticket_registration.display|default|display_options|style_options|columns|state"] = 'state';
+  $overrides["views_view.ticket_registration.display|default|display_options|style_options|info|active"]["DELETED"] = TRUE;
+  $overrides["views_view.ticket_registration.display|default|display_options|style_options|info|field_profile_first"] = array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  );
+  $overrides["views_view.ticket_registration.display|default|display_options|style_options|info|field_profile_last"] = array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  );
+  $overrides["views_view.ticket_registration.display|default|display_options|style_options|info|mail_1"] = array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => ' ',
+    'empty_column' => 0,
+  );
+  $overrides["views_view.ticket_registration.display|default|display_options|style_options|info|state"] = array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  );
+  $overrides["views_view.ticket_registration.display|default|display_options|use_ajax"] = TRUE;
+  $overrides["views_view.ticket_registration.display|panel_pane_1|display_options|argument_input"] = array(
+    'entity_id' => array(
+      'type' => 'context',
+      'context' => 'entity:node.nid',
+      'context_optional' => 0,
+      'panel' => 0,
+      'fixed' => '',
+      'label' => 'Ticket type: Entity ID',
+    ),
+  );
+  $overrides["views_view.ticket_registration.display|panel_pane_1|display_options|header"]["DELETED"] = TRUE;
+  $overrides["views_view.ticket_registration.display|panel_pane_1|display_options|inherit_panels_path"] = 1;
+  $overrides["views_view.ticket_registration.display|panel_pane_1|display_options|relationships|user_uid"] = array(
+    'id' => 'user_uid',
+    'table' => 'ticket_registration',
+    'field' => 'user_uid',
+  );
   $overrides["views_view.ticket_user.display|panel_pane_1"] = unserialize('O:13:"views_display":7:{s:15:"display_options";a:4:{s:5:"query";a:2:{s:4:"type";s:11:"views_query";s:7:"options";a:0:{}}s:8:"defaults";a:1:{s:5:"empty";b:0;}s:5:"allow";a:9:{s:9:"use_pager";i:0;s:14:"items_per_page";i:0;s:6:"offset";i:0;s:12:"link_to_view";i:0;s:9:"more_link";i:0;s:13:"path_override";i:0;s:14:"title_override";s:14:"title_override";s:12:"exposed_form";i:0;s:15:"fields_override";i:0;}s:14:"argument_input";a:1:{s:10:"author_uid";a:6:{s:4:"type";s:7:"context";s:7:"context";s:15:"entity:user.uid";s:16:"context_optional";i:0;s:5:"panel";s:1:"0";s:5:"fixed";s:0:"";s:5:"label";s:31:"Ticket registration: Author_uid";}}}s:8:"db_table";s:13:"views_display";s:3:"vid";i:0;s:2:"id";s:12:"panel_pane_1";s:13:"display_title";s:12:"Content pane";s:14:"display_plugin";s:10:"panel_pane";s:8:"position";i:0;}');
 
  return $overrides;
