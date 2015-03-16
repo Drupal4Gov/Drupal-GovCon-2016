@@ -13,13 +13,13 @@
 }
 
 /* Special blocks */
-#block-block-2 {
+#block-block-6 {
 	display:none;
 }
 
 @include breakpoint($tab, true) {
 	/* Special blocks */
-	#block-block-2 {
+	#block-block-6 {
 		h2 { @include hide-text; }
 		position: absolute;
 		left: -20px;
@@ -57,7 +57,7 @@
 	}
 }
 @include breakpoint($desk, true) {
-	#block-block-2 {
+	#block-block-6 {
 		top: -10px;
 	}
 	.dgc-callout {

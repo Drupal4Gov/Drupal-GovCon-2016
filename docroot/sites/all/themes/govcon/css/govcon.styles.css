@@ -102,19 +102,19 @@ a:hover, a:focus {
     float: left; } }
 /* Special blocks */
 /* line 16, ../sass/components/_blocks.scss */
-#block-block-2 {
+#block-block-6 {
   display: none; }
 
 @media (min-width: 44em) {
   /* Special blocks */
   /* line 22, ../sass/components/_blocks.scss */
-  #block-block-2 {
+  #block-block-6 {
     position: absolute;
     left: -20px;
     top: 10px;
     display: block; }
     /* line 23, ../sass/components/_blocks.scss */
-    #block-block-2 h2 {
+    #block-block-6 h2 {
       overflow: hidden;
       text-indent: -9000px;
       display: block;
@@ -160,7 +160,7 @@ a:hover, a:focus {
       color: #53868d; } }
 @media (min-width: 70em) {
   /* line 60, ../sass/components/_blocks.scss */
-  #block-block-2 {
+  #block-block-6 {
     top: -10px; }
 
   /* line 63, ../sass/components/_blocks.scss */
