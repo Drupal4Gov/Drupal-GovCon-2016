@@ -280,7 +280,7 @@ function dgc_deploy_panelizer_defaults() {
     $pane->panel = 'center';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:og_group_ref';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'above',
@@ -333,7 +333,7 @@ function dgc_deploy_panelizer_defaults() {
     $display->content['new-8a48e6b6-35f3-4bf3-a996-091be3ee9448'] = $pane;
     $display->panels['center'][3] = 'new-8a48e6b6-35f3-4bf3-a996-091be3ee9448';
   $display->hide_title = PANELS_TITLE_NONE;
-  $display->title_pane = 'new-e77d7150-2ab2-44e6-8cee-bf74af88c219';
+  $display->title_pane = '0';
   $panelizer->display = $display;
   $export['node:page:default:default'] = $panelizer;
 
