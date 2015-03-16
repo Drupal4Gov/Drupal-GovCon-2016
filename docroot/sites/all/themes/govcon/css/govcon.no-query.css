@@ -129,24 +129,26 @@ h1 {
     /* line 31, ../sass/components/_attendees.scss */
     .view-cod-community-attendees .views-field-picture img {
       position: relative;
-      z-index: 2; }
-  /* line 36, ../sass/components/_attendees.scss */
+      z-index: 2;
+      width: 100%;
+      height: auto; }
+  /* line 38, ../sass/components/_attendees.scss */
   .view-cod-community-attendees .views-field-field-profile-first,
   .view-cod-community-attendees .views-field-field-profile-last {
     display: inline; }
-    /* line 39, ../sass/components/_attendees.scss */
+    /* line 41, ../sass/components/_attendees.scss */
     .view-cod-community-attendees .views-field-field-profile-first div,
     .view-cod-community-attendees .views-field-field-profile-last div {
       display: inline; }
 
-/* line 44, ../sass/components/_attendees.scss */
+/* line 46, ../sass/components/_attendees.scss */
 .view-cod-community-attendees {
   font-size: 1em; }
-  /* line 46, ../sass/components/_attendees.scss */
+  /* line 48, ../sass/components/_attendees.scss */
   .view-cod-community-attendees ul li.views-row {
     width: 180px;
     height: 260px; }
-  /* line 47, ../sass/components/_attendees.scss */
+  /* line 49, ../sass/components/_attendees.scss */
   .view-cod-community-attendees .views-field-picture {
     width: 160px;
     height: 160px; }
