@@ -17,6 +17,15 @@ function dgc_deploy_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_filter_default_formats_alter().
+ */
+function dgc_deploy_filter_default_formats_alter(&$data) {
+  if (isset($data['filtered_html'])) {
+    $data['filtered_html']['filters']['filter_html']['settings']['allowed_html'] = '<a> <em> <strong> <u> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <h2> <h3> <h4> <h5> <h6>  <p> <br> <img> <strike>'; /* WAS: '<a> <em> <strong> <u> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <h4> <h5> <h6>  <p> <br> <img> <strike>' */
+  }
+}
+
+/**
  * Implements hook_default_page_manager_pages_alter().
  */
 function dgc_deploy_default_page_manager_pages_alter(&$data) {

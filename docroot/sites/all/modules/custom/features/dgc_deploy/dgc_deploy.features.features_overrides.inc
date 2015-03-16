@@ -11,6 +11,9 @@ function dgc_deploy_features_override_default_overrides() {
   // This code is only used for UI in features. Exported alters hooks do the magic.
   $overrides = array();
 
+  // Exported overrides for: filter
+  $overrides["filter.filtered_html.filters|filter_html|settings|allowed_html"] = '<a> <em> <strong> <u> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <h2> <h3> <h4> <h5> <h6>  <p> <br> <img> <strike>';
+
   // Exported overrides for: page_manager_pages
   $overrides["page_manager_pages.event_registration.access|settings"] = NULL;
   $overrides["page_manager_pages.event_registration.access|type"] = 'none';
