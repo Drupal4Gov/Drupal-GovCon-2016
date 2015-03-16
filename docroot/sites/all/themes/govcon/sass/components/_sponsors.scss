@@ -1,4 +1,4 @@
-.pane-cod-sponsors { 
+.pane-cod-sponsors-panel-pane-1 { 
   margin-top: 30px; 
   background-color: $gold;
   .bg { background-color: $gold; }
@@ -6,10 +6,16 @@
 }
 .view-cod-sponsors {
 	h3 { margin-bottom: 0; }
-	.view-results {
+	ul {
 		background: #fff;
+		margin: 0;
+		padding: 10px;
 	}
-	.sponsor img {
+	ul li.views-row {
+		display: inline-block;
+		list-style: none;
+	}
+	.views-field-field-sponsor-logo img {
 		width: auto;
 		height: auto;
 		max-height: 120px;

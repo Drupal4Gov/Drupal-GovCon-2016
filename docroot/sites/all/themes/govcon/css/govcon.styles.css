@@ -251,6 +251,74 @@ a.button.btn-big, .form-actions input[type=submit],
 .views-ui-display-tab-actions .ctools-button-processed input {
   color: #095380; }
 
+/* tickets button */
+/* line 46, ../sass/components/_buttons.scss */
+.panel-pane.tickets {
+  text-align: center; }
+  /* line 48, ../sass/components/_buttons.scss */
+  .panel-pane.tickets h2 {
+    color: #e02d3b;
+    font-size: 2.8em; }
+  /* line 52, ../sass/components/_buttons.scss */
+  .panel-pane.tickets a.tickets {
+    padding: 30px 22px 40px;
+    text-transform: uppercase;
+    font-size: 2.6em;
+    background: url(../images/ticket.svg) no-repeat top left;
+    background-size: contain;
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    -webkit-transform: rotate(-4deg);
+    -moz-transform: rotate(-4deg);
+    -ms-transform: rotate(-4deg);
+    -o-transform: rotate(-4deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out; }
+  /* line 70, ../sass/components/_buttons.scss */
+  .panel-pane.tickets a:after {
+    content: "";
+    background: url(../images/texture_font2.png) repeat transparent;
+    background-size: 100px 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  /* line 73, ../sass/components/_buttons.scss */
+  .panel-pane.tickets a:hover {
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    text-decoration: none; }
+
+@media (min-width: 44em) {
+  /* line 83, ../sass/components/_buttons.scss */
+  .panel-pane.tickets {
+    position: absolute;
+    left: 0;
+    top: -20px; }
+    /* line 87, ../sass/components/_buttons.scss */
+    .panel-pane.tickets h2 {
+      font-size: 2em; }
+    /* line 88, ../sass/components/_buttons.scss */
+    .panel-pane.tickets a.tickets {
+      padding: 18px 14px 30px;
+      text-transform: uppercase;
+      font-size: 1.4em; } }
+@media (min-width: 70em) {
+  /* line 96, ../sass/components/_buttons.scss */
+  .panel-pane.tickets {
+    left: 0;
+    top: -20px; }
+    /* line 99, ../sass/components/_buttons.scss */
+    .panel-pane.tickets a.tickets {
+      padding: 24px 20px 40px;
+      text-transform: uppercase;
+      font-size: 2em; } }
 /* line 1, ../sass/components/_fieldsets.scss */
 fieldset {
   border: 2px solid #b9a884;
@@ -777,14 +845,14 @@ li.menu-item a:hover, li.menu-item a.active {
     border-left: 15px solid transparent; }
 
 /* line 1, ../sass/components/_sponsors.scss */
-.pane-cod-sponsors {
+.pane-cod-sponsors-panel-pane-1 {
   margin-top: 30px;
   background-color: #b9a884; }
   /* line 4, ../sass/components/_sponsors.scss */
-  .pane-cod-sponsors .bg {
+  .pane-cod-sponsors-panel-pane-1 .bg {
     background-color: #b9a884; }
   /* line 5, ../sass/components/_sponsors.scss */
-  .pane-cod-sponsors h2 {
+  .pane-cod-sponsors-panel-pane-1 h2 {
     margin-top: 0;
     color: #fff; }
 
@@ -792,10 +860,16 @@ li.menu-item a:hover, li.menu-item a.active {
 .view-cod-sponsors h3 {
   margin-bottom: 0; }
 /* line 9, ../sass/components/_sponsors.scss */
-.view-cod-sponsors .view-results {
-  background: #fff; }
-/* line 12, ../sass/components/_sponsors.scss */
-.view-cod-sponsors .sponsor img {
+.view-cod-sponsors ul {
+  background: #fff;
+  margin: 0;
+  padding: 10px; }
+/* line 14, ../sass/components/_sponsors.scss */
+.view-cod-sponsors ul li.views-row {
+  display: inline-block;
+  list-style: none; }
+/* line 18, ../sass/components/_sponsors.scss */
+.view-cod-sponsors .views-field-field-sponsor-logo img {
   width: auto;
   height: auto;
   max-height: 120px;
@@ -936,17 +1010,18 @@ body.admin-menu.adminimal-menu.adminimal-frontend {
   /* line 79, ../sass/govcon.styles.scss */
   .page-node-1.node-type-event .pane-node-body h1 {
     color: #e02d3b;
-    margin: 0; }
+    margin: 0;
+    font-size: 2.6em; }
   /* line 80, ../sass/govcon.styles.scss */
   .page-node-1.node-type-event .pane-node-body h3 {
     color: #095380;
-    font-size: 1.6em;
+    font-size: 1.3em;
     letter-spacing: 0.2;
     margin: 0.5em 0; }
   /* line 81, ../sass/govcon.styles.scss */
   .page-node-1.node-type-event .pane-node-body h4 {
     color: #095380;
-    font-size: 1.2em;
+    font-size: 1em;
     text-transform: uppercase;
     margin: 0.5em 0;
     font-weight: 600; }
@@ -955,28 +1030,62 @@ body.admin-menu.adminimal-menu.adminimal-frontend {
   border-top: 2px solid #b9a884;
   padding-top: 30px;
   margin-top: 30px; }
-  /* line 87, ../sass/govcon.styles.scss */
-  .page-node-1.node-type-event .panel-display > .container.footer .pane-cod-sponsors {
-    margin-top: 30px;
-    background-color: #b9a884; }
 
 @media (min-width: 44em) {
-  /* line 96, ../sass/govcon.styles.scss */
+  /* line 92, ../sass/govcon.styles.scss */
   body {
     padding: 20px; }
 
-  /* line 97, ../sass/govcon.styles.scss */
+  /* line 93, ../sass/govcon.styles.scss */
   .site-branding {
     top: 70px; }
 
-  /* line 98, ../sass/govcon.styles.scss */
+  /* line 94, ../sass/govcon.styles.scss */
   .page-node-1.node-type-event .site-branding {
     top: 148px;
     width: 200px;
     margin-left: -100px; }
 
-  /* line 99, ../sass/govcon.styles.scss */
+  /* line 95, ../sass/govcon.styles.scss */
   .page-node-1.node-type-event .site-branding__logo img {
-    width: 200px; } }
+    width: 200px; }
+
+  /* line 97, ../sass/govcon.styles.scss */
+  .page-node-1.node-type-event .pane-node-body h1 {
+    color: #e02d3b;
+    margin: 0;
+    font-size: 3em; }
+  /* line 98, ../sass/govcon.styles.scss */
+  .page-node-1.node-type-event .pane-node-body h3 {
+    color: #095380;
+    font-size: 1.2em;
+    letter-spacing: 0.2;
+    margin: 0.5em 0; }
+  /* line 99, ../sass/govcon.styles.scss */
+  .page-node-1.node-type-event .pane-node-body h4 {
+    color: #095380;
+    font-size: 1em;
+    text-transform: uppercase;
+    margin: 0.5em 0;
+    font-weight: 600; } }
+@media (min-width: 70em) {
+  /* line 105, ../sass/govcon.styles.scss */
+  .page-node-1.node-type-event .pane-node-body h1 {
+    color: #e02d3b;
+    margin: 0;
+    font-size: 4em; }
+  /* line 106, ../sass/govcon.styles.scss */
+  .page-node-1.node-type-event .pane-node-body h3 {
+    color: #095380;
+    font-size: 1.6em;
+    letter-spacing: 0.2;
+    margin: 0.5em 0; }
+  /* line 107, ../sass/govcon.styles.scss */
+  .page-node-1.node-type-event .pane-node-body h4 {
+    color: #095380;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin: 0.5em 0;
+    font-weight: 600; } }
 
 /*# sourceMappingURL=govcon.styles.css.map */
