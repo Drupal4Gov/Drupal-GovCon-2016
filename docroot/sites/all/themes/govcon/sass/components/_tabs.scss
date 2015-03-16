@@ -32,3 +32,9 @@ ul.tabs--primary {
 	background: lighten($gold,20%);
 }
 .vertical-tabs fieldset.vertical-tabs-pane { padding: 1em; }
+
+
+/* Homepage */
+.page-node-1.node-type-event ul.tabs--primary {
+	display: none;
+}

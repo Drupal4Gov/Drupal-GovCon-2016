@@ -94,6 +94,63 @@ a:hover, a:focus {
   /* line 52, ../sass/base/_typography.scss */
   h1 {
     font-size: 4em; } }
+/* line 1, ../sass/components/_attendees.scss */
+.view-cod-community-attendees {
+  font-size: .8em; }
+  /* line 3, ../sass/components/_attendees.scss */
+  .view-cod-community-attendees ul {
+    padding: 0;
+    margin-top: 30px; }
+    /* line 6, ../sass/components/_attendees.scss */
+    .view-cod-community-attendees ul li.views-row {
+      list-style: none;
+      float: left;
+      padding: 10px;
+      margin: 0 10px 10px 0;
+      background: url(../images/texture200.png) #b9a884;
+      width: 140px;
+      height: 200px; }
+  /* line 16, ../sass/components/_attendees.scss */
+  .view-cod-community-attendees .views-field-picture {
+    width: 120px;
+    height: 120px;
+    background: url("../images/gold_star.svg") #095380;
+    position: relative;
+    margin-bottom: 4px; }
+    /* line 22, ../sass/components/_attendees.scss */
+    .view-cod-community-attendees .views-field-picture:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url(../images/texture200.png); }
+    /* line 31, ../sass/components/_attendees.scss */
+    .view-cod-community-attendees .views-field-picture img {
+      position: relative;
+      z-index: 2; }
+  /* line 36, ../sass/components/_attendees.scss */
+  .view-cod-community-attendees .views-field-field-profile-first,
+  .view-cod-community-attendees .views-field-field-profile-last {
+    display: inline; }
+    /* line 39, ../sass/components/_attendees.scss */
+    .view-cod-community-attendees .views-field-field-profile-first div,
+    .view-cod-community-attendees .views-field-field-profile-last div {
+      display: inline; }
+
+@media (min-width: 44em) {
+  /* line 44, ../sass/components/_attendees.scss */
+  .view-cod-community-attendees {
+    font-size: 1em; }
+    /* line 46, ../sass/components/_attendees.scss */
+    .view-cod-community-attendees ul li.views-row {
+      width: 180px;
+      height: 260px; }
+    /* line 47, ../sass/components/_attendees.scss */
+    .view-cod-community-attendees .views-field-picture {
+      width: 160px;
+      height: 160px; } }
 /* line 1, ../sass/components/_blocks.scss */
 .l-region--footer .block {
   margin: 20px; }
@@ -957,6 +1014,11 @@ ul.tabs--primary {
 /* line 34, ../sass/components/_tabs.scss */
 .vertical-tabs fieldset.vertical-tabs-pane {
   padding: 1em; }
+
+/* Homepage */
+/* line 38, ../sass/components/_tabs.scss */
+.page-node-1.node-type-event ul.tabs--primary {
+  display: none; }
 
 /* line 25, ../sass/govcon.styles.scss */
 body {
