@@ -95,7 +95,7 @@ function dgc_deploy_panelizer_defaults() {
     $pane->panel = 'footer';
     $pane->type = 'views_panes';
     $pane->subtype = 'cod_session_tracks-panel_pane_2';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'arguments' => array(
@@ -121,7 +121,7 @@ function dgc_deploy_panelizer_defaults() {
     $pane->panel = 'footer';
     $pane->type = 'views';
     $pane->subtype = 'cod_sponsors';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'override_pager_settings' => 0,
@@ -157,6 +157,44 @@ function dgc_deploy_panelizer_defaults() {
     $pane->uuid = 'd8a15e90-c296-4f34-8855-56168f2aabb9';
     $display->content['new-d8a15e90-c296-4f34-8855-56168f2aabb9'] = $pane;
     $display->panels['footer'][2] = 'new-d8a15e90-c296-4f34-8855-56168f2aabb9';
+    $pane = new stdClass();
+    $pane->pid = 'new-3603832e-68db-4872-8063-31e51eefba45';
+    $pane->panel = 'footer';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'cod_sponsors-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'exposed' => array(
+        'field_sponsor_sponsorship_level_tid' => array(
+          46 => '46',
+          51 => '51',
+          66 => '66',
+          41 => '41',
+          31 => '31',
+          61 => '61',
+          56 => '56',
+          36 => '36',
+        ),
+      ),
+      'context' => array(
+        0 => 'panelizer',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'bevel',
+    );
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = '3603832e-68db-4872-8063-31e51eefba45';
+    $display->content['new-3603832e-68db-4872-8063-31e51eefba45'] = $pane;
+    $display->panels['footer'][3] = 'new-3603832e-68db-4872-8063-31e51eefba45';
     $pane = new stdClass();
     $pane->pid = 'new-92f522dc-f620-443a-8ac4-c8baa4640cb8';
     $pane->panel = 'preface';
@@ -215,6 +253,40 @@ function dgc_deploy_panelizer_defaults() {
     $pane->uuid = '9e7be924-0930-4ef1-b0a8-4dc4da59caa4';
     $display->content['new-9e7be924-0930-4ef1-b0a8-4dc4da59caa4'] = $pane;
     $display->panels['preface'][1] = 'new-9e7be924-0930-4ef1-b0a8-4dc4da59caa4';
+    $pane = new stdClass();
+    $pane->pid = 'new-d815d2ff-886c-4b1f-8b13-7925adc949e0';
+    $pane->panel = 'preface';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'cod_sponsors-panel_pane_2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'exposed' => array(
+        'field_sponsor_sponsorship_level_tid' => array(
+          46 => '46',
+        ),
+      ),
+      'context' => array(
+        0 => 'panelizer',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'Diamond Sponsors',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'sponsors-featured',
+    );
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = 'd815d2ff-886c-4b1f-8b13-7925adc949e0';
+    $display->content['new-d815d2ff-886c-4b1f-8b13-7925adc949e0'] = $pane;
+    $display->panels['preface'][2] = 'new-d815d2ff-886c-4b1f-8b13-7925adc949e0';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $panelizer->display = $display;
