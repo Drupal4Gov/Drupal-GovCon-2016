@@ -83,7 +83,7 @@ a.button.btn-big, .form-actions input[type=submit],
 	.panel-pane.tickets {
 		position: absolute;
 		left: 0;
-		top: -20px;
+		top: -30px;
 		h2 { font-size: 2em; }
 		a.tickets {
       padding: 18px 14px 30px;
@@ -95,7 +95,7 @@ a.button.btn-big, .form-actions input[type=submit],
 @include breakpoint($desk, true) {
 	.panel-pane.tickets {
 		left: 0;
-		top: -20px;
+		top: -30px;
 		a.tickets {
       padding: 24px 20px 40px;
 	  	text-transform: uppercase;
