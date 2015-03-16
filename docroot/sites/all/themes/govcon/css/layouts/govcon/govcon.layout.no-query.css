@@ -42,7 +42,7 @@
 
 /* line 46, ../../../sass/layouts/govcon/govcon.layout.scss */
 .l-main {
-  margin-top: 60px;
+  margin-top: 80px;
   margin-bottom: 36px; }
 
 /* Sidebars */
@@ -62,7 +62,7 @@
 
 /* line 69, ../../../sass/layouts/govcon/govcon.layout.scss */
 .page-node-1.node-type-event .l-main {
-  margin-top: 260px; }
+  margin-top: 280px; }
 
 /* line 73, ../../../sass/layouts/govcon/govcon.layout.scss */
 .l-constrained, .l-region--highlighted, .l-region--footer {
@@ -94,18 +94,22 @@
   clear: right; }
 
 /* line 93, ../../../sass/layouts/govcon/govcon.layout.scss */
+.page-node-1.node-type-event .l-main {
+  margin-top: 300px; }
+
+/* line 97, ../../../sass/layouts/govcon/govcon.layout.scss */
 .l-constrained, .l-region--highlighted, .l-region--footer {
   width: 80%; }
 
 /* Sidebars */
-/* line 99, ../../../sass/layouts/govcon/govcon.layout.scss */
+/* line 103, ../../../sass/layouts/govcon/govcon.layout.scss */
 .has-one-sidebar .l-content {
   width: 66.10169%;
   float: left;
   margin-right: -100%;
   margin-left: 0;
   clear: none; }
-/* line 102, ../../../sass/layouts/govcon/govcon.layout.scss */
+/* line 106, ../../../sass/layouts/govcon/govcon.layout.scss */
 .has-one-sidebar .l-region--sidebar-first {
   width: 32.20339%;
   float: right;
@@ -114,14 +118,14 @@
   clear: none;
   clear: none; }
 
-/* line 108, ../../../sass/layouts/govcon/govcon.layout.scss */
+/* line 112, ../../../sass/layouts/govcon/govcon.layout.scss */
 .has-two-sidebars .l-content {
   width: 49.15254%;
   float: left;
   margin-right: -100%;
   margin-left: 0;
   clear: none; }
-/* line 111, ../../../sass/layouts/govcon/govcon.layout.scss */
+/* line 115, ../../../sass/layouts/govcon/govcon.layout.scss */
 .has-two-sidebars .l-region--sidebar-first,
 .has-two-sidebars .l-region--sidebar-second {
   width: 23.72881%;
@@ -130,7 +134,7 @@
   margin-left: 50.84746%;
   clear: none;
   clear: none; }
-/* line 116, ../../../sass/layouts/govcon/govcon.layout.scss */
+/* line 120, ../../../sass/layouts/govcon/govcon.layout.scss */
 .has-two-sidebars .l-region--sidebar-second {
   width: 23.72881%;
   float: right;
