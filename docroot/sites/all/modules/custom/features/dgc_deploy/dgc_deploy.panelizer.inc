@@ -67,6 +67,30 @@ function dgc_deploy_panelizer_defaults() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
+    $pane->pid = 'new-4bc6da4d-dc2c-490f-bc69-4b740e4a4c98';
+    $pane->panel = 'footer';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'cod_news-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'items_per_page' => '3',
+      'arguments' => array(
+        'gid' => '',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '4bc6da4d-dc2c-490f-bc69-4b740e4a4c98';
+    $display->content['new-4bc6da4d-dc2c-490f-bc69-4b740e4a4c98'] = $pane;
+    $display->panels['footer'][0] = 'new-4bc6da4d-dc2c-490f-bc69-4b740e4a4c98';
+    $pane = new stdClass();
     $pane->pid = 'new-b7f97f39-e53f-4356-8dea-f36c0e63ad6b';
     $pane->panel = 'footer';
     $pane->type = 'views_panes';
@@ -87,11 +111,11 @@ function dgc_deploy_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = 'b7f97f39-e53f-4356-8dea-f36c0e63ad6b';
     $display->content['new-b7f97f39-e53f-4356-8dea-f36c0e63ad6b'] = $pane;
-    $display->panels['footer'][0] = 'new-b7f97f39-e53f-4356-8dea-f36c0e63ad6b';
+    $display->panels['footer'][1] = 'new-b7f97f39-e53f-4356-8dea-f36c0e63ad6b';
     $pane = new stdClass();
     $pane->pid = 'new-d8a15e90-c296-4f34-8855-56168f2aabb9';
     $pane->panel = 'footer';
@@ -123,37 +147,16 @@ function dgc_deploy_panelizer_defaults() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'bevel',
+    );
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = 'd8a15e90-c296-4f34-8855-56168f2aabb9';
     $display->content['new-d8a15e90-c296-4f34-8855-56168f2aabb9'] = $pane;
-    $display->panels['footer'][1] = 'new-d8a15e90-c296-4f34-8855-56168f2aabb9';
-    $pane = new stdClass();
-    $pane->pid = 'new-4bc6da4d-dc2c-490f-bc69-4b740e4a4c98';
-    $pane->panel = 'left_content';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'cod_news-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'items_per_page' => '3',
-      'arguments' => array(
-        'gid' => '',
-      ),
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '4bc6da4d-dc2c-490f-bc69-4b740e4a4c98';
-    $display->content['new-4bc6da4d-dc2c-490f-bc69-4b740e4a4c98'] = $pane;
-    $display->panels['left_content'][0] = 'new-4bc6da4d-dc2c-490f-bc69-4b740e4a4c98';
+    $display->panels['footer'][2] = 'new-d8a15e90-c296-4f34-8855-56168f2aabb9';
     $pane = new stdClass();
     $pane->pid = 'new-92f522dc-f620-443a-8ac4-c8baa4640cb8';
     $pane->panel = 'preface';
@@ -183,6 +186,35 @@ function dgc_deploy_panelizer_defaults() {
     $pane->uuid = '92f522dc-f620-443a-8ac4-c8baa4640cb8';
     $display->content['new-92f522dc-f620-443a-8ac4-c8baa4640cb8'] = $pane;
     $display->panels['preface'][0] = 'new-92f522dc-f620-443a-8ac4-c8baa4640cb8';
+    $pane = new stdClass();
+    $pane->pid = 'new-9e7be924-0930-4ef1-b0a8-4dc4da59caa4';
+    $pane->panel = 'preface';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Ticket button',
+      'title' => '',
+      'body' => '<h2>Free</h2>
+<a class="tickets" href="/drupal-govcon-2015/registration" title="Get tickets">Tickets</a>',
+      'format' => 'full_html',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'tickets',
+    );
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '9e7be924-0930-4ef1-b0a8-4dc4da59caa4';
+    $display->content['new-9e7be924-0930-4ef1-b0a8-4dc4da59caa4'] = $pane;
+    $display->panels['preface'][1] = 'new-9e7be924-0930-4ef1-b0a8-4dc4da59caa4';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $panelizer->display = $display;
