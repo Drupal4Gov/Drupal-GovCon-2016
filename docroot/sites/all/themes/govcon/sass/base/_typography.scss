@@ -17,6 +17,9 @@ h1:after {
 }
 h2 {
 	font-family: $script;
+	-webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
 	color: $blue;
 	font-size: 2em;
 	font-weight: normal;
