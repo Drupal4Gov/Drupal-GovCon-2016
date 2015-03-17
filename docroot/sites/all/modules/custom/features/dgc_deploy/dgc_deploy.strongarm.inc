@@ -277,7 +277,7 @@ This link can only be used once to log in and will lead you to a page where you 
 After setting your password, you will be able to log in at [site:login-url] in the future. Make sure to visit the website for updates leading up to the event.
 
 email or username: [user:name]
-password: Your password (that you set)
+password: Your password (that you will set after clicking on the link above)
 
 Subscribe to our newsletter:
 http://eepurl.com/bbJASn
