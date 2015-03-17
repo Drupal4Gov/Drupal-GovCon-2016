@@ -1,0 +1,23 @@
+table {
+	width: 99.9%;
+	@include box-shadow(0 0 0 2px $gold);
+	margin: 2px;
+	th {
+		background: lighten($gold,20%);
+		padding: 0.5em;
+		width:99%
+	}
+	tr {
+		width: 99%;
+	}
+	tr.odd {
+		background-color: #fff;
+	}
+	tr.even {
+		background-color: $ecru;
+	}
+	td {
+		padding: 0.5em;
+		width:99%;
+	}
+}
