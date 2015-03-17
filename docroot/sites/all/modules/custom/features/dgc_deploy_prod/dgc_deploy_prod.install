@@ -10,7 +10,7 @@
 function dgc_deploy_prod_install() {
   // Disable devel, devel_generate and dblog modules. Enable syslog, memcache and security_review modules.
   module_disable(array('devel', 'devel_generate', 'dblog'));
-  module_enable(array('syslog', 'memcache', 'security_review'));
+  module_enable(array('syslog', 'memcache'));
   // Set initial variable values
   variable_set('cache', '1');
   variable_set('page_cache_maximum_age', '300');
@@ -24,7 +24,7 @@ function dgc_deploy_prod_install() {
  */
 function dgc_deploy_prod_uninstall() {
   // Disable production-only type modules
-  module_disable(array('syslog', 'memcache', 'security_review'));
+  module_disable(array('syslog', 'memcache'));
   // Enable
   module_enable(array('dblog'));
   // Set variable values back to default, non-production

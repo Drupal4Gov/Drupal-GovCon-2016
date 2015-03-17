@@ -9,6 +9,7 @@ dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
 features[variable][] = cache
+features[variable][] = error_level
 features[variable][] = page_cache_maximum_age
 features[variable][] = page_compression
 features[variable][] = preprocess_css
