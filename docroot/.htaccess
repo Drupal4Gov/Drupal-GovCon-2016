@@ -149,7 +149,7 @@ DirectoryIndex index.php index.html index.htm
   RewriteRule ^ https://www.drupalgovcon.org/ [L,R=301]
 
   # Redirect all requests to https
-  #RewriteCond %{HTTP_HOST} ^(www.|)(drupalgovcon.org) [NC]
-  #RewriteCond %{HTTPS} !=on
-  #RewriteRule ^ https://www.drupalgovcon.org%{REQUEST_URI} [L,R=301]
+  RewriteCond %{HTTP_HOST} ^www.drupalgovcon.org [NC]
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://www.drupalgovcon.org%{REQUEST_URI} [L,R=301]
 </IfModule>
