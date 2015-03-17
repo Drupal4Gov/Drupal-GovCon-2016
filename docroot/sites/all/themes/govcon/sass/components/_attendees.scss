@@ -10,7 +10,7 @@
   		margin: 0 10px 10px 0;
   		background: $texture $gold;
   		width: 140px;
-  		height: 200px;
+  		height: 180px;
   	}
   }
   .views-field-picture {
@@ -45,7 +45,7 @@
 @include breakpoint($tab, true) {
 	.view-cod-community-attendees {
 		font-size: 1em;
-		ul li.views-row { width: 180px; height: 260px; }
+		ul li.views-row { width: 180px; height: 224px; }
 		.views-field-picture { width: 160px; height: 160px; }
 	}
 }
