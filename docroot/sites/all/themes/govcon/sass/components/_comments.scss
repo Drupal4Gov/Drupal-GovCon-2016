@@ -1,4 +1,5 @@
 section#comments {
+	h3 { margin-top: 0; }
 	.indented {
 		border-left: 2px solid $gold;
 		margin-left: 0;
@@ -36,6 +37,6 @@ mark.new {
 	margin-right: 10px;
 	width: 80px;
 }
-.comment-left {
-	overflow: invisible;
+.comment-right {
+	overflow: hidden;
 }

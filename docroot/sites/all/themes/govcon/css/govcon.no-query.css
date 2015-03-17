@@ -417,24 +417,27 @@ a.button.btn-big, .form-actions input[type=submit],
     font-size: 2em; }
 
 /* line 2, ../sass/components/_comments.scss */
+section#comments h3 {
+  margin-top: 0; }
+/* line 3, ../sass/components/_comments.scss */
 section#comments .indented {
   border-left: 2px solid #b9a884;
   margin-left: 0;
   padding-left: 10px; }
-/* line 8, ../sass/components/_comments.scss */
+/* line 9, ../sass/components/_comments.scss */
 section#comments .comment .links li {
   float: right; }
-/* line 9, ../sass/components/_comments.scss */
+/* line 10, ../sass/components/_comments.scss */
 section#comments .comment .links a {
   font-size: 0.7em; }
 
-/* line 15, ../sass/components/_comments.scss */
+/* line 16, ../sass/components/_comments.scss */
 article.comment {
   padding: 10px;
   background: url(../images/texture200.png) #ded6c5;
   margin: 1em 0; }
 
-/* line 20, ../sass/components/_comments.scss */
+/* line 21, ../sass/components/_comments.scss */
 .comment__submitted .permalink {
   font-size: 0.7em;
   background: #e6e4dd;
@@ -444,21 +447,21 @@ article.comment {
   top: -2px;
   margin-left: 1em; }
 
-/* line 29, ../sass/components/_comments.scss */
+/* line 30, ../sass/components/_comments.scss */
 mark.new {
   padding: 0.2em;
   background: #e02d3b;
   color: #fff; }
 
-/* line 34, ../sass/components/_comments.scss */
+/* line 35, ../sass/components/_comments.scss */
 .comment-left {
   float: left;
   margin-right: 10px;
   width: 80px; }
 
-/* line 39, ../sass/components/_comments.scss */
-.comment-left {
-  overflow: invisible; }
+/* line 40, ../sass/components/_comments.scss */
+.comment-right {
+  overflow: hidden; }
 
 /* line 1, ../sass/components/_fieldsets.scss */
 fieldset {
