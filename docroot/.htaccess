@@ -140,10 +140,12 @@ DirectoryIndex index.php index.html index.htm
       # Force proxies to cache gzipped & non-gzipped css/js files separately.
       Header append Vary Accept-Encoding
     </FilesMatch>
+    # Set Strict transport security so modern browsers will remember to always go to https.
+    Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
   </IfModule>
 
   # Custom redirects for old hostnames
-  RewriteCond %{HTTP_HOST} ^(www.|)(capitalcamp|drupalgovdays|drupalforgov|capitalcampandgovdays)(.org|.com) [NC]
+  RewriteCond %{HTTP_HOST} ^(www.|)(capitalcamp|drupalgovdays|drupalforgov|capitalcampandgovdays|capitalcamp.prod.acquia-sites)(.org|.com) [NC]
   RewriteRule ^ https://drupalgovcon.org/ [L,R=301]
 
   # Redirect all requests to https
