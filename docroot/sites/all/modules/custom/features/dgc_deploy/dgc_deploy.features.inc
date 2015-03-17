@@ -112,6 +112,35 @@ function dgc_deploy_strongarm_alter(&$data) {
  * Implements hook_views_default_views_alter().
  */
 function dgc_deploy_views_default_views_alter(&$data) {
+  if (isset($data['cod_community_attendees'])) {
+    $data['cod_community_attendees']->display['default']->display_options['exposed_form']['options'] = array(
+      'reset_button' => TRUE,
+    ); /* WAS: '' */
+    $data['cod_community_attendees']->display['default']->display_options['fields']['field_profile_first']['exclude'] = TRUE; /* WAS: '' */
+    $data['cod_community_attendees']->display['default']->display_options['fields']['field_profile_job_title']['exclude'] = TRUE; /* WAS: '' */
+    $data['cod_community_attendees']->display['default']->display_options['fields']['field_profile_last']['alter'] = array(
+      'alter_text' => TRUE,
+      'text' => '[field_profile_first] [field_profile_last]',
+      'make_link' => TRUE,
+      'path' => 'user/[uid]',
+    ); /* WAS: '' */
+    $data['cod_community_attendees']->display['default']->display_options['fields']['field_profile_org']['exclude'] = TRUE; /* WAS: '' */
+    $data['cod_community_attendees']->display['default']->display_options['fields']['picture']['image_style'] = 'medium'; /* WAS: 'thumbnail' */
+    $data['cod_community_attendees']->display['default']->display_options['fields']['uid'] = array(
+      'id' => 'uid',
+      'table' => 'users',
+      'field' => 'uid',
+      'relationship' => 'user_uid',
+      'label' => '',
+      'exclude' => TRUE,
+      'element_label_colon' => FALSE,
+      'link_to_user' => FALSE,
+    ); /* WAS: '' */
+    $data['cod_community_attendees']->display['panel_pane_1']->display_options['inherit_panels_path'] = 1; /* WAS: '' */
+    unset($data['cod_community_attendees']->display['default']->display_options['fields']['name']);
+    unset($data['cod_community_attendees']->display['default']->display_options['filters']['name']);
+    unset($data['cod_community_attendees']->display['default']->display_options['relationships']['ticket_state_target_id']);
+  }
   if (isset($data['cod_news'])) {
     $data['cod_news']->display['panel_pane_1']->display_options['allow'] = array(
       'use_pager' => 0,

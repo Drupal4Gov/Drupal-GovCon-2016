@@ -64,6 +64,33 @@ function dgc_deploy_features_override_default_overrides() {
   $overrides["variable.og_node_access_strict.value"] = 0;
 
   // Exported overrides for: views_view
+  $overrides["views_view.cod_community_attendees.display|default|display_options|exposed_form|options"] = array(
+    'reset_button' => TRUE,
+  );
+  $overrides["views_view.cod_community_attendees.display|default|display_options|fields|field_profile_first|exclude"] = TRUE;
+  $overrides["views_view.cod_community_attendees.display|default|display_options|fields|field_profile_job_title|exclude"] = TRUE;
+  $overrides["views_view.cod_community_attendees.display|default|display_options|fields|field_profile_last|alter"] = array(
+    'alter_text' => TRUE,
+    'text' => '[field_profile_first] [field_profile_last]',
+    'make_link' => TRUE,
+    'path' => 'user/[uid]',
+  );
+  $overrides["views_view.cod_community_attendees.display|default|display_options|fields|field_profile_org|exclude"] = TRUE;
+  $overrides["views_view.cod_community_attendees.display|default|display_options|fields|name"]["DELETED"] = TRUE;
+  $overrides["views_view.cod_community_attendees.display|default|display_options|fields|picture|image_style"] = 'medium';
+  $overrides["views_view.cod_community_attendees.display|default|display_options|fields|uid"] = array(
+    'id' => 'uid',
+    'table' => 'users',
+    'field' => 'uid',
+    'relationship' => 'user_uid',
+    'label' => '',
+    'exclude' => TRUE,
+    'element_label_colon' => FALSE,
+    'link_to_user' => FALSE,
+  );
+  $overrides["views_view.cod_community_attendees.display|default|display_options|filters|name"]["DELETED"] = TRUE;
+  $overrides["views_view.cod_community_attendees.display|default|display_options|relationships|ticket_state_target_id"]["DELETED"] = TRUE;
+  $overrides["views_view.cod_community_attendees.display|panel_pane_1|display_options|inherit_panels_path"] = 1;
   $overrides["views_view.cod_news.display|panel_pane_1|display_options|allow"] = array(
     'use_pager' => 0,
     'items_per_page' => 'items_per_page',
