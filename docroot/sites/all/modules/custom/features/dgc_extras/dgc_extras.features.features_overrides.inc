@@ -34,7 +34,7 @@ function dgc_extras_features_override_default_overrides() {
   // Exported overrides for: field_instance
   $overrides["field_instance.user-user-field_profile_bio.widget|weight"] = 10;
   $overrides["field_instance.user-user-field_profile_interests.widget|weight"] = 11;
-  $overrides["field_instance.user-user-field_profile_location.widget|weight"] = 9;
+  $overrides["field_instance.user-user-field_profile_location.user-user-field_profile_location"]["DELETED"] = TRUE;
   $overrides["field_instance.user-user-field_profile_org.widget|weight"] = 7;
   $overrides["field_instance.user-user-field_profile_phone.widget|weight"] = 8;
   $overrides["field_instance.user-user-field_t_shirt_size.description"] = 'All sizes listed are men\'s, so please select appropriately.';

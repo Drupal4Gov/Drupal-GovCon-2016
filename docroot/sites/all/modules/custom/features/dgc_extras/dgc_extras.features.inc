@@ -51,7 +51,7 @@ function dgc_extras_field_default_field_instances_alter(&$data) {
     $data['user-user-field_profile_interests']['widget']['weight'] = 11; /* WAS: 9 */
   }
   if (isset($data['user-user-field_profile_location'])) {
-    $data['user-user-field_profile_location']['widget']['weight'] = 9; /* WAS: 7 */
+    unset($data['user-user-field_profile_location']);
   }
   if (isset($data['user-user-field_profile_org'])) {
     $data['user-user-field_profile_org']['widget']['weight'] = 7; /* WAS: 5 */
