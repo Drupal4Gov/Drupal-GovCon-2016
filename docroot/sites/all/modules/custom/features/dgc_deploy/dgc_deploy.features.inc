@@ -125,7 +125,7 @@ function dgc_deploy_views_default_views_alter(&$data) {
       'path' => 'user/[uid]',
     ); /* WAS: '' */
     $data['cod_community_attendees']->display['default']->display_options['fields']['field_profile_org']['exclude'] = TRUE; /* WAS: '' */
-    $data['cod_community_attendees']->display['default']->display_options['fields']['picture']['image_style'] = 'medium'; /* WAS: 'thumbnail' */
+    $data['cod_community_attendees']->display['default']->display_options['fields']['picture']['image_style'] = 'square_160'; /* WAS: 'thumbnail' */
     $data['cod_community_attendees']->display['default']->display_options['fields']['uid'] = array(
       'id' => 'uid',
       'table' => 'users',
@@ -503,4 +503,36 @@ function dgc_deploy_views_default_views_alter(&$data) {
   if (isset($data['ticket_user'])) {
     $data['ticket_user']->display['panel_pane_1'] = unserialize('O:13:"views_display":7:{s:15:"display_options";a:4:{s:5:"query";a:2:{s:4:"type";s:11:"views_query";s:7:"options";a:0:{}}s:8:"defaults";a:1:{s:5:"empty";b:0;}s:5:"allow";a:9:{s:9:"use_pager";i:0;s:14:"items_per_page";i:0;s:6:"offset";i:0;s:12:"link_to_view";i:0;s:9:"more_link";i:0;s:13:"path_override";i:0;s:14:"title_override";s:14:"title_override";s:12:"exposed_form";i:0;s:15:"fields_override";i:0;}s:14:"argument_input";a:1:{s:10:"author_uid";a:6:{s:4:"type";s:7:"context";s:7:"context";s:15:"entity:user.uid";s:16:"context_optional";i:0;s:5:"panel";s:1:"0";s:5:"fixed";s:0:"";s:5:"label";s:31:"Ticket registration: Author_uid";}}}s:8:"db_table";s:13:"views_display";s:3:"vid";i:0;s:2:"id";s:12:"panel_pane_1";s:13:"display_title";s:12:"Content pane";s:14:"display_plugin";s:10:"panel_pane";s:8:"position";i:0;}'); /* WAS: '' */
   }
+}
+
+/**
+ * Implements hook_image_default_styles().
+ */
+function dgc_deploy_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: square_160.
+  $styles['square_160'] = array(
+    'name' => 'square_160',
+    'label' => 'Square 160',
+    'effects' => array(
+      1 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 160,
+          'height' => 160,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
 }

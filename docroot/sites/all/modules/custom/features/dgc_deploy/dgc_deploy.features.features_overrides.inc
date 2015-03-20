@@ -77,7 +77,7 @@ function dgc_deploy_features_override_default_overrides() {
   );
   $overrides["views_view.cod_community_attendees.display|default|display_options|fields|field_profile_org|exclude"] = TRUE;
   $overrides["views_view.cod_community_attendees.display|default|display_options|fields|name"]["DELETED"] = TRUE;
-  $overrides["views_view.cod_community_attendees.display|default|display_options|fields|picture|image_style"] = 'medium';
+  $overrides["views_view.cod_community_attendees.display|default|display_options|fields|picture|image_style"] = 'square_160';
   $overrides["views_view.cod_community_attendees.display|default|display_options|fields|uid"] = array(
     'id' => 'uid',
     'table' => 'users',
