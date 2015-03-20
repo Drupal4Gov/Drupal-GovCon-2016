@@ -12,18 +12,17 @@ table {
   /* line 5, ../sass/base/_tables.scss */
   table th {
     background: #ded6c5;
-    padding: 0.5em;
-    width: 99%; }
-  /* line 10, ../sass/base/_tables.scss */
+    padding: 0.5em; }
+  /* line 9, ../sass/base/_tables.scss */
   table tr {
     width: 99%; }
-  /* line 13, ../sass/base/_tables.scss */
+  /* line 12, ../sass/base/_tables.scss */
   table tr.odd {
     background-color: #fff; }
-  /* line 16, ../sass/base/_tables.scss */
+  /* line 15, ../sass/base/_tables.scss */
   table tr.even {
     background-color: #e6e4dd; }
-  /* line 19, ../sass/base/_tables.scss */
+  /* line 18, ../sass/base/_tables.scss */
   table td {
     padding: 0.5em;
     width: 99%; }
@@ -122,6 +121,11 @@ h1 {
 /* line 4, ../sass/components/_admin.scss */
 .messages.warning {
   border-color: #e02d3b; }
+
+/* Admin tables */
+/* line 9, ../sass/components/_admin.scss */
+td.status {
+  width: 24px; }
 
 /* line 1, ../sass/components/_attendees.scss */
 .view-cod-community-attendees {
