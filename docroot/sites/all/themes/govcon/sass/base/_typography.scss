@@ -16,6 +16,20 @@ h1:after {
 	@include texture-text;
 }
 h2 {
+	color: darken($pale-blue, 10%);
+	font-weight: 700;
+	margin: 1em 0 0 0;
+	padding: 0 0 .1em 0;
+	border-bottom: 2px solid $gold;
+  a {
+		color: $red;
+		font-weight: 700;
+	  letter-spacing: 0;
+	  margin-bottom: 0;
+	  &:hover { color: $blue; text-decoration: none; }
+  }
+}
+h2.pane-title, h2.block__title {
 	font-family: $script;
 	-webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
@@ -24,14 +38,18 @@ h2 {
 	font-size: 2em;
 	font-weight: normal;
   letter-spacing: 0;
-  margin-bottom: 0;
-  a {
-		color: $red;
-		font-weight: normal;
-	  letter-spacing: 0;
-	  margin-bottom: 0;
-	  &:hover { color: $blue; text-decoration: none; }
-  }
+  margin: 0;
+  border: none;
+}
+h2.node__title {
+	border: none;
+	padding-bottom: 0;
+	margin: 0;
+}
+h3 {
+	color: $blue;
+	font-weight: 600;
+	margin: 1em 0 0 0;
 }
 a {
 	color: $blue;

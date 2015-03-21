@@ -69,6 +69,13 @@ body.admin-menu.adminimal-menu.adminimal-frontend {
       border: 10px solid $blue; 
     }
 }
+
+p.submitted {
+  margin: .1em 0;
+  color: #666;
+  font-size: 0.8em;
+}
+
 /* Homepage */
 .page-node-1.node-type-event {
   .breadcrumb { display: none; }

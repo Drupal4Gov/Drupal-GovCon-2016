@@ -17,6 +17,24 @@ function dgc_deploy_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_ckeditor_profile_defaults_alter().
+ */
+function dgc_deploy_ckeditor_profile_defaults_alter(&$data) {
+  if (isset($data['Advanced'])) {
+    $data['Advanced']['settings']['allowed_content'] = 't'; /* WAS: '' */
+    $data['Advanced']['settings']['extraAllowedContent'] = ''; /* WAS: '' */
+    $data['Advanced']['settings']['toolbar'] = '[
+        [\'Format\'],
+        [\'Bold\',\'Italic\',\'Strike\'],
+        [\'NumberedList\',\'BulletedList\',\'Indent\',\'Outdent\',\'Blockquote\'],
+        [\'Link\',\'Unlink\',\'Anchor\',\'Image\']
+    ]'; /* WAS: '[
+        [\'Format\'],[\'Bold\',\'Italic\',\'Strike\'],[\'NumberedList\',\'BulletedList\',\'Indent\',\'Outdent\',\'Blockquote\'],[\'Link\',\'Unlink\',\'Image\']
+    ]' */
+  }
+}
+
+/**
  * Implements hook_field_default_field_bases_alter().
  */
 function dgc_deploy_field_default_field_bases_alter(&$data) {
@@ -83,6 +101,34 @@ function dgc_deploy_panelizer_defaults_override_alter(&$data) {
     $data['node:bof_session:default:default']->pipeline = 'standard'; /* WAS: 'ipe' */
   }
   if (isset($data['node:session:default:default'])) {
+    $data['node:session:default:default']->display->content['new-604f1c98-aefd-4044-ad5a-d566a6a28303'] = (object) array(
+          'pid' => 'new-604f1c98-aefd-4044-ad5a-d566a6a28303',
+          'panel' => 'footer',
+          'type' => 'node_comment_wrapper',
+          'subtype' => 'node_comment_wrapper',
+          'shown' => TRUE,
+          'access' => array(),
+          'configuration' => array(
+            'mode' => 1,
+            'comments_per_page' => 50,
+            'context' => 'panelizer',
+            'override_title' => 0,
+            'override_title_text' => '',
+            'override_title_heading' => 'h2',
+          ),
+          'cache' => array(),
+          'style' => array(
+            'settings' => NULL,
+          ),
+          'css' => array(),
+          'extras' => array(),
+          'position' => 0,
+          'locks' => array(),
+          'uuid' => '604f1c98-aefd-4044-ad5a-d566a6a28303',
+        ); /* WAS: '' */
+    $data['node:session:default:default']->display->panels['footer'] = array(
+      0 => 'new-604f1c98-aefd-4044-ad5a-d566a6a28303',
+    ); /* WAS: '' */
     $data['node:session:default:default']->link_to_entity = FALSE; /* WAS: TRUE */
   }
 }
@@ -103,6 +149,21 @@ function dgc_deploy_user_default_permissions_alter(&$data) {
  * Implements hook_strongarm_alter().
  */
 function dgc_deploy_strongarm_alter(&$data) {
+  if (isset($data['node_options_session'])) {
+    $data['node_options_session']->value[0] = 'status'; /* WAS: '' */
+  }
+  if (isset($data['node_submitted_bof_session'])) {
+    $data['node_submitted_bof_session']->value = 0; /* WAS: 1 */
+  }
+  if (isset($data['node_submitted_news'])) {
+    $data['node_submitted_news']->value = 0; /* WAS: 1 */
+  }
+  if (isset($data['node_submitted_schedule_item'])) {
+    $data['node_submitted_schedule_item']->value = 0; /* WAS: 1 */
+  }
+  if (isset($data['node_submitted_session'])) {
+    $data['node_submitted_session']->value = 0; /* WAS: 1 */
+  }
   if (isset($data['og_node_access_strict'])) {
     $data['og_node_access_strict']->value = 0; /* WAS: 1 */
   }
@@ -125,7 +186,7 @@ function dgc_deploy_views_default_views_alter(&$data) {
       'path' => 'user/[uid]',
     ); /* WAS: '' */
     $data['cod_community_attendees']->display['default']->display_options['fields']['field_profile_org']['exclude'] = TRUE; /* WAS: '' */
-    $data['cod_community_attendees']->display['default']->display_options['fields']['picture']['image_style'] = 'medium'; /* WAS: 'thumbnail' */
+    $data['cod_community_attendees']->display['default']->display_options['fields']['picture']['image_style'] = 'square_160'; /* WAS: 'thumbnail' */
     $data['cod_community_attendees']->display['default']->display_options['fields']['uid'] = array(
       'id' => 'uid',
       'table' => 'users',
@@ -177,9 +238,6 @@ function dgc_deploy_views_default_views_alter(&$data) {
     $data['ticket_attendee']->display['panel_pane_1'] = unserialize('O:13:"views_display":7:{s:15:"display_options";a:6:{s:5:"query";a:2:{s:4:"type";s:11:"views_query";s:7:"options";a:0:{}}s:8:"defaults";a:2:{s:5:"empty";b:0;s:6:"fields";b:0;}s:5:"empty";a:1:{s:4:"area";a:6:{s:2:"id";s:4:"area";s:5:"table";s:5:"views";s:5:"field";s:4:"area";s:5:"empty";b:1;s:7:"content";s:27:"You haven\'t registered yet!";s:6:"format";s:13:"filtered_html";}}s:6:"fields";a:4:{s:6:"entity";a:5:{s:2:"id";s:6:"entity";s:5:"table";s:11:"ticket_type";s:5:"field";s:6:"entity";s:12:"relationship";s:16:"ticket_type_ttid";s:5:"label";s:5:"Event";}s:17:"ticket_type_label";a:4:{s:2:"id";s:17:"ticket_type_label";s:5:"table";s:28:"field_data_ticket_type_label";s:5:"field";s:17:"ticket_type_label";s:12:"relationship";s:16:"ticket_type_ttid";}s:4:"name";a:5:{s:2:"id";s:4:"name";s:5:"table";s:5:"users";s:5:"field";s:4:"name";s:12:"relationship";s:10:"author_uid";s:5:"label";s:10:"Registrant";}s:7:"created";a:4:{s:2:"id";s:7:"created";s:5:"table";s:19:"ticket_registration";s:5:"field";s:7:"created";s:11:"date_format";s:4:"long";}}s:5:"allow";a:9:{s:9:"use_pager";i:0;s:14:"items_per_page";i:0;s:6:"offset";i:0;s:12:"link_to_view";i:0;s:9:"more_link";i:0;s:13:"path_override";i:0;s:14:"title_override";s:14:"title_override";s:12:"exposed_form";i:0;s:15:"fields_override";i:0;}s:14:"argument_input";a:1:{s:8:"user_uid";a:6:{s:4:"type";s:7:"context";s:7:"context";s:15:"entity:user.uid";s:16:"context_optional";i:0;s:5:"panel";s:1:"0";s:5:"fixed";s:0:"";s:5:"label";s:29:"Ticket registration: User_uid";}}}s:8:"db_table";s:13:"views_display";s:3:"vid";i:0;s:2:"id";s:12:"panel_pane_1";s:13:"display_title";s:12:"Content pane";s:14:"display_plugin";s:10:"panel_pane";s:8:"position";i:0;}'); /* WAS: '' */
   }
   if (isset($data['ticket_registration'])) {
-    $data['ticket_registration']->display['default']->display_options['exposed_form']['options'] = array(
-      'reset_button' => TRUE,
-    ); /* WAS: '' */
     $data['ticket_registration']->display['default']->display_options['fields']['field_profile_first'] = array(
       'id' => 'field_profile_first',
       'table' => 'field_data_field_profile_first',
@@ -442,6 +500,22 @@ function dgc_deploy_views_default_views_alter(&$data) {
         ),
       ),
     ); /* WAS: '' */
+    $data['ticket_registration']->display['default']->display_options['footer'] = array(
+      'result' => array(
+        'id' => 'result',
+        'table' => 'views',
+        'field' => 'result',
+        'content' => 'Displaying @start - @end of @total (page @current_page of @page_count)',
+      ),
+    ); /* WAS: '' */
+    $data['ticket_registration']->display['default']->display_options['header'] = array(
+      'result' => array(
+        'id' => 'result',
+        'table' => 'views',
+        'field' => 'result',
+        'content' => 'Displaying @start - @end of @total (page @current_page of @page_count)',
+      ),
+    ); /* WAS: '' */
     $data['ticket_registration']->display['default']->display_options['relationships']['user_uid'] = array(
       'id' => 'user_uid',
       'table' => 'ticket_registration',
@@ -503,4 +577,36 @@ function dgc_deploy_views_default_views_alter(&$data) {
   if (isset($data['ticket_user'])) {
     $data['ticket_user']->display['panel_pane_1'] = unserialize('O:13:"views_display":7:{s:15:"display_options";a:4:{s:5:"query";a:2:{s:4:"type";s:11:"views_query";s:7:"options";a:0:{}}s:8:"defaults";a:1:{s:5:"empty";b:0;}s:5:"allow";a:9:{s:9:"use_pager";i:0;s:14:"items_per_page";i:0;s:6:"offset";i:0;s:12:"link_to_view";i:0;s:9:"more_link";i:0;s:13:"path_override";i:0;s:14:"title_override";s:14:"title_override";s:12:"exposed_form";i:0;s:15:"fields_override";i:0;}s:14:"argument_input";a:1:{s:10:"author_uid";a:6:{s:4:"type";s:7:"context";s:7:"context";s:15:"entity:user.uid";s:16:"context_optional";i:0;s:5:"panel";s:1:"0";s:5:"fixed";s:0:"";s:5:"label";s:31:"Ticket registration: Author_uid";}}}s:8:"db_table";s:13:"views_display";s:3:"vid";i:0;s:2:"id";s:12:"panel_pane_1";s:13:"display_title";s:12:"Content pane";s:14:"display_plugin";s:10:"panel_pane";s:8:"position";i:0;}'); /* WAS: '' */
   }
+}
+
+/**
+ * Implements hook_image_default_styles().
+ */
+function dgc_deploy_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: square_160.
+  $styles['square_160'] = array(
+    'name' => 'square_160',
+    'label' => 'Square 160',
+    'effects' => array(
+      1 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 160,
+          'height' => 160,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
 }

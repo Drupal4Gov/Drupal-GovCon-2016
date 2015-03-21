@@ -45,9 +45,13 @@ a.button.btn-big, .form-actions input[type=submit],
 /* tickets button */
 .panel-pane.tickets {
 	text-align: center;
+	margin-top: 100px;
 	h2 {
     color: $red;
     font-size: 2.8em;
+    font-family: $script;
+    border: none;
+    font-weight: normal;
 	}
   a.tickets {
   	padding: 30px 22px 40px;
@@ -81,6 +85,7 @@ a.button.btn-big, .form-actions input[type=submit],
 
 @include breakpoint($tab, true) {
 	.panel-pane.tickets {
+		margin-top: 0;
 		position: absolute;
 		left: 0;
 		top: -30px;
