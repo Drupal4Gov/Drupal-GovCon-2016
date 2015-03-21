@@ -71,6 +71,11 @@ function dgc_deploy_features_override_default_overrides() {
   $overrides["user_permission.view sponsors.roles|anonymous user"] = 'anonymous user';
 
   // Exported overrides for: variable
+  $overrides["variable.node_options_session.value|0"] = 'status';
+  $overrides["variable.node_submitted_bof_session.value"] = 0;
+  $overrides["variable.node_submitted_news.value"] = 0;
+  $overrides["variable.node_submitted_schedule_item.value"] = 0;
+  $overrides["variable.node_submitted_session.value"] = 0;
   $overrides["variable.og_node_access_strict.value"] = 0;
 
   // Exported overrides for: views_view

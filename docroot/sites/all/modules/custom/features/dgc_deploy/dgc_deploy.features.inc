@@ -121,6 +121,21 @@ function dgc_deploy_user_default_permissions_alter(&$data) {
  * Implements hook_strongarm_alter().
  */
 function dgc_deploy_strongarm_alter(&$data) {
+  if (isset($data['node_options_session'])) {
+    $data['node_options_session']->value[0] = 'status'; /* WAS: '' */
+  }
+  if (isset($data['node_submitted_bof_session'])) {
+    $data['node_submitted_bof_session']->value = 0; /* WAS: 1 */
+  }
+  if (isset($data['node_submitted_news'])) {
+    $data['node_submitted_news']->value = 0; /* WAS: 1 */
+  }
+  if (isset($data['node_submitted_schedule_item'])) {
+    $data['node_submitted_schedule_item']->value = 0; /* WAS: 1 */
+  }
+  if (isset($data['node_submitted_session'])) {
+    $data['node_submitted_session']->value = 0; /* WAS: 1 */
+  }
   if (isset($data['og_node_access_strict'])) {
     $data['og_node_access_strict']->value = 0; /* WAS: 1 */
   }
