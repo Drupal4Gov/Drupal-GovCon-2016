@@ -17,6 +17,24 @@ function dgc_deploy_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_ckeditor_profile_defaults_alter().
+ */
+function dgc_deploy_ckeditor_profile_defaults_alter(&$data) {
+  if (isset($data['Advanced'])) {
+    $data['Advanced']['settings']['allowed_content'] = 't'; /* WAS: '' */
+    $data['Advanced']['settings']['extraAllowedContent'] = ''; /* WAS: '' */
+    $data['Advanced']['settings']['toolbar'] = '[
+        [\'Format\'],
+        [\'Bold\',\'Italic\',\'Strike\'],
+        [\'NumberedList\',\'BulletedList\',\'Indent\',\'Outdent\',\'Blockquote\'],
+        [\'Link\',\'Unlink\',\'Anchor\',\'Image\']
+    ]'; /* WAS: '[
+        [\'Format\'],[\'Bold\',\'Italic\',\'Strike\'],[\'NumberedList\',\'BulletedList\',\'Indent\',\'Outdent\',\'Blockquote\'],[\'Link\',\'Unlink\',\'Image\']
+    ]' */
+  }
+}
+
+/**
  * Implements hook_field_default_field_bases_alter().
  */
 function dgc_deploy_field_default_field_bases_alter(&$data) {

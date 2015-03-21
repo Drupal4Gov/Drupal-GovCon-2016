@@ -11,6 +11,16 @@ function dgc_deploy_features_override_default_overrides() {
   // This code is only used for UI in features. Exported alters hooks do the magic.
   $overrides = array();
 
+  // Exported overrides for: ckeditor_profile
+  $overrides["ckeditor_profile.Advanced.settings|allowed_content"] = 't';
+  $overrides["ckeditor_profile.Advanced.settings|extraAllowedContent"] = '';
+  $overrides["ckeditor_profile.Advanced.settings|toolbar"] = '[
+      [\'Format\'],
+      [\'Bold\',\'Italic\',\'Strike\'],
+      [\'NumberedList\',\'BulletedList\',\'Indent\',\'Outdent\',\'Blockquote\'],
+      [\'Link\',\'Unlink\',\'Anchor\',\'Image\']
+  ]';
+
   // Exported overrides for: field_base
   $overrides["field_base.field_ticket_attendee_listing.field_permissions|type"] = 0;
 
