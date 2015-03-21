@@ -64,6 +64,34 @@ function dgc_deploy_features_override_default_overrides() {
 
   // Exported overrides for: panelizer_defaults
   $overrides["panelizer_defaults.node:bof_session:default:default.pipeline"] = 'standard';
+  $overrides["panelizer_defaults.node:session:default:default.display|content|new-604f1c98-aefd-4044-ad5a-d566a6a28303"] = (object) array(
+      'pid' => 'new-604f1c98-aefd-4044-ad5a-d566a6a28303',
+      'panel' => 'footer',
+      'type' => 'node_comment_wrapper',
+      'subtype' => 'node_comment_wrapper',
+      'shown' => TRUE,
+      'access' => array(),
+      'configuration' => array(
+        'mode' => 1,
+        'comments_per_page' => 50,
+        'context' => 'panelizer',
+        'override_title' => 0,
+        'override_title_text' => '',
+        'override_title_heading' => 'h2',
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 0,
+      'locks' => array(),
+      'uuid' => '604f1c98-aefd-4044-ad5a-d566a6a28303',
+    );
+  $overrides["panelizer_defaults.node:session:default:default.display|panels|footer"] = array(
+    0 => 'new-604f1c98-aefd-4044-ad5a-d566a6a28303',
+  );
   $overrides["panelizer_defaults.node:session:default:default.link_to_entity"] = FALSE;
 
   // Exported overrides for: user_permission
