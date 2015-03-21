@@ -210,9 +210,6 @@ function dgc_deploy_views_default_views_alter(&$data) {
     $data['ticket_attendee']->display['panel_pane_1'] = unserialize('O:13:"views_display":7:{s:15:"display_options";a:6:{s:5:"query";a:2:{s:4:"type";s:11:"views_query";s:7:"options";a:0:{}}s:8:"defaults";a:2:{s:5:"empty";b:0;s:6:"fields";b:0;}s:5:"empty";a:1:{s:4:"area";a:6:{s:2:"id";s:4:"area";s:5:"table";s:5:"views";s:5:"field";s:4:"area";s:5:"empty";b:1;s:7:"content";s:27:"You haven\'t registered yet!";s:6:"format";s:13:"filtered_html";}}s:6:"fields";a:4:{s:6:"entity";a:5:{s:2:"id";s:6:"entity";s:5:"table";s:11:"ticket_type";s:5:"field";s:6:"entity";s:12:"relationship";s:16:"ticket_type_ttid";s:5:"label";s:5:"Event";}s:17:"ticket_type_label";a:4:{s:2:"id";s:17:"ticket_type_label";s:5:"table";s:28:"field_data_ticket_type_label";s:5:"field";s:17:"ticket_type_label";s:12:"relationship";s:16:"ticket_type_ttid";}s:4:"name";a:5:{s:2:"id";s:4:"name";s:5:"table";s:5:"users";s:5:"field";s:4:"name";s:12:"relationship";s:10:"author_uid";s:5:"label";s:10:"Registrant";}s:7:"created";a:4:{s:2:"id";s:7:"created";s:5:"table";s:19:"ticket_registration";s:5:"field";s:7:"created";s:11:"date_format";s:4:"long";}}s:5:"allow";a:9:{s:9:"use_pager";i:0;s:14:"items_per_page";i:0;s:6:"offset";i:0;s:12:"link_to_view";i:0;s:9:"more_link";i:0;s:13:"path_override";i:0;s:14:"title_override";s:14:"title_override";s:12:"exposed_form";i:0;s:15:"fields_override";i:0;}s:14:"argument_input";a:1:{s:8:"user_uid";a:6:{s:4:"type";s:7:"context";s:7:"context";s:15:"entity:user.uid";s:16:"context_optional";i:0;s:5:"panel";s:1:"0";s:5:"fixed";s:0:"";s:5:"label";s:29:"Ticket registration: User_uid";}}}s:8:"db_table";s:13:"views_display";s:3:"vid";i:0;s:2:"id";s:12:"panel_pane_1";s:13:"display_title";s:12:"Content pane";s:14:"display_plugin";s:10:"panel_pane";s:8:"position";i:0;}'); /* WAS: '' */
   }
   if (isset($data['ticket_registration'])) {
-    $data['ticket_registration']->display['default']->display_options['exposed_form']['options'] = array(
-      'reset_button' => TRUE,
-    ); /* WAS: '' */
     $data['ticket_registration']->display['default']->display_options['fields']['field_profile_first'] = array(
       'id' => 'field_profile_first',
       'table' => 'field_data_field_profile_first',
@@ -473,6 +470,22 @@ function dgc_deploy_views_default_views_alter(&$data) {
           'field_profile_first_1' => 'field_profile_first_1',
           'field_profile_last_1' => 'field_profile_last_1',
         ),
+      ),
+    ); /* WAS: '' */
+    $data['ticket_registration']->display['default']->display_options['footer'] = array(
+      'result' => array(
+        'id' => 'result',
+        'table' => 'views',
+        'field' => 'result',
+        'content' => 'Displaying @start - @end of @total (page @current_page of @page_count)',
+      ),
+    ); /* WAS: '' */
+    $data['ticket_registration']->display['default']->display_options['header'] = array(
+      'result' => array(
+        'id' => 'result',
+        'table' => 'views',
+        'field' => 'result',
+        'content' => 'Displaying @start - @end of @total (page @current_page of @page_count)',
       ),
     ); /* WAS: '' */
     $data['ticket_registration']->display['default']->display_options['relationships']['user_uid'] = array(
