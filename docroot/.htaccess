@@ -153,7 +153,7 @@ DirectoryIndex index.php index.html index.htm
   #RewriteCond %{SERVER_PORT} !=443
   #RewriteCond %{HTTP_HOST} ^www.drupalgovcon.org [NC]
   RewriteCond %{HTTPS} off
-  RewriteCond %{HTTP_HOST} !dgc.vm
+  RewriteCond %{HTTP_HOST} !(dgc.vm|govcon.dd|capitalcampdev.prod.acquia-sites.com|capitalcampstg.prod.acquia-sites.com)
   RewriteCond %{HTTP:X-Forwarded-Proto} !https
   RewriteRule ^ https://www.drupalgovcon.org%{REQUEST_URI} [L,R=301]
 </IfModule>
