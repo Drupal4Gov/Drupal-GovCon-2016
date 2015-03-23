@@ -186,7 +186,7 @@ ul.tier-two {
     max-height: 0;
     overflow: hidden;
   }
-  .responsive-menu .sub-menu.active {
+  .responsive-menu .sub-menu.active, .responsive-menu .menu-parent:focus .sub-menu {
     max-height: none;
     overflow: visible;
   }
