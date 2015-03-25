@@ -24,11 +24,11 @@ function dgc_deploy_ckeditor_profile_defaults_alter(&$data) {
     $data['Advanced']['settings']['allowed_content'] = 't'; /* WAS: '' */
     $data['Advanced']['settings']['extraAllowedContent'] = ''; /* WAS: '' */
     $data['Advanced']['settings']['toolbar'] = '[
-        [\'Format\'],
-        [\'Bold\',\'Italic\',\'Strike\'],
-        [\'NumberedList\',\'BulletedList\',\'Indent\',\'Outdent\',\'Blockquote\'],
-        [\'Link\',\'Unlink\',\'Anchor\',\'Image\']
-    ]'; /* WAS: '[
+            [\'Format\'],
+            [\'Bold\',\'Italic\',\'Strike\'],
+            [\'NumberedList\',\'BulletedList\',\'Indent\',\'Outdent\',\'Blockquote\'],
+            [\'Link\',\'Unlink\',\'Anchor\',\'Image\']
+        ]'; /* WAS: '[
         [\'Format\'],[\'Bold\',\'Italic\',\'Strike\'],[\'NumberedList\',\'BulletedList\',\'Indent\',\'Outdent\',\'Blockquote\'],[\'Link\',\'Unlink\',\'Image\']
     ]' */
   }
@@ -40,6 +40,7 @@ function dgc_deploy_ckeditor_profile_defaults_alter(&$data) {
 function dgc_deploy_field_default_field_bases_alter(&$data) {
   if (isset($data['field_ticket_attendee_listing'])) {
     $data['field_ticket_attendee_listing']['field_permissions']['type'] = 0; /* WAS: 1 */
+    unset($data['field_ticket_attendee_listing']['foreign keys']);
   }
 }
 
@@ -173,35 +174,6 @@ function dgc_deploy_strongarm_alter(&$data) {
  * Implements hook_views_default_views_alter().
  */
 function dgc_deploy_views_default_views_alter(&$data) {
-  if (isset($data['cod_community_attendees'])) {
-    $data['cod_community_attendees']->display['default']->display_options['exposed_form']['options'] = array(
-      'reset_button' => TRUE,
-    ); /* WAS: '' */
-    $data['cod_community_attendees']->display['default']->display_options['fields']['field_profile_first']['exclude'] = TRUE; /* WAS: '' */
-    $data['cod_community_attendees']->display['default']->display_options['fields']['field_profile_job_title']['exclude'] = TRUE; /* WAS: '' */
-    $data['cod_community_attendees']->display['default']->display_options['fields']['field_profile_last']['alter'] = array(
-      'alter_text' => TRUE,
-      'text' => '[field_profile_first] [field_profile_last]',
-      'make_link' => TRUE,
-      'path' => 'user/[uid]',
-    ); /* WAS: '' */
-    $data['cod_community_attendees']->display['default']->display_options['fields']['field_profile_org']['exclude'] = TRUE; /* WAS: '' */
-    $data['cod_community_attendees']->display['default']->display_options['fields']['picture']['image_style'] = 'square_160'; /* WAS: 'thumbnail' */
-    $data['cod_community_attendees']->display['default']->display_options['fields']['uid'] = array(
-      'id' => 'uid',
-      'table' => 'users',
-      'field' => 'uid',
-      'relationship' => 'user_uid',
-      'label' => '',
-      'exclude' => TRUE,
-      'element_label_colon' => FALSE,
-      'link_to_user' => FALSE,
-    ); /* WAS: '' */
-    $data['cod_community_attendees']->display['panel_pane_1']->display_options['inherit_panels_path'] = 1; /* WAS: '' */
-    unset($data['cod_community_attendees']->display['default']->display_options['fields']['name']);
-    unset($data['cod_community_attendees']->display['default']->display_options['filters']['name']);
-    unset($data['cod_community_attendees']->display['default']->display_options['relationships']['ticket_state_target_id']);
-  }
   if (isset($data['cod_news'])) {
     $data['cod_news']->display['panel_pane_1']->display_options['allow'] = array(
       'use_pager' => 0,
@@ -587,17 +559,9 @@ function dgc_deploy_image_default_styles() {
 
   // Exported image style: square_160.
   $styles['square_160'] = array(
-    'name' => 'square_160',
     'label' => 'Square 160',
     'effects' => array(
       1 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 160,

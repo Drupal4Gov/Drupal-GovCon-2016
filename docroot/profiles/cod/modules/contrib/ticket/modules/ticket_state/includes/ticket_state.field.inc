@@ -112,7 +112,7 @@ function ticket_state_allowed_values($field, $instance = NULL, $entity_type = NU
       $values = $function($field, $instance, $entity_type, $entity, $cacheable);
     }
     else {
-      $values = array_intersect_key(ticket_state_get_states_options(),$field['settings']['allowed_values']);
+      $values = ticket_state_get_states_options();
     }
 
     if ($cacheable) {
@@ -235,7 +235,7 @@ function ticket_state_field_update_forbid($field, $prior_field, $has_data) {
  * - 'list_illegal_value': The value is not part of the list of allowed values.
  */
 function ticket_state_field_validate($entity_type, $entity, $field, $instance, $langcode, $items, &$errors) {
-  $allowed_values = list_allowed_values($field, $instance, $entity_type, $entity);
+  $allowed_values = ticket_state_allowed_values($field, $instance, $entity_type, $entity);
   foreach ($items as $delta => $item) {
     if (!empty($item['value'])) {
       if (!empty($allowed_values) && !isset($allowed_values[$item['value']])) {

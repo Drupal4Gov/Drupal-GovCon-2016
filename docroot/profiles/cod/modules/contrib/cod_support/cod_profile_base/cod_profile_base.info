@@ -33,9 +33,9 @@ features[variable][] = user_picture_file_size
 features[variable][] = user_picture_style
 features[variable][] = user_pictures
 
-; Information added by Drupal.org packaging script on 2015-01-28
-version = "7.x-1.0-beta7"
+; Information added by Drupal.org packaging script on 2015-03-18
+version = "7.x-1.0-beta8"
 core = "7.x"
 project = "cod_support"
-datestamp = "1422486193"
+datestamp = "1426715316"
 

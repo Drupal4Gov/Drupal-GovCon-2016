@@ -15,14 +15,15 @@ function dgc_deploy_features_override_default_overrides() {
   $overrides["ckeditor_profile.Advanced.settings|allowed_content"] = 't';
   $overrides["ckeditor_profile.Advanced.settings|extraAllowedContent"] = '';
   $overrides["ckeditor_profile.Advanced.settings|toolbar"] = '[
-      [\'Format\'],
-      [\'Bold\',\'Italic\',\'Strike\'],
-      [\'NumberedList\',\'BulletedList\',\'Indent\',\'Outdent\',\'Blockquote\'],
-      [\'Link\',\'Unlink\',\'Anchor\',\'Image\']
-  ]';
+          [\'Format\'],
+          [\'Bold\',\'Italic\',\'Strike\'],
+          [\'NumberedList\',\'BulletedList\',\'Indent\',\'Outdent\',\'Blockquote\'],
+          [\'Link\',\'Unlink\',\'Anchor\',\'Image\']
+      ]';
 
   // Exported overrides for: field_base
   $overrides["field_base.field_ticket_attendee_listing.field_permissions|type"] = 0;
+  $overrides["field_base.field_ticket_attendee_listing.foreign keys"]["DELETED"] = TRUE;
 
   // Exported overrides for: filter
   $overrides["filter.filtered_html.filters|filter_html|settings|allowed_html"] = '<a> <em> <strong> <u> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <h2> <h3> <h4> <h5> <h6>  <p> <br> <img> <strike>';
@@ -107,33 +108,6 @@ function dgc_deploy_features_override_default_overrides() {
   $overrides["variable.og_node_access_strict.value"] = 0;
 
   // Exported overrides for: views_view
-  $overrides["views_view.cod_community_attendees.display|default|display_options|exposed_form|options"] = array(
-    'reset_button' => TRUE,
-  );
-  $overrides["views_view.cod_community_attendees.display|default|display_options|fields|field_profile_first|exclude"] = TRUE;
-  $overrides["views_view.cod_community_attendees.display|default|display_options|fields|field_profile_job_title|exclude"] = TRUE;
-  $overrides["views_view.cod_community_attendees.display|default|display_options|fields|field_profile_last|alter"] = array(
-    'alter_text' => TRUE,
-    'text' => '[field_profile_first] [field_profile_last]',
-    'make_link' => TRUE,
-    'path' => 'user/[uid]',
-  );
-  $overrides["views_view.cod_community_attendees.display|default|display_options|fields|field_profile_org|exclude"] = TRUE;
-  $overrides["views_view.cod_community_attendees.display|default|display_options|fields|name"]["DELETED"] = TRUE;
-  $overrides["views_view.cod_community_attendees.display|default|display_options|fields|picture|image_style"] = 'square_160';
-  $overrides["views_view.cod_community_attendees.display|default|display_options|fields|uid"] = array(
-    'id' => 'uid',
-    'table' => 'users',
-    'field' => 'uid',
-    'relationship' => 'user_uid',
-    'label' => '',
-    'exclude' => TRUE,
-    'element_label_colon' => FALSE,
-    'link_to_user' => FALSE,
-  );
-  $overrides["views_view.cod_community_attendees.display|default|display_options|filters|name"]["DELETED"] = TRUE;
-  $overrides["views_view.cod_community_attendees.display|default|display_options|relationships|ticket_state_target_id"]["DELETED"] = TRUE;
-  $overrides["views_view.cod_community_attendees.display|panel_pane_1|display_options|inherit_panels_path"] = 1;
   $overrides["views_view.cod_news.display|panel_pane_1|display_options|allow"] = array(
     'use_pager' => 0,
     'items_per_page' => 'items_per_page',
