@@ -12,7 +12,9 @@ function dgc_extras_features_override_default_overrides() {
   $overrides = array();
 
   // Exported overrides for: field_base
+  $overrides["field_base.field_dietary_needs.foreign keys"]["DELETED"] = TRUE;
   $overrides["field_base.field_dietary_needs.settings|allowed_values|None"] = 'None';
+  $overrides["field_base.field_t_shirt_size.foreign keys"]["DELETED"] = TRUE;
   $overrides["field_base.field_t_shirt_size.settings|allowed_values|2XL"] = '2XL';
   $overrides["field_base.field_t_shirt_size.settings|allowed_values|Large"] = 'Large';
   $overrides["field_base.field_t_shirt_size.settings|allowed_values|Mens L"]["DELETED"] = TRUE;

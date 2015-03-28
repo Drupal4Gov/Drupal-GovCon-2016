@@ -10,11 +10,13 @@
 function dgc_extras_field_default_field_bases_alter(&$data) {
   if (isset($data['field_dietary_needs'])) {
     $data['field_dietary_needs']['settings']['allowed_values']['None'] = 'None'; /* WAS: '' */
+    unset($data['field_dietary_needs']['foreign keys']);
   }
   if (isset($data['field_t_shirt_size'])) {
     $data['field_t_shirt_size']['settings']['allowed_values']['2XL'] = '2XL'; /* WAS: '' */
     $data['field_t_shirt_size']['settings']['allowed_values']['Large'] = 'Large'; /* WAS: '' */
     $data['field_t_shirt_size']['settings']['allowed_values']['Small'] = 'Small'; /* WAS: '' */
+    unset($data['field_t_shirt_size']['foreign keys']);
     unset($data['field_t_shirt_size']['settings']['allowed_values']['Mens L']);
     unset($data['field_t_shirt_size']['settings']['allowed_values']['Mens M']);
     unset($data['field_t_shirt_size']['settings']['allowed_values']['Mens S']);
