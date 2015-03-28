@@ -1,2 +1,5 @@
 The following patches have been applied to this project:
-NONE! YAY
+
+Various features overridden after beta8 update
+https://www.drupal.org/node/2458819#comment-9768455
+https://www.drupal.org/files/issues/cod_support-features-overridden-beta8-2458819-4.patch

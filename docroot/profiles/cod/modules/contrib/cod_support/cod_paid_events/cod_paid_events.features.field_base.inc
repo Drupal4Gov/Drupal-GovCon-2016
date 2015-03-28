@@ -19,7 +19,6 @@ function cod_paid_events_field_default_field_bases() {
       0 => 'commerce_product',
     ),
     'field_name' => 'commerce_price',
-    'foreign keys' => array(),
     'indexes' => array(
       'currency_price' => array(
         0 => 'amount',
@@ -43,7 +42,6 @@ function cod_paid_events_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 2,
     ),
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -73,14 +71,6 @@ function cod_paid_events_field_default_field_bases() {
     'field_name' => 'field_ticket_order',
     'field_permissions' => array(
       'type' => 1,
-    ),
-    'foreign keys' => array(
-      'commerce_order' => array(
-        'columns' => array(
-          'target_id' => 'order_id',
-        ),
-        'table' => 'commerce_order',
-      ),
     ),
     'indexes' => array(
       'target_id' => array(
@@ -121,14 +111,6 @@ function cod_paid_events_field_default_field_bases() {
     'field_name' => 'field_ticket_related_product',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'product_id' => array(
-        'columns' => array(
-          'product_id' => 'product_id',
-        ),
-        'table' => 'commerce_product',
-      ),
     ),
     'indexes' => array(
       'product_id' => array(
