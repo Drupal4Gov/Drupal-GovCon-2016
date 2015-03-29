@@ -594,6 +594,45 @@ function dgc_deploy_views_default_views_alter(&$data) {
 }
 
 /**
+ * Implements hook_flag_default_flags().
+ */
+function dgc_deploy_flag_default_flags() {
+  $flags = array();
+  // Exported flag: "Drupal GovCon Event Organizer".
+  $flags['dgc_event_organizer'] = array(
+    'entity_type' => 'ticket_registration',
+    'title' => 'Drupal GovCon Event Organizer',
+    'global' => 1,
+    'types' => array(),
+    'flag_short' => 'Flag as event organizer',
+    'flag_long' => '',
+    'flag_message' => '',
+    'unflag_short' => 'Unflag as event organizer',
+    'unflag_long' => '',
+    'unflag_message' => '',
+    'unflag_denied_text' => '',
+    'link_type' => 'toggle',
+    'weight' => 0,
+    'show_in_links' => array(
+      'default' => 0,
+      'diff_standard' => 0,
+      'token' => 0,
+    ),
+    'show_as_field' => 0,
+    'show_on_form' => 1,
+    'access_author' => '',
+    'show_contextual_link' => 0,
+    'api_version' => 3,
+    'module' => 'dgc_deploy',
+    'locked' => array(
+      0 => 'name',
+    ),
+  );
+  return $flags;
+
+}
+
+/**
  * Implements hook_image_default_styles().
  */
 function dgc_deploy_image_default_styles() {

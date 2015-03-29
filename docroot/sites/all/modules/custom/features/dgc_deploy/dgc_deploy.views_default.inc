@@ -128,7 +128,7 @@ function dgc_deploy_views_default_views() {
   $handler->display->display_options['arguments']['entity_id']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['entity_id']['validate']['type'] = 'og';
   $handler->display->display_options['arguments']['entity_id']['validate']['fail'] = 'empty';
-  /* Filter criterion: Field: Include &#039;attendee listing&#039; field for tickets (field_ticket_attendee_listing) */
+  /* Filter criterion: Field: Show on attendee listing page (field_ticket_attendee_listing) */
   $handler->display->display_options['filters']['field_ticket_attendee_listing_value']['id'] = 'field_ticket_attendee_listing_value';
   $handler->display->display_options['filters']['field_ticket_attendee_listing_value']['table'] = 'field_data_field_ticket_attendee_listing';
   $handler->display->display_options['filters']['field_ticket_attendee_listing_value']['field'] = 'field_ticket_attendee_listing_value';
@@ -219,6 +219,113 @@ function dgc_deploy_views_default_views() {
       'panel' => '0',
       'fixed' => '',
       'label' => 'Ticket type: Entity ID',
+    ),
+  );
+  $handler->display->display_options['inherit_panels_path'] = 1;
+
+  /* Display: Event organizers */
+  $handler = $view->new_display('panel_pane', 'Event organizers', 'organizers');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Ticket registration: Attendee */
+  $handler->display->display_options['relationships']['user_uid']['id'] = 'user_uid';
+  $handler->display->display_options['relationships']['user_uid']['table'] = 'ticket_registration';
+  $handler->display->display_options['relationships']['user_uid']['field'] = 'user_uid';
+  /* Relationship: Ticket registration: Ticket Type */
+  $handler->display->display_options['relationships']['ticket_type_ttid']['id'] = 'ticket_type_ttid';
+  $handler->display->display_options['relationships']['ticket_type_ttid']['table'] = 'ticket_registration';
+  $handler->display->display_options['relationships']['ticket_type_ttid']['field'] = 'ticket_type_ttid';
+  /* Relationship: Flags: dgc_event_organizer */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'ticket_registration';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['label'] = 'organizers_flag';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'dgc_event_organizer';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Ticket registration: Ticket Registration ID */
+  $handler->display->display_options['fields']['trid']['id'] = 'trid';
+  $handler->display->display_options['fields']['trid']['table'] = 'ticket_registration';
+  $handler->display->display_options['fields']['trid']['field'] = 'trid';
+  $handler->display->display_options['fields']['trid']['label'] = '';
+  $handler->display->display_options['fields']['trid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['trid']['element_label_colon'] = FALSE;
+  /* Field: User: Picture */
+  $handler->display->display_options['fields']['picture']['id'] = 'picture';
+  $handler->display->display_options['fields']['picture']['table'] = 'users';
+  $handler->display->display_options['fields']['picture']['field'] = 'picture';
+  $handler->display->display_options['fields']['picture']['relationship'] = 'user_uid';
+  $handler->display->display_options['fields']['picture']['label'] = '';
+  $handler->display->display_options['fields']['picture']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['picture']['image_style'] = 'square_160';
+  /* Field: User: Uid */
+  $handler->display->display_options['fields']['uid']['id'] = 'uid';
+  $handler->display->display_options['fields']['uid']['table'] = 'users';
+  $handler->display->display_options['fields']['uid']['field'] = 'uid';
+  $handler->display->display_options['fields']['uid']['relationship'] = 'user_uid';
+  $handler->display->display_options['fields']['uid']['label'] = '';
+  $handler->display->display_options['fields']['uid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
+  /* Field: Field: First name */
+  $handler->display->display_options['fields']['field_profile_first']['id'] = 'field_profile_first';
+  $handler->display->display_options['fields']['field_profile_first']['table'] = 'field_data_field_profile_first';
+  $handler->display->display_options['fields']['field_profile_first']['field'] = 'field_profile_first';
+  $handler->display->display_options['fields']['field_profile_first']['relationship'] = 'user_uid';
+  $handler->display->display_options['fields']['field_profile_first']['label'] = '';
+  $handler->display->display_options['fields']['field_profile_first']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_profile_first']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_profile_first']['type'] = 'text_plain';
+  /* Field: Field: Last name */
+  $handler->display->display_options['fields']['field_profile_last']['id'] = 'field_profile_last';
+  $handler->display->display_options['fields']['field_profile_last']['table'] = 'field_data_field_profile_last';
+  $handler->display->display_options['fields']['field_profile_last']['field'] = 'field_profile_last';
+  $handler->display->display_options['fields']['field_profile_last']['relationship'] = 'user_uid';
+  $handler->display->display_options['fields']['field_profile_last']['label'] = '';
+  $handler->display->display_options['fields']['field_profile_last']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_profile_last']['alter']['text'] = '[field_profile_first] [field_profile_last]';
+  $handler->display->display_options['fields']['field_profile_last']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_profile_last']['alter']['path'] = 'user/[uid]';
+  $handler->display->display_options['fields']['field_profile_last']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_profile_last']['type'] = 'text_plain';
+  /* Field: User: Job title */
+  $handler->display->display_options['fields']['field_profile_job_title']['id'] = 'field_profile_job_title';
+  $handler->display->display_options['fields']['field_profile_job_title']['table'] = 'field_data_field_profile_job_title';
+  $handler->display->display_options['fields']['field_profile_job_title']['field'] = 'field_profile_job_title';
+  $handler->display->display_options['fields']['field_profile_job_title']['relationship'] = 'user_uid';
+  $handler->display->display_options['fields']['field_profile_job_title']['label'] = '';
+  $handler->display->display_options['fields']['field_profile_job_title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_profile_job_title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_profile_job_title']['alter']['text'] = '[field_profile_job_title]  at';
+  $handler->display->display_options['fields']['field_profile_job_title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_profile_job_title']['type'] = 'text_plain';
+  /* Field: User: Organization */
+  $handler->display->display_options['fields']['field_profile_org']['id'] = 'field_profile_org';
+  $handler->display->display_options['fields']['field_profile_org']['table'] = 'field_data_field_profile_org';
+  $handler->display->display_options['fields']['field_profile_org']['field'] = 'field_profile_org';
+  $handler->display->display_options['fields']['field_profile_org']['relationship'] = 'user_uid';
+  $handler->display->display_options['fields']['field_profile_org']['label'] = '';
+  $handler->display->display_options['fields']['field_profile_org']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_profile_org']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_profile_org']['alter']['text'] = '[field_profile_job_title] [field_profile_org]';
+  $handler->display->display_options['fields']['field_profile_org']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_profile_org']['type'] = 'text_plain';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Field: Last name (field_profile_last) */
+  $handler->display->display_options['sorts']['field_profile_last_value']['id'] = 'field_profile_last_value';
+  $handler->display->display_options['sorts']['field_profile_last_value']['table'] = 'field_data_field_profile_last';
+  $handler->display->display_options['sorts']['field_profile_last_value']['field'] = 'field_profile_last_value';
+  $handler->display->display_options['sorts']['field_profile_last_value']['relationship'] = 'user_uid';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  $handler->display->display_options['argument_input'] = array(
+    'entity_id' => array(
+      'type' => 'user',
+      'context' => 'entity:node.og-group-ref',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Event ID',
     ),
   );
   $handler->display->display_options['inherit_panels_path'] = 1;
