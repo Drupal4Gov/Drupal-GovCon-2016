@@ -22,6 +22,7 @@ function dgc_deploy_features_override_default_overrides() {
       ]';
 
   // Exported overrides for: field_base
+  $overrides["field_base.field_accepted.settings|allowed_values|proposed"] = 'Proposed';
   $overrides["field_base.field_ticket_attendee_listing.field_permissions|type"] = 0;
   $overrides["field_base.field_ticket_attendee_listing.foreign keys"]["DELETED"] = TRUE;
 
@@ -131,6 +132,7 @@ function dgc_deploy_features_override_default_overrides() {
   $overrides["variable.node_submitted_schedule_item.value"] = 0;
   $overrides["variable.node_submitted_session.value"] = 0;
   $overrides["variable.og_node_access_strict.value"] = 0;
+  $overrides["variable.subpathauto_depth.value"] = 3;
 
   // Exported overrides for: views_view
   $overrides["views_view.cod_news.display|panel_pane_1|display_options|allow"] = array(

@@ -45,6 +45,9 @@ function dgc_deploy_ckeditor_profile_defaults_alter(&$data) {
  * Implements hook_field_default_field_bases_alter().
  */
 function dgc_deploy_field_default_field_bases_alter(&$data) {
+  if (isset($data['field_accepted'])) {
+    $data['field_accepted']['settings']['allowed_values']['proposed'] = 'Proposed'; /* WAS: '' */
+  }
   if (isset($data['field_ticket_attendee_listing'])) {
     $data['field_ticket_attendee_listing']['field_permissions']['type'] = 0; /* WAS: 1 */
     unset($data['field_ticket_attendee_listing']['foreign keys']);
@@ -201,6 +204,9 @@ function dgc_deploy_strongarm_alter(&$data) {
   }
   if (isset($data['og_node_access_strict'])) {
     $data['og_node_access_strict']->value = 0; /* WAS: 1 */
+  }
+  if (isset($data['subpathauto_depth'])) {
+    $data['subpathauto_depth']->value = 3; /* WAS: 2 */
   }
 }
 
