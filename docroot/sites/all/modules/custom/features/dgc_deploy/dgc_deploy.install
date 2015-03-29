@@ -167,3 +167,23 @@ function dgc_deploy_update_7010() {
 function dgc_deploy_update_7011() {
   module_enable(array('mollom'));
 }
+
+
+/**
+ * Add main menu block to footer region.
+ */
+function dgc_deploy_update_7012() {
+  // Enable main menu block and set title to <none>.
+  $default_theme = variable_get('theme_default', 'govcon');
+  db_update('block')
+    ->fields(array(
+      'region' => 'footer',
+      'title' => '<none>',
+      'status' => '1',
+    )
+  )
+  ->condition('module', 'system')
+  ->condition('delta', 'main-menu')
+  ->condition('theme', $default_theme)
+  ->execute();
+}
