@@ -622,11 +622,11 @@ function dgc_deploy_flag_default_flags() {
     'show_on_form' => 1,
     'access_author' => '',
     'show_contextual_link' => 0,
-    'api_version' => 3,
     'module' => 'dgc_deploy',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   return $flags;
 

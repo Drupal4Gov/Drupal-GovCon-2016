@@ -36,6 +36,7 @@ function dgc_deploy_views_default_views() {
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['row_class'] = '[flagged]';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
@@ -52,6 +53,14 @@ function dgc_deploy_views_default_views() {
   $handler->display->display_options['relationships']['ticket_type_ttid']['id'] = 'ticket_type_ttid';
   $handler->display->display_options['relationships']['ticket_type_ttid']['table'] = 'ticket_registration';
   $handler->display->display_options['relationships']['ticket_type_ttid']['field'] = 'ticket_type_ttid';
+  /* Relationship: Flags: dgc_event_organizer */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'ticket_registration';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['label'] = 'organizers_flag';
+  $handler->display->display_options['relationships']['flag_content_rel']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'dgc_event_organizer';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   /* Field: Ticket registration: Ticket Registration ID */
   $handler->display->display_options['fields']['trid']['id'] = 'trid';
   $handler->display->display_options['fields']['trid']['table'] = 'ticket_registration';
@@ -115,6 +124,19 @@ function dgc_deploy_views_default_views() {
   $handler->display->display_options['fields']['field_profile_org']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_profile_org']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_profile_org']['type'] = 'text_plain';
+  /* Field: Flags: Flagged */
+  $handler->display->display_options['fields']['flagged']['id'] = 'flagged';
+  $handler->display->display_options['fields']['flagged']['table'] = 'flagging';
+  $handler->display->display_options['fields']['flagged']['field'] = 'flagged';
+  $handler->display->display_options['fields']['flagged']['relationship'] = 'flag_content_rel';
+  $handler->display->display_options['fields']['flagged']['label'] = '';
+  $handler->display->display_options['fields']['flagged']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['flagged']['alter']['path'] = 'node/!1/meet-drupal-govcon-team';
+  $handler->display->display_options['fields']['flagged']['alter']['alt'] = 'Meet the %1 team!';
+  $handler->display->display_options['fields']['flagged']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['flagged']['type'] = 'custom';
+  $handler->display->display_options['fields']['flagged']['type_custom_true'] = 'Organizer';
+  $handler->display->display_options['fields']['flagged']['not'] = 0;
   /* Contextual filter: Ticket type: Entity ID */
   $handler->display->display_options['arguments']['entity_id']['id'] = 'entity_id';
   $handler->display->display_options['arguments']['entity_id']['table'] = 'ticket_type';
@@ -310,6 +332,20 @@ function dgc_deploy_views_default_views() {
   $handler->display->display_options['fields']['field_profile_org']['alter']['text'] = '[field_profile_job_title] [field_profile_org]';
   $handler->display->display_options['fields']['field_profile_org']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_profile_org']['type'] = 'text_plain';
+  /* Field: Flags: Flagged */
+  $handler->display->display_options['fields']['flagged']['id'] = 'flagged';
+  $handler->display->display_options['fields']['flagged']['table'] = 'flagging';
+  $handler->display->display_options['fields']['flagged']['field'] = 'flagged';
+  $handler->display->display_options['fields']['flagged']['relationship'] = 'flag_content_rel';
+  $handler->display->display_options['fields']['flagged']['label'] = '';
+  $handler->display->display_options['fields']['flagged']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['flagged']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['flagged']['alter']['path'] = 'node/!1/meet-drupal-govcon-team';
+  $handler->display->display_options['fields']['flagged']['alter']['alt'] = 'Meet the %1 team!';
+  $handler->display->display_options['fields']['flagged']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['flagged']['type'] = 'custom';
+  $handler->display->display_options['fields']['flagged']['type_custom_true'] = 'Organizer';
+  $handler->display->display_options['fields']['flagged']['not'] = 0;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Field: Last name (field_profile_last) */
   $handler->display->display_options['sorts']['field_profile_last_value']['id'] = 'field_profile_last_value';
