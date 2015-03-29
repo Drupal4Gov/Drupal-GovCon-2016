@@ -29,6 +29,31 @@ function dgc_deploy_features_override_default_overrides() {
   $overrides["filter.filtered_html.filters|filter_html|settings|allowed_html"] = '<a> <em> <strong> <u> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <h2> <h3> <h4> <h5> <h6>  <p> <br> <img> <strike>';
 
   // Exported overrides for: page_manager_pages
+  $overrides["page_manager_pages.community.default_handlers|page_community_panel_context|conf|display|content|new-797bfb61-a42b-47a1-94da-7e49df24efbc|shown"] = FALSE;
+  $overrides["page_manager_pages.community.default_handlers|page_community_panel_context|conf|display|content|new-bc2d3d3f-97e4-418e-ba6e-a16d3552bbe3"] = (object) array(
+      'pid' => 'new-bc2d3d3f-97e4-418e-ba6e-a16d3552bbe3',
+      'panel' => 'center',
+      'type' => 'views_panes',
+      'subtype' => 'dgc_community_attendees-panel_pane_1',
+      'shown' => TRUE,
+      'access' => array(),
+      'configuration' => array(
+        'context' => array(
+          0 => 'argument_entity_id:node_1',
+        ),
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 2,
+      'locks' => array(),
+      'uuid' => 'bc2d3d3f-97e4-418e-ba6e-a16d3552bbe3',
+    );
+  $overrides["page_manager_pages.community.default_handlers|page_community_panel_context|conf|display|content|new-dafcfd0f-4f89-4ace-b9b7-bee77657b467|shown"] = FALSE;
+  $overrides["page_manager_pages.community.default_handlers|page_community_panel_context|conf|display|panels|center|2"] = 'new-bc2d3d3f-97e4-418e-ba6e-a16d3552bbe3';
   $overrides["page_manager_pages.event_registration.access|settings"] = NULL;
   $overrides["page_manager_pages.event_registration.access|type"] = 'none';
   $overrides["page_manager_pages.event_registration.default_handlers|page_event_registration__panel_context_ef9c7edf-6676-4d39-b6ef-3c7ce98858b7"] = (object) array(
