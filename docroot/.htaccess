@@ -141,7 +141,7 @@ DirectoryIndex index.php index.html index.htm
       Header append Vary Accept-Encoding
     </FilesMatch>
     # Set Strict transport security so modern browsers will remember to always go to https.
-    Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
+    #Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
   </IfModule>
 
   # Custom redirects for old hostnames
