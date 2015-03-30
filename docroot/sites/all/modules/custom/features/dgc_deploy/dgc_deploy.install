@@ -168,7 +168,6 @@ function dgc_deploy_update_7011() {
   module_enable(array('mollom'));
 }
 
-
 /**
  * Add main menu block to footer region.
  */
@@ -186,4 +185,18 @@ function dgc_deploy_update_7012() {
   ->condition('delta', 'main-menu')
   ->condition('theme', $default_theme)
   ->execute();
+}
+
+/**
+ * Enable form_builder module
+ */
+function dgc_deploy_update_7013() {
+  module_enable(array('form_builder'));
+}
+
+/**
+ * Enable form_builder WEBFORM module
+ */
+function dgc_deploy_update_7014() {
+  module_enable(array('form_builder_webform'));
 }

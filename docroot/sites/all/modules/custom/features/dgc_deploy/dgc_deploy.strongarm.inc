@@ -304,5 +304,12 @@ https://www.facebook.com/DrupalGovCon
   $strongarm->value = '1';
   $export['user_register'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'webform_node_page';
+  $strongarm->value = 1;
+  $export['webform_node_page'] = $strongarm;
+
   return $export;
 }
