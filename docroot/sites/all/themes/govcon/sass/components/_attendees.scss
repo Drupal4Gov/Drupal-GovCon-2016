@@ -12,6 +12,9 @@
   		width: 120px;
   		height: 160px;
   	}
+    li.views-row.Organizer {
+      background: $texture $pale-blue;
+    }
   }
   .views-field-picture {
   	width: 100px;
@@ -34,6 +37,9 @@
   		width: 100%;
   		height: auto;
   	}
+  }
+  .Organizer.views-field-picture {
+    background: url('../images/gold_star.svg') $red;
   }
   .views-field-field-profile-first,
   .views-field-field-profile-last {

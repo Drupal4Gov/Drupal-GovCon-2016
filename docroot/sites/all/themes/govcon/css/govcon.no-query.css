@@ -143,14 +143,17 @@ td.status {
       background: url(../images/texture200.png) #b9a884;
       width: 120px;
       height: 160px; }
-  /* line 16, ../sass/components/_attendees.scss */
+    /* line 15, ../sass/components/_attendees.scss */
+    .view-cod-community-attendees ul li.views-row.Organizer {
+      background: url(../images/texture200.png) #8bb5bb; }
+  /* line 19, ../sass/components/_attendees.scss */
   .view-cod-community-attendees .views-field-picture {
     width: 100px;
     height: 100px;
     background: url("../images/gold_star.svg") #095380;
     position: relative;
     margin-bottom: 4px; }
-    /* line 22, ../sass/components/_attendees.scss */
+    /* line 25, ../sass/components/_attendees.scss */
     .view-cod-community-attendees .views-field-picture:after {
       content: "";
       position: absolute;
@@ -159,29 +162,32 @@ td.status {
       right: 0;
       bottom: 0;
       background: url(../images/texture200.png); }
-    /* line 31, ../sass/components/_attendees.scss */
+    /* line 34, ../sass/components/_attendees.scss */
     .view-cod-community-attendees .views-field-picture img {
       position: relative;
       z-index: 2;
       width: 100%;
       height: auto; }
-  /* line 38, ../sass/components/_attendees.scss */
+  /* line 41, ../sass/components/_attendees.scss */
+  .view-cod-community-attendees .Organizer.views-field-picture {
+    background: url("../images/gold_star.svg") #e02d3b; }
+  /* line 44, ../sass/components/_attendees.scss */
   .view-cod-community-attendees .views-field-field-profile-first,
   .view-cod-community-attendees .views-field-field-profile-last {
     display: inline; }
-    /* line 41, ../sass/components/_attendees.scss */
+    /* line 47, ../sass/components/_attendees.scss */
     .view-cod-community-attendees .views-field-field-profile-first div,
     .view-cod-community-attendees .views-field-field-profile-last div {
       display: inline; }
 
-/* line 46, ../sass/components/_attendees.scss */
+/* line 52, ../sass/components/_attendees.scss */
 .view-cod-community-attendees {
   font-size: 1em; }
-  /* line 48, ../sass/components/_attendees.scss */
+  /* line 54, ../sass/components/_attendees.scss */
   .view-cod-community-attendees ul li.views-row {
     width: 180px;
     height: 224px; }
-  /* line 49, ../sass/components/_attendees.scss */
+  /* line 55, ../sass/components/_attendees.scss */
   .view-cod-community-attendees .views-field-picture {
     width: 160px;
     height: 160px; }
@@ -961,9 +967,10 @@ li.menu-item a:hover, li.menu-item a.active {
 
 /* line 41, ../sass/components/_sessions.scss */
 .session-title a {
-  font-size: 1.4em; }
+  font-size: 1.4em;
+  margin: 0.5em 0; }
 
-/* line 47, ../sass/components/_sessions.scss */
+/* line 48, ../sass/components/_sessions.scss */
 .view-id-dgc_sessions.view-display-id-page_1 {
   width: 49.15254%;
   float: left;
@@ -971,21 +978,21 @@ li.menu-item a:hover, li.menu-item a.active {
   margin-left: 0;
   clear: none; }
 
-/* line 50, ../sass/components/_sessions.scss */
+/* line 51, ../sass/components/_sessions.scss */
 .page-node-sessions .view-filters {
   width: 49.15254%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none; }
-  /* line 52, ../sass/components/_sessions.scss */
+  /* line 53, ../sass/components/_sessions.scss */
   .page-node-sessions .view-filters .views-exposed-form .views-exposed-widget {
     width: 100%; }
-  /* line 56, ../sass/components/_sessions.scss */
+  /* line 57, ../sass/components/_sessions.scss */
   .page-node-sessions .view-filters .views-exposed-form .views-exposed-widget.views-submit-button, .page-node-sessions .view-filters .views-exposed-form .views-exposed-widget.views-reset-button {
     width: auto; }
 
-/* line 61, ../sass/components/_sessions.scss */
+/* line 62, ../sass/components/_sessions.scss */
 .page-node-sessions .view-content {
   clear: both; }
 
