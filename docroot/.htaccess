@@ -141,7 +141,7 @@ DirectoryIndex index.php index.html index.htm
       Header append Vary Accept-Encoding
     </FilesMatch>
     # Set Strict transport security so modern browsers will remember to always go to https.
-    Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
+    #Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
   </IfModule>
 
   # Custom redirects for old hostnames
@@ -153,7 +153,7 @@ DirectoryIndex index.php index.html index.htm
   #RewriteCond %{SERVER_PORT} !=443
   #RewriteCond %{HTTP_HOST} ^www.drupalgovcon.org [NC]
   RewriteCond %{HTTPS} off
-  RewriteCond %{HTTP_HOST} !(dgc.vm|govcon.dd|capitalcampdev.prod.acquia-sites.com|capitalcampstg.prod.acquia-sites.com)
+  RewriteCond %{HTTP_HOST} !(dgc\d?.vm|govcon.dd|capitalcampdev.prod.acquia-sites.com|capitalcampstg.prod.acquia-sites.com)
   RewriteCond %{HTTP:X-Forwarded-Proto} !https
   RewriteRule ^ https://www.drupalgovcon.org%{REQUEST_URI} [L,R=301]
 </IfModule>

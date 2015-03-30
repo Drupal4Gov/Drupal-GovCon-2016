@@ -1,5 +1,5 @@
 The following patches have been applied to this project:
 
-Update profile_location field for new addressfield settings related to #968112
-https://www.drupal.org/node/2446727#comment-9689553
-https://www.drupal.org/files/issues/cod_support-update-profile_location-field-2446727-1.patch
+Various features overridden after beta8 update
+https://www.drupal.org/node/2458819#comment-9768455
+https://www.drupal.org/files/issues/cod_support-features-overridden-beta8-2458819-4.patch

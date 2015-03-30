@@ -13,7 +13,7 @@ table {
 		background-color: #fff;
 	}
 	tr.even {
-		background-color: $ecru;
+		background-color: lighten($ecru, 4%);
 	}
 	td {
 		padding: 0.5em;

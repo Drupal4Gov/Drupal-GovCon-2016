@@ -34,3 +34,10 @@ function dgc_deploy_prod_uninstall() {
   variable_set('preprocess_js', '0');
   variable_set('page_compression', '0');
 }
+
+/**
+ * Enable Security Kit module
+ */
+function dgc_deploy_prod_update_7000() {
+  module_enable(array('seckit'));
+}

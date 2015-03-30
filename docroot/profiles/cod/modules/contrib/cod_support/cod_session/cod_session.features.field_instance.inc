@@ -773,9 +773,9 @@ function cod_session_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('An image to be used for highlighted sessions in the front page rotator.');
   t('Body');
+  t('Conference');
   t('Default Session View');
   t('Description');
-  t('Conference');
   t('Experience level');
   t('File attachments');
   t('Image');

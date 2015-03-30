@@ -76,6 +76,25 @@ class CommerceDiscountUIController extends EntityDefaultUIController {
       'file' => 'includes/commerce_discount.admin.inc',
       'file path' => drupal_get_path('module', 'commerce_discount'),
     );
+
+    $items[$this->path . '/rules'] = array(
+      'title' => 'Discount rules',
+      'description' => 'Manage discount rules',
+      'page callback' => 'drupal_goto',
+      'page arguments' => array(
+        'admin/config/workflow/rules',
+        array(
+          'query' => array(
+            'event' => 0,
+            'tag' => 'Commerce Discount',
+          ),
+        )
+      ),
+      'access arguments' => array('administer commerce discounts'),
+      'type' => MENU_LOCAL_TASK,
+      'weight' => 10,
+    );
+
     return $items;
   }
 }

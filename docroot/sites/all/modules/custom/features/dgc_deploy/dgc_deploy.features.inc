@@ -17,6 +17,13 @@ function dgc_deploy_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function dgc_deploy_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
+
+/**
  * Implements hook_ckeditor_profile_defaults_alter().
  */
 function dgc_deploy_ckeditor_profile_defaults_alter(&$data) {
@@ -24,11 +31,11 @@ function dgc_deploy_ckeditor_profile_defaults_alter(&$data) {
     $data['Advanced']['settings']['allowed_content'] = 't'; /* WAS: '' */
     $data['Advanced']['settings']['extraAllowedContent'] = ''; /* WAS: '' */
     $data['Advanced']['settings']['toolbar'] = '[
-        [\'Format\'],
-        [\'Bold\',\'Italic\',\'Strike\'],
-        [\'NumberedList\',\'BulletedList\',\'Indent\',\'Outdent\',\'Blockquote\'],
-        [\'Link\',\'Unlink\',\'Anchor\',\'Image\']
-    ]'; /* WAS: '[
+            [\'Format\'],
+            [\'Bold\',\'Italic\',\'Strike\'],
+            [\'NumberedList\',\'BulletedList\',\'Indent\',\'Outdent\',\'Blockquote\'],
+            [\'Link\',\'Unlink\',\'Anchor\',\'Image\']
+        ]'; /* WAS: '[
         [\'Format\'],[\'Bold\',\'Italic\',\'Strike\'],[\'NumberedList\',\'BulletedList\',\'Indent\',\'Outdent\',\'Blockquote\'],[\'Link\',\'Unlink\',\'Image\']
     ]' */
   }
@@ -38,8 +45,12 @@ function dgc_deploy_ckeditor_profile_defaults_alter(&$data) {
  * Implements hook_field_default_field_bases_alter().
  */
 function dgc_deploy_field_default_field_bases_alter(&$data) {
+  if (isset($data['field_accepted'])) {
+    $data['field_accepted']['settings']['allowed_values']['proposed'] = 'Proposed'; /* WAS: '' */
+  }
   if (isset($data['field_ticket_attendee_listing'])) {
     $data['field_ticket_attendee_listing']['field_permissions']['type'] = 0; /* WAS: 1 */
+    unset($data['field_ticket_attendee_listing']['foreign keys']);
   }
 }
 
@@ -56,6 +67,33 @@ function dgc_deploy_filter_default_formats_alter(&$data) {
  * Implements hook_default_page_manager_pages_alter().
  */
 function dgc_deploy_default_page_manager_pages_alter(&$data) {
+  if (isset($data['community'])) {
+    $data['community']->default_handlers['page_community_panel_context']->conf['display']->content['new-797bfb61-a42b-47a1-94da-7e49df24efbc']->shown = FALSE; /* WAS: TRUE */
+    $data['community']->default_handlers['page_community_panel_context']->conf['display']->content['new-bc2d3d3f-97e4-418e-ba6e-a16d3552bbe3'] = (object) array(
+          'pid' => 'new-bc2d3d3f-97e4-418e-ba6e-a16d3552bbe3',
+          'panel' => 'center',
+          'type' => 'views_panes',
+          'subtype' => 'dgc_community_attendees-panel_pane_1',
+          'shown' => TRUE,
+          'access' => array(),
+          'configuration' => array(
+            'context' => array(
+              0 => 'argument_entity_id:node_1',
+            ),
+          ),
+          'cache' => array(),
+          'style' => array(
+            'settings' => NULL,
+          ),
+          'css' => array(),
+          'extras' => array(),
+          'position' => 2,
+          'locks' => array(),
+          'uuid' => 'bc2d3d3f-97e4-418e-ba6e-a16d3552bbe3',
+        ); /* WAS: '' */
+    $data['community']->default_handlers['page_community_panel_context']->conf['display']->content['new-dafcfd0f-4f89-4ace-b9b7-bee77657b467']->shown = FALSE; /* WAS: TRUE */
+    $data['community']->default_handlers['page_community_panel_context']->conf['display']->panels['center'][2] = 'new-bc2d3d3f-97e4-418e-ba6e-a16d3552bbe3'; /* WAS: '' */
+  }
   if (isset($data['event_registration'])) {
     $data['event_registration']->access['settings'] = NULL; /* WAS: '' */
     $data['event_registration']->access['type'] = 'none'; /* WAS: '' */
@@ -167,41 +205,15 @@ function dgc_deploy_strongarm_alter(&$data) {
   if (isset($data['og_node_access_strict'])) {
     $data['og_node_access_strict']->value = 0; /* WAS: 1 */
   }
+  if (isset($data['subpathauto_depth'])) {
+    $data['subpathauto_depth']->value = 3; /* WAS: 2 */
+  }
 }
 
 /**
  * Implements hook_views_default_views_alter().
  */
 function dgc_deploy_views_default_views_alter(&$data) {
-  if (isset($data['cod_community_attendees'])) {
-    $data['cod_community_attendees']->display['default']->display_options['exposed_form']['options'] = array(
-      'reset_button' => TRUE,
-    ); /* WAS: '' */
-    $data['cod_community_attendees']->display['default']->display_options['fields']['field_profile_first']['exclude'] = TRUE; /* WAS: '' */
-    $data['cod_community_attendees']->display['default']->display_options['fields']['field_profile_job_title']['exclude'] = TRUE; /* WAS: '' */
-    $data['cod_community_attendees']->display['default']->display_options['fields']['field_profile_last']['alter'] = array(
-      'alter_text' => TRUE,
-      'text' => '[field_profile_first] [field_profile_last]',
-      'make_link' => TRUE,
-      'path' => 'user/[uid]',
-    ); /* WAS: '' */
-    $data['cod_community_attendees']->display['default']->display_options['fields']['field_profile_org']['exclude'] = TRUE; /* WAS: '' */
-    $data['cod_community_attendees']->display['default']->display_options['fields']['picture']['image_style'] = 'square_160'; /* WAS: 'thumbnail' */
-    $data['cod_community_attendees']->display['default']->display_options['fields']['uid'] = array(
-      'id' => 'uid',
-      'table' => 'users',
-      'field' => 'uid',
-      'relationship' => 'user_uid',
-      'label' => '',
-      'exclude' => TRUE,
-      'element_label_colon' => FALSE,
-      'link_to_user' => FALSE,
-    ); /* WAS: '' */
-    $data['cod_community_attendees']->display['panel_pane_1']->display_options['inherit_panels_path'] = 1; /* WAS: '' */
-    unset($data['cod_community_attendees']->display['default']->display_options['fields']['name']);
-    unset($data['cod_community_attendees']->display['default']->display_options['filters']['name']);
-    unset($data['cod_community_attendees']->display['default']->display_options['relationships']['ticket_state_target_id']);
-  }
   if (isset($data['cod_news'])) {
     $data['cod_news']->display['panel_pane_1']->display_options['allow'] = array(
       'use_pager' => 0,
@@ -219,6 +231,8 @@ function dgc_deploy_views_default_views_alter(&$data) {
     $data['cod_session_tracks']->display['panel_pane_2'] = unserialize('O:13:"views_display":7:{s:15:"display_options";a:8:{s:5:"query";a:2:{s:4:"type";s:11:"views_query";s:7:"options";a:0:{}}s:8:"defaults";a:5:{s:12:"style_plugin";b:0;s:13:"style_options";b:0;s:10:"row_plugin";b:0;s:11:"row_options";b:0;s:6:"fields";b:0;}s:12:"style_plugin";s:7:"default";s:10:"row_plugin";s:6:"fields";s:6:"fields";a:1:{s:4:"name";a:6:{s:2:"id";s:4:"name";s:5:"table";s:18:"taxonomy_term_data";s:5:"field";s:4:"name";s:5:"label";s:0:"";s:5:"alter";a:2:{s:13:"word_boundary";b:0;s:8:"ellipsis";b:0;}s:16:"link_to_taxonomy";b:1;}}s:10:"pane_title";s:20:"Event Session Tracks";s:5:"allow";a:9:{s:9:"use_pager";i:0;s:14:"items_per_page";i:0;s:6:"offset";i:0;s:12:"link_to_view";i:0;s:9:"more_link";i:0;s:13:"path_override";i:0;s:14:"title_override";s:14:"title_override";s:12:"exposed_form";i:0;s:15:"fields_override";i:0;}s:14:"argument_input";a:1:{s:12:"machine_name";a:6:{s:4:"type";s:4:"user";s:7:"context";s:21:"entity:comment.author";s:16:"context_optional";i:0;s:5:"panel";s:1:"0";s:5:"fixed";s:0:"";s:5:"label";s:33:"Taxonomy vocabulary: Machine name";}}}s:8:"db_table";s:13:"views_display";s:3:"vid";i:0;s:2:"id";s:12:"panel_pane_2";s:13:"display_title";s:12:"Content pane";s:14:"display_plugin";s:10:"panel_pane";s:8:"position";i:0;}'); /* WAS: '' */
   }
   if (isset($data['cod_sponsors'])) {
+    $data['cod_sponsors']->display['page_1'] = unserialize('O:13:"views_display":7:{s:15:"display_options";a:11:{s:5:"query";a:2:{s:4:"type";s:11:"views_query";s:7:"options";a:0:{}}s:8:"defaults";a:9:{s:16:"hide_admin_links";b:0;s:12:"style_plugin";b:0;s:13:"style_options";b:0;s:10:"row_plugin";b:0;s:11:"row_options";b:0;s:13:"relationships";b:0;s:6:"fields";b:0;s:5:"sorts";b:0;s:9:"arguments";b:0;}s:12:"style_plugin";s:7:"default";s:13:"style_options";a:4:{s:8:"grouping";a:1:{i:0;a:3:{s:5:"field";s:31:"field_sponsor_sponsorship_level";s:8:"rendered";i:1;s:14:"rendered_strip";i:0;}}s:9:"row_class";s:7:"sponsor";s:17:"default_row_class";b:0;s:17:"row_class_special";b:0;}s:10:"row_plugin";s:6:"fields";s:13:"relationships";a:2:{s:17:"og_membership_rel";a:5:{s:2:"id";s:17:"og_membership_rel";s:5:"table";s:4:"node";s:5:"field";s:17:"og_membership_rel";s:5:"label";s:10:"Conference";s:8:"required";b:1;}s:35:"field_sponsor_sponsorship_level_tid";a:5:{s:2:"id";s:35:"field_sponsor_sponsorship_level_tid";s:5:"table";s:42:"field_data_field_sponsor_sponsorship_level";s:5:"field";s:35:"field_sponsor_sponsorship_level_tid";s:5:"label";s:17:"Sponsorship Level";s:8:"required";b:1;}}s:6:"fields";a:4:{s:5:"title";a:11:{s:2:"id";s:5:"title";s:5:"table";s:4:"node";s:5:"field";s:5:"title";s:5:"label";s:0:"";s:7:"exclude";b:1;s:5:"alter";a:2:{s:13:"word_boundary";b:0;s:8:"ellipsis";b:0;}s:12:"element_type";s:2:"h3";s:13:"element_class";s:5:"title";s:19:"element_label_colon";b:0;s:23:"element_default_classes";b:0;s:12:"link_to_node";b:0;}s:17:"field_sponsor_url";a:8:{s:2:"id";s:17:"field_sponsor_url";s:5:"table";s:28:"field_data_field_sponsor_url";s:5:"field";s:17:"field_sponsor_url";s:5:"label";s:0:"";s:7:"exclude";b:1;s:19:"element_label_colon";b:0;s:17:"click_sort_column";s:3:"url";s:4:"type";s:13:"link_absolute";}s:18:"field_sponsor_logo";a:8:{s:2:"id";s:18:"field_sponsor_logo";s:5:"table";s:29:"field_data_field_sponsor_logo";s:5:"field";s:18:"field_sponsor_logo";s:5:"label";s:0:"";s:5:"alter";a:3:{s:9:"make_link";b:1;s:4:"path";s:19:"[field_sponsor_url]";s:3:"alt";s:7:"[title]";}s:19:"element_label_colon";b:0;s:17:"click_sort_column";s:3:"fid";s:8:"settings";a:2:{s:11:"image_style";s:12:"cod_sponsors";s:10:"image_link";s:0:"";}}s:31:"field_sponsor_sponsorship_level";a:10:{s:2:"id";s:31:"field_sponsor_sponsorship_level";s:5:"table";s:42:"field_data_field_sponsor_sponsorship_level";s:5:"field";s:31:"field_sponsor_sponsorship_level";s:5:"label";s:0:"";s:7:"exclude";b:1;s:19:"element_label_colon";b:0;s:20:"element_wrapper_type";s:2:"h2";s:21:"element_wrapper_class";s:5:"level";s:23:"element_default_classes";b:0;s:4:"type";s:29:"taxonomy_term_reference_plain";}}s:5:"sorts";a:1:{s:6:"weight";a:4:{s:2:"id";s:6:"weight";s:5:"table";s:18:"taxonomy_term_data";s:5:"field";s:6:"weight";s:12:"relationship";s:35:"field_sponsor_sponsorship_level_tid";}}s:9:"arguments";a:1:{s:3:"gid";a:11:{s:2:"id";s:3:"gid";s:5:"table";s:13:"og_membership";s:5:"field";s:3:"gid";s:12:"relationship";s:17:"og_membership_rel";s:14:"default_action";s:5:"empty";s:21:"default_argument_type";s:5:"fixed";s:7:"summary";a:2:{s:17:"number_of_records";s:1:"0";s:6:"format";s:15:"default_summary";}s:15:"summary_options";a:1:{s:14:"items_per_page";s:2:"25";}s:18:"specify_validation";b:1;s:8:"validate";a:1:{s:4:"type";s:4:"node";}s:16:"validate_options";a:2:{s:5:"types";a:1:{s:5:"event";s:5:"event";}s:6:"access";b:1;}}}s:4:"path";s:15:"node/%/sponsors";s:4:"menu";a:6:{s:4:"type";s:3:"tab";s:5:"title";s:8:"Sponsors";s:6:"weight";s:2:"-1";s:4:"name";s:9:"main-menu";s:7:"context";i:0;s:19:"context_only_inline";i:0;}}s:8:"db_table";s:13:"views_display";s:3:"vid";i:0;s:2:"id";s:6:"page_1";s:13:"display_title";s:12:"Sponsor Page";s:14:"display_plugin";s:4:"page";s:8:"position";i:0;}'); /* WAS: '' */
+    $data['cod_sponsors']->display['page']->display_options['enabled'] = FALSE; /* WAS: '' */
     $data['cod_sponsors']->display['page']->display_options['fields']['field_sponsor_logo']['alter']['path'] = '[field_sponsor_url]'; /* WAS: '' */
     $data['cod_sponsors']->display['page']->display_options['fields']['field_sponsor_logo']['settings']['image_link'] = ''; /* WAS: 'content' */
     $data['cod_sponsors']->display['page']->display_options['fields']['field_sponsor_url'] = array(
@@ -580,6 +594,45 @@ function dgc_deploy_views_default_views_alter(&$data) {
 }
 
 /**
+ * Implements hook_flag_default_flags().
+ */
+function dgc_deploy_flag_default_flags() {
+  $flags = array();
+  // Exported flag: "Drupal GovCon Event Organizer".
+  $flags['dgc_event_organizer'] = array(
+    'entity_type' => 'ticket_registration',
+    'title' => 'Drupal GovCon Event Organizer',
+    'global' => 1,
+    'types' => array(),
+    'flag_short' => 'Flag as event organizer',
+    'flag_long' => '',
+    'flag_message' => '',
+    'unflag_short' => 'Unflag as event organizer',
+    'unflag_long' => '',
+    'unflag_message' => '',
+    'unflag_denied_text' => '',
+    'link_type' => 'toggle',
+    'weight' => 0,
+    'show_in_links' => array(
+      'default' => 0,
+      'diff_standard' => 0,
+      'token' => 0,
+    ),
+    'show_as_field' => 0,
+    'show_on_form' => 1,
+    'access_author' => '',
+    'show_contextual_link' => 0,
+    'module' => 'dgc_deploy',
+    'locked' => array(
+      0 => 'name',
+    ),
+    'api_version' => 3,
+  );
+  return $flags;
+
+}
+
+/**
  * Implements hook_image_default_styles().
  */
 function dgc_deploy_image_default_styles() {
@@ -587,17 +640,9 @@ function dgc_deploy_image_default_styles() {
 
   // Exported image style: square_160.
   $styles['square_160'] = array(
-    'name' => 'square_160',
     'label' => 'Square 160',
     'effects' => array(
       1 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 160,
