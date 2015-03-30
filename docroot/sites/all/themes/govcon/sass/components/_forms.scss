@@ -65,6 +65,11 @@ form.user-login {
   }
 }
 
+/* Views exposed filters */
+.views-exposed-form .views-exposed-widget.views-submit-button {
+  clear: left;
+}
+
 /* Drop downs */
 .form-type-select select {
   background: transparent;
