@@ -150,7 +150,7 @@ function dgc_deploy_views_default_views() {
   $handler->display->display_options['arguments']['entity_id']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['entity_id']['validate']['type'] = 'og';
   $handler->display->display_options['arguments']['entity_id']['validate']['fail'] = 'empty';
-  /* Filter criterion: Field: Show on attendee listing page (field_ticket_attendee_listing) */
+  /* Filter criterion: Field: Include &#039;attendee listing&#039; field for tickets (field_ticket_attendee_listing) */
   $handler->display->display_options['filters']['field_ticket_attendee_listing_value']['id'] = 'field_ticket_attendee_listing_value';
   $handler->display->display_options['filters']['field_ticket_attendee_listing_value']['table'] = 'field_data_field_ticket_attendee_listing';
   $handler->display->display_options['filters']['field_ticket_attendee_listing_value']['field'] = 'field_ticket_attendee_listing_value';
@@ -1270,6 +1270,7 @@ function dgc_deploy_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['empty'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Content: Author */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
