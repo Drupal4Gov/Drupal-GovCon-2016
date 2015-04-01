@@ -55,6 +55,15 @@ function dgc_deploy_field_default_field_bases_alter(&$data) {
 }
 
 /**
+ * Implements hook_field_default_field_instances_alter().
+ */
+function dgc_deploy_field_default_field_instances_alter(&$data) {
+  if (isset($data['node-session-field_speakers'])) {
+    $data['node-session-field_speakers']['required'] = 1; /* WAS: 0 */
+  }
+}
+
+/**
  * Implements hook_filter_default_formats_alter().
  */
 function dgc_deploy_filter_default_formats_alter(&$data) {
