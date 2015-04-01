@@ -58,6 +58,9 @@ function dgc_deploy_field_default_field_bases_alter(&$data) {
  * Implements hook_field_default_field_instances_alter().
  */
 function dgc_deploy_field_default_field_instances_alter(&$data) {
+  if (isset($data['node-session-field_accepted'])) {
+    $data['node-session-field_accepted']['default_value'][0]['value'] = 'proposed'; /* WAS: 'unprocessed' */
+  }
   if (isset($data['node-session-field_speakers'])) {
     $data['node-session-field_speakers']['required'] = 1; /* WAS: 0 */
   }

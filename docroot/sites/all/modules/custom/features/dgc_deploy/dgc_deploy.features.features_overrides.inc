@@ -27,6 +27,7 @@ function dgc_deploy_features_override_default_overrides() {
   $overrides["field_base.field_ticket_attendee_listing.foreign keys"]["DELETED"] = TRUE;
 
   // Exported overrides for: field_instance
+  $overrides["field_instance.node-session-field_accepted.default_value|0|value"] = 'proposed';
   $overrides["field_instance.node-session-field_speakers.required"] = 1;
 
   // Exported overrides for: filter
