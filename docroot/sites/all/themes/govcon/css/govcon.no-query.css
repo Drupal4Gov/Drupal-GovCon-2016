@@ -143,14 +143,17 @@ td.status {
       background: url(../images/texture200.png) #b9a884;
       width: 120px;
       height: 160px; }
-  /* line 16, ../sass/components/_attendees.scss */
+    /* line 15, ../sass/components/_attendees.scss */
+    .view-cod-community-attendees ul li.views-row.Organizer {
+      background: url(../images/texture200.png) #8bb5bb; }
+  /* line 19, ../sass/components/_attendees.scss */
   .view-cod-community-attendees .views-field-picture {
     width: 100px;
     height: 100px;
     background: url("../images/gold_star.svg") #095380;
     position: relative;
     margin-bottom: 4px; }
-    /* line 22, ../sass/components/_attendees.scss */
+    /* line 25, ../sass/components/_attendees.scss */
     .view-cod-community-attendees .views-field-picture:after {
       content: "";
       position: absolute;
@@ -159,29 +162,32 @@ td.status {
       right: 0;
       bottom: 0;
       background: url(../images/texture200.png); }
-    /* line 31, ../sass/components/_attendees.scss */
+    /* line 34, ../sass/components/_attendees.scss */
     .view-cod-community-attendees .views-field-picture img {
       position: relative;
       z-index: 2;
       width: 100%;
       height: auto; }
-  /* line 38, ../sass/components/_attendees.scss */
+  /* line 41, ../sass/components/_attendees.scss */
+  .view-cod-community-attendees .Organizer.views-field-picture {
+    background: url("../images/gold_star.svg") #e02d3b; }
+  /* line 44, ../sass/components/_attendees.scss */
   .view-cod-community-attendees .views-field-field-profile-first,
   .view-cod-community-attendees .views-field-field-profile-last {
     display: inline; }
-    /* line 41, ../sass/components/_attendees.scss */
+    /* line 47, ../sass/components/_attendees.scss */
     .view-cod-community-attendees .views-field-field-profile-first div,
     .view-cod-community-attendees .views-field-field-profile-last div {
       display: inline; }
 
-/* line 46, ../sass/components/_attendees.scss */
+/* line 52, ../sass/components/_attendees.scss */
 .view-cod-community-attendees {
   font-size: 1em; }
-  /* line 48, ../sass/components/_attendees.scss */
+  /* line 54, ../sass/components/_attendees.scss */
   .view-cod-community-attendees ul li.views-row {
     width: 180px;
     height: 224px; }
-  /* line 49, ../sass/components/_attendees.scss */
+  /* line 55, ../sass/components/_attendees.scss */
   .view-cod-community-attendees .views-field-picture {
     width: 160px;
     height: 160px; }
@@ -554,22 +560,27 @@ form .description {
 form.user-login input[type=text], form.user-login input[type=password] {
   max-width: 400px; }
 
-/* Drop downs */
+/* Views exposed filters */
 /* line 69, ../sass/components/_forms.scss */
+.views-exposed-form .views-exposed-widget.views-submit-button {
+  clear: left; }
+
+/* Drop downs */
+/* line 74, ../sass/components/_forms.scss */
 .form-type-select select {
   background: transparent; }
 
 /* Autocomplete */
-/* line 75, ../sass/components/_forms.scss */
+/* line 80, ../sass/components/_forms.scss */
 form .field-multiple-table td.field-multiple-drag {
   width: 30px;
   padding-right: 0; }
 
-/* line 76, ../sass/components/_forms.scss */
+/* line 81, ../sass/components/_forms.scss */
 form .field-multiple-table td.field-multiple-drag a.tabledrag-handle {
   padding-right: 0.5em; }
 
-/* line 77, ../sass/components/_forms.scss */
+/* line 82, ../sass/components/_forms.scss */
 .draggable a.tabledrag-handle {
   cursor: move;
   float: left;
@@ -577,7 +588,7 @@ form .field-multiple-table td.field-multiple-drag a.tabledrag-handle {
   overflow: hidden;
   text-decoration: none; }
 
-/* line 84, ../sass/components/_forms.scss */
+/* line 89, ../sass/components/_forms.scss */
 a.tabledrag-handle .handle {
   background-position: 8px 8px;
   height: 26px;
@@ -914,6 +925,76 @@ li.menu-item a {
 /* line 239, ../sass/components/_navigation.scss */
 li.menu-item a:hover, li.menu-item a.active {
   color: #e02d3b; }
+
+/* line 2, ../sass/components/_sessions.scss */
+.view-id-dgc_sessions.view-display-id-attachment_1 .views-field-og-vocabulary .field-content {
+  margin-bottom: 4px; }
+/* line 5, ../sass/components/_sessions.scss */
+.view-id-dgc_sessions.view-display-id-attachment_1 .views-field-og-vocabulary a {
+  background: #fff;
+  padding: 20px;
+  display: block;
+  font-family: "Courgette", cursive;
+  font-size: 1.3em; }
+  /* line 11, ../sass/components/_sessions.scss */
+  .view-id-dgc_sessions.view-display-id-attachment_1 .views-field-og-vocabulary a:hover, .view-id-dgc_sessions.view-display-id-attachment_1 .views-field-og-vocabulary a:focus, .view-id-dgc_sessions.view-display-id-attachment_1 .views-field-og-vocabulary a.active {
+    background: url(../images/texture200.png) #095380;
+    color: #fff; }
+
+/* line 18, ../sass/components/_sessions.scss */
+.page-node-sessions .view-filters {
+  background: url(../images/texture200.png) #8bb5bb;
+  padding: 30px; }
+  /* line 21, ../sass/components/_sessions.scss */
+  .page-node-sessions .view-filters .views-exposed-form .views-exposed-widget select {
+    background: #fff; }
+/* line 25, ../sass/components/_sessions.scss */
+.page-node-sessions .l-content > .view-content {
+  padding-top: 3em; }
+/* line 28, ../sass/components/_sessions.scss */
+.page-node-sessions h3 a {
+  font-size: 2em;
+  padding-top: 3em;
+  font-family: "Courgette", cursive;
+  font-weight: normal;
+  color: #e02d3b; }
+
+/* line 36, ../sass/components/_sessions.scss */
+.session {
+  margin: 1em 0;
+  padding: 1em 0;
+  border-top: 2px solid #b9a884; }
+
+/* line 41, ../sass/components/_sessions.scss */
+.session-title a {
+  font-size: 1.4em;
+  margin: 0.5em 0; }
+
+/* line 48, ../sass/components/_sessions.scss */
+.view-id-dgc_sessions.view-display-id-page_1 {
+  width: 49.15254%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0;
+  clear: none; }
+
+/* line 51, ../sass/components/_sessions.scss */
+.page-node-sessions .view-filters {
+  width: 49.15254%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none; }
+  /* line 53, ../sass/components/_sessions.scss */
+  .page-node-sessions .view-filters .views-exposed-form .views-exposed-widget {
+    width: 100%; }
+  /* line 57, ../sass/components/_sessions.scss */
+  .page-node-sessions .view-filters .views-exposed-form .views-exposed-widget.views-submit-button, .page-node-sessions .view-filters .views-exposed-form .views-exposed-widget.views-reset-button {
+    width: auto; }
+
+/* line 62, ../sass/components/_sessions.scss */
+.page-node-sessions .view-content {
+  clear: both; }
 
 /* header background shapes */
 /* line 3, ../sass/components/_shapes.scss */

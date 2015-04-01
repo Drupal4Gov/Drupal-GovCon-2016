@@ -1,0 +1,65 @@
+.view-id-dgc_sessions.view-display-id-attachment_1 {
+  .views-field-og-vocabulary .field-content {
+    margin-bottom: 4px;
+  }
+  .views-field-og-vocabulary a {
+    background: #fff;
+    padding: 20px;
+    display: block;
+    font-family: $script;
+    font-size: 1.3em;
+    &:hover, &:focus, &.active {
+      background: $texture $blue;
+      color: #fff;
+    }
+  }
+}
+.page-node-sessions {
+  .view-filters {
+    background: $texture $pale-blue;
+    padding: 30px;
+    .views-exposed-form .views-exposed-widget select {
+      background: #fff;
+    }
+  }
+  .l-content > .view-content {
+    padding-top: 3em;
+  }
+  h3 a {
+    font-size: 2em;
+    padding-top: 3em;
+    font-family: $script;
+    font-weight: normal;
+    color: $red;
+  }
+}
+.session {
+  margin: 1em 0;
+  padding: 1em 0;
+  border-top: 2px solid $gold;
+}
+.session-title a {
+  font-size: 1.4em;
+  margin: 0.5em 0;
+}
+
+
+@include breakpoint($tab, true) {
+  .view-id-dgc_sessions.view-display-id-page_1 {
+    @include grid-span(6, 1);
+  }
+  .page-node-sessions .view-filters {
+    @include grid-span(6, 7);
+    .views-exposed-form .views-exposed-widget {
+      width: 100%;
+    }
+    .views-exposed-form .views-exposed-widget {
+      &.views-submit-button, &.views-reset-button {
+        width: auto;
+      }
+    }
+  }
+  .page-node-sessions .view-content {
+    clear: both;
+  }
+}
