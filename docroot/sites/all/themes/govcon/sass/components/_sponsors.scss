@@ -1,10 +1,18 @@
 .pane-cod-sponsors-panel-pane-1 { 
   margin-top: 50px;
+  padding-top: 0;
   background-color: $gold;
   .bg { background-color: $gold; }
-  h2 { 
-  	margin-top: 0; 
+  h2 { @include hide-text; }
+  h3 { 
   	color: #fff; 
+  	text-align: center;
+  	font-family: $script;
+  	margin: 1em 0;
+  	padding-bottom: 6px;
+  	font-size: 32px;
+  	font-weight: normal;
+  	 -webkit-font-smoothing: antialiased;
   }
 }
 .view-cod-sponsors {
@@ -23,13 +31,16 @@
 	.views-field-field-sponsor-logo img, .sponsor img {
 		width: auto;
 		height: auto;
-		max-height: 120px;
+		max-height:100px;
 		max-width: 200px;
 	}
 }
 
 .pane-cod-sponsors-panel-pane-2 {
-	display: none;
+	margin-top: 4em;
+	padding-top: 10px;
+	.pane-title { text-align: center; color: #fff; margin-top: 0; }
+	ul { text-align: center; }
 }
 
 @include breakpoint($tab, true) {
@@ -39,8 +50,8 @@
 			display: inline-block;
 		}
 		.views-field-field-sponsor-logo img, .sponsor img {
-			max-height: 130px;
-			max-width: 220px;
+			max-height: 100px;
+			max-width: 200px;
 		}
 	}
 }

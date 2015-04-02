@@ -1,16 +1,18 @@
 .view-id-dgc_sessions.view-display-id-attachment_1 {
   .views-field-og-vocabulary .field-content {
     margin-bottom: 4px;
+    background: $texture lighten($gold, 20%);
   }
   .views-field-og-vocabulary a {
-    background: #fff;
-    padding: 20px;
+    background-size: 60px;
+    padding: 20px 20px 20px 80px;
+    background-position: 8px center;
     display: block;
     font-family: $script;
     font-size: 1.3em;
     &:hover, &:focus, &.active {
-      background: $texture $blue;
-      color: #fff;
+      background-color: #fff;
+      color: $blue;
     }
   }
 }
@@ -27,10 +29,13 @@
   }
   h3 a {
     font-size: 2em;
-    padding-top: 3em;
     font-family: $script;
     font-weight: normal;
-    color: $red;
+    background-size: 80px;
+    min-height: 80px;
+    display: block;
+    padding: 20px 20px 20px 100px;
+    background-position: 0 center;
   }
 }
 .session {
@@ -42,6 +47,15 @@
   font-size: 1.4em;
   margin: 0.5em 0;
 }
+[class*="track-icon-"] {
+  background: no-repeat 0 center transparent;
+}
+.track-icon-6 { background-image: url(../images/icons/ux.svg); }
+.track-icon-11 { background-image: url(../images/icons/devops.svg); }
+.track-icon-21 { background-image: url(../images/icons/business.svg); }
+.track-icon-26 { background-image: url(../images/icons/building.svg); }
+.track-icon-16 { background-image: url(../images/icons/keynote.svg); }
+.track-icon-1 { background-image: url(../images/icons/training.svg); }
 
 
 @include breakpoint($tab, true) {
