@@ -167,7 +167,6 @@ function dgc_deploy_panelizer_defaults() {
     $pane->configuration = array(
       'exposed' => array(
         'field_sponsor_sponsorship_level_tid' => array(
-          46 => '46',
           51 => '51',
           66 => '66',
           41 => '41',
@@ -180,6 +179,9 @@ function dgc_deploy_panelizer_defaults() {
       'context' => array(
         0 => 'panelizer',
       ),
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -279,7 +281,7 @@ function dgc_deploy_panelizer_defaults() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'sponsors-featured',
+      'css_class' => 'sponsors-featured bevel',
     );
     $pane->extras = array();
     $pane->position = 2;

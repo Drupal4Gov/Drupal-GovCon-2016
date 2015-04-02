@@ -1072,7 +1072,7 @@ function dgc_deploy_views_default_views() {
   $handler->display->display_options['style_options']['grouping'] = array(
     0 => array(
       'field' => 'og_vocabulary',
-      'rendered' => 0,
+      'rendered' => 1,
       'rendered_strip' => 0,
     ),
   );
@@ -1157,6 +1157,8 @@ function dgc_deploy_views_default_views() {
   $handler->display->display_options['fields']['og_vocabulary']['alter']['path'] = '%1/sessions/%2/[og_vocabulary]';
   $handler->display->display_options['fields']['og_vocabulary']['alter']['replace_spaces'] = TRUE;
   $handler->display->display_options['fields']['og_vocabulary']['alter']['path_case'] = 'lower';
+  $handler->display->display_options['fields']['og_vocabulary']['alter']['link_class'] = 'track-icon-[og_vocabulary-target_id]';
+  $handler->display->display_options['fields']['og_vocabulary']['element_type'] = 'h3';
   $handler->display->display_options['fields']['og_vocabulary']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['og_vocabulary']['settings'] = array(
     'link' => 0,
@@ -1295,6 +1297,7 @@ function dgc_deploy_views_default_views() {
   $handler->display->display_options['fields']['og_vocabulary']['alter']['path'] = 'node/!1/sessions/!2/[og_vocabulary]';
   $handler->display->display_options['fields']['og_vocabulary']['alter']['replace_spaces'] = TRUE;
   $handler->display->display_options['fields']['og_vocabulary']['alter']['path_case'] = 'lower';
+  $handler->display->display_options['fields']['og_vocabulary']['alter']['link_class'] = 'track-icon-[og_vocabulary-target_id]';
   $handler->display->display_options['fields']['og_vocabulary']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['og_vocabulary']['settings'] = array(
     'link' => 0,
