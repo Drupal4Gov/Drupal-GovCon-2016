@@ -1299,6 +1299,7 @@ function dgc_deploy_views_default_views() {
   $handler->display->display_options['fields']['og_vocabulary']['alter']['path_case'] = 'lower';
   $handler->display->display_options['fields']['og_vocabulary']['alter']['link_class'] = 'track-icon-[og_vocabulary-target_id]';
   $handler->display->display_options['fields']['og_vocabulary']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['og_vocabulary']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['og_vocabulary']['settings'] = array(
     'link' => 0,
   );
