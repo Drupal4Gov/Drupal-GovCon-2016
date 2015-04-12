@@ -28,6 +28,7 @@
   .l-content > .view-content {
     padding-top: 3em;
   }
+  h3 { clear: both; }
   h3 a {
     font-size: 2em;
     font-family: $script;
@@ -38,15 +39,18 @@
     padding: 20px 20px 20px 100px;
     background-position: 0 center;
   }
+  .views-field-field-speakers { font-style: italic; }
 }
 .session {
-  margin: 1em 0;
-  padding: 1em 0;
-  border-top: 2px solid $gold;
+  margin: .2em 0 1em;
+  padding: 0;
+  p { margin: 0; }
 }
-.session-title a {
+.session-title {
+  border-top: 2px solid $gold;
+  padding-top: .2em;
   font-size: 1.4em;
-  margin: 0.5em 0;
+  margin: 0;
 }
 [class*="track-icon-"] {
   background: no-repeat 0 center transparent;
@@ -76,5 +80,27 @@
   }
   .page-node-sessions .view-content {
     clear: both;
+  }
+  .session {
+    float: left;
+    width: 50%;
+    padding-left: 20px;
+  }
+  .session:nth-of-type(odd) {
+    clear: left;
+    padding-left: 0;
+  }
+}
+@include breakpoint($desk, true) {
+  .session {
+      width: 33%;
+  }
+  .session:nth-of-type(odd) {
+    clear: none;
+    padding-left: 20px;
+  }
+  .session:nth-of-type(3n+1) {
+    clear: left;
+    padding-left: 0;
   }
 }
