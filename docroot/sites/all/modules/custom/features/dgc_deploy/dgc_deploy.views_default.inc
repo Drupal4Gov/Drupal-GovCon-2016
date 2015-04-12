@@ -388,10 +388,8 @@ function dgc_deploy_views_default_views() {
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
-  $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '20';
+  $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['grouping'] = '';
   $handler->display->display_options['style_options']['columns'] = array(
@@ -1072,7 +1070,7 @@ function dgc_deploy_views_default_views() {
   $handler->display->display_options['style_options']['grouping'] = array(
     0 => array(
       'field' => 'og_vocabulary',
-      'rendered' => 0,
+      'rendered' => 1,
       'rendered_strip' => 0,
     ),
   );
@@ -1157,10 +1155,20 @@ function dgc_deploy_views_default_views() {
   $handler->display->display_options['fields']['og_vocabulary']['alter']['path'] = '%1/sessions/%2/[og_vocabulary]';
   $handler->display->display_options['fields']['og_vocabulary']['alter']['replace_spaces'] = TRUE;
   $handler->display->display_options['fields']['og_vocabulary']['alter']['path_case'] = 'lower';
+  $handler->display->display_options['fields']['og_vocabulary']['alter']['link_class'] = 'track-icon-[og_vocabulary-target_id]';
+  $handler->display->display_options['fields']['og_vocabulary']['element_type'] = 'h3';
   $handler->display->display_options['fields']['og_vocabulary']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['og_vocabulary']['empty'] = '<h2 class="pane-title">No session track selected</h2>
+<br />';
   $handler->display->display_options['fields']['og_vocabulary']['settings'] = array(
     'link' => 0,
   );
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Session Track (og_vocabulary) */
+  $handler->display->display_options['sorts']['og_vocabulary_target_id']['id'] = 'og_vocabulary_target_id';
+  $handler->display->display_options['sorts']['og_vocabulary_target_id']['table'] = 'field_data_og_vocabulary';
+  $handler->display->display_options['sorts']['og_vocabulary_target_id']['field'] = 'og_vocabulary_target_id';
+  $handler->display->display_options['sorts']['og_vocabulary_target_id']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: OG membership: Group ID */
   $handler->display->display_options['arguments']['gid']['id'] = 'gid';
@@ -1270,6 +1278,7 @@ function dgc_deploy_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['empty'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Content: Author */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
@@ -1294,7 +1303,9 @@ function dgc_deploy_views_default_views() {
   $handler->display->display_options['fields']['og_vocabulary']['alter']['path'] = 'node/!1/sessions/!2/[og_vocabulary]';
   $handler->display->display_options['fields']['og_vocabulary']['alter']['replace_spaces'] = TRUE;
   $handler->display->display_options['fields']['og_vocabulary']['alter']['path_case'] = 'lower';
+  $handler->display->display_options['fields']['og_vocabulary']['alter']['link_class'] = 'track-icon-[og_vocabulary-target_id]';
   $handler->display->display_options['fields']['og_vocabulary']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['og_vocabulary']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['og_vocabulary']['settings'] = array(
     'link' => 0,
   );
