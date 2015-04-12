@@ -200,3 +200,10 @@ function dgc_deploy_update_7013() {
 function dgc_deploy_update_7014() {
   module_enable(array('form_builder_webform'));
 }
+
+/**
+ * Enable back_to_top module
+ */
+function dgc_deploy_update_7015() {
+  module_enable(array('back_to_top'));
+}
