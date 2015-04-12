@@ -957,6 +957,9 @@ li.menu-item a:hover, li.menu-item a.active {
 .page-node-sessions .l-content > .view-content {
   padding-top: 3em; }
 /* line 31, ../sass/components/_sessions.scss */
+.page-node-sessions h3 {
+  clear: both; }
+/* line 32, ../sass/components/_sessions.scss */
 .page-node-sessions h3 a {
   font-size: 2em;
   font-family: "Courgette", cursive;
@@ -966,47 +969,54 @@ li.menu-item a:hover, li.menu-item a.active {
   display: block;
   padding: 20px 20px 20px 100px;
   background-position: 0 center; }
-
 /* line 42, ../sass/components/_sessions.scss */
+.page-node-sessions .views-field-field-speakers {
+  font-style: italic; }
+
+/* line 44, ../sass/components/_sessions.scss */
 .session {
-  margin: 1em 0;
-  padding: 1em 0;
-  border-top: 2px solid #b9a884; }
+  margin: .2em 0 1em;
+  padding: 0; }
+  /* line 47, ../sass/components/_sessions.scss */
+  .session p {
+    margin: 0; }
 
-/* line 47, ../sass/components/_sessions.scss */
-.session-title a {
+/* line 49, ../sass/components/_sessions.scss */
+.session-title {
+  border-top: 2px solid #b9a884;
+  padding-top: .2em;
   font-size: 1.4em;
-  margin: 0.5em 0; }
+  margin: 0; }
 
-/* line 51, ../sass/components/_sessions.scss */
+/* line 55, ../sass/components/_sessions.scss */
 [class*="track-icon-"] {
   background: no-repeat 0 center transparent; }
 
-/* line 54, ../sass/components/_sessions.scss */
+/* line 58, ../sass/components/_sessions.scss */
 .track-icon-6 {
   background-image: url(../images/icons/ux.svg); }
 
-/* line 55, ../sass/components/_sessions.scss */
+/* line 59, ../sass/components/_sessions.scss */
 .track-icon-11 {
   background-image: url(../images/icons/devops.svg); }
 
-/* line 56, ../sass/components/_sessions.scss */
+/* line 60, ../sass/components/_sessions.scss */
 .track-icon-21 {
   background-image: url(../images/icons/business.svg); }
 
-/* line 57, ../sass/components/_sessions.scss */
+/* line 61, ../sass/components/_sessions.scss */
 .track-icon-26 {
   background-image: url(../images/icons/building.svg); }
 
-/* line 58, ../sass/components/_sessions.scss */
+/* line 62, ../sass/components/_sessions.scss */
 .track-icon-16 {
   background-image: url(../images/icons/keynote.svg); }
 
-/* line 59, ../sass/components/_sessions.scss */
+/* line 63, ../sass/components/_sessions.scss */
 .track-icon-1 {
   background-image: url(../images/icons/training.svg); }
 
-/* line 63, ../sass/components/_sessions.scss */
+/* line 67, ../sass/components/_sessions.scss */
 .view-id-dgc_sessions.view-display-id-page_1 {
   width: 49.15254%;
   float: left;
@@ -1014,23 +1024,48 @@ li.menu-item a:hover, li.menu-item a.active {
   margin-left: 0;
   clear: none; }
 
-/* line 66, ../sass/components/_sessions.scss */
+/* line 70, ../sass/components/_sessions.scss */
 .page-node-sessions .view-filters {
   width: 49.15254%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none; }
-  /* line 68, ../sass/components/_sessions.scss */
+  /* line 72, ../sass/components/_sessions.scss */
   .page-node-sessions .view-filters .views-exposed-form .views-exposed-widget {
     width: 100%; }
-  /* line 72, ../sass/components/_sessions.scss */
+  /* line 76, ../sass/components/_sessions.scss */
   .page-node-sessions .view-filters .views-exposed-form .views-exposed-widget.views-submit-button, .page-node-sessions .view-filters .views-exposed-form .views-exposed-widget.views-reset-button {
     width: auto; }
 
-/* line 77, ../sass/components/_sessions.scss */
+/* line 81, ../sass/components/_sessions.scss */
 .page-node-sessions .view-content {
   clear: both; }
+
+/* line 84, ../sass/components/_sessions.scss */
+.session {
+  float: left;
+  width: 50%;
+  padding-left: 20px; }
+
+/* line 89, ../sass/components/_sessions.scss */
+.session:nth-of-type(odd) {
+  clear: left;
+  padding-left: 0; }
+
+/* line 95, ../sass/components/_sessions.scss */
+.session {
+  width: 33%; }
+
+/* line 98, ../sass/components/_sessions.scss */
+.session:nth-of-type(odd) {
+  clear: none;
+  padding-left: 20px; }
+
+/* line 102, ../sass/components/_sessions.scss */
+.session:nth-of-type(3n+1) {
+  clear: left;
+  padding-left: 0; }
 
 /* header background shapes */
 /* line 3, ../sass/components/_shapes.scss */
