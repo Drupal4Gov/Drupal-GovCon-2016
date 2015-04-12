@@ -76,7 +76,7 @@ function dgc_deploy_panelizer_defaults() {
     $pane->configuration = array(
       'items_per_page' => '3',
       'arguments' => array(
-        'gid' => '',
+        'gid' => '1',
       ),
     );
     $pane->cache = array();
