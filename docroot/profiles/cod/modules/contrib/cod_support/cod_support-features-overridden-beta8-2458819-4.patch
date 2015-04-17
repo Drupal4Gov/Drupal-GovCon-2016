@@ -1,0 +1,642 @@
+diff --git a/cod_events/cod_events.features.field_base.inc b/cod_events/cod_events.features.field_base.inc
+index fd87226..d6fddd0 100644
+--- a/cod_events/cod_events.features.field_base.inc
++++ b/cod_events/cod_events.features.field_base.inc
+@@ -22,14 +22,6 @@ function cod_events_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 0,
+     ),
+-    'foreign keys' => array(
+-      'format' => array(
+-        'columns' => array(
+-          'format' => 'format',
+-        ),
+-        'table' => 'filter_format',
+-      ),
+-    ),
+     'indexes' => array(
+       'format' => array(
+         0 => 'format',
+@@ -60,7 +52,6 @@ function cod_events_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 0,
+     ),
+-    'foreign keys' => array(),
+     'indexes' => array(),
+     'locked' => 0,
+     'module' => 'date',
+@@ -91,14 +82,6 @@ function cod_events_field_default_field_bases() {
+     'deleted' => 0,
+     'entity_types' => array(),
+     'field_name' => 'field_event_image',
+-    'foreign keys' => array(
+-      'fid' => array(
+-        'columns' => array(
+-          'fid' => 'fid',
+-        ),
+-        'table' => 'file_managed',
+-      ),
+-    ),
+     'indexes' => array(
+       'fid' => array(
+         0 => 'fid',
+@@ -128,7 +111,6 @@ function cod_events_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 1,
+     ),
+-    'foreign keys' => array(),
+     'indexes' => array(
+       'value' => array(
+         0 => 'value',
+@@ -155,7 +137,6 @@ function cod_events_field_default_field_bases() {
+     'deleted' => 0,
+     'entity_types' => array(),
+     'field_name' => 'group_group',
+-    'foreign keys' => array(),
+     'indexes' => array(
+       'value' => array(
+         0 => 'value',
+@@ -184,14 +165,6 @@ function cod_events_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 0,
+     ),
+-    'foreign keys' => array(
+-      'node' => array(
+-        'columns' => array(
+-          'target_id' => 'nid',
+-        ),
+-        'table' => 'node',
+-      ),
+-    ),
+     'indexes' => array(
+       'target_id' => array(
+         0 => 'target_id',
+@@ -236,7 +209,6 @@ function cod_events_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 1,
+     ),
+-    'foreign keys' => array(),
+     'indexes' => array(
+       'value' => array(
+         0 => 'value',
+diff --git a/cod_news/cod_news.features.field_base.inc b/cod_news/cod_news.features.field_base.inc
+index 17583dc..89019e0 100644
+--- a/cod_news/cod_news.features.field_base.inc
++++ b/cod_news/cod_news.features.field_base.inc
+@@ -20,14 +20,6 @@ function cod_news_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 0,
+     ),
+-    'foreign keys' => array(
+-      'tid' => array(
+-        'columns' => array(
+-          'tid' => 'tid',
+-        ),
+-        'table' => 'taxonomy_term_data',
+-      ),
+-    ),
+     'indexes' => array(
+       'tid' => array(
+         0 => 'tid',
+diff --git a/cod_paid_events/cod_paid_events.features.field_base.inc b/cod_paid_events/cod_paid_events.features.field_base.inc
+index d41d6f5..cb0cb74 100644
+--- a/cod_paid_events/cod_paid_events.features.field_base.inc
++++ b/cod_paid_events/cod_paid_events.features.field_base.inc
+@@ -19,7 +19,6 @@ function cod_paid_events_field_default_field_bases() {
+       0 => 'commerce_product',
+     ),
+     'field_name' => 'commerce_price',
+-    'foreign keys' => array(),
+     'indexes' => array(
+       'currency_price' => array(
+         0 => 'amount',
+@@ -43,7 +42,6 @@ function cod_paid_events_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 2,
+     ),
+-    'foreign keys' => array(),
+     'indexes' => array(
+       'value' => array(
+         0 => 'value',
+@@ -74,14 +72,6 @@ function cod_paid_events_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 1,
+     ),
+-    'foreign keys' => array(
+-      'commerce_order' => array(
+-        'columns' => array(
+-          'target_id' => 'order_id',
+-        ),
+-        'table' => 'commerce_order',
+-      ),
+-    ),
+     'indexes' => array(
+       'target_id' => array(
+         0 => 'target_id',
+@@ -122,14 +112,6 @@ function cod_paid_events_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 0,
+     ),
+-    'foreign keys' => array(
+-      'product_id' => array(
+-        'columns' => array(
+-          'product_id' => 'product_id',
+-        ),
+-        'table' => 'commerce_product',
+-      ),
+-    ),
+     'indexes' => array(
+       'product_id' => array(
+         0 => 'product_id',
+diff --git a/cod_paid_events/cod_paid_events.features.field_instance.inc b/cod_paid_events/cod_paid_events.features.field_instance.inc
+index c5e8a0e..9761369 100644
+--- a/cod_paid_events/cod_paid_events.features.field_instance.inc
++++ b/cod_paid_events/cod_paid_events.features.field_instance.inc
+@@ -102,8 +102,8 @@ function cod_paid_events_field_default_field_instances() {
+     'display' => array(
+       'default' => array(
+         'label' => 'hidden',
+-        'type' => 'hidden',
+         'settings' => array(),
++        'type' => 'hidden',
+         'weight' => 9,
+       ),
+     ),
+diff --git a/cod_paid_events/cod_paid_events.info b/cod_paid_events/cod_paid_events.info
+index 860c2cf..bf1e215 100644
+--- a/cod_paid_events/cod_paid_events.info
++++ b/cod_paid_events/cod_paid_events.info
+@@ -10,11 +10,11 @@ dependencies[] = commerce_cart
+ dependencies[] = commerce_checkout
+ dependencies[] = commerce_features
+ dependencies[] = commerce_order_ui
++dependencies[] = commerce_payment
++dependencies[] = commerce_payment_ui
+ dependencies[] = commerce_price
+ dependencies[] = commerce_product_reference
+ dependencies[] = commerce_product_ui
+-dependencies[] = commerce_payment
+-dependencies[] = commerce_payment_ui
+ dependencies[] = conditional_fields
+ dependencies[] = ctools
+ dependencies[] = entityreference
+@@ -22,10 +22,10 @@ dependencies[] = features
+ dependencies[] = inline_entity_form
+ dependencies[] = list
+ dependencies[] = options
++dependencies[] = rules
+ dependencies[] = ticket
+ dependencies[] = ticket_state
+ dependencies[] = views
+-dependencies[] = rules
+ features[commerce_product_type][] = cod_paid_event
+ features[ctools][] = views:views_default:3.0
+ features[features_api][] = api:2
+diff --git a/cod_profile_base/cod_profile_base.features.field_base.inc b/cod_profile_base/cod_profile_base.features.field_base.inc
+index b79f711..a5c0bcc 100644
+--- a/cod_profile_base/cod_profile_base.features.field_base.inc
++++ b/cod_profile_base/cod_profile_base.features.field_base.inc
+@@ -20,14 +20,6 @@ function cod_profile_base_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 0,
+     ),
+-    'foreign keys' => array(
+-      'format' => array(
+-        'columns' => array(
+-          'format' => 'format',
+-        ),
+-        'table' => 'filter_format',
+-      ),
+-    ),
+     'indexes' => array(
+       'format' => array(
+         0 => 'format',
+@@ -47,14 +39,6 @@ function cod_profile_base_field_default_field_bases() {
+     'deleted' => 0,
+     'entity_types' => array(),
+     'field_name' => 'field_profile_first',
+-    'foreign keys' => array(
+-      'format' => array(
+-        'columns' => array(
+-          'format' => 'format',
+-        ),
+-        'table' => 'filter_format',
+-      ),
+-    ),
+     'indexes' => array(
+       'format' => array(
+         0 => 'format',
+@@ -76,14 +60,6 @@ function cod_profile_base_field_default_field_bases() {
+     'deleted' => 0,
+     'entity_types' => array(),
+     'field_name' => 'field_profile_interests',
+-    'foreign keys' => array(
+-      'format' => array(
+-        'columns' => array(
+-          'format' => 'format',
+-        ),
+-        'table' => 'filter_format',
+-      ),
+-    ),
+     'indexes' => array(
+       'format' => array(
+         0 => 'format',
+@@ -103,14 +79,6 @@ function cod_profile_base_field_default_field_bases() {
+     'deleted' => 0,
+     'entity_types' => array(),
+     'field_name' => 'field_profile_job_title',
+-    'foreign keys' => array(
+-      'format' => array(
+-        'columns' => array(
+-          'format' => 'format',
+-        ),
+-        'table' => 'filter_format',
+-      ),
+-    ),
+     'indexes' => array(
+       'format' => array(
+         0 => 'format',
+@@ -132,14 +100,6 @@ function cod_profile_base_field_default_field_bases() {
+     'deleted' => 0,
+     'entity_types' => array(),
+     'field_name' => 'field_profile_last',
+-    'foreign keys' => array(
+-      'format' => array(
+-        'columns' => array(
+-          'format' => 'format',
+-        ),
+-        'table' => 'filter_format',
+-      ),
+-    ),
+     'indexes' => array(
+       'format' => array(
+         0 => 'format',
+@@ -164,7 +124,6 @@ function cod_profile_base_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 0,
+     ),
+-    'foreign keys' => array(),
+     'indexes' => array(),
+     'locked' => 0,
+     'module' => 'addressfield',
+@@ -180,14 +139,6 @@ function cod_profile_base_field_default_field_bases() {
+     'deleted' => 0,
+     'entity_types' => array(),
+     'field_name' => 'field_profile_org',
+-    'foreign keys' => array(
+-      'format' => array(
+-        'columns' => array(
+-          'format' => 'format',
+-        ),
+-        'table' => 'filter_format',
+-      ),
+-    ),
+     'indexes' => array(
+       'format' => array(
+         0 => 'format',
+@@ -212,14 +163,6 @@ function cod_profile_base_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 0,
+     ),
+-    'foreign keys' => array(
+-      'format' => array(
+-        'columns' => array(
+-          'format' => 'format',
+-        ),
+-        'table' => 'filter_format',
+-      ),
+-    ),
+     'indexes' => array(
+       'format' => array(
+         0 => 'format',
+diff --git a/cod_registration/cod_registration.features.field_base.inc b/cod_registration/cod_registration.features.field_base.inc
+index fad44fe..e8db371 100644
+--- a/cod_registration/cod_registration.features.field_base.inc
++++ b/cod_registration/cod_registration.features.field_base.inc
+@@ -20,14 +20,6 @@ function cod_registration_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 0,
+     ),
+-    'foreign keys' => array(
+-      'ttid' => array(
+-        'columns' => array(
+-          'value' => 'ttid',
+-        ),
+-        'table' => 'ticket_type',
+-      ),
+-    ),
+     'indexes' => array(
+       'value' => array(
+         0 => 'value',
+diff --git a/cod_schedule/cod_schedule.features.field_base.inc b/cod_schedule/cod_schedule.features.field_base.inc
+index 2974ae2..e6e66a5 100644
+--- a/cod_schedule/cod_schedule.features.field_base.inc
++++ b/cod_schedule/cod_schedule.features.field_base.inc
+@@ -20,7 +20,6 @@ function cod_schedule_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 0,
+     ),
+-    'foreign keys' => array(),
+     'indexes' => array(
+       'revision_id' => array(
+         0 => 'revision_id',
+@@ -46,7 +45,6 @@ function cod_schedule_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 0,
+     ),
+-    'foreign keys' => array(),
+     'indexes' => array(),
+     'locked' => 0,
+     'module' => 'date',
+@@ -79,14 +77,6 @@ function cod_schedule_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 2,
+     ),
+-    'foreign keys' => array(
+-      'field_collection_item' => array(
+-        'columns' => array(
+-          'target_id' => 'item_id',
+-        ),
+-        'table' => 'field_collection_item',
+-      ),
+-    ),
+     'indexes' => array(
+       'target_id' => array(
+         0 => 'target_id',
+@@ -124,7 +114,6 @@ function cod_schedule_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 0,
+     ),
+-    'foreign keys' => array(),
+     'indexes' => array(
+       'value' => array(
+         0 => 'value',
+@@ -154,14 +143,6 @@ function cod_schedule_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 0,
+     ),
+-    'foreign keys' => array(
+-      'cod_event_room' => array(
+-        'columns' => array(
+-          'target_id' => 'evtrid',
+-        ),
+-        'table' => 'cod_event_room',
+-      ),
+-    ),
+     'indexes' => array(
+       'target_id' => array(
+         0 => 'target_id',
+@@ -198,14 +179,6 @@ function cod_schedule_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 0,
+     ),
+-    'foreign keys' => array(
+-      'cod_event_time' => array(
+-        'columns' => array(
+-          'target_id' => 'evttid',
+-        ),
+-        'table' => 'cod_event_time',
+-      ),
+-    ),
+     'indexes' => array(
+       'target_id' => array(
+         0 => 'target_id',
+diff --git a/cod_session/cod_session.features.field_base.inc b/cod_session/cod_session.features.field_base.inc
+index 28b1df3..1ae738b 100644
+--- a/cod_session/cod_session.features.field_base.inc
++++ b/cod_session/cod_session.features.field_base.inc
+@@ -21,7 +21,6 @@ function cod_session_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 0,
+     ),
+-    'foreign keys' => array(),
+     'indexes' => array(
+       'value' => array(
+         0 => 'value',
+@@ -62,7 +61,6 @@ function cod_session_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 1,
+     ),
+-    'foreign keys' => array(),
+     'indexes' => array(
+       'value' => array(
+         0 => 'value',
+@@ -91,7 +89,6 @@ function cod_session_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 0,
+     ),
+-    'foreign keys' => array(),
+     'indexes' => array(
+       'value' => array(
+         0 => 'value',
+@@ -128,14 +125,6 @@ function cod_session_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 0,
+     ),
+-    'foreign keys' => array(
+-      'fid' => array(
+-        'columns' => array(
+-          'fid' => 'fid',
+-        ),
+-        'table' => 'file_managed',
+-      ),
+-    ),
+     'indexes' => array(
+       'fid' => array(
+         0 => 'fid',
+@@ -161,14 +150,6 @@ function cod_session_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 0,
+     ),
+-    'foreign keys' => array(
+-      'fid' => array(
+-        'columns' => array(
+-          'fid' => 'fid',
+-        ),
+-        'table' => 'file_managed',
+-      ),
+-    ),
+     'indexes' => array(
+       'fid' => array(
+         0 => 'fid',
+@@ -202,14 +183,6 @@ function cod_session_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 0,
+     ),
+-    'foreign keys' => array(
+-      'users' => array(
+-        'columns' => array(
+-          'target_id' => 'uid',
+-        ),
+-        'table' => 'users',
+-      ),
+-    ),
+     'indexes' => array(
+       'target_id' => array(
+         0 => 'target_id',
+@@ -247,14 +220,6 @@ function cod_session_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 0,
+     ),
+-    'foreign keys' => array(
+-      'taxonomy_term_data' => array(
+-        'columns' => array(
+-          'target_id' => 'tid',
+-        ),
+-        'table' => 'taxonomy_term_data',
+-      ),
+-    ),
+     'indexes' => array(
+       'target_id' => array(
+         0 => 'target_id',
+@@ -295,14 +260,6 @@ function cod_session_field_default_field_bases() {
+     'deleted' => 0,
+     'entity_types' => array(),
+     'field_name' => 'upload',
+-    'foreign keys' => array(
+-      'fid' => array(
+-        'columns' => array(
+-          'fid' => 'fid',
+-        ),
+-        'table' => 'file_managed',
+-      ),
+-    ),
+     'indexes' => array(
+       'fid' => array(
+         0 => 'fid',
+diff --git a/cod_session/cod_session.features.field_instance.inc b/cod_session/cod_session.features.field_instance.inc
+index aeb8d78..56f2c4d 100644
+--- a/cod_session/cod_session.features.field_instance.inc
++++ b/cod_session/cod_session.features.field_instance.inc
+@@ -773,9 +773,9 @@ function cod_session_field_default_field_instances() {
+   // Included for use with string extractors like potx.
+   t('An image to be used for highlighted sessions in the front page rotator.');
+   t('Body');
++  t('Conference');
+   t('Default Session View');
+   t('Description');
+-  t('Conference');
+   t('Experience level');
+   t('File attachments');
+   t('Image');
+diff --git a/cod_sponsors/cod_sponsors.features.field_base.inc b/cod_sponsors/cod_sponsors.features.field_base.inc
+index 2a599ee..219833c 100644
+--- a/cod_sponsors/cod_sponsors.features.field_base.inc
++++ b/cod_sponsors/cod_sponsors.features.field_base.inc
+@@ -20,14 +20,6 @@ function cod_sponsors_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 0,
+     ),
+-    'foreign keys' => array(
+-      'format' => array(
+-        'columns' => array(
+-          'format' => 'format',
+-        ),
+-        'table' => 'filter_format',
+-      ),
+-    ),
+     'indexes' => array(
+       'format' => array(
+         0 => 'format',
+@@ -50,14 +42,6 @@ function cod_sponsors_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 0,
+     ),
+-    'foreign keys' => array(
+-      'fid' => array(
+-        'columns' => array(
+-          'fid' => 'fid',
+-        ),
+-        'table' => 'file_managed',
+-      ),
+-    ),
+     'indexes' => array(
+       'fid' => array(
+         0 => 'fid',
+@@ -83,14 +67,6 @@ function cod_sponsors_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 0,
+     ),
+-    'foreign keys' => array(
+-      'users' => array(
+-        'columns' => array(
+-          'target_id' => 'uid',
+-        ),
+-        'table' => 'users',
+-      ),
+-    ),
+     'indexes' => array(
+       'target_id' => array(
+         0 => 'target_id',
+@@ -131,14 +107,6 @@ function cod_sponsors_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 0,
+     ),
+-    'foreign keys' => array(
+-      'tid' => array(
+-        'columns' => array(
+-          'tid' => 'tid',
+-        ),
+-        'table' => 'taxonomy_term_data',
+-      ),
+-    ),
+     'indexes' => array(
+       'tid' => array(
+         0 => 'tid',
+@@ -168,7 +136,6 @@ function cod_sponsors_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 0,
+     ),
+-    'foreign keys' => array(),
+     'indexes' => array(),
+     'locked' => 0,
+     'module' => 'link',
+diff --git a/cod_sponsors/cod_sponsors.features.inc b/cod_sponsors/cod_sponsors.features.inc
+index 7e025bb..87e55cc 100644
+--- a/cod_sponsors/cod_sponsors.features.inc
++++ b/cod_sponsors/cod_sponsors.features.inc
+@@ -31,17 +31,9 @@ function cod_sponsors_image_default_styles() {
+ 
+   // Exported image style: cod_sponsors.
+   $styles['cod_sponsors'] = array(
+-    'name' => 'cod_sponsors',
+     'label' => 'COD Sponsors',
+     'effects' => array(
+       2 => array(
+-        'label' => 'Scale',
+-        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
+-        'effect callback' => 'image_scale_effect',
+-        'dimensions callback' => 'image_scale_dimensions',
+-        'form callback' => 'image_scale_form',
+-        'summary theme' => 'image_scale_summary',
+-        'module' => 'image',
+         'name' => 'image_scale',
+         'data' => array(
+           'width' => 220,
+diff --git a/cod_sponsors/modules/cod_sponsors_exhibits/cod_sponsors_exhibits.features.field_base.inc b/cod_sponsors/modules/cod_sponsors_exhibits/cod_sponsors_exhibits.features.field_base.inc
+index 5f96416..05a88ce 100644
+--- a/cod_sponsors/modules/cod_sponsors_exhibits/cod_sponsors_exhibits.features.field_base.inc
++++ b/cod_sponsors/modules/cod_sponsors_exhibits/cod_sponsors_exhibits.features.field_base.inc
+@@ -20,14 +20,6 @@ function cod_sponsors_exhibits_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 2,
+     ),
+-    'foreign keys' => array(
+-      'format' => array(
+-        'columns' => array(
+-          'format' => 'format',
+-        ),
+-        'table' => 'filter_format',
+-      ),
+-    ),
+     'indexes' => array(
+       'format' => array(
+         0 => 'format',
+@@ -52,7 +44,6 @@ function cod_sponsors_exhibits_field_default_field_bases() {
+     'field_permissions' => array(
+       'type' => 1,
+     ),
+-    'foreign keys' => array(),
+     'indexes' => array(
+       'value' => array(
+         0 => 'value',

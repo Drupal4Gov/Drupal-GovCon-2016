@@ -41,9 +41,9 @@ features[variable][] = pathauto_node_news_pattern
 features[views_view][] = cod_news
 install_option = cod
 
-; Information added by Drupal.org packaging script on 2015-01-28
-version = "7.x-1.0-beta7"
+; Information added by Drupal.org packaging script on 2015-03-18
+version = "7.x-1.0-beta8"
 core = "7.x"
 project = "cod_support"
-datestamp = "1422486193"
+datestamp = "1426715316"
 

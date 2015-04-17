@@ -20,14 +20,6 @@ function cod_sponsors_exhibits_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 2,
     ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -52,7 +44,6 @@ function cod_sponsors_exhibits_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 1,
     ),
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',

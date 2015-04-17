@@ -100,14 +100,15 @@ function cod_sponsors_commerce_add_product($event, $content_type, $prefix = '', 
 function cod_sponsors_commerce_form_alter(&$form, &$form_state, $form_id) {
   //dpm($form_id);
 }
+
 /**
  *  Implements hook_form_FORM_ID_alter().
- */
+ *  TODO Improve functionality of this.
+
 function cod_sponsors_commerce_form_taxonomy_form_term_alter(&$form, &$form_state, $form_id) {
 
   /*
    * Add an option to create a product -- would be good to eventually use IEF here.
-   */
   $form['related_product'] = array(
     '#type' => 'checkbox',
     '#title' => 'Create an associated product with this sponsorship type',
@@ -143,6 +144,7 @@ function cod_sponsors_commerce_form_taxonomy_form_term_alter(&$form, &$form_stat
   $form['commerce_sponsor_product']['#element_validate'] = array('cod_sponsors_commerce_inline_entity_form_entity_form_validate');
   $form['commerce_sponsor_product']['#ief_element_submit'] = array('cod_sponsors_commerce_inline_entity_form_entity_form_submit');
 }
+ */
 
 function cod_sponsors_commerce_inline_entity_form_get_controller() {
   $type_settings = array(

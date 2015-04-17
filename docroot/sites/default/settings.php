@@ -574,3 +574,10 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
 if (file_exists('/var/www/site-php')) {
   require('/var/www/site-php/capitalcamp/capitalcamp-settings.inc');
 }
+
+$conf['cache_backends'][] = 'sites/all/modules/contrib/memcache/memcache.inc';
+$conf['lock_inc'] = 'sites/all/modules/contrib/memcache/memcache-lock.inc';
+$conf['memcache_stampede_protection'] = TRUE;
+$conf['cache_default_class'] = 'MemCacheDrupal';
+$conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
+$conf['memcache_key_prefix'] = 'dgc';

@@ -102,8 +102,8 @@ function cod_paid_events_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'type' => 'hidden',
         'settings' => array(),
+        'type' => 'hidden',
         'weight' => 9,
       ),
     ),
