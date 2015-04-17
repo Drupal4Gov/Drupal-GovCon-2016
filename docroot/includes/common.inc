@@ -2214,20 +2214,14 @@ function url($path = NULL, array $options = array()) {
     'prefix' => ''
   );
 
-  // A duplicate of the code from url_is_external() to avoid needing another
-  // function call, since performance inside url() is critical.
   if (!isset($options['external'])) {
-    // Return an external link if $path contains an allowed absolute URL. Avoid
-    // calling drupal_strip_dangerous_protocols() if there is any slash (/),
-    // hash (#) or question_mark (?) before the colon (:) occurrence - if any -
-    // as this would clearly mean it is not a URL. If the path starts with 2
-    // slashes then it is always considered an external URL without an explicit
-    // protocol part.
+    // Return an external link if $path contains an allowed absolute URL. Only
+    // call the slow drupal_strip_dangerous_protocols() if $path contains a ':'
+    // before any / ? or #. Note: we could use url_is_external($path) here, but
+    // that would require another function call, and performance inside url() is
+    // critical.
     $colonpos = strpos($path, ':');
-    $options['external'] = (strpos($path, '//') === 0)
-      || ($colonpos !== FALSE
-        && !preg_match('![/?#]!', substr($path, 0, $colonpos))
-        && drupal_strip_dangerous_protocols($path) == $path);
+    $options['external'] = ($colonpos !== FALSE && !preg_match('![/?#]!', substr($path, 0, $colonpos)) && drupal_strip_dangerous_protocols($path) == $path);
   }
 
   // Preserve the original path before altering or aliasing.
@@ -2264,11 +2258,6 @@ function url($path = NULL, array $options = array()) {
     // Reassemble.
     return $path . $options['fragment'];
   }
-
-  // Strip leading slashes from internal paths to prevent them becoming external
-  // URLs without protocol. /example.com should not be turned into
-  // //example.com.
-  $path = ltrim($path, '/');
 
   global $base_url, $base_secure_url, $base_insecure_url;
 
@@ -2347,15 +2336,10 @@ function url($path = NULL, array $options = array()) {
  */
 function url_is_external($path) {
   $colonpos = strpos($path, ':');
-  // Avoid calling drupal_strip_dangerous_protocols() if there is any slash (/),
-  // hash (#) or question_mark (?) before the colon (:) occurrence - if any - as
-  // this would clearly mean it is not a URL. If the path starts with 2 slashes
-  // then it is always considered an external URL without an explicit protocol
-  // part.
-  return (strpos($path, '//') === 0)
-    || ($colonpos !== FALSE
-      && !preg_match('![/?#]!', substr($path, 0, $colonpos))
-      && drupal_strip_dangerous_protocols($path) == $path);
+  // Avoid calling drupal_strip_dangerous_protocols() if there is any
+  // slash (/), hash (#) or question_mark (?) before the colon (:)
+  // occurrence - if any - as this would clearly mean it is not a URL.
+  return $colonpos !== FALSE && !preg_match('![/?#]!', substr($path, 0, $colonpos)) && drupal_strip_dangerous_protocols($path) == $path;
 }
 
 /**
@@ -2652,10 +2636,7 @@ function drupal_deliver_html_page($page_callback_result) {
 
         // Keep old path for reference, and to allow forms to redirect to it.
         if (!isset($_GET['destination'])) {
-          // Make sure that the current path is not interpreted as external URL.
-          if (!url_is_external($_GET['q'])) {
-            $_GET['destination'] = $_GET['q'];
-          }
+          $_GET['destination'] = $_GET['q'];
         }
 
         $path = drupal_get_normal_path(variable_get('site_404', ''));
@@ -2684,10 +2665,7 @@ function drupal_deliver_html_page($page_callback_result) {
 
         // Keep old path for reference, and to allow forms to redirect to it.
         if (!isset($_GET['destination'])) {
-          // Make sure that the current path is not interpreted as external URL.
-          if (!url_is_external($_GET['q'])) {
-            $_GET['destination'] = $_GET['q'];
-          }
+          $_GET['destination'] = $_GET['q'];
         }
 
         $path = drupal_get_normal_path(variable_get('site_403', ''));
@@ -4392,6 +4370,7 @@ function drupal_get_js($scope = 'header', $javascript = NULL, $skip_alter = FALS
     switch ($item['type']) {
       case 'setting':
         $js_element = $element;
+        $js_element['#attributes'] = !empty($item['attributes']) ? $item['attributes'] : array();
         $js_element['#value_prefix'] = $embed_prefix;
         $js_element['#value'] = 'jQuery.extend(Drupal.settings, ' . drupal_json_encode(drupal_array_merge_deep_array($item['data'])) . ");";
         $js_element['#value_suffix'] = $embed_suffix;
@@ -4400,6 +4379,7 @@ function drupal_get_js($scope = 'header', $javascript = NULL, $skip_alter = FALS
 
       case 'inline':
         $js_element = $element;
+        $js_element['#attributes'] = !empty($item['attributes']) ? $item['attributes'] : array();
         if ($item['defer']) {
           $js_element['#attributes']['defer'] = 'defer';
         }
@@ -4411,6 +4391,7 @@ function drupal_get_js($scope = 'header', $javascript = NULL, $skip_alter = FALS
 
       case 'file':
         $js_element = $element;
+        $js_element['#attributes'] = !empty($item['attributes']) ? $item['attributes'] : array();
         if (!$item['preprocess'] || !$preprocess_js) {
           if ($item['defer']) {
             $js_element['#attributes']['defer'] = 'defer';

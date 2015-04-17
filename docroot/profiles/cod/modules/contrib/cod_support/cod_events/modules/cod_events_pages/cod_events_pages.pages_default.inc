@@ -331,7 +331,7 @@ function cod_events_pages_default_page_manager_pages() {
     $pane->pid = 'new-e5302f2d-92ba-4445-824a-ddead9884dc1';
     $pane->panel = 'featured';
     $pane->type = 'views_panes';
-    $pane->subtype = 'cod_session_sessions-panel_sessions_featured';
+    $pane->subtype = 'cod_session_sessions-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(

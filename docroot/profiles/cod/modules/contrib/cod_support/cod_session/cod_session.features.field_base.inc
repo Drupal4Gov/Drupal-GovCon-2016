@@ -21,6 +21,7 @@ function cod_session_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
+    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -61,6 +62,7 @@ function cod_session_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 1,
     ),
+    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -89,6 +91,7 @@ function cod_session_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
+    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -125,6 +128,14 @@ function cod_session_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
+    'foreign keys' => array(
+      'fid' => array(
+        'columns' => array(
+          'fid' => 'fid',
+        ),
+        'table' => 'file_managed',
+      ),
+    ),
     'indexes' => array(
       'fid' => array(
         0 => 'fid',
@@ -149,6 +160,14 @@ function cod_session_field_default_field_bases() {
     'field_name' => 'field_slides',
     'field_permissions' => array(
       'type' => 0,
+    ),
+    'foreign keys' => array(
+      'fid' => array(
+        'columns' => array(
+          'fid' => 'fid',
+        ),
+        'table' => 'file_managed',
+      ),
     ),
     'indexes' => array(
       'fid' => array(
@@ -182,6 +201,14 @@ function cod_session_field_default_field_bases() {
     'field_name' => 'field_speakers',
     'field_permissions' => array(
       'type' => 0,
+    ),
+    'foreign keys' => array(
+      'users' => array(
+        'columns' => array(
+          'target_id' => 'uid',
+        ),
+        'table' => 'users',
+      ),
     ),
     'indexes' => array(
       'target_id' => array(
@@ -219,6 +246,14 @@ function cod_session_field_default_field_bases() {
     'field_name' => 'og_vocabulary',
     'field_permissions' => array(
       'type' => 0,
+    ),
+    'foreign keys' => array(
+      'taxonomy_term_data' => array(
+        'columns' => array(
+          'target_id' => 'tid',
+        ),
+        'table' => 'taxonomy_term_data',
+      ),
     ),
     'indexes' => array(
       'target_id' => array(
@@ -260,6 +295,14 @@ function cod_session_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'upload',
+    'foreign keys' => array(
+      'fid' => array(
+        'columns' => array(
+          'fid' => 'fid',
+        ),
+        'table' => 'file_managed',
+      ),
+    ),
     'indexes' => array(
       'fid' => array(
         0 => 'fid',

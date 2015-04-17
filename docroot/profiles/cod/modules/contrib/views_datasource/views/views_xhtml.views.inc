@@ -1,4 +1,4 @@
-<?php
+z<?php
 /**
  * @file
  * Views style plugin to render nodes as XHTML microformats.

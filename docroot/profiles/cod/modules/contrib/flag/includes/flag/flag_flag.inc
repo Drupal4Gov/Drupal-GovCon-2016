@@ -793,11 +793,11 @@ class flag_flag {
    * Create a new Flagging to flag an entity.
    *
    * @param $flagging
-   *  The flagging entity that is to be saved.
+   *  The flagging entity that is to be removed.
    * @param $entity_id
-   *  The entity ID of entity being flagged.
+   *  The entity ID of entity being unflagged.
    * @param $account
-   *  The account performing the flagging.
+   *  The account performing the unflagging.
    */
   private function flagging_insert($flagging, $entity_id, $account) {
     if ($this->uses_anonymous_cookies()) {
@@ -842,14 +842,32 @@ class flag_flag {
   }
 
   /**
+   * Invoke a Rules event in reaction to a flagging or unflagging.
+   *
+   * @param $action
+   *   Either 'flag' or 'unflag'.
+   * @param $flagging
+   *  The flagging entity that is to be removed.
+   * @param $entity_id
+   *  The entity ID of entity being unflagged.
+   * @param $account
+   *  The account performing the unflagging.
+   */
+  protected function invoke_rules_event($action, $flagging, $entity_id, $account) {
+    // We only support flags on entities: do nothing in this class.
+    // See flag_entity::invoke_rules_event().
+    return;
+  }
+
+  /**
    * Update a Flagging.
    *
    * @param $flagging
-   *  The flagging entity that is being updated.
+   *  The flagging entity that is to be removed.
    * @param $entity_id
-   *  The entity ID of entity the flagging is on.
+   *  The entity ID of entity being unflagged.
    * @param $account
-   *  The account performing the action.
+   *  The account performing the unflagging.
    */
   private function flagging_update($flagging, $entity_id, $account) {
     // Invoke presave hooks.
@@ -925,24 +943,6 @@ class flag_flag {
       watchdog_exception('flag', $e);
       throw $e;
     }
-  }
-
-  /**
-   * Invoke a Rules event in reaction to a flagging or unflagging.
-   *
-   * @param $action
-   *   Either 'flag' or 'unflag'.
-   * @param $flagging
-   *  The flagging entity that is either newly created or about to be deleted.
-   * @param $entity_id
-   *  The entity ID of entity being flagged or unflagged.
-   * @param $account
-   *  The account performing the action.
-   */
-  protected function invoke_rules_event($action, $flagging, $entity_id, $account) {
-    // We only support flags on entities: do nothing in this class.
-    // See flag_entity::invoke_rules_event().
-    return;
   }
 
   /**

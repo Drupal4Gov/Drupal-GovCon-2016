@@ -3,9 +3,3 @@
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
-
-# Ignore Mac files
-.DS_Store
-
-# Ignore Local setting.php from Acquia Dev Desktop
-sites.php
