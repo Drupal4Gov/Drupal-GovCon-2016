@@ -1,5 +1,5 @@
 .view-cod-sponsors.bevel {
-  padding-top: 0;
+  padding: 0 0 16px;
 }
 
 .view-cod-sponsors .view-content h3 {
@@ -14,8 +14,8 @@
 }
 .pane-cod-sponsors-panel-pane-1 { 
   margin-top: 50px;
-  padding-top: 0;
   background-color: $gold;
+  padding: 0 0 16px;
   .bg { background-color: $gold; }
   h2 { @include hide-text; }
 }
@@ -25,32 +25,46 @@
 		background: #fff;
 		margin: 0;
 		padding: 10px;
+		text-align: center;
 	}
 	ul li.views-row, .sponsor {
-		display: block;
+		display: inline-block;
 		list-style: none;
-		margin: 50px auto;
+		margin: 50px 20px;
 		text-align: center;
 	}
 	.views-field-field-sponsor-logo img, .sponsor img {
 		width: auto;
 		height: auto;
 		max-height:100px;
-		max-width: 200px;
+		max-width: 140px;
 	}
 }
 
-.pane-cod-sponsors-panel-pane-2 {
-	margin-top: 4em;
-	padding-top: 0;
-	.pane-title { text-align: center; color: #fff; padding: 0.6em 0 0 0; margin: 0; }
+.panel-layout .sponsors-featured {
+	background-color: #fff;
+	position: relative;
+	margin: 5em 0 3em 0;
+	padding: 16px 0;
+  .bg { background-color: #fff; }
+  .bg-overlay { background: none; }
+	.pane-title { 
+		position: absolute;
+		width: 100%;
+		top: -30px;
+		text-align: center; 
+		color: $blue; 
+		padding: 0.2em 0; 
+		margin: 0; 
+	}
 	ul { text-align: center; }
+	ul li.views-row, .sponsor { margin: 0 20px; }
 }
 
 @include breakpoint($tab, true) {
 	.view-cod-sponsors {
 		ul li.views-row, .sponsor {
-			margin: 24px;
+			margin: 20px;
 			display: inline-block;
 		}
 		.views-field-field-sponsor-logo img, .sponsor img {
@@ -59,3 +73,31 @@
 		}
 	}
 }
+
+@include breakpoint($desk, true) {
+	.view-cod-sponsors {
+		ul li.views-row, .sponsor {
+			margin: 20px;
+			display: inline-block;
+		}
+	}	
+
+}
+
+@include breakpoint($wide, true) {
+	.panel-layout .sponsors-featured {
+		position: absolute;
+		top: 0;
+		width: 200px;
+		right: 0;
+		margin: 0;
+		ul { padding: 0 0 10px; }
+		ul li { margin: 0; }
+		.pane-title { top: -30px; font-size: 1.5em; line-height: 1; padding: 0; margin: 0; }
+		.views-field-field-sponsor-logo img, .sponsor img {
+			max-height: 100px;
+			max-width: 140px;
+		}
+	}
+}
+	

@@ -51,6 +51,7 @@ body.admin-menu.adminimal-menu.adminimal-frontend {
 }
 .l-region--footer {
   background: $texture lighten($gold, 20%);
+  padding: 10px;
 }
 
 /* get rid of background for all panel layouts running this theme */
@@ -77,6 +78,7 @@ p.submitted {
 }
 
 /* Homepage */
+
 .page-node-1.node-type-event {
   .breadcrumb { display: none; }
   .l-content > h1 { @include hide-text; }
@@ -115,4 +117,9 @@ p.submitted {
     h3 { color: $blue; font-size: 1.6em; letter-spacing: 0.2; margin: 0.5em 0; }
     h4 { color: $blue; font-size: 1.2em; text-transform: uppercase; margin: 0.5em 0; font-weight: 600; }
   }
+  .preface-inner { width: 100%; }
+}
+
+@include breakpoint($wide, true) {
+  .container.preface { height: 300px; }
 }

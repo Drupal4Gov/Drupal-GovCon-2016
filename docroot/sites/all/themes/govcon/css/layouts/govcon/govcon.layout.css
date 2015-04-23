@@ -56,7 +56,7 @@
 .l-footer-wrapper {
   padding: 18px 0; }
 
-@media (min-width: 44em) {
+@media (min-width: 50em) {
   /* line 66, ../../../sass/layouts/govcon/govcon.layout.scss */
   .l-main {
     margin-top: 160px; }

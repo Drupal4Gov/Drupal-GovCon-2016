@@ -1,23 +1,16 @@
 
 
 .l-region--footer .block {
-	margin: 20px;
-}
-
-@include breakpoint($tab, true) {
-
-  /* footer blocks in columns */
-  .l-region--footer .block, .l-region--footer .block:first-child {
-      width: 33.3%;
-      float: left;
-  }
-
+	padding: 20px;
+	margin: 0;
+	clear: both;
 }
 
 /* Special blocks */
 #block-block-6 {
 	display:none;
 }
+
 
 @include breakpoint($tab, true) {
 	/* Special blocks */
