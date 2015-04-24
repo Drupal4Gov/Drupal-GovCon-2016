@@ -176,14 +176,17 @@ ul.tier-two {
     width: 50%;
     list-style: none;
     margin-bottom: 20px;
-    padding: 0 0 0 20px;
+    padding: 0 0 0 30px;
     a {
-      font-size: 1.2em;
+      font-size: 1.4em;
       line-height: 1.2;
-      margin-bottom: 0.6em;
+      margin-bottom: 0.3em;
       display: block;
       border-bottom: 2px solid $gold;
       padding-bottom: 4px;
+      text-transform: uppercase;
+      color: darken($pale-blue, 6%);
+      &:hover { text-decoration: none; }
     }
   }
   ul.menu li:nth-child(odd) { clear: left; padding-left: 0; }
@@ -194,6 +197,8 @@ ul.tier-two {
     margin-bottom: 0;
     padding-bottom: 0;
     border: none;
+    text-transform: none;
+    color: $blue;
   }
 }
 
@@ -283,11 +288,11 @@ ul.tier-two {
 		a { font-size: 1em; padding: 10px 10px 14px; }
 	}
   .l-region--footer .block--system-main-menu {
-    ul.menu li { width: 33.3%; float: left; padding-left: 20px;
+    ul.menu li { width: 33.3%; float: left; padding-left: 30px;
       &.first { padding: 0; }
       ul li { display: block; width: 100%; }
     }
-    ul.menu li:nth-child(odd) { clear: none; padding-left: 20px; }
+    ul.menu li:nth-child(odd) { clear: none; padding-left: 30px; }
     ul.menu li:nth-child(3n+1) { clear: left; padding-left: 0; } 
   }
 }
@@ -296,7 +301,7 @@ ul.tier-two {
   .no-touch .page-node-1.node-type-event ul.main-menu { margin: 0 0 0 190px; }
   .l-region--footer .block--system-main-menu {
     ul.menu li { width: 20%; }
-    ul.menu li:nth-child(3n+1) { clear: none; padding-left: 20px; } 
+    ul.menu li:nth-child(3n+1) { clear: none; padding-left: 30px; } 
     ul.menu li.first:nth-child(3n+1) { padding: 0; }
     ul.menu li:nth-child(5n+1) { clear: left; padding-left: 0; }
   }
