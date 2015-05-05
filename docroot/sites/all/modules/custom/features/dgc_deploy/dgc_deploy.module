@@ -5,3 +5,33 @@
  */
 
 include_once 'dgc_deploy.features.inc';
+
+/**
+* Implements hook_mollom_form_list().
+* Make ticket registration form available to Mollom
+*/
+function dgc_deploy_mollom_form_list() {
+  $forms['ticket_register_form'] = array(
+    'title' => t('Ticket registration form'),
+  );
+  return $forms;
+}
+/**
+* Implements hook_mollom_form_info().
+* Enable CAPTCHA mode for ticket registration form
+*/
+function dgc_deploy_mollom_form_info() {
+  $form_info = array(
+    'mode' => MOLLOM_MODE_CAPTCHA,
+  );
+  return $form_info;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ * Change submit button weight to force it to bottom
+ */
+function dgc_deploy_form_ticket_register_form_alter(&$form, &$form_state) {
+  // Force Submit button to bottom of form.
+  $form['submit']['#weight'] = 1000;
+}
