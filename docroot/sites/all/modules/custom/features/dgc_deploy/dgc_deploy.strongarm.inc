@@ -21,7 +21,7 @@ function dgc_deploy_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'captcha_default_challenge';
-  $strongarm->value = 'captcha/Math';
+  $strongarm->value = 'recaptcha/reCAPTCHA';
   $export['captcha_default_challenge'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -437,6 +437,20 @@ user/*/*';
     ),
   );
   $export['panelizer_defaults_node_event'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'recaptcha_secret_key';
+  $strongarm->value = '6LfsWAYTAAAAAI_3aCzE8NMGVpsCdctv6S61x_4U';
+  $export['recaptcha_secret_key'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'recaptcha_site_key';
+  $strongarm->value = '6LfsWAYTAAAAAHJ29sjy9GtPIw8FYhZFww7CGu1E';
+  $export['recaptcha_site_key'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
