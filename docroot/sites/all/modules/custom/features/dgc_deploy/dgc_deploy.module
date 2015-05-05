@@ -32,6 +32,9 @@ function dgc_deploy_mollom_form_info() {
  * Change submit button weight to force it to bottom
  */
 function dgc_deploy_form_ticket_register_form_alter(&$form, &$form_state) {
+  // Add honeypot to ticket register form.
+  honeypot_add_form_protection($form, $form_state, array('honeypot', 'time_restriction'));
+
   // Force Submit button to bottom of form.
-  $form['submit']['#weight'] = 1000;
+  //$form['submit']['#weight'] = 1000;
 }

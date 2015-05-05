@@ -214,3 +214,17 @@ function dgc_deploy_update_7015() {
 function dgc_deploy_update_7016() {
   module_enable(array('modernizr'));
 }
+
+/**
+ * Enable CAPTCHA module
+ */
+function dgc_deploy_update_7017() {
+  module_enable(array('captcha'));
+}
+
+/**
+ * Enable honeypot module
+ */
+function dgc_deploy_update_7018() {
+  module_enable(array('honeypot'));
+}
