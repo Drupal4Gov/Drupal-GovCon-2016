@@ -207,3 +207,10 @@ function dgc_deploy_update_7014() {
 function dgc_deploy_update_7015() {
   module_enable(array('back_to_top'));
 }
+
+/**
+ * Enable modernizr module
+ */
+function dgc_deploy_update_7016() {
+  module_enable(array('modernizr'));
+}
