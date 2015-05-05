@@ -1044,6 +1044,23 @@ ul.tier-two {
 .no-touch .page-node-1.node-type-event ul.main-menu {
   margin: 0 190px; }
 
+/* line 2, ../sass/components/_news.scss */
+.view-cod-news .view-row {
+  position: relative; }
+  /* line 35, ../sass/abstractions/_mixins.scss */
+  .view-cod-news .view-row:after {
+    content: "";
+    display: table;
+    clear: both; }
+/* line 6, ../sass/components/_news.scss */
+.view-cod-news .views-field-created {
+  float: left;
+  width: 100px; }
+/* line 10, ../sass/components/_news.scss */
+.view-cod-news .views-field-rendered-entity {
+  margin-left: 20px;
+  overflow: hidden; }
+
 /* line 2, ../sass/components/_sessions.scss */
 .view-id-dgc_sessions.view-display-id-attachment_1 .views-field-og-vocabulary .field-content {
   margin-bottom: 4px;
@@ -1683,7 +1700,7 @@ body {
   width: 100%; }
 
 /* line 124, ../sass/govcon.styles.scss */
-.container.preface {
+.page-node-1.node-type-event .container.preface {
   height: 300px; }
 
 /*# sourceMappingURL=govcon.no-query.css.map */

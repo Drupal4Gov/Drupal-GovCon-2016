@@ -121,5 +121,5 @@ p.submitted {
 }
 
 @include breakpoint($wide, true) {
-  .container.preface { height: 300px; }
+  .page-node-1.node-type-event .container.preface { height: 300px; }
 }

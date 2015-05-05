@@ -1,0 +1,14 @@
+.view-cod-news {
+  .view-row {
+    position: relative;
+    @include clearfix;
+  }
+  .views-field-created {
+    float: left;
+    width: 100px;
+  }
+  .views-field-rendered-entity {
+    margin-left: 20px;
+    overflow: hidden;
+  }
+}
