@@ -132,6 +132,7 @@ function dgc_deploy_features_override_default_overrides() {
 
   // Exported overrides for: variable
   $overrides["variable.node_options_session.value|0"] = 'status';
+  $overrides["variable.node_options_session.value|1"] = 'panelizer';
   $overrides["variable.node_submitted_bof_session.value"] = 0;
   $overrides["variable.node_submitted_news.value"] = 0;
   $overrides["variable.node_submitted_schedule_item.value"] = 0;

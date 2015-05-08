@@ -174,30 +174,6 @@ function dgc_deploy_panelizer_defaults() {
     $display->content['new-3603832e-68db-4872-8063-31e51eefba45'] = $pane;
     $display->panels['footer'][2] = 'new-3603832e-68db-4872-8063-31e51eefba45';
     $pane = new stdClass();
-    $pane->pid = 'new-4bc6da4d-dc2c-490f-bc69-4b740e4a4c98';
-    $pane->panel = 'left_content';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'cod_news-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'items_per_page' => '3',
-      'arguments' => array(
-        'gid' => '1',
-      ),
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '4bc6da4d-dc2c-490f-bc69-4b740e4a4c98';
-    $display->content['new-4bc6da4d-dc2c-490f-bc69-4b740e4a4c98'] = $pane;
-    $display->panels['left_content'][0] = 'new-4bc6da4d-dc2c-490f-bc69-4b740e4a4c98';
-    $pane = new stdClass();
     $pane->pid = 'new-92f522dc-f620-443a-8ac4-c8baa4640cb8';
     $pane->panel = 'preface';
     $pane->type = 'entity_field';
@@ -290,8 +266,38 @@ function dgc_deploy_panelizer_defaults() {
     $display->content['new-d815d2ff-886c-4b1f-8b13-7925adc949e0'] = $pane;
     $display->panels['preface'][2] = 'new-d815d2ff-886c-4b1f-8b13-7925adc949e0';
     $pane = new stdClass();
+    $pane->pid = 'new-3c1c06e3-2060-411a-b4eb-ce6f3218e20b';
+    $pane->panel = 'preface';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Featured Keynote',
+      'title' => 'Featured Speaker',
+      'body' => '<h3>Dries Buytaert</h3>
+<img alt="Dries Buytaert" src="/sites/all/themes/govcon/images/dries_2color.jpg" />
+',
+      'format' => 'full_html',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'bevel featured-keynote',
+    );
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = '3c1c06e3-2060-411a-b4eb-ce6f3218e20b';
+    $display->content['new-3c1c06e3-2060-411a-b4eb-ce6f3218e20b'] = $pane;
+    $display->panels['preface'][3] = 'new-3c1c06e3-2060-411a-b4eb-ce6f3218e20b';
+    $pane = new stdClass();
     $pane->pid = 'new-c07e2a66-10f9-4539-a9c0-da58f8e72531';
-    $pane->panel = 'top_right_content';
+    $pane->panel = 'preface';
     $pane->type = 'views';
     $pane->subtype = 'dgc_sessions';
     $pane->shown = TRUE;
@@ -326,11 +332,35 @@ function dgc_deploy_panelizer_defaults() {
       'css_class' => '',
     );
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 4;
     $pane->locks = array();
     $pane->uuid = 'c07e2a66-10f9-4539-a9c0-da58f8e72531';
     $display->content['new-c07e2a66-10f9-4539-a9c0-da58f8e72531'] = $pane;
-    $display->panels['top_right_content'][0] = 'new-c07e2a66-10f9-4539-a9c0-da58f8e72531';
+    $display->panels['preface'][4] = 'new-c07e2a66-10f9-4539-a9c0-da58f8e72531';
+    $pane = new stdClass();
+    $pane->pid = 'new-4bc6da4d-dc2c-490f-bc69-4b740e4a4c98';
+    $pane->panel = 'preface';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'cod_news-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'items_per_page' => '3',
+      'arguments' => array(
+        'gid' => '1',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 5;
+    $pane->locks = array();
+    $pane->uuid = '4bc6da4d-dc2c-490f-bc69-4b740e4a4c98';
+    $display->content['new-4bc6da4d-dc2c-490f-bc69-4b740e4a4c98'] = $pane;
+    $display->panels['preface'][5] = 'new-4bc6da4d-dc2c-490f-bc69-4b740e4a4c98';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $panelizer->display = $display;
