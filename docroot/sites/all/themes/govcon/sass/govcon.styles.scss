@@ -76,50 +76,14 @@ p.submitted {
   color: #666;
   font-size: 0.8em;
 }
-
-/* Homepage */
-
-.page-node-1.node-type-event {
-  .breadcrumb { display: none; }
-  .l-content > h1 { @include hide-text; }
-  .pane-node-body {
-    text-align: center;
-    line-height: 1;
-    h1 { color: $red; margin: 0; font-size: 2.2em; }
-    h1:after { background-image: none; }
-    h3 { color: $blue; font-size: 1.3em; letter-spacing: 0.2; margin: 0.5em 0; }
-    h4 { color: $blue; font-size: 1em; text-transform: uppercase; margin: 0.5em 0; font-weight: 600; }
-  }
-  .panel-display > .container.footer {
-    border-top: 2px solid $gold;
-    padding-top: 30px;
-    margin-top: 30px;
-  }
-}
+.panel-pane { margin: 2em 0; }
 
 
 @include breakpoint($tab, true) {
   body { padding: 20px; }
   .site-branding { top: 70px; }
-  .page-node-1.node-type-event .site-branding { top: 148px; width: 200px; margin-left: -100px; }
-  .page-node-1.node-type-event .site-branding__logo img { width: 200px; }
-  .page-node-1.node-type-event .pane-node-body {
-    h1 { color: $red; margin: 0; font-size: 3em; }
-    h1:after { background-image: $texture-font; }
-    h3 { color: $blue; font-size: 1.2em; letter-spacing: 0.2; margin: 0.5em 0; }
-    h4 { color: $blue; font-size: 1em; text-transform: uppercase; margin: 0.5em 0; font-weight: 600; }
-  }
 }
 
 @include breakpoint($desk, true) {
-  .page-node-1.node-type-event .pane-node-body {
-    h1 { color: $red; margin: 0; font-size: 4em; }
-    h3 { color: $blue; font-size: 1.6em; letter-spacing: 0.2; margin: 0.5em 0; }
-    h4 { color: $blue; font-size: 1.2em; text-transform: uppercase; margin: 0.5em 0; font-weight: 600; }
-  }
   .preface-inner { width: 100%; }
-}
-
-@include breakpoint($wide, true) {
-  .page-node-1.node-type-event .container.preface { height: 300px; }
 }

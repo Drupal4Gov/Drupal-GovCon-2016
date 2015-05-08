@@ -62,6 +62,10 @@
   @extend .l-constrained;
 }
 
+.container {
+  @include clearfix;
+}
+
 @include breakpoint($tab, true) {
   .l-main {
     margin-top: 160px;
