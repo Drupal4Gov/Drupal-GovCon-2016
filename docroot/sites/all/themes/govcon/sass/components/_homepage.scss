@@ -83,6 +83,11 @@
       h4 { color: $blue; font-size: 1.2em; text-transform: uppercase; margin: 0.5em 0; font-weight: 600; }
     }
     .pane-dgc-sessions .views-row a { min-height: 190px; }
+    .featured-keynote { 
+      max-height: 330px; 
+      overflow: hidden; 
+      img { top: -30px; }
+    }
   }
 }
 
