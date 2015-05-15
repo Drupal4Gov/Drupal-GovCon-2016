@@ -207,6 +207,7 @@ function dgc_deploy_user_default_permissions_alter(&$data) {
 function dgc_deploy_strongarm_alter(&$data) {
   if (isset($data['node_options_session'])) {
     $data['node_options_session']->value[0] = 'status'; /* WAS: '' */
+    $data['node_options_session']->value[1] = 'panelizer'; /* WAS: '' */
   }
   if (isset($data['node_submitted_bof_session'])) {
     $data['node_submitted_bof_session']->value = 0; /* WAS: 1 */

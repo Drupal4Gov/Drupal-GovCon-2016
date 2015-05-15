@@ -1,5 +1,9 @@
 article.node-teaser {
-	margin: 1em 0;
-	padding: 10px;
-	background: $texture lighten($gold, 20%);
+	margin: 0 0 1em 0;
+  p { margin: 0; }
+  .node__links a { font-size: .9em; }
+  .node__links a:hover { text-decoration: none; }
+}
+.more-link {
+  clear: both;
 }

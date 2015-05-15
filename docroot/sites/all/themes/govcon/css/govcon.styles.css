@@ -81,7 +81,7 @@ h2.pane-title, h2.block__title {
   font-size: 2em;
   font-weight: normal;
   letter-spacing: 0;
-  margin: 0;
+  margin: 0 0 0.5em;
   border: none; }
 
 /* line 44, ../sass/base/_typography.scss */
@@ -608,6 +608,175 @@ a.tabledrag-handle .handle {
   top: 0;
   right: 10px; }
 
+/* line 2, ../sass/components/_homepage.scss */
+.page-node-1.node-type-event .breadcrumb {
+  display: none; }
+/* line 3, ../sass/components/_homepage.scss */
+.page-node-1.node-type-event .l-content > h1 {
+  overflow: hidden;
+  text-indent: -9000px;
+  display: block;
+  padding: 0;
+  margin: 0;
+  line-height: 0; }
+/* line 4, ../sass/components/_homepage.scss */
+.page-node-1.node-type-event .pane-node-body {
+  text-align: center;
+  line-height: 1; }
+  /* line 7, ../sass/components/_homepage.scss */
+  .page-node-1.node-type-event .pane-node-body h1 {
+    color: #e02d3b;
+    margin: 0;
+    font-size: 2.2em; }
+  /* line 8, ../sass/components/_homepage.scss */
+  .page-node-1.node-type-event .pane-node-body h1:after {
+    background-image: none; }
+  /* line 9, ../sass/components/_homepage.scss */
+  .page-node-1.node-type-event .pane-node-body h3 {
+    color: #095380;
+    font-size: 1.3em;
+    letter-spacing: 0.2;
+    margin: 0.5em 0; }
+  /* line 10, ../sass/components/_homepage.scss */
+  .page-node-1.node-type-event .pane-node-body h4 {
+    color: #095380;
+    font-size: 1em;
+    text-transform: uppercase;
+    margin: 0.5em 0;
+    font-weight: 600; }
+/* line 12, ../sass/components/_homepage.scss */
+.page-node-1.node-type-event .panel-display > .container.footer {
+  border-top: 2px solid #b9a884;
+  padding-top: 30px;
+  margin-top: 30px; }
+/* line 17, ../sass/components/_homepage.scss */
+.page-node-1.node-type-event .featured-keynote {
+  padding: 0;
+  line-height: 1; }
+  /* line 20, ../sass/components/_homepage.scss */
+  .page-node-1.node-type-event .featured-keynote .bl, .page-node-1.node-type-event .featured-keynote .br, .page-node-1.node-type-event .featured-keynote .tl, .page-node-1.node-type-event .featured-keynote .tr {
+    z-index: 1; }
+  /* line 21, ../sass/components/_homepage.scss */
+  .page-node-1.node-type-event .featured-keynote .featured-keynote__heading {
+    z-index: 1; }
+  /* line 22, ../sass/components/_homepage.scss */
+  .page-node-1.node-type-event .featured-keynote h2 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    color: #fff;
+    font-size: 1.4em; }
+  /* line 30, ../sass/components/_homepage.scss */
+  .page-node-1.node-type-event .featured-keynote h3 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    z-index: 3;
+    font-size: 2em; }
+  /* line 39, ../sass/components/_homepage.scss */
+  .page-node-1.node-type-event .featured-keynote img {
+    min-width: 300px; }
+
+@media (min-width: 50em) {
+  /* line 47, ../sass/components/_homepage.scss */
+  .page-node-1.node-type-event .site-branding {
+    top: 148px;
+    width: 200px;
+    margin-left: -100px; }
+  /* line 48, ../sass/components/_homepage.scss */
+  .page-node-1.node-type-event .site-branding__logo img {
+    width: 200px; }
+  /* line 50, ../sass/components/_homepage.scss */
+  .page-node-1.node-type-event .pane-node-body h1 {
+    color: #e02d3b;
+    margin: 0;
+    font-size: 3em; }
+  /* line 51, ../sass/components/_homepage.scss */
+  .page-node-1.node-type-event .pane-node-body h1:after {
+    background-image: url(../images/texture_font2.png); }
+  /* line 52, ../sass/components/_homepage.scss */
+  .page-node-1.node-type-event .pane-node-body h3 {
+    color: #095380;
+    font-size: 1.2em;
+    letter-spacing: 0.2;
+    margin: 0.5em 0; }
+  /* line 53, ../sass/components/_homepage.scss */
+  .page-node-1.node-type-event .pane-node-body h4 {
+    color: #095380;
+    font-size: 1em;
+    text-transform: uppercase;
+    margin: 0.5em 0;
+    font-weight: 600; }
+  /* line 55, ../sass/components/_homepage.scss */
+  .page-node-1.node-type-event .featured-keynote h2, .page-node-1.node-type-event .featured-keynote h3 {
+    top: 40px;
+    left: 40px; }
+  /* line 56, ../sass/components/_homepage.scss */
+  .page-node-1.node-type-event .featured-keynote h2 {
+    font-size: 2em; }
+  /* line 57, ../sass/components/_homepage.scss */
+  .page-node-1.node-type-event .featured-keynote h3 {
+    font-size: 3em; }
+  /* line 35, ../sass/abstractions/_mixins.scss */
+  .page-node-1.node-type-event .pane-dgc-sessions:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 60, ../sass/components/_homepage.scss */
+  .page-node-1.node-type-event .pane-dgc-sessions .views-row {
+    float: left;
+    width: 25%;
+    padding-right: 20px; }
+    /* line 64, ../sass/components/_homepage.scss */
+    .page-node-1.node-type-event .pane-dgc-sessions .views-row.views-row-first {
+      width: 0;
+      padding-right: 0; }
+    /* line 65, ../sass/components/_homepage.scss */
+    .page-node-1.node-type-event .pane-dgc-sessions .views-row.views-row-first {
+      padding-right: 0; }
+    /* line 66, ../sass/components/_homepage.scss */
+    .page-node-1.node-type-event .pane-dgc-sessions .views-row a {
+      min-height: 220px;
+      padding: 110px 10px 10px;
+      text-align: center;
+      background-position: center 10px;
+      background-size: 90px; } }
+@media (min-width: 70em) {
+  /* line 81, ../sass/components/_homepage.scss */
+  .page-node-1.node-type-event .pane-node-body h1 {
+    color: #e02d3b;
+    margin: 0;
+    font-size: 4em; }
+  /* line 82, ../sass/components/_homepage.scss */
+  .page-node-1.node-type-event .pane-node-body h3 {
+    color: #095380;
+    font-size: 1.6em;
+    letter-spacing: 0.2;
+    margin: 0.5em 0; }
+  /* line 83, ../sass/components/_homepage.scss */
+  .page-node-1.node-type-event .pane-node-body h4 {
+    color: #095380;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin: 0.5em 0;
+    font-weight: 600; }
+  /* line 85, ../sass/components/_homepage.scss */
+  .page-node-1.node-type-event .pane-dgc-sessions .views-row a {
+    min-height: 190px; }
+  /* line 86, ../sass/components/_homepage.scss */
+  .page-node-1.node-type-event .featured-keynote {
+    max-height: 330px;
+    overflow: hidden; }
+    /* line 89, ../sass/components/_homepage.scss */
+    .page-node-1.node-type-event .featured-keynote img {
+      top: -30px; } }
+@media (min-width: 75em) {
+  /* line 95, ../sass/components/_homepage.scss */
+  .page-node-1.node-type-event .container.preface .pane-node-body {
+    margin-bottom: 100px; } }
 /* line 2, ../sass/components/_navigation.scss */
 li.menu-item a {
   text-transform: uppercase; }
@@ -1045,21 +1214,28 @@ ul.tier-two {
   .no-touch .page-node-1.node-type-event ul.main-menu {
     margin: 0 190px; } }
 /* line 2, ../sass/components/_news.scss */
-.view-cod-news .view-row {
+article.node-teaser.node--news .view-row {
   position: relative; }
   /* line 35, ../sass/abstractions/_mixins.scss */
-  .view-cod-news .view-row:after {
+  article.node-teaser.node--news .view-row:after {
     content: "";
     display: table;
     clear: both; }
 /* line 6, ../sass/components/_news.scss */
-.view-cod-news .views-field-created {
+article.node-teaser.node--news .node__posted {
   float: left;
-  width: 100px; }
-/* line 10, ../sass/components/_news.scss */
-.view-cod-news .views-field-rendered-entity {
+  width: 100px;
+  color: #b9a884;
+  font-weight: bold;
+  font-size: 2em; }
+/* line 13, ../sass/components/_news.scss */
+article.node-teaser.node--news .news-content {
   margin-left: 20px;
   overflow: hidden; }
+
+/* line 18, ../sass/components/_news.scss */
+.more-link {
+  clear: both; }
 
 /* line 2, ../sass/components/_sessions.scss */
 .view-id-dgc_sessions.view-display-id-attachment_1 .views-field-og-vocabulary .field-content {
@@ -1516,9 +1692,20 @@ ul.tabs--primary {
 
 /* line 1, ../sass/components/_teasers.scss */
 article.node-teaser {
-  margin: 1em 0;
-  padding: 10px;
-  background: url(../images/texture200.png) #ded6c5; }
+  margin: 0 0 1em 0; }
+  /* line 3, ../sass/components/_teasers.scss */
+  article.node-teaser p {
+    margin: 0; }
+  /* line 4, ../sass/components/_teasers.scss */
+  article.node-teaser .node__links a {
+    font-size: .9em; }
+  /* line 5, ../sass/components/_teasers.scss */
+  article.node-teaser .node__links a:hover {
+    text-decoration: none; }
+
+/* line 7, ../sass/components/_teasers.scss */
+.more-link {
+  clear: both; }
 
 /* line 25, ../sass/govcon.styles.scss */
 body {
@@ -1593,115 +1780,21 @@ p.submitted {
   color: #666;
   font-size: 0.8em; }
 
-/* Homepage */
-/* line 83, ../sass/govcon.styles.scss */
-.page-node-1.node-type-event .breadcrumb {
-  display: none; }
-/* line 84, ../sass/govcon.styles.scss */
-.page-node-1.node-type-event .l-content > h1 {
-  overflow: hidden;
-  text-indent: -9000px;
-  display: block;
-  padding: 0;
-  margin: 0;
-  line-height: 0; }
-/* line 85, ../sass/govcon.styles.scss */
-.page-node-1.node-type-event .pane-node-body {
-  text-align: center;
-  line-height: 1; }
-  /* line 88, ../sass/govcon.styles.scss */
-  .page-node-1.node-type-event .pane-node-body h1 {
-    color: #e02d3b;
-    margin: 0;
-    font-size: 2.2em; }
-  /* line 89, ../sass/govcon.styles.scss */
-  .page-node-1.node-type-event .pane-node-body h1:after {
-    background-image: none; }
-  /* line 90, ../sass/govcon.styles.scss */
-  .page-node-1.node-type-event .pane-node-body h3 {
-    color: #095380;
-    font-size: 1.3em;
-    letter-spacing: 0.2;
-    margin: 0.5em 0; }
-  /* line 91, ../sass/govcon.styles.scss */
-  .page-node-1.node-type-event .pane-node-body h4 {
-    color: #095380;
-    font-size: 1em;
-    text-transform: uppercase;
-    margin: 0.5em 0;
-    font-weight: 600; }
-/* line 93, ../sass/govcon.styles.scss */
-.page-node-1.node-type-event .panel-display > .container.footer {
-  border-top: 2px solid #b9a884;
-  padding-top: 30px;
-  margin-top: 30px; }
+/* line 79, ../sass/govcon.styles.scss */
+.panel-pane {
+  margin: 2em 0; }
 
 @media (min-width: 50em) {
-  /* line 102, ../sass/govcon.styles.scss */
+  /* line 83, ../sass/govcon.styles.scss */
   body {
     padding: 20px; }
 
-  /* line 103, ../sass/govcon.styles.scss */
+  /* line 84, ../sass/govcon.styles.scss */
   .site-branding {
-    top: 70px; }
-
-  /* line 104, ../sass/govcon.styles.scss */
-  .page-node-1.node-type-event .site-branding {
-    top: 148px;
-    width: 200px;
-    margin-left: -100px; }
-
-  /* line 105, ../sass/govcon.styles.scss */
-  .page-node-1.node-type-event .site-branding__logo img {
-    width: 200px; }
-
-  /* line 107, ../sass/govcon.styles.scss */
-  .page-node-1.node-type-event .pane-node-body h1 {
-    color: #e02d3b;
-    margin: 0;
-    font-size: 3em; }
-  /* line 108, ../sass/govcon.styles.scss */
-  .page-node-1.node-type-event .pane-node-body h1:after {
-    background-image: url(../images/texture_font2.png); }
-  /* line 109, ../sass/govcon.styles.scss */
-  .page-node-1.node-type-event .pane-node-body h3 {
-    color: #095380;
-    font-size: 1.2em;
-    letter-spacing: 0.2;
-    margin: 0.5em 0; }
-  /* line 110, ../sass/govcon.styles.scss */
-  .page-node-1.node-type-event .pane-node-body h4 {
-    color: #095380;
-    font-size: 1em;
-    text-transform: uppercase;
-    margin: 0.5em 0;
-    font-weight: 600; } }
+    top: 70px; } }
 @media (min-width: 70em) {
-  /* line 116, ../sass/govcon.styles.scss */
-  .page-node-1.node-type-event .pane-node-body h1 {
-    color: #e02d3b;
-    margin: 0;
-    font-size: 4em; }
-  /* line 117, ../sass/govcon.styles.scss */
-  .page-node-1.node-type-event .pane-node-body h3 {
-    color: #095380;
-    font-size: 1.6em;
-    letter-spacing: 0.2;
-    margin: 0.5em 0; }
-  /* line 118, ../sass/govcon.styles.scss */
-  .page-node-1.node-type-event .pane-node-body h4 {
-    color: #095380;
-    font-size: 1.2em;
-    text-transform: uppercase;
-    margin: 0.5em 0;
-    font-weight: 600; }
-
-  /* line 120, ../sass/govcon.styles.scss */
+  /* line 88, ../sass/govcon.styles.scss */
   .preface-inner {
     width: 100%; } }
-@media (min-width: 75em) {
-  /* line 124, ../sass/govcon.styles.scss */
-  .page-node-1.node-type-event .container.preface {
-    height: 300px; } }
 
 /*# sourceMappingURL=govcon.styles.css.map */
