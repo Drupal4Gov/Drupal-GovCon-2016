@@ -1293,6 +1293,7 @@ function dgc_deploy_views_default_views() {
   $handler->display->display_options['relationships']['og_vocabulary_target_id']['id'] = 'og_vocabulary_target_id';
   $handler->display->display_options['relationships']['og_vocabulary_target_id']['table'] = 'field_data_og_vocabulary';
   $handler->display->display_options['relationships']['og_vocabulary_target_id']['field'] = 'og_vocabulary_target_id';
+  $handler->display->display_options['relationships']['og_vocabulary_target_id']['required'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Session Track */
   $handler->display->display_options['fields']['og_vocabulary']['id'] = 'og_vocabulary';
