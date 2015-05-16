@@ -40,6 +40,9 @@
       min-width: 300px;
     }
   }
+  .timeline-header h1.summary {
+    color: orange;
+  }
 }
 
 @include breakpoint($tab, true) {
