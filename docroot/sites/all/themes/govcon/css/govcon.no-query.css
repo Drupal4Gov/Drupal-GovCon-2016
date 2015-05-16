@@ -1518,6 +1518,9 @@ article.node-teaser.node--news .news-content {
   /* line 110, ../sass/components/_shapes.scss */
   .bevel--white .bg {
     background: #fff; }
+  /* line 111, ../sass/components/_shapes.scss */
+  .bevel--white .bg-overlay {
+    background: none; }
 
 /* line 1, ../sass/components/_sponsors.scss */
 .view-cod-sponsors.bevel {
