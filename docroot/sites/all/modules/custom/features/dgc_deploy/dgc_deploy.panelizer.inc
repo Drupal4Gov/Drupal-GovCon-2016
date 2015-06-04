@@ -273,8 +273,9 @@ function dgc_deploy_panelizer_defaults() {
     $pane->configuration = array(
       'admin_title' => 'Featured Keynote',
       'title' => 'Featured Speaker',
-      'body' => '<h3>Dries Buytaert</h3>
-<img alt="Dries Buytaert" src="/sites/all/themes/govcon/images/dries_2color.jpg" />
+      'body' => '<h3>Angie Byron</h3>
+
+<p><img alt="Angie Byron" src="/sites/all/themes/govcon/images/angie_dgc_web.jpg" /></p>
 ',
       'format' => 'full_html',
       'substitute' => 1,
