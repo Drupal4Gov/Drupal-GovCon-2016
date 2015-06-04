@@ -1263,7 +1263,7 @@ article.node-teaser.node--news .news-content {
   .page-node-sessions .view-filters .views-exposed-form .views-exposed-widget select {
     background: #fff; }
 /* line 28, ../sass/components/_sessions.scss */
-.page-node-sessions .l-content > .view-content {
+.page-node-sessions .l-content > .view > .view-content {
   padding-top: 3em; }
 /* line 31, ../sass/components/_sessions.scss */
 .page-node-sessions h3 {
@@ -1326,7 +1326,7 @@ article.node-teaser.node--news .news-content {
   background-image: url(../images/icons/training.svg); }
 
 /* line 67, ../sass/components/_sessions.scss */
-.view-id-dgc_sessions.view-display-id-page_1 {
+.view-id-dgc_sessions.view-display-id-page_1 .view-id-dgc_sessions.view-display-id-attachment_1 {
   width: 49.15254%;
   float: left;
   margin-right: -100%;
