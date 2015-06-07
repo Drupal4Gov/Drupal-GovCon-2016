@@ -1186,11 +1186,10 @@ function dgc_deploy_views_default_views() {
   $handler->display->display_options['arguments']['field_accepted_value']['id'] = 'field_accepted_value';
   $handler->display->display_options['arguments']['field_accepted_value']['table'] = 'field_data_field_accepted';
   $handler->display->display_options['arguments']['field_accepted_value']['field'] = 'field_accepted_value';
-  $handler->display->display_options['arguments']['field_accepted_value']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_accepted_value']['default_action'] = 'not found';
   $handler->display->display_options['arguments']['field_accepted_value']['title_enable'] = TRUE;
   $handler->display->display_options['arguments']['field_accepted_value']['title'] = '%2 Sessions';
   $handler->display->display_options['arguments']['field_accepted_value']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_accepted_value']['default_argument_options']['argument'] = 'proposed';
   $handler->display->display_options['arguments']['field_accepted_value']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_accepted_value']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_accepted_value']['summary_options']['items_per_page'] = '25';
@@ -1327,9 +1326,8 @@ function dgc_deploy_views_default_views() {
   $handler->display->display_options['arguments']['field_accepted_value']['id'] = 'field_accepted_value';
   $handler->display->display_options['arguments']['field_accepted_value']['table'] = 'field_data_field_accepted';
   $handler->display->display_options['arguments']['field_accepted_value']['field'] = 'field_accepted_value';
-  $handler->display->display_options['arguments']['field_accepted_value']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_accepted_value']['default_action'] = 'not found';
   $handler->display->display_options['arguments']['field_accepted_value']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_accepted_value']['default_argument_options']['argument'] = 'proposed';
   $handler->display->display_options['arguments']['field_accepted_value']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_accepted_value']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_accepted_value']['summary_options']['items_per_page'] = '25';

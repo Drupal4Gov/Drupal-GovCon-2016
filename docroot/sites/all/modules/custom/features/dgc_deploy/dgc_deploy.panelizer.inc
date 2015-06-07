@@ -30,6 +30,13 @@ function dgc_deploy_panelizer_defaults() {
       'uid' => '',
       'id' => 1,
     ),
+    1 => array(
+      'identifier' => 'Session Status',
+      'keyword' => 'session_status',
+      'name' => 'string',
+      'string' => 'accepted',
+      'id' => 1,
+    ),
   );
   $panelizer->relationships = array();
   $panelizer->access = array();
@@ -316,7 +323,7 @@ function dgc_deploy_panelizer_defaults() {
       'display' => 'attachment_1',
       'context' => array(
         0 => 'panelizer.nid',
-        1 => '',
+        1 => 'context_string_1.raw',
       ),
       'override_title' => 1,
       'override_title_text' => 'Session Tracks',
