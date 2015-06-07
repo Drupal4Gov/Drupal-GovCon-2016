@@ -132,11 +132,11 @@ class CodEventTime extends Entity {
   public function getTimeLabel($type = 'cod_time') {
     $date_field1 = $this->field_evttime_date[LANGUAGE_NONE][0]['value'];
     $date_field1 = new DateTime($date_field1);
-    $date_field1 = format_date(($date_field1->getTimestamp() + $this->field_evttime_date[LANGUAGE_NONE][0]['offset']), $type);
+    $date_field1 = format_date(($date_field1->getTimestamp()), $type);
 
     $date_field2 = $this->field_evttime_date[LANGUAGE_NONE][0]['value2'];
     $date_field2 = new DateTime($date_field2);
-    $date_field2 = format_date(($date_field2->getTimestamp() + $this->field_evttime_date[LANGUAGE_NONE][0]['offset2']), $type);
+    $date_field2 = format_date(($date_field2->getTimestamp()), $type);
 
     return $date_field1 . '-' . $date_field2;
   }
