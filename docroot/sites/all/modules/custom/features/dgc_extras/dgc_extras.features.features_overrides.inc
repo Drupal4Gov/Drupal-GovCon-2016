@@ -51,5 +51,108 @@ function dgc_extras_features_override_default_overrides() {
   );
   $overrides["variable.field_bundle_settings_user__user.value|extra_fields|form|timezone|weight"] = 16;
 
+  // Exported overrides for: views_view
+  $overrides["views_view.cod_schedule.display|panel_pane_1|display_options|defaults|fields"] = FALSE;
+  $overrides["views_view.cod_schedule.display|panel_pane_1|display_options|defaults|filter_groups"] = FALSE;
+  $overrides["views_view.cod_schedule.display|panel_pane_1|display_options|defaults|filters"] = FALSE;
+  $overrides["views_view.cod_schedule.display|panel_pane_1|display_options|defaults|relationships"] = FALSE;
+  $overrides["views_view.cod_schedule.display|panel_pane_1|display_options|fields"] = array(
+    'evttid' => array(
+      'id' => 'evttid',
+      'table' => 'cod_event_time',
+      'field' => 'evttid',
+      'exclude' => TRUE,
+      'separator' => '',
+    ),
+    'field_evttime_date' => array(
+      'id' => 'field_evttime_date',
+      'table' => 'field_data_field_evttime_date',
+      'field' => 'field_evttime_date',
+      'label' => 'Day Tab',
+      'exclude' => TRUE,
+      'settings' => array(
+        'format_type' => 'day_of_the_week',
+        'fromto' => 'value',
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_to' => '',
+        'show_remaining_days' => 0,
+      ),
+    ),
+    'field_evttime_date_1' => array(
+      'id' => 'field_evttime_date_1',
+      'table' => 'field_data_field_evttime_date',
+      'field' => 'field_evttime_date',
+      'ui_name' => 'Time: Date and time (Time slot day)',
+      'label' => '',
+      'element_label_colon' => FALSE,
+      'settings' => array(
+        'format_type' => 'day_of_the_week',
+        'fromto' => 'both',
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_to' => '',
+        'show_remaining_days' => 0,
+      ),
+    ),
+    'field_evttime_date_2' => array(
+      'id' => 'field_evttime_date_2',
+      'table' => 'field_data_field_evttime_date',
+      'field' => 'field_evttime_date',
+      'ui_name' => 'Time: Date and time (Time slot time)',
+      'label' => '',
+      'element_label_colon' => FALSE,
+      'settings' => array(
+        'format_type' => 'cod_time',
+        'fromto' => 'both',
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_to' => '',
+        'show_remaining_days' => 0,
+      ),
+    ),
+    'view' => array(
+      'id' => 'view',
+      'table' => 'views',
+      'field' => 'view',
+      'label' => '',
+      'element_label_colon' => FALSE,
+      'hide_empty' => TRUE,
+      'view' => 'cod_schedule_content',
+      'arguments' => '[!evttid]/session+schedule_item',
+    ),
+  );
+  $overrides["views_view.cod_schedule.display|panel_pane_1|display_options|relationships"] = array(
+    'og_membership_rel' => array(
+      'id' => 'og_membership_rel',
+      'table' => 'cod_event_time',
+      'field' => 'og_membership_rel',
+    ),
+  );
+  $overrides["views_view.cod_schedule_content.display|default|display_options|fields|field_experience"] = array(
+    'id' => 'field_experience',
+    'table' => 'field_data_field_experience',
+    'field' => 'field_experience',
+    'label' => '',
+    'element_label_colon' => FALSE,
+  );
+  $overrides["views_view.cod_schedule_content.display|default|display_options|fields|og_vocabulary"] = array(
+    'id' => 'og_vocabulary',
+    'table' => 'field_data_og_vocabulary',
+    'field' => 'og_vocabulary',
+    'label' => '',
+    'alter' => array(
+      'alter_text' => TRUE,
+      'text' => '<div class="track-icon-[og_vocabulary-target_id]">[og_vocabulary]</div>',
+    ),
+    'element_type' => 0,
+    'element_label_colon' => FALSE,
+    'element_wrapper_type' => 0,
+    'element_default_classes' => FALSE,
+    'settings' => array(
+      'link' => 0,
+    ),
+  );
+
  return $overrides;
 }
