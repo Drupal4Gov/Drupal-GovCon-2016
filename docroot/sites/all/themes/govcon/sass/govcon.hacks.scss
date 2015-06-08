@@ -11,3 +11,14 @@
     }
   }
 }
+
+// Instead of creating a whole new panels layout for the homepage
+// Let's just overide the sidebar width of they Hydra layout
+
+@media all and (max-width: 900px) {
+  .hydra.panel-layout .top-right-content,
+  .hydra.panel-layout .left-content {
+    width: 100% !important;
+    clear: both;
+  }
+}

@@ -30,6 +30,13 @@ function dgc_deploy_panelizer_defaults() {
       'uid' => '',
       'id' => 1,
     ),
+    1 => array(
+      'identifier' => 'Session Status',
+      'keyword' => 'session_status',
+      'name' => 'string',
+      'string' => 'accepted',
+      'id' => 1,
+    ),
   );
   $panelizer->relationships = array();
   $panelizer->access = array();
@@ -67,32 +74,6 @@ function dgc_deploy_panelizer_defaults() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-b7f97f39-e53f-4356-8dea-f36c0e63ad6b';
-    $pane->panel = 'footer';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'cod_session_tracks-panel_pane_2';
-    $pane->shown = FALSE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'arguments' => array(
-        'machine_name' => 'session_tracks_%node:nid',
-      ),
-      'override_title' => 0,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = 'b7f97f39-e53f-4356-8dea-f36c0e63ad6b';
-    $display->content['new-b7f97f39-e53f-4356-8dea-f36c0e63ad6b'] = $pane;
-    $display->panels['footer'][0] = 'new-b7f97f39-e53f-4356-8dea-f36c0e63ad6b';
-    $pane = new stdClass();
     $pane->pid = 'new-d8a15e90-c296-4f34-8855-56168f2aabb9';
     $pane->panel = 'footer';
     $pane->type = 'views';
@@ -128,11 +109,11 @@ function dgc_deploy_panelizer_defaults() {
       'css_class' => 'bevel',
     );
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
     $pane->uuid = 'd8a15e90-c296-4f34-8855-56168f2aabb9';
     $display->content['new-d8a15e90-c296-4f34-8855-56168f2aabb9'] = $pane;
-    $display->panels['footer'][1] = 'new-d8a15e90-c296-4f34-8855-56168f2aabb9';
+    $display->panels['footer'][0] = 'new-d8a15e90-c296-4f34-8855-56168f2aabb9';
     $pane = new stdClass();
     $pane->pid = 'new-3603832e-68db-4872-8063-31e51eefba45';
     $pane->panel = 'footer';
@@ -168,11 +149,35 @@ function dgc_deploy_panelizer_defaults() {
       'css_class' => 'bevel',
     );
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = '3603832e-68db-4872-8063-31e51eefba45';
     $display->content['new-3603832e-68db-4872-8063-31e51eefba45'] = $pane;
-    $display->panels['footer'][2] = 'new-3603832e-68db-4872-8063-31e51eefba45';
+    $display->panels['footer'][1] = 'new-3603832e-68db-4872-8063-31e51eefba45';
+    $pane = new stdClass();
+    $pane->pid = 'new-4bc6da4d-dc2c-490f-bc69-4b740e4a4c98';
+    $pane->panel = 'left_content';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'cod_news-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'items_per_page' => '3',
+      'arguments' => array(
+        'gid' => '1',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '4bc6da4d-dc2c-490f-bc69-4b740e4a4c98';
+    $display->content['new-4bc6da4d-dc2c-490f-bc69-4b740e4a4c98'] = $pane;
+    $display->panels['left_content'][0] = 'new-4bc6da4d-dc2c-490f-bc69-4b740e4a4c98';
     $pane = new stdClass();
     $pane->pid = 'new-92f522dc-f620-443a-8ac4-c8baa4640cb8';
     $pane->panel = 'preface';
@@ -275,8 +280,9 @@ function dgc_deploy_panelizer_defaults() {
     $pane->configuration = array(
       'admin_title' => 'Featured Keynote',
       'title' => 'Featured Speaker',
-      'body' => '<h3>Dries Buytaert</h3>
-<img alt="Dries Buytaert" src="/sites/all/themes/govcon/images/dries_2color.jpg" />
+      'body' => '<h3>Angie Byron</h3>
+
+<p><img alt="Angie Byron" src="/sites/all/themes/govcon/images/angie_dgc_web.jpg" /></p>
 ',
       'format' => 'full_html',
       'substitute' => 1,
@@ -317,7 +323,7 @@ function dgc_deploy_panelizer_defaults() {
       'display' => 'attachment_1',
       'context' => array(
         0 => 'panelizer.nid',
-        1 => '',
+        1 => 'context_string_1.raw',
       ),
       'override_title' => 1,
       'override_title_text' => 'Session Tracks',
@@ -338,17 +344,19 @@ function dgc_deploy_panelizer_defaults() {
     $display->content['new-c07e2a66-10f9-4539-a9c0-da58f8e72531'] = $pane;
     $display->panels['preface'][4] = 'new-c07e2a66-10f9-4539-a9c0-da58f8e72531';
     $pane = new stdClass();
-    $pane->pid = 'new-4bc6da4d-dc2c-490f-bc69-4b740e4a4c98';
+    $pane->pid = 'new-b7f97f39-e53f-4356-8dea-f36c0e63ad6b';
     $pane->panel = 'preface';
     $pane->type = 'views_panes';
-    $pane->subtype = 'cod_news-panel_pane_1';
-    $pane->shown = TRUE;
+    $pane->subtype = 'cod_session_tracks-panel_pane_2';
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
-      'items_per_page' => '3',
       'arguments' => array(
-        'gid' => '1',
+        'machine_name' => 'session_tracks_%node:nid',
       ),
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -358,9 +366,35 @@ function dgc_deploy_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 5;
     $pane->locks = array();
-    $pane->uuid = '4bc6da4d-dc2c-490f-bc69-4b740e4a4c98';
-    $display->content['new-4bc6da4d-dc2c-490f-bc69-4b740e4a4c98'] = $pane;
-    $display->panels['preface'][5] = 'new-4bc6da4d-dc2c-490f-bc69-4b740e4a4c98';
+    $pane->uuid = 'b7f97f39-e53f-4356-8dea-f36c0e63ad6b';
+    $display->content['new-b7f97f39-e53f-4356-8dea-f36c0e63ad6b'] = $pane;
+    $display->panels['preface'][5] = 'new-b7f97f39-e53f-4356-8dea-f36c0e63ad6b';
+    $pane = new stdClass();
+    $pane->pid = 'new-14b8468f-8685-4a64-9a72-df5156bdfec1';
+    $pane->panel = 'top_right_content';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Drupal GovCon Twitter feed',
+      'title' => '',
+      'body' => '<div class="twitter-timeline__wrapper bevel bevel--white"><div class="twitter-timeline__header"><h2 class="pane-title">Tweets <a class="button btn-big" target="_blank" title="Follow drupalgovcon on Twitter" href="https://twitter.com/drupalgovcon">Follow</a></h2></div><a class="twitter-timeline" href="https://twitter.com/drupalgovcon" data-widget-id="598658356363075584" data-chrome="noheader nofooter noborders transparent">Tweets by @drupalgovcon</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?\'http\':\'https\';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>',
+      'format' => 'full_html',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '14b8468f-8685-4a64-9a72-df5156bdfec1';
+    $display->content['new-14b8468f-8685-4a64-9a72-df5156bdfec1'] = $pane;
+    $display->panels['top_right_content'][0] = 'new-14b8468f-8685-4a64-9a72-df5156bdfec1';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $panelizer->display = $display;

@@ -86,6 +86,8 @@ function dgc_deploy_filter_default_formats_alter(&$data) {
  */
 function dgc_deploy_default_page_manager_pages_alter(&$data) {
   if (isset($data['community'])) {
+    $data['community']->access['settings'] = NULL; /* WAS: '' */
+    $data['community']->access['type'] = 'none'; /* WAS: '' */
     $data['community']->default_handlers['page_community_panel_context']->conf['display']->content['new-797bfb61-a42b-47a1-94da-7e49df24efbc']->shown = FALSE; /* WAS: TRUE */
     $data['community']->default_handlers['page_community_panel_context']->conf['display']->content['new-bc2d3d3f-97e4-418e-ba6e-a16d3552bbe3'] = (object) array(
           'pid' => 'new-bc2d3d3f-97e4-418e-ba6e-a16d3552bbe3',

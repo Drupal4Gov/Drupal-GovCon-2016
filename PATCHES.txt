@@ -3,3 +3,7 @@ The following patches have been applied to this project:
 Various features overridden after beta8 update
 https://www.drupal.org/node/2458819#comment-9768455
 https://www.drupal.org/files/issues/cod_support-features-overridden-beta8-2458819-4.patch
+
+Time entity do not compute offset to store label
+https://www.drupal.org/node/2407607#comment-9999695
+https://www.drupal.org/files/issues/cod_support-remove_offset_from_time_label-2407607-3.patch

@@ -40,6 +40,9 @@
       min-width: 300px;
     }
   }
+  .timeline-header h1.summary {
+    color: orange;
+  }
 }
 
 @include breakpoint($tab, true) {
@@ -61,8 +64,6 @@
         float: left;
         width: 25%;
         padding-right: 20px;
-        &.views-row-first { width: 0; padding-right: 0; }
-        &.views-row-first { padding-right: 0; }
         a {
           min-height: 220px;
           padding: 110px 10px 10px;

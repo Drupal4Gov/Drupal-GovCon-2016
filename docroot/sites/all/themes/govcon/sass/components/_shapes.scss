@@ -105,3 +105,8 @@
     border-left: 15px solid transparent;
   }
 }
+.bevel--white {
+  background: #fff;
+  .bg { background: #fff; }
+  .bg-overlay { background: none; }
+}

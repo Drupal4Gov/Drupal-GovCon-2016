@@ -25,7 +25,7 @@
       background: #fff;
     }
   }
-  .l-content > .view-content {
+  .l-content > .view > .view-content {
     padding-top: 3em;
   }
   h3 { clear: both; }
@@ -64,7 +64,7 @@
 
 
 @include breakpoint($tab, true) {
-  .view-id-dgc_sessions.view-display-id-page_1 {
+  .view-id-dgc_sessions.view-display-id-page_1 .view-id-dgc_sessions.view-display-id-attachment_1  {
     @include grid-span(6, 1);
   }
   .page-node-sessions .view-filters {
