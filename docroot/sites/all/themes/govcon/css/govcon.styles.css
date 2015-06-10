@@ -1870,6 +1870,25 @@ article.node-teaser.node--news .news-content {
     .panel-layout .sponsors-featured .views-field-field-sponsor-logo img, .panel-layout .sponsors-featured .sponsor img {
       max-height: 100px;
       max-width: 140px; } }
+/* Specific sponsor logo sizing */
+/* line 104, ../sass/components/_sponsors.scss */
+.view-cod-sponsors [href="http://www.aquilent.com/"] img {
+  width: 250px !important;
+  max-width: 250px !important; }
+
+/* line 105, ../sass/components/_sponsors.scss */
+.view-cod-sponsors [href="http://azrisolutions.com/"] img {
+  max-width: 130px !important; }
+
+/* line 106, ../sass/components/_sponsors.scss */
+.view-cod-sponsors [href="http://www.interactivestrategies.com/"] img {
+  max-height: 160px !important; }
+
+/* line 107, ../sass/components/_sponsors.scss */
+.view-cod-sponsors [href="http://www.bstonetech.com/"] img {
+  width: 270px !important;
+  max-width: 270px !important; }
+
 /* Tabs */
 /* line 3, ../sass/components/_tabs.scss */
 .not-logged-in ul.tabs--primary {
