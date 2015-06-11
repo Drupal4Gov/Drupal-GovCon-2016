@@ -71,12 +71,12 @@
   }
   .view-cod-schedule-content .views-row {
     position: relative;
-    padding: 0 0 0 126px;
-    min-height: 110px;
+    padding: 0 0 0 146px;
+    min-height: 120px;
     @include clearfix;
     @include breakpoint($desk, true) {
-      padding: 20px 0 20px 160px;
-      min-height: 130px;
+      padding: 20px 0 20px 180px;
+      min-height: 140px;
     }
   }
   [class*="track-icon-"] {
@@ -88,15 +88,17 @@
     background-size: 50px;
     background-position: center 10px;
     height: 100%;
-    width: 110px;
+    width: 130px;
     text-align: center;
     font-family: $script;
+    font-size: .9em;
     border-right: 1px solid #ccc;
     margin-right: 20px;
     @include breakpoint($desk, true) {
       padding: 70px 10px 0;
-      width: 130px;
+      width: 160px;
       background-position: center 18px;
+      font-size: 1em;
     }
   }
   .track-icon-6 { color: #f6001b; }
@@ -121,7 +123,7 @@
     font-family: $script;
     color: #666;
     float: none;
-    margin-top: 10px;
+    clear: both;
     @include breakpoint($desk, true) {
       position: absolute;
       top: 2px;
@@ -132,7 +134,6 @@
   .views-field-field-speakers {
     padding-left: 0;
     height: auto;
-    margin-bottom: 16px;
   }
 }
 

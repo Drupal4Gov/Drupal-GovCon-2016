@@ -1347,10 +1347,10 @@ article.node-teaser.node--news .news-content {
 .view-cod-bof-schedule .view-cod-schedule-content .views-row,
 .view-cod-schedule .view-cod-schedule-content .views-row {
   position: relative;
-  padding: 0 0 0 126px;
-  min-height: 110px;
-  padding: 20px 0 20px 160px;
-  min-height: 130px; }
+  padding: 0 0 0 146px;
+  min-height: 120px;
+  padding: 20px 0 20px 180px;
+  min-height: 140px; }
   /* line 35, ../sass/abstractions/_mixins.scss */
   .view-cod-session-schedule .view-cod-schedule-content .views-row:after,
   .view-cod-bof-schedule .view-cod-schedule-content .views-row:after,
@@ -1370,51 +1370,53 @@ article.node-teaser.node--news .news-content {
   background-size: 50px;
   background-position: center 10px;
   height: 100%;
-  width: 110px;
+  width: 130px;
   text-align: center;
   font-family: "Courgette", cursive;
+  font-size: .9em;
   border-right: 1px solid #ccc;
   margin-right: 20px;
   padding: 70px 10px 0;
-  width: 130px;
-  background-position: center 18px; }
-/* line 102, ../sass/components/_schedule.scss */
+  width: 160px;
+  background-position: center 18px;
+  font-size: 1em; }
+/* line 104, ../sass/components/_schedule.scss */
 .view-cod-session-schedule .track-icon-6,
 .view-cod-bof-schedule .track-icon-6,
 .view-cod-schedule .track-icon-6 {
   color: #f6001b; }
-/* line 103, ../sass/components/_schedule.scss */
+/* line 105, ../sass/components/_schedule.scss */
 .view-cod-session-schedule .track-icon-11,
 .view-cod-bof-schedule .track-icon-11,
 .view-cod-schedule .track-icon-11 {
   color: #f88d00; }
-/* line 104, ../sass/components/_schedule.scss */
+/* line 106, ../sass/components/_schedule.scss */
 .view-cod-session-schedule .track-icon-21,
 .view-cod-bof-schedule .track-icon-21,
 .view-cod-schedule .track-icon-21 {
   color: #79648d; }
-/* line 105, ../sass/components/_schedule.scss */
+/* line 107, ../sass/components/_schedule.scss */
 .view-cod-session-schedule .track-icon-26,
 .view-cod-bof-schedule .track-icon-26,
 .view-cod-schedule .track-icon-26 {
   color: #007c7f; }
-/* line 106, ../sass/components/_schedule.scss */
+/* line 108, ../sass/components/_schedule.scss */
 .view-cod-session-schedule .track-icon-16,
 .view-cod-bof-schedule .track-icon-16,
 .view-cod-schedule .track-icon-16 {
   color: #005185; }
-/* line 107, ../sass/components/_schedule.scss */
+/* line 109, ../sass/components/_schedule.scss */
 .view-cod-session-schedule .track-icon-1,
 .view-cod-bof-schedule .track-icon-1,
 .view-cod-schedule .track-icon-1 {
   color: #5fa44c; }
-/* line 108, ../sass/components/_schedule.scss */
+/* line 110, ../sass/components/_schedule.scss */
 .view-cod-session-schedule .views-field-title,
 .view-cod-bof-schedule .views-field-title,
 .view-cod-schedule .views-field-title {
   margin: 4px 0 2px 0;
   margin-top: 16px; }
-/* line 114, ../sass/components/_schedule.scss */
+/* line 116, ../sass/components/_schedule.scss */
 .view-cod-session-schedule .views-field-name,
 .view-cod-bof-schedule .views-field-name,
 .view-cod-schedule .views-field-name {
@@ -1422,25 +1424,24 @@ article.node-teaser.node--news .news-content {
   margin-right: 20px;
   margin-bottom: 0;
   clear: both; }
-/* line 120, ../sass/components/_schedule.scss */
+/* line 122, ../sass/components/_schedule.scss */
 .view-cod-session-schedule .views-field-field-experience,
 .view-cod-bof-schedule .views-field-field-experience,
 .view-cod-schedule .views-field-field-experience {
   font-family: "Courgette", cursive;
   color: #666;
   float: none;
-  margin-top: 10px;
+  clear: both;
   position: absolute;
   top: 2px;
   right: 0;
   margin: 0; }
-/* line 132, ../sass/components/_schedule.scss */
+/* line 134, ../sass/components/_schedule.scss */
 .view-cod-session-schedule .views-field-field-speakers,
 .view-cod-bof-schedule .views-field-field-speakers,
 .view-cod-schedule .views-field-field-speakers {
   padding-left: 0;
-  height: auto;
-  margin-bottom: 16px; }
+  height: auto; }
 
 /* line 2, ../sass/components/_sessions.scss */
 .view-id-dgc_sessions.view-display-id-attachment_1 .views-field-og-vocabulary .field-content {
