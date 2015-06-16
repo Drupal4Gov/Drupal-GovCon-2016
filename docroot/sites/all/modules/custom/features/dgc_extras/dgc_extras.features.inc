@@ -80,6 +80,8 @@ function dgc_extras_field_default_field_instances_alter(&$data) {
  */
 function dgc_extras_default_page_manager_pages_alter(&$data) {
   if (isset($data['cod_schedule_public'])) {
+    $data['cod_schedule_public']->access['settings'] = NULL; /* WAS: '' */
+    $data['cod_schedule_public']->access['type'] = 'none'; /* WAS: '' */
     $data['cod_schedule_public']->default_handlers['page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b']->conf['display']->content['new-57a703d0-e549-4b24-8ca2-634eb677c6d7'] = (object) array(
           'pid' => 'new-57a703d0-e549-4b24-8ca2-634eb677c6d7',
           'panel' => 'content',
@@ -104,8 +106,7 @@ function dgc_extras_default_page_manager_pages_alter(&$data) {
           'uuid' => '57a703d0-e549-4b24-8ca2-634eb677c6d7',
         ); /* WAS: '' */
     $data['cod_schedule_public']->default_handlers['page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b']->conf['display']->content['new-da4f4f1a-2b55-4e8e-95ce-e40a92a0dbfb']->position = 1; /* WAS: 0 */
-    $data['cod_schedule_public']->default_handlers['page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b']->conf['display']->panels['content'][0] = 'new-57a703d0-e549-4b24-8ca2-634eb677c6d7'; /* WAS: 'new-da4f4f1a-2b55-4e8e-95ce-e40a92a0dbfb' */
-    $data['cod_schedule_public']->default_handlers['page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b']->conf['display']->panels['content'][1] = 'new-da4f4f1a-2b55-4e8e-95ce-e40a92a0dbfb'; /* WAS: '' */
+    $data['cod_schedule_public']->default_handlers['page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b']->conf['display']->panels['content'][1] = 'new-57a703d0-e549-4b24-8ca2-634eb677c6d7'; /* WAS: '' */
   }
 }
 
@@ -197,7 +198,6 @@ function dgc_extras_views_default_views_alter(&$data) {
         'element_label_colon' => FALSE,
         'hide_empty' => TRUE,
         'view' => 'cod_schedule_content',
-        'display' => 'page_2',
         'arguments' => '[!evttid]/session+schedule_item',
       ),
     ); /* WAS: '' */

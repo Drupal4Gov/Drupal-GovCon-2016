@@ -42,6 +42,8 @@ function dgc_extras_features_override_default_overrides() {
   $overrides["field_instance.user-user-field_t_shirt_size.description"] = 'All sizes listed are men\'s, so please select appropriately.';
 
   // Exported overrides for: page_manager_pages
+  $overrides["page_manager_pages.cod_schedule_public.access|settings"] = NULL;
+  $overrides["page_manager_pages.cod_schedule_public.access|type"] = 'none';
   $overrides["page_manager_pages.cod_schedule_public.default_handlers|page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b|conf|display|content|new-57a703d0-e549-4b24-8ca2-634eb677c6d7"] = (object) array(
       'pid' => 'new-57a703d0-e549-4b24-8ca2-634eb677c6d7',
       'panel' => 'content',
@@ -66,8 +68,7 @@ function dgc_extras_features_override_default_overrides() {
       'uuid' => '57a703d0-e549-4b24-8ca2-634eb677c6d7',
     );
   $overrides["page_manager_pages.cod_schedule_public.default_handlers|page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b|conf|display|content|new-da4f4f1a-2b55-4e8e-95ce-e40a92a0dbfb|position"] = 1;
-  $overrides["page_manager_pages.cod_schedule_public.default_handlers|page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b|conf|display|panels|content|0"] = 'new-57a703d0-e549-4b24-8ca2-634eb677c6d7';
-  $overrides["page_manager_pages.cod_schedule_public.default_handlers|page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b|conf|display|panels|content|1"] = 'new-da4f4f1a-2b55-4e8e-95ce-e40a92a0dbfb';
+  $overrides["page_manager_pages.cod_schedule_public.default_handlers|page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b|conf|display|panels|content|1"] = 'new-57a703d0-e549-4b24-8ca2-634eb677c6d7';
 
   // Exported overrides for: variable
   $overrides["variable.field_bundle_settings_user__user.value|extra_fields|form|ckeditor|weight"] = 15;
@@ -147,7 +148,6 @@ function dgc_extras_features_override_default_overrides() {
       'element_label_colon' => FALSE,
       'hide_empty' => TRUE,
       'view' => 'cod_schedule_content',
-      'display' => 'page_2',
       'arguments' => '[!evttid]/session+schedule_item',
     ),
   );
