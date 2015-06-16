@@ -19,7 +19,7 @@
     }
     li.active {
       background: none;
-      a, a:hover, a:focus {
+      a, a:hover, a:focus, a.active:hover {
         @extend a.button.btn-big;
         color: #fff;
         position: relative;
@@ -124,6 +124,7 @@
     color: #666;
     float: none;
     clear: both;
+    margin-bottom: 10px;
     @include breakpoint($desk, true) {
       position: absolute;
       top: 2px;
@@ -136,4 +137,7 @@
     height: auto;
   }
 }
-
+/* hide extraneous exposed filters on each timeslot view */
+form#views-exposed-form-cod-schedule-content-default {
+  display: none;
+}

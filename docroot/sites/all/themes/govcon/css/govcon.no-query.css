@@ -323,13 +323,15 @@ input[type=submit], button, .button, .more-link a {
 /* line 23, ../sass/components/_buttons.scss */
 a.button.btn-big, .more-link a.btn-big, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li a,
 .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li a,
-.view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li a, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:hover, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:focus,
+.view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li a, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:hover, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:focus, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a.active:hover,
 .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a,
 .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:hover,
 .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:focus,
+.view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a.active:hover,
 .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a,
 .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:hover,
-.view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:focus, .form-actions input[type=submit],
+.view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:focus,
+.view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a.active:hover, .form-actions input[type=submit],
 .ticket-field-formatter-view-form input[type=submit],
 .exposed-filters input[type=submit].form-submit,
 .ticket-register-form input[type=submit],
@@ -342,9 +344,11 @@ a.button.btn-big, .more-link a.btn-big, .view-cod-session-schedule ul.quicktabs-
   /* line 33, ../sass/components/_buttons.scss */
   a.button.btn-big:hover, .more-link a.btn-big:hover, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:hover,
   .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:hover,
-  .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:hover, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:hover:focus,
+  .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:hover, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:hover:focus, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a.active:hover,
   .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:hover:focus,
-  .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:hover:focus, a.button.btn-big:focus, .more-link a.btn-big:focus, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:focus,
+  .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a.active:hover,
+  .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:hover:focus,
+  .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a.active:hover, a.button.btn-big:focus, .more-link a.btn-big:focus, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:focus,
   .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:focus,
   .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:focus, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:focus:hover,
   .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:focus:hover,
@@ -1274,25 +1278,29 @@ article.node-teaser.node--news .news-content {
 .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active {
   background: none; }
   /* line 22, ../sass/components/_schedule.scss */
-  .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:hover, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:focus,
+  .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:hover, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:focus, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a.active:hover,
   .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a,
   .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:hover,
   .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:focus,
+  .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a.active:hover,
   .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a,
   .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:hover,
-  .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:focus {
+  .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:focus,
+  .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a.active:hover {
     color: #fff;
     position: relative;
     background-color: #e02d3b;
     background-image: url(../images/texture200.png); }
     /* line 28, ../sass/components/_schedule.scss */
-    .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:after, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:hover:after, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:focus:after,
+    .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:after, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:hover:after, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:focus:after, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a.active:hover:after,
     .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:after,
     .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:hover:after,
     .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:focus:after,
+    .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a.active:hover:after,
     .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:after,
     .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:hover:after,
-    .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:focus:after {
+    .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:focus:after,
+    .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a.active:hover:after {
       content: "";
       width: 20px;
       height: 20px;
@@ -1432,16 +1440,22 @@ article.node-teaser.node--news .news-content {
   color: #666;
   float: none;
   clear: both;
+  margin-bottom: 10px;
   position: absolute;
   top: 2px;
   right: 0;
   margin: 0; }
-/* line 134, ../sass/components/_schedule.scss */
+/* line 135, ../sass/components/_schedule.scss */
 .view-cod-session-schedule .views-field-field-speakers,
 .view-cod-bof-schedule .views-field-field-speakers,
 .view-cod-schedule .views-field-field-speakers {
   padding-left: 0;
   height: auto; }
+
+/* hide extraneous exposed filters on each timeslot view */
+/* line 141, ../sass/components/_schedule.scss */
+form#views-exposed-form-cod-schedule-content-default {
+  display: none; }
 
 /* line 2, ../sass/components/_sessions.scss */
 .view-id-dgc_sessions.view-display-id-attachment_1 .views-field-og-vocabulary .field-content {
