@@ -76,6 +76,42 @@ function dgc_extras_field_default_field_instances_alter(&$data) {
 }
 
 /**
+ * Implements hook_default_page_manager_pages_alter().
+ */
+function dgc_extras_default_page_manager_pages_alter(&$data) {
+  if (isset($data['cod_schedule_public'])) {
+    $data['cod_schedule_public']->access['settings'] = NULL; /* WAS: '' */
+    $data['cod_schedule_public']->access['type'] = 'none'; /* WAS: '' */
+    $data['cod_schedule_public']->default_handlers['page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b']->conf['display']->content['new-57a703d0-e549-4b24-8ca2-634eb677c6d7'] = (object) array(
+          'pid' => 'new-57a703d0-e549-4b24-8ca2-634eb677c6d7',
+          'panel' => 'content',
+          'type' => 'block',
+          'subtype' => 'views-d0ac992818bd16258ffbea5a3c8fd25c',
+          'shown' => TRUE,
+          'access' => array(),
+          'configuration' => array(
+            'inherit_path' => 1,
+            'override_title' => 0,
+            'override_title_text' => '',
+            'override_title_heading' => 'h2',
+          ),
+          'cache' => array(),
+          'style' => array(
+            'settings' => NULL,
+          ),
+          'css' => array(),
+          'extras' => array(),
+          'position' => 0,
+          'locks' => array(),
+          'uuid' => '57a703d0-e549-4b24-8ca2-634eb677c6d7',
+        ); /* WAS: '' */
+    $data['cod_schedule_public']->default_handlers['page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b']->conf['display']->content['new-da4f4f1a-2b55-4e8e-95ce-e40a92a0dbfb']->position = 1; /* WAS: 0 */
+    $data['cod_schedule_public']->default_handlers['page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b']->conf['display']->panels['content'][0] = 'new-57a703d0-e549-4b24-8ca2-634eb677c6d7'; /* WAS: 'new-da4f4f1a-2b55-4e8e-95ce-e40a92a0dbfb' */
+    $data['cod_schedule_public']->default_handlers['page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b']->conf['display']->panels['content'][1] = 'new-da4f4f1a-2b55-4e8e-95ce-e40a92a0dbfb'; /* WAS: '' */
+  }
+}
+
+/**
  * Implements hook_strongarm_alter().
  */
 function dgc_extras_strongarm_alter(&$data) {
@@ -175,6 +211,9 @@ function dgc_extras_views_default_views_alter(&$data) {
     ); /* WAS: '' */
   }
   if (isset($data['cod_schedule_content'])) {
+    $data['cod_schedule_content']->display['default']->display_options['exposed_form']['options'] = array(
+      'autosubmit' => TRUE,
+    ); /* WAS: '' */
     $data['cod_schedule_content']->display['default']->display_options['fields']['field_experience'] = array(
       'id' => 'field_experience',
       'table' => 'field_data_field_experience',
@@ -199,5 +238,42 @@ function dgc_extras_views_default_views_alter(&$data) {
         'link' => 0,
       ),
     ); /* WAS: '' */
+    $data['cod_schedule_content']->display['default']->display_options['filters']['tid'] = array(
+      'id' => 'tid',
+      'table' => 'taxonomy_term_data',
+      'field' => 'tid',
+      'relationship' => 'term_node_tid',
+      'exposed' => TRUE,
+      'expose' => array(
+        'operator_id' => 'tid_op',
+        'label' => 'Filter by Session Track',
+        'operator' => 'tid_op',
+        'identifier' => 'session_track',
+        'remember_roles' => array(
+          2 => 2,
+          1 => 0,
+          21 => 0,
+          11 => 0,
+          26 => 0,
+          31 => 0,
+          16 => 0,
+        ),
+      ),
+      'type' => 'select',
+      'vocabulary' => 'session_tracks_1',
+      'error_message' => FALSE,
+    ); /* WAS: '' */
+    $data['cod_schedule_content']->display['default']->display_options['relationships']['term_node_tid'] = array(
+      'id' => 'term_node_tid',
+      'table' => 'node',
+      'field' => 'term_node_tid',
+      'label' => 'session_track',
+      'vocabularies' => array(
+        'session_tracks_1' => 'session_tracks_1',
+        'news_tags' => 0,
+        'sponsorship_level' => 0,
+      ),
+    ); /* WAS: '' */
+    $data['cod_schedule_content']->display['page_2'] = unserialize('O:13:"views_display":7:{s:15:"display_options";a:3:{s:5:"query";a:2:{s:4:"type";s:11:"views_query";s:7:"options";a:0:{}}s:13:"exposed_block";b:1;s:4:"path";s:16:"node/%/schedule2";}s:8:"db_table";s:13:"views_display";s:3:"vid";i:0;s:2:"id";s:6:"page_2";s:13:"display_title";s:6:"Page 2";s:14:"display_plugin";s:4:"page";s:8:"position";i:0;}'); /* WAS: '' */
   }
 }

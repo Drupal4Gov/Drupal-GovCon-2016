@@ -123,6 +123,7 @@ function dgc_deploy_features_override_default_overrides() {
       'locks' => array(),
       'uuid' => '604f1c98-aefd-4044-ad5a-d566a6a28303',
     );
+  $overrides["panelizer_defaults.node:session:default:default.display|content|new-b01a3d0c-16f1-43ec-8d15-a359a49d0ef0|configuration|formatter_settings|link"] = 1;
   $overrides["panelizer_defaults.node:session:default:default.display|panels|footer"] = array(
     0 => 'new-604f1c98-aefd-4044-ad5a-d566a6a28303',
   );

@@ -184,6 +184,7 @@ function dgc_deploy_panelizer_defaults_override_alter(&$data) {
           'locks' => array(),
           'uuid' => '604f1c98-aefd-4044-ad5a-d566a6a28303',
         ); /* WAS: '' */
+    $data['node:session:default:default']->display->content['new-b01a3d0c-16f1-43ec-8d15-a359a49d0ef0']->configuration['formatter_settings']['link'] = 1; /* WAS: 0 */
     $data['node:session:default:default']->display->panels['footer'] = array(
       0 => 'new-604f1c98-aefd-4044-ad5a-d566a6a28303',
     ); /* WAS: '' */
