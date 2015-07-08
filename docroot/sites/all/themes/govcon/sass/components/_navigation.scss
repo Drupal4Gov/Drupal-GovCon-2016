@@ -132,11 +132,12 @@ ul.tier-two {
 			a {padding: 10px 0; display: inline-block; }
 			a:hover { text-decoration: none; }
 		}
-		li.first {
-			position: absolute;
-			top: 62px;
-			right: 10px;
-      a { 
+		li {
+			position: relative;
+      a[href="/drupal-govcon-2015/registration"] { 
+        top: 62px;
+        right: 10px;
+        position: absolute;
       	padding: 6px 6px 8px;
       	font-size: .8em;
       	background: url(../images/ticket.svg) no-repeat top left;
