@@ -472,7 +472,7 @@ user/*/*';
   $strongarm->name = 'user_mail_register_admin_created_body';
   $strongarm->value = 'Hi [user:name]. Welcome to [site:name]!
 
-You\'ve been registered for [site:name] and have secured a ticket to the event. You may now log in by clicking this link or copying and pasting it to your browser:
+You\'ve been registered for [site:name] and are on the waitlist for the event. You may now log in by clicking this link or copying and pasting it to your browser:
 [user:one-time-login-url]
 
 This link can only be used once to log in and will lead you to a page where you can set your password, change your username if you choose, and fill out your profile.
@@ -497,7 +497,7 @@ https://www.facebook.com/DrupalGovCon
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'user_mail_register_admin_created_subject';
-  $strongarm->value = 'Your new account at [site:name] and ticket!';
+  $strongarm->value = 'Your new account at [site:name]!';
   $export['user_mail_register_admin_created_subject'] = $strongarm;
 
   $strongarm = new stdClass();
