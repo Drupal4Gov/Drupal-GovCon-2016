@@ -17,7 +17,7 @@ function dgc_extras_default_rules_configuration() {
       "REQUIRES" : [ "rules", "ticket" ],
       "ON" : { "ticket_registration_insert" : [] },
       "IF" : [
-        { "data_is" : { "data" : [ "ticket-registration:bundle" ], "value" : "2" } }
+        { "data_is" : { "data" : [ "ticket-registration:bundle" ], "value" : "11" } }
       ],
       "DO" : [ { "redirect" : { "url" : "drupal-govcon-2015\\/waitlist-thank-you" } } ]
     }
@@ -43,7 +43,7 @@ function dgc_extras_default_rules_configuration() {
       "REQUIRES" : [ "rules", "ticket" ],
       "ON" : { "ticket_registration_update" : [] },
       "IF" : [
-        { "data_is" : { "data" : [ "ticket-registration:bundle" ], "value" : "2" } },
+        { "data_is" : { "data" : [ "ticket-registration:bundle" ], "value" : "11" } },
         { "NOT data_is" : {
             "data" : [ "ticket-registration:state" ],
             "value" : [ "ticket-registration-unchanged:state" ]
