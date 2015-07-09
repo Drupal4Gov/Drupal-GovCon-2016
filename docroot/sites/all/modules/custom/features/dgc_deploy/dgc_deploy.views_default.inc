@@ -1094,6 +1094,21 @@ function dgc_deploy_views_default_views() {
   $handler->display->display_options['header']['view_field']['view'] = 'dgc_sessions';
   $handler->display->display_options['header']['view_field']['display'] = 'attachment_1';
   $handler->display->display_options['header']['view_field']['arguments'] = '!1/!2';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Author */
+  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
+  $handler->display->display_options['relationships']['uid']['table'] = 'node';
+  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
+  /* Relationship: OG membership: OG membership from Node */
+  $handler->display->display_options['relationships']['og_membership_rel']['id'] = 'og_membership_rel';
+  $handler->display->display_options['relationships']['og_membership_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['og_membership_rel']['field'] = 'og_membership_rel';
+  $handler->display->display_options['relationships']['og_membership_rel']['required'] = TRUE;
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['og_vocabulary_target_id']['id'] = 'og_vocabulary_target_id';
+  $handler->display->display_options['relationships']['og_vocabulary_target_id']['table'] = 'field_data_og_vocabulary';
+  $handler->display->display_options['relationships']['og_vocabulary_target_id']['field'] = 'og_vocabulary_target_id';
+  $handler->display->display_options['relationships']['og_vocabulary_target_id']['required'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -1264,6 +1279,13 @@ function dgc_deploy_views_default_views() {
   $handler->display->display_options['filters']['field_experience_value']['expose']['label'] = 'Experience';
   $handler->display->display_options['filters']['field_experience_value']['expose']['operator'] = 'field_experience_value_op';
   $handler->display->display_options['filters']['field_experience_value']['expose']['identifier'] = 'field_experience_value';
+  /* Filter criterion: Taxonomy term: Name */
+  $handler->display->display_options['filters']['name']['id'] = 'name';
+  $handler->display->display_options['filters']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['filters']['name']['field'] = 'name';
+  $handler->display->display_options['filters']['name']['relationship'] = 'og_vocabulary_target_id';
+  $handler->display->display_options['filters']['name']['operator'] = '!=';
+  $handler->display->display_options['filters']['name']['value'] = 'Keynote';
   $handler->display->display_options['path'] = 'node/%/sessions';
 
   /* Display: Attachment */
@@ -1353,6 +1375,13 @@ function dgc_deploy_views_default_views() {
   $handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
   $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
   $handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
+  /* Filter criterion: Taxonomy term: Name */
+  $handler->display->display_options['filters']['name']['id'] = 'name';
+  $handler->display->display_options['filters']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['filters']['name']['field'] = 'name';
+  $handler->display->display_options['filters']['name']['relationship'] = 'og_vocabulary_target_id';
+  $handler->display->display_options['filters']['name']['operator'] = '!=';
+  $handler->display->display_options['filters']['name']['value'] = 'Keynote';
   $handler->display->display_options['displays'] = array(
     'default' => 0,
     'page_json' => 0,

@@ -243,8 +243,13 @@ function dgc_deploy_features_override_default_overrides() {
   $overrides["views_view.ticket_registration.display|default|display_options|fields|views_bulk_operations|label"] = 'Select';
   $overrides["views_view.ticket_registration.display|default|display_options|fields|views_bulk_operations|vbo_operations|action::views_bulk_operations_delete_item|label"] = 'Delete ticket';
   $overrides["views_view.ticket_registration.display|default|display_options|fields|views_bulk_operations|vbo_operations|action::views_bulk_operations_delete_item|override_label"] = 1;
+  $overrides["views_view.ticket_registration.display|default|display_options|fields|views_bulk_operations|vbo_operations|action::views_bulk_operations_modify_action|label"] = 'Change ticket state';
+  $overrides["views_view.ticket_registration.display|default|display_options|fields|views_bulk_operations|vbo_operations|action::views_bulk_operations_modify_action|override_label"] = 1;
+  $overrides["views_view.ticket_registration.display|default|display_options|fields|views_bulk_operations|vbo_operations|action::views_bulk_operations_modify_action|selected"] = 1;
+  $overrides["views_view.ticket_registration.display|default|display_options|fields|views_bulk_operations|vbo_operations|action::views_bulk_operations_modify_action|settings|display_values|_all_"]["DELETED"] = TRUE;
+  $overrides["views_view.ticket_registration.display|default|display_options|fields|views_bulk_operations|vbo_operations|action::views_bulk_operations_modify_action|settings|display_values|state"] = 'state';
+  $overrides["views_view.ticket_registration.display|default|display_options|fields|views_bulk_operations|vbo_operations|action::views_bulk_operations_modify_action|settings|show_all_tokens"] = 0;
   $overrides["views_view.ticket_registration.display|default|display_options|fields|views_bulk_operations|vbo_settings|display_type"] = 1;
-  $overrides["views_view.ticket_registration.display|default|display_options|fields|views_bulk_operations|vbo_settings|entity_load_capacity"]["DELETED"] = TRUE;
   $overrides["views_view.ticket_registration.display|default|display_options|filters|combine"] = array(
     'id' => 'combine',
     'table' => 'views',
@@ -373,7 +378,22 @@ function dgc_deploy_features_override_default_overrides() {
       ),
     ),
   );
-  $overrides["views_view.ticket_registration.display|default|display_options|filters|state"]["DELETED"] = TRUE;
+  $overrides["views_view.ticket_registration.display|default|display_options|filters|state|expose|label"] = 'Registration state';
+  $overrides["views_view.ticket_registration.display|default|display_options|filters|state|expose|remember_roles|10"]["DELETED"] = TRUE;
+  $overrides["views_view.ticket_registration.display|default|display_options|filters|state|expose|remember_roles|11"] = 0;
+  $overrides["views_view.ticket_registration.display|default|display_options|filters|state|expose|remember_roles|16"] = 0;
+  $overrides["views_view.ticket_registration.display|default|display_options|filters|state|expose|remember_roles|21"] = 0;
+  $overrides["views_view.ticket_registration.display|default|display_options|filters|state|expose|remember_roles|26"] = 0;
+  $overrides["views_view.ticket_registration.display|default|display_options|filters|state|expose|remember_roles|3"]["DELETED"] = TRUE;
+  $overrides["views_view.ticket_registration.display|default|display_options|filters|state|expose|remember_roles|31"] = 0;
+  $overrides["views_view.ticket_registration.display|default|display_options|filters|state|expose|remember_roles|4"]["DELETED"] = TRUE;
+  $overrides["views_view.ticket_registration.display|default|display_options|filters|state|expose|remember_roles|5"]["DELETED"] = TRUE;
+  $overrides["views_view.ticket_registration.display|default|display_options|filters|state|expose|remember_roles|6"]["DELETED"] = TRUE;
+  $overrides["views_view.ticket_registration.display|default|display_options|filters|state|expose|remember_roles|7"]["DELETED"] = TRUE;
+  $overrides["views_view.ticket_registration.display|default|display_options|filters|state|expose|remember_roles|8"]["DELETED"] = TRUE;
+  $overrides["views_view.ticket_registration.display|default|display_options|filters|state|expose|remember_roles|9"]["DELETED"] = TRUE;
+  $overrides["views_view.ticket_registration.display|default|display_options|filters|state|operator"]["DELETED"] = TRUE;
+  $overrides["views_view.ticket_registration.display|default|display_options|filters|state|value"]["DELETED"] = TRUE;
   $overrides["views_view.ticket_registration.display|default|display_options|footer"] = array(
     'result' => array(
       'id' => 'result',

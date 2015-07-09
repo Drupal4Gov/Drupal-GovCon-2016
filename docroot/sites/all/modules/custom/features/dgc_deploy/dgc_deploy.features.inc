@@ -343,6 +343,11 @@ function dgc_deploy_views_default_views_alter(&$data) {
     $data['ticket_registration']->display['default']->display_options['fields']['views_bulk_operations']['label'] = 'Select'; /* WAS: '' */
     $data['ticket_registration']->display['default']->display_options['fields']['views_bulk_operations']['vbo_operations']['action::views_bulk_operations_delete_item']['label'] = 'Delete ticket'; /* WAS: '' */
     $data['ticket_registration']->display['default']->display_options['fields']['views_bulk_operations']['vbo_operations']['action::views_bulk_operations_delete_item']['override_label'] = 1; /* WAS: 0 */
+    $data['ticket_registration']->display['default']->display_options['fields']['views_bulk_operations']['vbo_operations']['action::views_bulk_operations_modify_action']['label'] = 'Change ticket state'; /* WAS: '' */
+    $data['ticket_registration']->display['default']->display_options['fields']['views_bulk_operations']['vbo_operations']['action::views_bulk_operations_modify_action']['override_label'] = 1; /* WAS: 0 */
+    $data['ticket_registration']->display['default']->display_options['fields']['views_bulk_operations']['vbo_operations']['action::views_bulk_operations_modify_action']['selected'] = 1; /* WAS: 0 */
+    $data['ticket_registration']->display['default']->display_options['fields']['views_bulk_operations']['vbo_operations']['action::views_bulk_operations_modify_action']['settings']['display_values']['state'] = 'state'; /* WAS: '' */
+    $data['ticket_registration']->display['default']->display_options['fields']['views_bulk_operations']['vbo_operations']['action::views_bulk_operations_modify_action']['settings']['show_all_tokens'] = 0; /* WAS: 1 */
     $data['ticket_registration']->display['default']->display_options['fields']['views_bulk_operations']['vbo_settings']['display_type'] = 1; /* WAS: 0 */
     $data['ticket_registration']->display['default']->display_options['filters']['combine'] = array(
       'id' => 'combine',
@@ -472,6 +477,12 @@ function dgc_deploy_views_default_views_alter(&$data) {
         ),
       ),
     ); /* WAS: '' */
+    $data['ticket_registration']->display['default']->display_options['filters']['state']['expose']['label'] = 'Registration state'; /* WAS: 'Order state' */
+    $data['ticket_registration']->display['default']->display_options['filters']['state']['expose']['remember_roles'][11] = 0; /* WAS: '' */
+    $data['ticket_registration']->display['default']->display_options['filters']['state']['expose']['remember_roles'][16] = 0; /* WAS: '' */
+    $data['ticket_registration']->display['default']->display_options['filters']['state']['expose']['remember_roles'][21] = 0; /* WAS: '' */
+    $data['ticket_registration']->display['default']->display_options['filters']['state']['expose']['remember_roles'][26] = 0; /* WAS: '' */
+    $data['ticket_registration']->display['default']->display_options['filters']['state']['expose']['remember_roles'][31] = 0; /* WAS: '' */
     $data['ticket_registration']->display['default']->display_options['footer'] = array(
       'result' => array(
         'id' => 'result',
@@ -543,8 +554,17 @@ function dgc_deploy_views_default_views_alter(&$data) {
       'field' => 'user_uid',
     ); /* WAS: '' */
     unset($data['ticket_registration']->display['default']->display_options['fields']['field_ticket_order']);
-    unset($data['ticket_registration']->display['default']->display_options['fields']['views_bulk_operations']['vbo_settings']['entity_load_capacity']);
-    unset($data['ticket_registration']->display['default']->display_options['filters']['state']);
+    unset($data['ticket_registration']->display['default']->display_options['fields']['views_bulk_operations']['vbo_operations']['action::views_bulk_operations_modify_action']['settings']['display_values']['_all_']);
+    unset($data['ticket_registration']->display['default']->display_options['filters']['state']['expose']['remember_roles'][10]);
+    unset($data['ticket_registration']->display['default']->display_options['filters']['state']['expose']['remember_roles'][3]);
+    unset($data['ticket_registration']->display['default']->display_options['filters']['state']['expose']['remember_roles'][4]);
+    unset($data['ticket_registration']->display['default']->display_options['filters']['state']['expose']['remember_roles'][5]);
+    unset($data['ticket_registration']->display['default']->display_options['filters']['state']['expose']['remember_roles'][6]);
+    unset($data['ticket_registration']->display['default']->display_options['filters']['state']['expose']['remember_roles'][7]);
+    unset($data['ticket_registration']->display['default']->display_options['filters']['state']['expose']['remember_roles'][8]);
+    unset($data['ticket_registration']->display['default']->display_options['filters']['state']['expose']['remember_roles'][9]);
+    unset($data['ticket_registration']->display['default']->display_options['filters']['state']['operator']);
+    unset($data['ticket_registration']->display['default']->display_options['filters']['state']['value']);
     unset($data['ticket_registration']->display['default']->display_options['style_options']['columns']['active']);
     unset($data['ticket_registration']->display['default']->display_options['style_options']['info']['active']);
     unset($data['ticket_registration']->display['panel_pane_1']->display_options['header']);
