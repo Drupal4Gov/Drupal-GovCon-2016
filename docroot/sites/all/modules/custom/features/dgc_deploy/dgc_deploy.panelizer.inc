@@ -217,8 +217,7 @@ function dgc_deploy_panelizer_defaults() {
     $pane->configuration = array(
       'admin_title' => 'Ticket button',
       'title' => '',
-      'body' => '<p><span class="tickets">Sold Out</span></p>
-',
+      'body' => '<p><a href="/drupal-govcon-2015/registration" class="tickets" title="Waitlist">Waitlist</a></p>',
       'format' => 'full_html',
       'substitute' => 1,
     );

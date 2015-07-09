@@ -61,9 +61,11 @@ a.button.btn-big, .form-actions input[type=submit],
     border: none;
     font-weight: normal;
 	}
-  span.tickets {
-  	padding: 44px 22px 60px;
+  .tickets {
+    width: 215px;
+  	padding: 40px 0 60px;
     margin-top: 30px;
+    text-align: center;
   	text-transform: uppercase;
   	font-size: 2.6em;
   	background: url(../images/ticket.svg) no-repeat top left;
@@ -81,10 +83,10 @@ a.button.btn-big, .form-actions input[type=submit],
     -o-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
   }
-  a:after {
+  a.tickets:after {
   	@include texture-text;
   } 
-  a:hover { 
+  a.tickets:hover { 
   	-webkit-transform: rotate(3deg);
 	  -moz-transform: rotate(3deg);
 	  -ms-transform: rotate(3deg);
@@ -100,8 +102,9 @@ a.button.btn-big, .form-actions input[type=submit],
 		left: 0;
 		top: -30px;
 		h2 { font-size: 2em; }
-		span.tickets {
-      padding: 22px 14px 30px;
+		.tickets {
+      width: 125px;
+      padding: 22px 0 30px;
 	  	text-transform: uppercase;
 	  	font-size: 1.4em;
 		}
@@ -111,8 +114,9 @@ a.button.btn-big, .form-actions input[type=submit],
 	.panel-pane.tickets {
 		left: 0;
 		top: -30px;
-		span.tickets {
-      padding: 36px 20px 50px;
+		.tickets {
+      width: 175px;
+      padding: 32px 0 50px;
 	  	text-transform: uppercase;
 	  	font-size: 2em;
 		}
