@@ -230,6 +230,13 @@ function dgc_deploy_views_default_views() {
     5 => 0,
     6 => 0,
   );
+  /* Filter criterion: Ticket registration: Order state */
+  $handler->display->display_options['filters']['state']['id'] = 'state';
+  $handler->display->display_options['filters']['state']['table'] = 'ticket_registration';
+  $handler->display->display_options['filters']['state']['field'] = 'state';
+  $handler->display->display_options['filters']['state']['value'] = array(
+    'completed' => 'completed',
+  );
 
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
