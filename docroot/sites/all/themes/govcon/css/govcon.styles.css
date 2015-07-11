@@ -280,6 +280,42 @@ td.status {
     /* line 67, ../sass/components/_blocks.scss */
     .dgc-callout .dgc-callout--4 {
       font-size: 28px; } }
+/* line 2, ../sass/components/_bofs.scss */
+.page-node-bofs .view-cod-bof-schedule > .view-header {
+  margin-bottom: 30px;
+  margin-top: -20px; }
+/* line 6, ../sass/components/_bofs.scss */
+.page-node-bofs .view-cod-bof-schedule .views-field-name {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.1em; }
+/* line 11, ../sass/components/_bofs.scss */
+.page-node-bofs .view-cod-bof-schedule .quicktabs-views-group {
+  margin-bottom: -50px; }
+/* line 14, ../sass/components/_bofs.scss */
+.page-node-bofs .view-cod-bof-schedule .quicktabs-views-group > .views-field-view {
+  padding-bottom: 50px; }
+  /* line 16, ../sass/components/_bofs.scss */
+  .page-node-bofs .view-cod-bof-schedule .quicktabs-views-group > .views-field-view .attachment a {
+    border: none;
+    background-image: none;
+    background-color: #e02d3b;
+    padding: 0.3em 0.5em;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+    margin: 3px 3px 0 0; }
+  /* line 26, ../sass/components/_bofs.scss */
+  .page-node-bofs .view-cod-bof-schedule .quicktabs-views-group > .views-field-view .views-field-title {
+    margin: 0; }
+/* line 30, ../sass/components/_bofs.scss */
+.page-node-bofs .footer {
+  position: relative;
+  background: url(../images/texture200.png) #e6e4dd;
+  height: 50px;
+  margin-top: -50px;
+  z-index: 100; }
+
 /* line 1, ../sass/components/_breadcrumbs.scss */
 .breadcrumb {
   padding: 0.5em 0; }
