@@ -68,8 +68,7 @@ function dgc_extras_features_override_default_overrides() {
       'uuid' => '57a703d0-e549-4b24-8ca2-634eb677c6d7',
     );
   $overrides["page_manager_pages.cod_schedule_public.default_handlers|page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b|conf|display|content|new-da4f4f1a-2b55-4e8e-95ce-e40a92a0dbfb|position"] = 1;
-  $overrides["page_manager_pages.cod_schedule_public.default_handlers|page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b|conf|display|panels|content|0"] = 'new-57a703d0-e549-4b24-8ca2-634eb677c6d7';
-  $overrides["page_manager_pages.cod_schedule_public.default_handlers|page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b|conf|display|panels|content|1"] = 'new-da4f4f1a-2b55-4e8e-95ce-e40a92a0dbfb';
+  $overrides["page_manager_pages.cod_schedule_public.default_handlers|page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b|conf|display|panels|content|1"] = 'new-57a703d0-e549-4b24-8ca2-634eb677c6d7';
 
   // Exported overrides for: variable
   $overrides["variable.field_bundle_settings_user__user.value|extra_fields|form|ckeditor|weight"] = 15;
@@ -162,6 +161,13 @@ function dgc_extras_features_override_default_overrides() {
   $overrides["views_view.cod_schedule_content.display|default|display_options|exposed_form|options"] = array(
     'autosubmit' => TRUE,
   );
+  $overrides["views_view.cod_schedule_content.display|default|display_options|fields|count"] = array(
+    'id' => 'count',
+    'table' => 'flag_counts',
+    'field' => 'count',
+    'relationship' => 'flag_count_rel',
+    'label' => 'Attending',
+  );
   $overrides["views_view.cod_schedule_content.display|default|display_options|fields|field_experience"] = array(
     'id' => 'field_experience',
     'table' => 'field_data_field_experience',
@@ -185,6 +191,14 @@ function dgc_extras_features_override_default_overrides() {
     'settings' => array(
       'link' => 0,
     ),
+  );
+  $overrides["views_view.cod_schedule_content.display|default|display_options|fields|ops"] = array(
+    'id' => 'ops',
+    'table' => 'flagging',
+    'field' => 'ops',
+    'relationship' => 'flag_content_rel',
+    'label' => '',
+    'element_label_colon' => FALSE,
   );
   $overrides["views_view.cod_schedule_content.display|default|display_options|filters|tid"] = array(
     'id' => 'tid',
@@ -210,6 +224,22 @@ function dgc_extras_features_override_default_overrides() {
     'type' => 'select',
     'vocabulary' => 'session_tracks_1',
     'error_message' => FALSE,
+  );
+  $overrides["views_view.cod_schedule_content.display|default|display_options|relationships|flag_content_rel"] = array(
+    'id' => 'flag_content_rel',
+    'table' => 'node',
+    'field' => 'flag_content_rel',
+    'label' => 'attending session',
+    'required' => 0,
+    'flag' => 'session_schedule',
+  );
+  $overrides["views_view.cod_schedule_content.display|default|display_options|relationships|flag_count_rel"] = array(
+    'id' => 'flag_count_rel',
+    'table' => 'node',
+    'field' => 'flag_count_rel',
+    'label' => 'attending session count',
+    'required' => 0,
+    'flag' => 'session_schedule',
   );
   $overrides["views_view.cod_schedule_content.display|default|display_options|relationships|term_node_tid"] = array(
     'id' => 'term_node_tid',
