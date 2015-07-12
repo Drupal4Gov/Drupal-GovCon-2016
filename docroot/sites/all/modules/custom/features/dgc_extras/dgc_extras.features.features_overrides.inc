@@ -81,6 +81,27 @@ function dgc_extras_features_override_default_overrides() {
   $overrides["variable.field_bundle_settings_user__user.value|extra_fields|form|timezone|weight"] = 16;
 
   // Exported overrides for: views_view
+  $overrides["views_view.cod_bof_schedule.display|default|display_options|fields|field_evttime_date_1|settings|format_type"] = 'day_of_the_week';
+  $overrides["views_view.cod_bof_schedule.display|default|display_options|fields|field_evttime_date_1|settings|show_remaining_days"] = 0;
+  $overrides["views_view.cod_bof_schedule.display|default|display_options|fields|field_evttime_date_1|ui_name"] = 'Time: Date and time (Time slot day)';
+  $overrides["views_view.cod_bof_schedule.display|default|display_options|fields|field_evttime_date_2"] = array(
+    'id' => 'field_evttime_date_2',
+    'table' => 'field_data_field_evttime_date',
+    'field' => 'field_evttime_date',
+    'ui_name' => 'Time: Date and time (Time slot time)',
+    'label' => '',
+    'element_label_colon' => FALSE,
+    'settings' => array(
+      'format_type' => 'cod_time',
+      'fromto' => 'both',
+      'multiple_number' => '',
+      'multiple_from' => '',
+      'multiple_to' => '',
+      'show_remaining_days' => 0,
+    ),
+  );
+  $overrides["views_view.cod_bof_schedule.display|default|display_options|fields|field_evttime_date|settings|format_type"] = 'day_of_the_week';
+  $overrides["views_view.cod_bof_schedule.display|default|display_options|fields|field_evttime_date|settings|show_remaining_days"] = 0;
   $overrides["views_view.cod_schedule.display|panel_pane_1|display_options|defaults|fields"] = FALSE;
   $overrides["views_view.cod_schedule.display|panel_pane_1|display_options|defaults|filter_groups"] = FALSE;
   $overrides["views_view.cod_schedule.display|panel_pane_1|display_options|defaults|filters"] = FALSE;

@@ -130,6 +130,29 @@ function dgc_extras_strongarm_alter(&$data) {
  * Implements hook_views_default_views_alter().
  */
 function dgc_extras_views_default_views_alter(&$data) {
+  if (isset($data['cod_bof_schedule'])) {
+    $data['cod_bof_schedule']->display['default']->display_options['fields']['field_evttime_date_1']['settings']['format_type'] = 'day_of_the_week'; /* WAS: 'time_slot' */
+    $data['cod_bof_schedule']->display['default']->display_options['fields']['field_evttime_date_1']['settings']['show_remaining_days'] = 0; /* WAS: '' */
+    $data['cod_bof_schedule']->display['default']->display_options['fields']['field_evttime_date_1']['ui_name'] = 'Time: Date and time (Time slot day)'; /* WAS: '' */
+    $data['cod_bof_schedule']->display['default']->display_options['fields']['field_evttime_date_2'] = array(
+      'id' => 'field_evttime_date_2',
+      'table' => 'field_data_field_evttime_date',
+      'field' => 'field_evttime_date',
+      'ui_name' => 'Time: Date and time (Time slot time)',
+      'label' => '',
+      'element_label_colon' => FALSE,
+      'settings' => array(
+        'format_type' => 'cod_time',
+        'fromto' => 'both',
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_to' => '',
+        'show_remaining_days' => 0,
+      ),
+    ); /* WAS: '' */
+    $data['cod_bof_schedule']->display['default']->display_options['fields']['field_evttime_date']['settings']['format_type'] = 'day_of_the_week'; /* WAS: 'date_no_time' */
+    $data['cod_bof_schedule']->display['default']->display_options['fields']['field_evttime_date']['settings']['show_remaining_days'] = 0; /* WAS: '' */
+  }
   if (isset($data['cod_schedule'])) {
     $data['cod_schedule']->display['panel_pane_1']->display_options['defaults']['fields'] = FALSE; /* WAS: '' */
     $data['cod_schedule']->display['panel_pane_1']->display_options['defaults']['filter_groups'] = FALSE; /* WAS: '' */
