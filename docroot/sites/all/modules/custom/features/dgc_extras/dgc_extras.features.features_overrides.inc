@@ -41,6 +41,17 @@ function dgc_extras_features_override_default_overrides() {
   $overrides["field_instance.user-user-field_profile_phone.widget|weight"] = 8;
   $overrides["field_instance.user-user-field_t_shirt_size.description"] = 'All sizes listed are men\'s, so please select appropriately.';
 
+  // Exported overrides for: flag
+  $overrides["flag.session_schedule.show_as_field"] = 0;
+  $overrides["flag.session_schedule.show_in_links|diff_standard"] = 0;
+  $overrides["flag.session_schedule.show_in_links|full"] = 'full';
+  $overrides["flag.session_schedule.show_in_links|listing"] = 0;
+  $overrides["flag.session_schedule.show_in_links|rss"] = 0;
+  $overrides["flag.session_schedule.show_in_links|search_index"] = 0;
+  $overrides["flag.session_schedule.show_in_links|search_result"] = 0;
+  $overrides["flag.session_schedule.show_in_links|teaser"] = 0;
+  $overrides["flag.session_schedule.show_in_links|token"] = 0;
+
   // Exported overrides for: page_manager_pages
   $overrides["page_manager_pages.cod_schedule_public.access|settings"] = NULL;
   $overrides["page_manager_pages.cod_schedule_public.access|type"] = 'none';

@@ -144,8 +144,18 @@ function dgc_deploy_default_page_manager_pages_alter(&$data) {
               ),
             ),
             'relationships' => array(),
-            'display' => unserialize('O:14:"panels_display":16:{s:4:"args";a:0:{}s:7:"content";a:4:{s:40:"new-e4814e86-f90f-4df6-b40a-af26294404fb";O:8:"stdClass":14:{s:3:"pid";s:40:"new-e4814e86-f90f-4df6-b40a-af26294404fb";s:5:"panel";s:20:"bottom_right_content";s:4:"type";s:11:"views_panes";s:7:"subtype";s:24:"ticket_user-panel_pane_1";s:5:"shown";b:1;s:6:"access";a:0:{}s:13:"configuration";a:4:{s:7:"context";a:1:{i:0;s:14:"context_user_1";}s:14:"override_title";i:1;s:19:"override_title_text";s:25:"Tickets you\'ve registered";s:22:"override_title_heading";s:2:"h2";}s:5:"cache";a:0:{}s:5:"style";a:1:{s:8:"settings";N;}s:3:"css";a:0:{}s:6:"extras";a:0:{}s:8:"position";i:0;s:5:"locks";a:0:{}s:4:"uuid";s:36:"e4814e86-f90f-4df6-b40a-af26294404fb";}s:40:"new-502569b6-639e-45ae-84bd-813dda786c70";O:8:"stdClass":14:{s:3:"pid";s:40:"new-502569b6-639e-45ae-84bd-813dda786c70";s:5:"panel";s:12:"left_content";s:4:"type";s:6:"custom";s:7:"subtype";s:6:"custom";s:5:"shown";b:1;s:6:"access";a:0:{}s:13:"configuration";a:5:{s:11:"admin_title";s:17:"Registration full";s:5:"title";s:0:"";s:4:"body";s:183:"<p>We\'ve reached our limit! Registration is now full. Please stay tuned to our <a href="https://www.drupalgovcon.org/drupal-govcon-2015/news">news</a> for additional information.</p>
-            ";s:6:"format";s:13:"filtered_html";s:10:"substitute";i:0;}s:5:"cache";a:0:{}s:5:"style";a:1:{s:8:"settings";N;}s:3:"css";a:0:{}s:6:"extras";a:0:{}s:8:"position";i:0;s:5:"locks";a:0:{}s:4:"uuid";s:36:"502569b6-639e-45ae-84bd-813dda786c70";}s:40:"new-54e43e9a-96ee-4a66-ba91-b05ca3b2c688";O:8:"stdClass":14:{s:3:"pid";s:40:"new-54e43e9a-96ee-4a66-ba91-b05ca3b2c688";s:5:"panel";s:12:"left_content";s:4:"type";s:12:"entity_field";s:7:"subtype";s:24:"node:field_event_tickets";s:5:"shown";b:1;s:6:"access";a:0:{}s:13:"configuration";a:10:{s:5:"label";s:6:"hidden";s:9:"formatter";s:11:"ticket_type";s:11:"delta_limit";s:1:"0";s:12:"delta_offset";s:1:"0";s:14:"delta_reversed";i:0;s:18:"formatter_settings";a:2:{s:11:"submit_text";s:8:"Register";s:16:"show_unavailable";i:0;}s:7:"context";s:25:"argument_entity_id:node_1";s:14:"override_title";i:0;s:19:"override_title_text";s:0:"";s:22:"override_title_heading";s:2:"h2";}s:5:"cache";a:0:{}s:5:"style";a:1:{s:8:"settings";N;}s:3:"css";a:0:{}s:6:"extras";a:0:{}s:8:"position";i:1;s:5:"locks";a:0:{}s:4:"uuid";s:36:"54e43e9a-96ee-4a66-ba91-b05ca3b2c688";}s:40:"new-24a85338-7ad2-4779-be9b-c234673eaaa6";O:8:"stdClass":14:{s:3:"pid";s:40:"new-24a85338-7ad2-4779-be9b-c234673eaaa6";s:5:"panel";s:17:"top_right_content";s:4:"type";s:11:"views_panes";s:7:"subtype";s:28:"ticket_attendee-panel_pane_1";s:5:"shown";b:1;s:6:"access";a:1:{s:7:"plugins";a:1:{i:0;a:4:{s:4:"name";s:4:"role";s:8:"settings";a:1:{s:4:"rids";a:1:{i:0;i:1;}}s:7:"context";s:14:"context_user_1";s:3:"not";b:1;}}}s:13:"configuration";a:4:{s:7:"context";a:1:{i:0;s:14:"context_user_1";}s:14:"override_title";i:1;s:19:"override_title_text";s:12:"Your tickets";s:22:"override_title_heading";s:2:"h2";}s:5:"cache";a:0:{}s:5:"style";a:1:{s:8:"settings";N;}s:3:"css";a:0:{}s:6:"extras";a:0:{}s:8:"position";i:0;s:5:"locks";a:0:{}s:4:"uuid";s:36:"24a85338-7ad2-4779-be9b-c234673eaaa6";}}s:6:"panels";a:3:{s:20:"bottom_right_content";a:1:{i:0;s:40:"new-e4814e86-f90f-4df6-b40a-af26294404fb";}s:12:"left_content";a:2:{i:0;s:40:"new-502569b6-639e-45ae-84bd-813dda786c70";i:1;s:40:"new-54e43e9a-96ee-4a66-ba91-b05ca3b2c688";}s:17:"top_right_content";a:1:{i:0;s:40:"new-24a85338-7ad2-4779-be9b-c234673eaaa6";}}s:16:"incoming_content";N;s:6:"css_id";N;s:7:"context";a:0:{}s:3:"did";s:3:"new";s:8:"renderer";s:8:"standard";s:6:"layout";s:5:"hydra";s:15:"layout_settings";a:0:{}s:14:"panel_settings";a:1:{s:14:"style_settings";a:7:{s:7:"default";N;s:7:"preface";N;s:7:"content";N;s:6:"footer";N;s:12:"left_content";N;s:17:"top_right_content";N;s:20:"bottom_right_content";N;}}s:5:"cache";a:0:{}s:5:"title";s:24:"%node:title Registration";s:4:"uuid";s:36:"f1fa21f4-4b7a-4978-91b5-af69f96fe648";s:10:"hide_title";i:0;s:10:"title_pane";s:40:"new-54e43e9a-96ee-4a66-ba91-b05ca3b2c688";}'),
+            'display' => (object) array(
+                'layout' => '',
+                'layout_settings' => '',
+                'panel_settings' => '',
+                'cache' => '',
+                'title' => '',
+                'uuid' => '4a5b3e77-7018-4c8e-b05e-5ffe187d36e4',
+                'content' => array(),
+                'panels' => array(),
+                'hide_title' => 0,
+                'title_pane' => 0,
+              ),
           ),
         ); /* WAS: '' */
     $data['event_registration']->default_handlers['page_event_registration_panel_context']->weight = -29; /* WAS: 0 */
@@ -160,6 +170,7 @@ function dgc_deploy_panelizer_defaults_override_alter(&$data) {
     $data['node:bof_session:default:default']->pipeline = 'standard'; /* WAS: 'ipe' */
   }
   if (isset($data['node:session:default:default'])) {
+    $data['node:session:default:default']->display->content['new-0da34661-2455-4e0b-918b-5c11fd44fd6a']->position = 1; /* WAS: 0 */
     $data['node:session:default:default']->display->content['new-604f1c98-aefd-4044-ad5a-d566a6a28303'] = (object) array(
           'pid' => 'new-604f1c98-aefd-4044-ad5a-d566a6a28303',
           'panel' => 'footer',
@@ -185,10 +196,40 @@ function dgc_deploy_panelizer_defaults_override_alter(&$data) {
           'locks' => array(),
           'uuid' => '604f1c98-aefd-4044-ad5a-d566a6a28303',
         ); /* WAS: '' */
+    $data['node:session:default:default']->display->content['new-7bee847d-a66f-46fa-b584-3f7131b1137e'] = (object) array(
+          'pid' => 'new-7bee847d-a66f-46fa-b584-3f7131b1137e',
+          'panel' => 'top_right_content',
+          'type' => 'flag_link',
+          'subtype' => 'node',
+          'shown' => TRUE,
+          'access' => array(),
+          'configuration' => array(
+            'flag_name' => 'session_schedule',
+            'context' => 'panelizer',
+            'override_title' => 1,
+            'override_title_text' => '',
+            'override_title_heading' => 'h2',
+          ),
+          'cache' => array(),
+          'style' => array(
+            'settings' => NULL,
+          ),
+          'css' => array(),
+          'extras' => array(),
+          'position' => 0,
+          'locks' => array(),
+          'uuid' => '7bee847d-a66f-46fa-b584-3f7131b1137e',
+        ); /* WAS: '' */
     $data['node:session:default:default']->display->content['new-b01a3d0c-16f1-43ec-8d15-a359a49d0ef0']->configuration['formatter_settings']['link'] = 1; /* WAS: 0 */
+    $data['node:session:default:default']->display->content['new-b4b99930-c93b-4de8-97f8-08a81413b531']->position = 2; /* WAS: 1 */
+    $data['node:session:default:default']->display->content['new-d1c2e7df-53fe-4dc5-9c77-51c7e83580e2']->position = 3; /* WAS: 2 */
     $data['node:session:default:default']->display->panels['footer'] = array(
       0 => 'new-604f1c98-aefd-4044-ad5a-d566a6a28303',
     ); /* WAS: '' */
+    $data['node:session:default:default']->display->panels['top_right_content'][0] = 'new-7bee847d-a66f-46fa-b584-3f7131b1137e'; /* WAS: 'new-0da34661-2455-4e0b-918b-5c11fd44fd6a' */
+    $data['node:session:default:default']->display->panels['top_right_content'][1] = 'new-0da34661-2455-4e0b-918b-5c11fd44fd6a'; /* WAS: 'new-b4b99930-c93b-4de8-97f8-08a81413b531' */
+    $data['node:session:default:default']->display->panels['top_right_content'][2] = 'new-b4b99930-c93b-4de8-97f8-08a81413b531'; /* WAS: 'new-d1c2e7df-53fe-4dc5-9c77-51c7e83580e2' */
+    $data['node:session:default:default']->display->panels['top_right_content'][3] = 'new-d1c2e7df-53fe-4dc5-9c77-51c7e83580e2'; /* WAS: '' */
     $data['node:session:default:default']->link_to_entity = FALSE; /* WAS: TRUE */
   }
 }

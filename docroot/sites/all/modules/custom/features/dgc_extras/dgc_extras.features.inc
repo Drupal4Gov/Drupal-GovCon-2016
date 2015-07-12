@@ -76,6 +76,23 @@ function dgc_extras_field_default_field_instances_alter(&$data) {
 }
 
 /**
+ * Implements hook_flag_default_flags_alter().
+ */
+function dgc_extras_flag_default_flags_alter(&$data) {
+  if (isset($data['session_schedule'])) {
+    $data['session_schedule']['show_as_field'] = 0; /* WAS: FALSE */
+    $data['session_schedule']['show_in_links']['diff_standard'] = 0; /* WAS: '' */
+    $data['session_schedule']['show_in_links']['full'] = 'full'; /* WAS: TRUE */
+    $data['session_schedule']['show_in_links']['listing'] = 0; /* WAS: '' */
+    $data['session_schedule']['show_in_links']['rss'] = 0; /* WAS: '' */
+    $data['session_schedule']['show_in_links']['search_index'] = 0; /* WAS: '' */
+    $data['session_schedule']['show_in_links']['search_result'] = 0; /* WAS: '' */
+    $data['session_schedule']['show_in_links']['teaser'] = 0; /* WAS: '' */
+    $data['session_schedule']['show_in_links']['token'] = 0; /* WAS: '' */
+  }
+}
+
+/**
  * Implements hook_default_page_manager_pages_alter().
  */
 function dgc_extras_default_page_manager_pages_alter(&$data) {
