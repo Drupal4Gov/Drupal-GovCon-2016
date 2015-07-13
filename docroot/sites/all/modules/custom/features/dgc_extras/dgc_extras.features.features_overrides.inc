@@ -78,8 +78,37 @@ function dgc_extras_features_override_default_overrides() {
       'locks' => array(),
       'uuid' => '57a703d0-e549-4b24-8ca2-634eb677c6d7',
     );
+  $overrides["page_manager_pages.cod_schedule_public.default_handlers|page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b|conf|display|content|new-9e8372a0-8ecc-47e1-9a24-f1442c15066f"] = (object) array(
+      'pid' => 'new-9e8372a0-8ecc-47e1-9a24-f1442c15066f',
+      'panel' => 'preface',
+      'type' => 'custom',
+      'subtype' => 'custom',
+      'shown' => TRUE,
+      'access' => array(),
+      'configuration' => array(
+        'admin_title' => 'Schedule links',
+        'title' => '',
+        'body' => '<p><a class="button btn-big" href="">Conference Schedule</a> <a class="button btn-big" href="%node:url/schedule/mine">My Schedule</a> <a class="button btn-big" href="%node:url/bofs">BoFs</a> <a class="button btn-big" href="%node:url/floor-layouts">Floor Layouts</a></p>
+        ',
+        'format' => 'filtered_html',
+        'substitute' => 1,
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 0,
+      'locks' => array(),
+      'uuid' => '9e8372a0-8ecc-47e1-9a24-f1442c15066f',
+    );
   $overrides["page_manager_pages.cod_schedule_public.default_handlers|page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b|conf|display|content|new-da4f4f1a-2b55-4e8e-95ce-e40a92a0dbfb|position"] = 1;
-  $overrides["page_manager_pages.cod_schedule_public.default_handlers|page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b|conf|display|panels|content|1"] = 'new-57a703d0-e549-4b24-8ca2-634eb677c6d7';
+  $overrides["page_manager_pages.cod_schedule_public.default_handlers|page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b|conf|display|panels|content|0"] = 'new-57a703d0-e549-4b24-8ca2-634eb677c6d7';
+  $overrides["page_manager_pages.cod_schedule_public.default_handlers|page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b|conf|display|panels|content|1"] = 'new-da4f4f1a-2b55-4e8e-95ce-e40a92a0dbfb';
+  $overrides["page_manager_pages.cod_schedule_public.default_handlers|page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b|conf|display|panels|preface"] = array(
+    0 => 'new-9e8372a0-8ecc-47e1-9a24-f1442c15066f',
+  );
 
   // Exported overrides for: variable
   $overrides["variable.field_bundle_settings_user__user.value|extra_fields|form|ckeditor|weight"] = 15;
@@ -113,6 +142,7 @@ function dgc_extras_features_override_default_overrides() {
   );
   $overrides["views_view.cod_bof_schedule.display|default|display_options|fields|field_evttime_date|settings|format_type"] = 'day_of_the_week';
   $overrides["views_view.cod_bof_schedule.display|default|display_options|fields|field_evttime_date|settings|show_remaining_days"] = 0;
+  $overrides["views_view.cod_schedule.display|my_schedule_times"] = unserialize('O:13:"views_display":7:{s:15:"display_options";a:6:{s:5:"query";a:2:{s:4:"type";s:11:"views_query";s:7:"options";a:0:{}}s:8:"defaults";a:5:{s:5:"title";b:0;s:13:"relationships";b:0;s:6:"fields";b:0;s:13:"filter_groups";b:0;s:7:"filters";b:0;}s:13:"relationships";a:1:{s:17:"og_membership_rel";a:3:{s:2:"id";s:17:"og_membership_rel";s:5:"table";s:14:"cod_event_time";s:5:"field";s:17:"og_membership_rel";}}s:6:"fields";a:5:{s:6:"evttid";a:5:{s:2:"id";s:6:"evttid";s:5:"table";s:14:"cod_event_time";s:5:"field";s:6:"evttid";s:7:"exclude";b:1;s:9:"separator";s:0:"";}s:18:"field_evttime_date";a:6:{s:2:"id";s:18:"field_evttime_date";s:5:"table";s:29:"field_data_field_evttime_date";s:5:"field";s:18:"field_evttime_date";s:5:"label";s:7:"Day Tab";s:7:"exclude";b:1;s:8:"settings";a:6:{s:11:"format_type";s:15:"day_of_the_week";s:6:"fromto";s:5:"value";s:15:"multiple_number";s:0:"";s:13:"multiple_from";s:0:"";s:11:"multiple_to";s:0:"";s:19:"show_remaining_days";i:0;}}s:20:"field_evttime_date_1";a:7:{s:2:"id";s:20:"field_evttime_date_1";s:5:"table";s:29:"field_data_field_evttime_date";s:5:"field";s:18:"field_evttime_date";s:7:"ui_name";s:35:"Time: Date and time (Time slot day)";s:5:"label";s:0:"";s:19:"element_label_colon";b:0;s:8:"settings";a:6:{s:11:"format_type";s:15:"day_of_the_week";s:6:"fromto";s:4:"both";s:15:"multiple_number";s:0:"";s:13:"multiple_from";s:0:"";s:11:"multiple_to";s:0:"";s:19:"show_remaining_days";i:0;}}s:20:"field_evttime_date_2";a:7:{s:2:"id";s:20:"field_evttime_date_2";s:5:"table";s:29:"field_data_field_evttime_date";s:5:"field";s:18:"field_evttime_date";s:7:"ui_name";s:36:"Time: Date and time (Time slot time)";s:5:"label";s:0:"";s:19:"element_label_colon";b:0;s:8:"settings";a:6:{s:11:"format_type";s:8:"cod_time";s:6:"fromto";s:4:"both";s:15:"multiple_number";s:0:"";s:13:"multiple_from";s:0:"";s:11:"multiple_to";s:0:"";s:19:"show_remaining_days";i:0;}}s:4:"view";a:8:{s:2:"id";s:4:"view";s:5:"table";s:5:"views";s:5:"field";s:4:"view";s:5:"label";s:0:"";s:19:"element_label_colon";b:0;s:10:"hide_empty";b:1;s:4:"view";s:23:"dgc_my_schedule_content";s:9:"arguments";s:31:"[!evttid]/session+schedule_item";}}s:14:"argument_input";a:1:{s:3:"gid";a:6:{s:4:"type";s:4:"user";s:7:"context";s:21:"entity:comment.author";s:16:"context_optional";i:0;s:5:"panel";s:1:"0";s:5:"fixed";s:0:"";s:5:"label";s:10:"Conference";}}s:19:"inherit_panels_path";s:1:"1";}s:8:"db_table";s:13:"views_display";s:3:"vid";i:0;s:2:"id";s:17:"my_schedule_times";s:13:"display_title";s:17:"My schedule times";s:14:"display_plugin";s:10:"panel_pane";s:8:"position";i:0;}');
   $overrides["views_view.cod_schedule.display|panel_pane_1|display_options|defaults|fields"] = FALSE;
   $overrides["views_view.cod_schedule.display|panel_pane_1|display_options|defaults|filter_groups"] = FALSE;
   $overrides["views_view.cod_schedule.display|panel_pane_1|display_options|defaults|filters"] = FALSE;

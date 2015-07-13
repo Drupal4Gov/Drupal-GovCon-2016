@@ -9,19 +9,6 @@
  */
 function dgc_extras_default_rules_configuration() {
   $items = array();
-  $items['rules_dgc_ticket_waitlist_thankyou'] = entity_import('rules_config', '{ "rules_dgc_ticket_waitlist_thankyou" : {
-      "LABEL" : "Drupal GovCon ticket waitlist thank you",
-      "PLUGIN" : "reaction rule",
-      "OWNER" : "rules",
-      "TAGS" : [ "DGC" ],
-      "REQUIRES" : [ "rules", "ticket" ],
-      "ON" : { "ticket_registration_insert" : [] },
-      "IF" : [
-        { "data_is" : { "data" : [ "ticket-registration:bundle" ], "value" : "11" } }
-      ],
-      "DO" : [ { "redirect" : { "url" : "drupal-govcon-2015\\/waitlist-thank-you" } } ]
-    }
-  }');
   $items['rules_dgc_ticket_registration_thankyou'] = entity_import('rules_config', '{ "rules_dgc_ticket_registration_thankyou" : {
       "LABEL" : "Drupal GovCon ticket registration thankyou",
       "PLUGIN" : "reaction rule",
@@ -33,6 +20,19 @@ function dgc_extras_default_rules_configuration() {
         { "data_is" : { "data" : [ "ticket-registration:bundle" ], "value" : "1" } }
       ],
       "DO" : [ { "redirect" : { "url" : "thankyou" } } ]
+    }
+  }');
+  $items['rules_dgc_ticket_waitlist_thankyou'] = entity_import('rules_config', '{ "rules_dgc_ticket_waitlist_thankyou" : {
+      "LABEL" : "Drupal GovCon ticket waitlist thank you",
+      "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
+      "TAGS" : [ "DGC" ],
+      "REQUIRES" : [ "rules", "ticket" ],
+      "ON" : { "ticket_registration_insert" : [] },
+      "IF" : [
+        { "data_is" : { "data" : [ "ticket-registration:bundle" ], "value" : "11" } }
+      ],
+      "DO" : [ { "redirect" : { "url" : "drupal-govcon-2015\\/waitlist-thank-you" } } ]
     }
   }');
   $items['rules_email_waitlist_ticket_holder_ticket_approved'] = entity_import('rules_config', '{ "rules_email_waitlist_ticket_holder_ticket_approved" : {

@@ -11,6 +11,9 @@ function dgc_deploy_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "captcha" && $api == "captcha") {
     return array("version" => "1");
   }
+  if ($module == "page_manager" && $api == "pages_default") {
+    return array("version" => "1");
+  }
   if ($module == "panelizer" && $api == "panelizer") {
     return array("version" => "1");
   }
@@ -85,6 +88,36 @@ function dgc_deploy_filter_default_formats_alter(&$data) {
  * Implements hook_default_page_manager_pages_alter().
  */
 function dgc_deploy_default_page_manager_pages_alter(&$data) {
+  if (isset($data['cod_bof_pages'])) {
+    $data['cod_bof_pages']->default_handlers['page_cod_bof_pages__panel_context_d1b7e4a1-edf8-4c94-bc18-5b7362409cc6']->conf['display']->content['new-c13e87dc-7afd-4320-9611-a34e2dda526d'] = (object) array(
+          'pid' => 'new-c13e87dc-7afd-4320-9611-a34e2dda526d',
+          'panel' => 'preface',
+          'type' => 'custom',
+          'subtype' => 'custom',
+          'shown' => TRUE,
+          'access' => array(),
+          'configuration' => array(
+            'admin_title' => 'Schedule links',
+            'title' => '',
+            'body' => '<p><a class="button btn-big" href="%node:url/schedule">Conference Schedule</a> <a class="button btn-big" href="%node:url/schedule/mine">My Schedule</a> <a class="button btn-big" href="">BoFs</a> <a class="button btn-big" href="%node:url/floor-layouts">Floor Layouts</a></p>
+            ',
+            'format' => 'filtered_html',
+            'substitute' => 1,
+          ),
+          'cache' => array(),
+          'style' => array(
+            'settings' => NULL,
+          ),
+          'css' => array(),
+          'extras' => array(),
+          'position' => 0,
+          'locks' => array(),
+          'uuid' => 'c13e87dc-7afd-4320-9611-a34e2dda526d',
+        ); /* WAS: '' */
+    $data['cod_bof_pages']->default_handlers['page_cod_bof_pages__panel_context_d1b7e4a1-edf8-4c94-bc18-5b7362409cc6']->conf['display']->panels['preface'] = array(
+      0 => 'new-c13e87dc-7afd-4320-9611-a34e2dda526d',
+    ); /* WAS: '' */
+  }
   if (isset($data['community'])) {
     $data['community']->access['settings'] = NULL; /* WAS: '' */
     $data['community']->access['type'] = 'none'; /* WAS: '' */
@@ -226,10 +259,7 @@ function dgc_deploy_panelizer_defaults_override_alter(&$data) {
     $data['node:session:default:default']->display->panels['footer'] = array(
       0 => 'new-604f1c98-aefd-4044-ad5a-d566a6a28303',
     ); /* WAS: '' */
-    $data['node:session:default:default']->display->panels['top_right_content'][0] = 'new-7bee847d-a66f-46fa-b584-3f7131b1137e'; /* WAS: 'new-0da34661-2455-4e0b-918b-5c11fd44fd6a' */
-    $data['node:session:default:default']->display->panels['top_right_content'][1] = 'new-0da34661-2455-4e0b-918b-5c11fd44fd6a'; /* WAS: 'new-b4b99930-c93b-4de8-97f8-08a81413b531' */
-    $data['node:session:default:default']->display->panels['top_right_content'][2] = 'new-b4b99930-c93b-4de8-97f8-08a81413b531'; /* WAS: 'new-d1c2e7df-53fe-4dc5-9c77-51c7e83580e2' */
-    $data['node:session:default:default']->display->panels['top_right_content'][3] = 'new-d1c2e7df-53fe-4dc5-9c77-51c7e83580e2'; /* WAS: '' */
+    $data['node:session:default:default']->display->panels['top_right_content'][3] = 'new-7bee847d-a66f-46fa-b584-3f7131b1137e'; /* WAS: '' */
     $data['node:session:default:default']->link_to_entity = FALSE; /* WAS: TRUE */
   }
 }

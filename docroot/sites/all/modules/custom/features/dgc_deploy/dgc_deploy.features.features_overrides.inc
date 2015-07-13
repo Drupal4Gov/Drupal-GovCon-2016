@@ -35,6 +35,34 @@ function dgc_deploy_features_override_default_overrides() {
   $overrides["filter.filtered_html.filters|filter_html|settings|allowed_html"] = '<a> <em> <strong> <u> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <h2> <h3> <h4> <h5> <h6>  <p> <br> <img> <strike>';
 
   // Exported overrides for: page_manager_pages
+  $overrides["page_manager_pages.cod_bof_pages.default_handlers|page_cod_bof_pages__panel_context_d1b7e4a1-edf8-4c94-bc18-5b7362409cc6|conf|display|content|new-c13e87dc-7afd-4320-9611-a34e2dda526d"] = (object) array(
+      'pid' => 'new-c13e87dc-7afd-4320-9611-a34e2dda526d',
+      'panel' => 'preface',
+      'type' => 'custom',
+      'subtype' => 'custom',
+      'shown' => TRUE,
+      'access' => array(),
+      'configuration' => array(
+        'admin_title' => 'Schedule links',
+        'title' => '',
+        'body' => '<p><a class="button btn-big" href="%node:url/schedule">Conference Schedule</a> <a class="button btn-big" href="%node:url/schedule/mine">My Schedule</a> <a class="button btn-big" href="">BoFs</a> <a class="button btn-big" href="%node:url/floor-layouts">Floor Layouts</a></p>
+        ',
+        'format' => 'filtered_html',
+        'substitute' => 1,
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 0,
+      'locks' => array(),
+      'uuid' => 'c13e87dc-7afd-4320-9611-a34e2dda526d',
+    );
+  $overrides["page_manager_pages.cod_bof_pages.default_handlers|page_cod_bof_pages__panel_context_d1b7e4a1-edf8-4c94-bc18-5b7362409cc6|conf|display|panels|preface"] = array(
+    0 => 'new-c13e87dc-7afd-4320-9611-a34e2dda526d',
+  );
   $overrides["page_manager_pages.community.access|settings"] = NULL;
   $overrides["page_manager_pages.community.access|type"] = 'none';
   $overrides["page_manager_pages.community.default_handlers|page_community_panel_context|conf|display|content|new-797bfb61-a42b-47a1-94da-7e49df24efbc|shown"] = FALSE;
@@ -165,10 +193,7 @@ function dgc_deploy_features_override_default_overrides() {
   $overrides["panelizer_defaults.node:session:default:default.display|panels|footer"] = array(
     0 => 'new-604f1c98-aefd-4044-ad5a-d566a6a28303',
   );
-  $overrides["panelizer_defaults.node:session:default:default.display|panels|top_right_content|0"] = 'new-7bee847d-a66f-46fa-b584-3f7131b1137e';
-  $overrides["panelizer_defaults.node:session:default:default.display|panels|top_right_content|1"] = 'new-0da34661-2455-4e0b-918b-5c11fd44fd6a';
-  $overrides["panelizer_defaults.node:session:default:default.display|panels|top_right_content|2"] = 'new-b4b99930-c93b-4de8-97f8-08a81413b531';
-  $overrides["panelizer_defaults.node:session:default:default.display|panels|top_right_content|3"] = 'new-d1c2e7df-53fe-4dc5-9c77-51c7e83580e2';
+  $overrides["panelizer_defaults.node:session:default:default.display|panels|top_right_content|3"] = 'new-7bee847d-a66f-46fa-b584-3f7131b1137e';
   $overrides["panelizer_defaults.node:session:default:default.link_to_entity"] = FALSE;
 
   // Exported overrides for: user_permission
