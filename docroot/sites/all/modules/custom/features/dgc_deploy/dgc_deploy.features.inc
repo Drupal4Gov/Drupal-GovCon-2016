@@ -147,52 +147,6 @@ function dgc_deploy_default_page_manager_pages_alter(&$data) {
     $data['community']->default_handlers['page_community_panel_context']->conf['display']->content['new-dafcfd0f-4f89-4ace-b9b7-bee77657b467']->shown = FALSE; /* WAS: TRUE */
     $data['community']->default_handlers['page_community_panel_context']->conf['display']->panels['center'][2] = 'new-bc2d3d3f-97e4-418e-ba6e-a16d3552bbe3'; /* WAS: '' */
   }
-  if (isset($data['event_registration'])) {
-    $data['event_registration']->access['settings'] = NULL; /* WAS: '' */
-    $data['event_registration']->access['type'] = 'none'; /* WAS: '' */
-    $data['event_registration']->default_handlers['page_event_registration__panel_context_ef9c7edf-6676-4d39-b6ef-3c7ce98858b7'] = (object) array(
-          'disabled' => FALSE,
-          'api_version' => 1,
-          'name' => 'page_event_registration__panel_context_ef9c7edf-6676-4d39-b6ef-3c7ce98858b7',
-          'task' => 'page',
-          'subtask' => 'event_registration',
-          'handler' => 'panel_context',
-          'weight' => -30,
-          'conf' => array(
-            'title' => 'Drupal GovCon registration',
-            'no_blocks' => 0,
-            'pipeline' => 'ipe',
-            'body_classes_to_remove' => '',
-            'body_classes_to_add' => '',
-            'css_id' => '',
-            'css' => '',
-            'contexts' => array(
-              0 => array(
-                'identifier' => 'User',
-                'keyword' => 'user',
-                'name' => 'user',
-                'type' => 'current',
-                'uid' => '',
-                'id' => 1,
-              ),
-            ),
-            'relationships' => array(),
-            'display' => (object) array(
-                'layout' => '',
-                'layout_settings' => '',
-                'panel_settings' => '',
-                'cache' => '',
-                'title' => '',
-                'uuid' => '4a5b3e77-7018-4c8e-b05e-5ffe187d36e4',
-                'content' => array(),
-                'panels' => array(),
-                'hide_title' => 0,
-                'title_pane' => 0,
-              ),
-          ),
-        ); /* WAS: '' */
-    $data['event_registration']->default_handlers['page_event_registration_panel_context']->weight = -29; /* WAS: 0 */
-  }
 }
 
 /**
