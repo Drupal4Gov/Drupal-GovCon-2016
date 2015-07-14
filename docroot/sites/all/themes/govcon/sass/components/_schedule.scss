@@ -69,7 +69,8 @@
     color: #fff;
     padding: 0 10px;
   }
-  .view-cod-schedule-content .views-row {
+  .view-cod-schedule-content .views-row,
+  .view-dgc-my-schedule-content .views-row {
     position: relative;
     padding: 0 0 0 146px;
     min-height: 120px;
@@ -136,8 +137,44 @@
     padding-left: 0;
     height: auto;
   }
+  .views-field-count, .views-field-ops {
+    float: left;
+    margin: 0 20px 10px 0;
+    padding-top: 4px;
+    a {
+      @extend .button;
+      &.unflag-action {
+        background: $red;
+        &:hover {
+          background: #fff;
+        }
+      }
+    }
+  }
 }
 /* hide extraneous exposed filters on each timeslot view */
 form#views-exposed-form-cod-schedule-content-default {
   display: none;
+}
+/* fake tabs for my schedule and bof schedule */
+
+/* hide active button */
+.page-node-schedule,
+.page-node-bofs {
+  h1 {
+    margin-bottom: 0;
+  }
+  .pane-custom.pane-1 {
+    a.button.btn-big {
+      background: $blue;
+      margin-bottom: 4px;
+      display: inline-block;
+      white-space: no-wrap;
+      &:hover, &:focus, &:active { background: #fff; }
+    }
+    a.button.btn-big[href=""] {
+      background: $red;
+      &:hover, &:focus, &:active { color: #fff; }
+    }
+  }
 }

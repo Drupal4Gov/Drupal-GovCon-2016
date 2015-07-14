@@ -280,6 +280,48 @@ td.status {
   .dgc-callout .dgc-callout--4 {
     font-size: 28px; }
 
+/* line 2, ../sass/components/_bofs.scss */
+.page-node-bofs .view-cod-bof-schedule > .view-header {
+  margin-bottom: 30px;
+  margin-top: -20px; }
+/* line 6, ../sass/components/_bofs.scss */
+.page-node-bofs .view-cod-bof-schedule .views-field-name {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  min-width: 80px; }
+/* line 12, ../sass/components/_bofs.scss */
+.page-node-bofs .view-cod-bof-schedule .quicktabs-views-group {
+  margin-bottom: -50px; }
+/* line 15, ../sass/components/_bofs.scss */
+.page-node-bofs .view-cod-bof-schedule .quicktabs-views-group > .views-field-view {
+  padding-bottom: 50px; }
+  /* line 17, ../sass/components/_bofs.scss */
+  .page-node-bofs .view-cod-bof-schedule .quicktabs-views-group > .views-field-view .attachment a {
+    border: none;
+    background-image: none;
+    background-color: #e02d3b;
+    padding: 0.3em 0.5em;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+    margin: 3px 3px 0 0; }
+    /* line 26, ../sass/components/_bofs.scss */
+    .page-node-bofs .view-cod-bof-schedule .quicktabs-views-group > .views-field-view .attachment a:hover {
+      background: #fff;
+      text-decoration: none;
+      color: #e02d3b; }
+  /* line 32, ../sass/components/_bofs.scss */
+  .page-node-bofs .view-cod-bof-schedule .quicktabs-views-group > .views-field-view .views-field-title {
+    margin: 0; }
+/* line 36, ../sass/components/_bofs.scss */
+.page-node-bofs .footer {
+  position: relative;
+  background: url(../images/texture200.png) #e6e4dd;
+  height: 50px;
+  margin-top: -50px;
+  z-index: 100; }
+
 /* line 1, ../sass/components/_breadcrumbs.scss */
 .breadcrumb {
   padding: 0.5em 0; }
@@ -296,7 +338,11 @@ td.status {
   margin: 0 0.2em; }
 
 /* line 1, ../sass/components/_buttons.scss */
-input[type=submit], button, .button, .more-link a {
+input[type=submit], button, .button, .more-link a, .view-cod-session-schedule .views-field-count a, .view-cod-session-schedule .views-field-ops a,
+.view-cod-bof-schedule .views-field-count a,
+.view-cod-bof-schedule .views-field-ops a,
+.view-cod-schedule .views-field-count a,
+.view-cod-schedule .views-field-ops a {
   border: none;
   background-image: none;
   background-color: #095380;
@@ -312,7 +358,15 @@ input[type=submit], button, .button, .more-link a {
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
   font-family: "Source Sans Pro", Helvetica, sans-serif; }
   /* line 14, ../sass/components/_buttons.scss */
-  input[type=submit]:hover, input[type=submit]:focus, button:hover, button:focus, .button:hover, .more-link a:hover, .button:focus, .more-link a:focus {
+  input[type=submit]:hover, input[type=submit]:focus, button:hover, button:focus, .button:hover, .more-link a:hover, .view-cod-session-schedule .views-field-count a:hover, .view-cod-session-schedule .views-field-ops a:hover,
+  .view-cod-bof-schedule .views-field-count a:hover,
+  .view-cod-bof-schedule .views-field-ops a:hover,
+  .view-cod-schedule .views-field-count a:hover,
+  .view-cod-schedule .views-field-ops a:hover, .button:focus, .more-link a:focus, .view-cod-session-schedule .views-field-count a:focus, .view-cod-session-schedule .views-field-ops a:focus,
+  .view-cod-bof-schedule .views-field-count a:focus,
+  .view-cod-bof-schedule .views-field-ops a:focus,
+  .view-cod-schedule .views-field-count a:focus,
+  .view-cod-schedule .views-field-ops a:focus {
     text-decoration: none;
     background-color: #fff;
     background-image: none;
@@ -331,7 +385,11 @@ a.button.btn-big, .more-link a.btn-big, .view-cod-session-schedule ul.quicktabs-
 .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a,
 .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:hover,
 .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:focus,
-.view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a.active:hover, .form-actions input[type=submit],
+.view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a.active:hover, .view-cod-session-schedule .views-field-count a.btn-big, .view-cod-session-schedule .views-field-ops a.btn-big,
+.view-cod-bof-schedule .views-field-count a.btn-big,
+.view-cod-bof-schedule .views-field-ops a.btn-big,
+.view-cod-schedule .views-field-count a.btn-big,
+.view-cod-schedule .views-field-ops a.btn-big, .form-actions input[type=submit],
 .ticket-field-formatter-view-form input[type=submit],
 .exposed-filters input[type=submit].form-submit,
 .ticket-register-form input[type=submit],
@@ -348,11 +406,19 @@ a.button.btn-big, .more-link a.btn-big, .view-cod-session-schedule ul.quicktabs-
   .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:hover:focus,
   .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a.active:hover,
   .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:hover:focus,
-  .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a.active:hover, a.button.btn-big:focus, .more-link a.btn-big:focus, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:focus,
+  .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a.active:hover, .view-cod-session-schedule .views-field-count a.btn-big:hover, .view-cod-session-schedule .views-field-ops a.btn-big:hover,
+  .view-cod-bof-schedule .views-field-count a.btn-big:hover,
+  .view-cod-bof-schedule .views-field-ops a.btn-big:hover,
+  .view-cod-schedule .views-field-count a.btn-big:hover,
+  .view-cod-schedule .views-field-ops a.btn-big:hover, a.button.btn-big:focus, .more-link a.btn-big:focus, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:focus,
   .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:focus,
   .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:focus, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:focus:hover,
   .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:focus:hover,
-  .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:focus:hover, .form-actions input[type=submit]:hover, .form-actions input[type=submit]:focus,
+  .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li.active a:focus:hover, .view-cod-session-schedule .views-field-count a.btn-big:focus, .view-cod-session-schedule .views-field-ops a.btn-big:focus,
+  .view-cod-bof-schedule .views-field-count a.btn-big:focus,
+  .view-cod-bof-schedule .views-field-ops a.btn-big:focus,
+  .view-cod-schedule .views-field-count a.btn-big:focus,
+  .view-cod-schedule .views-field-ops a.btn-big:focus, .form-actions input[type=submit]:hover, .form-actions input[type=submit]:focus,
   .ticket-field-formatter-view-form input[type=submit]:hover,
   .ticket-field-formatter-view-form input[type=submit]:focus,
   .exposed-filters input[type=submit].form-submit:hover,
@@ -1359,8 +1425,11 @@ article.node-teaser.node--news .news-content {
   padding: 0 10px; }
 /* line 72, ../sass/components/_schedule.scss */
 .view-cod-session-schedule .view-cod-schedule-content .views-row,
+.view-cod-session-schedule .view-dgc-my-schedule-content .views-row,
 .view-cod-bof-schedule .view-cod-schedule-content .views-row,
-.view-cod-schedule .view-cod-schedule-content .views-row {
+.view-cod-bof-schedule .view-dgc-my-schedule-content .views-row,
+.view-cod-schedule .view-cod-schedule-content .views-row,
+.view-cod-schedule .view-dgc-my-schedule-content .views-row {
   position: relative;
   padding: 0 0 0 146px;
   min-height: 120px;
@@ -1368,12 +1437,15 @@ article.node-teaser.node--news .news-content {
   min-height: 140px; }
   /* line 35, ../sass/abstractions/_mixins.scss */
   .view-cod-session-schedule .view-cod-schedule-content .views-row:after,
+  .view-cod-session-schedule .view-dgc-my-schedule-content .views-row:after,
   .view-cod-bof-schedule .view-cod-schedule-content .views-row:after,
-  .view-cod-schedule .view-cod-schedule-content .views-row:after {
+  .view-cod-bof-schedule .view-dgc-my-schedule-content .views-row:after,
+  .view-cod-schedule .view-cod-schedule-content .views-row:after,
+  .view-cod-schedule .view-dgc-my-schedule-content .views-row:after {
     content: "";
     display: table;
     clear: both; }
-/* line 82, ../sass/components/_schedule.scss */
+/* line 83, ../sass/components/_schedule.scss */
 .view-cod-session-schedule [class*="track-icon-"],
 .view-cod-bof-schedule [class*="track-icon-"],
 .view-cod-schedule [class*="track-icon-"] {
@@ -1395,43 +1467,43 @@ article.node-teaser.node--news .news-content {
   width: 160px;
   background-position: center 18px;
   font-size: 1em; }
-/* line 104, ../sass/components/_schedule.scss */
+/* line 105, ../sass/components/_schedule.scss */
 .view-cod-session-schedule .track-icon-6,
 .view-cod-bof-schedule .track-icon-6,
 .view-cod-schedule .track-icon-6 {
   color: #f6001b; }
-/* line 105, ../sass/components/_schedule.scss */
+/* line 106, ../sass/components/_schedule.scss */
 .view-cod-session-schedule .track-icon-11,
 .view-cod-bof-schedule .track-icon-11,
 .view-cod-schedule .track-icon-11 {
   color: #f88d00; }
-/* line 106, ../sass/components/_schedule.scss */
+/* line 107, ../sass/components/_schedule.scss */
 .view-cod-session-schedule .track-icon-21,
 .view-cod-bof-schedule .track-icon-21,
 .view-cod-schedule .track-icon-21 {
   color: #79648d; }
-/* line 107, ../sass/components/_schedule.scss */
+/* line 108, ../sass/components/_schedule.scss */
 .view-cod-session-schedule .track-icon-26,
 .view-cod-bof-schedule .track-icon-26,
 .view-cod-schedule .track-icon-26 {
   color: #007c7f; }
-/* line 108, ../sass/components/_schedule.scss */
+/* line 109, ../sass/components/_schedule.scss */
 .view-cod-session-schedule .track-icon-16,
 .view-cod-bof-schedule .track-icon-16,
 .view-cod-schedule .track-icon-16 {
   color: #005185; }
-/* line 109, ../sass/components/_schedule.scss */
+/* line 110, ../sass/components/_schedule.scss */
 .view-cod-session-schedule .track-icon-1,
 .view-cod-bof-schedule .track-icon-1,
 .view-cod-schedule .track-icon-1 {
   color: #5fa44c; }
-/* line 110, ../sass/components/_schedule.scss */
+/* line 111, ../sass/components/_schedule.scss */
 .view-cod-session-schedule .views-field-title,
 .view-cod-bof-schedule .views-field-title,
 .view-cod-schedule .views-field-title {
   margin: 4px 0 2px 0;
   margin-top: 16px; }
-/* line 116, ../sass/components/_schedule.scss */
+/* line 117, ../sass/components/_schedule.scss */
 .view-cod-session-schedule .views-field-name,
 .view-cod-bof-schedule .views-field-name,
 .view-cod-schedule .views-field-name {
@@ -1439,7 +1511,7 @@ article.node-teaser.node--news .news-content {
   margin-right: 20px;
   margin-bottom: 0;
   clear: both; }
-/* line 122, ../sass/components/_schedule.scss */
+/* line 123, ../sass/components/_schedule.scss */
 .view-cod-session-schedule .views-field-field-experience,
 .view-cod-bof-schedule .views-field-field-experience,
 .view-cod-schedule .views-field-field-experience {
@@ -1452,17 +1524,326 @@ article.node-teaser.node--news .news-content {
   top: 2px;
   right: 0;
   margin: 0; }
-/* line 135, ../sass/components/_schedule.scss */
+/* line 136, ../sass/components/_schedule.scss */
 .view-cod-session-schedule .views-field-field-speakers,
 .view-cod-bof-schedule .views-field-field-speakers,
 .view-cod-schedule .views-field-field-speakers {
   padding-left: 0;
   height: auto; }
+/* line 140, ../sass/components/_schedule.scss */
+.view-cod-session-schedule .views-field-count, .view-cod-session-schedule .views-field-ops,
+.view-cod-bof-schedule .views-field-count,
+.view-cod-bof-schedule .views-field-ops,
+.view-cod-schedule .views-field-count,
+.view-cod-schedule .views-field-ops {
+  float: left;
+  margin: 0 20px 10px 0;
+  padding-top: 4px; }
+  /* line 146, ../sass/components/_schedule.scss */
+  .view-cod-session-schedule .views-field-count a.unflag-action, .view-cod-session-schedule .views-field-ops a.unflag-action,
+  .view-cod-bof-schedule .views-field-count a.unflag-action,
+  .view-cod-bof-schedule .views-field-ops a.unflag-action,
+  .view-cod-schedule .views-field-count a.unflag-action,
+  .view-cod-schedule .views-field-ops a.unflag-action {
+    background: #e02d3b; }
+    /* line 148, ../sass/components/_schedule.scss */
+    .view-cod-session-schedule .views-field-count a.unflag-action:hover, .view-cod-session-schedule .views-field-ops a.unflag-action:hover,
+    .view-cod-bof-schedule .views-field-count a.unflag-action:hover,
+    .view-cod-bof-schedule .views-field-ops a.unflag-action:hover,
+    .view-cod-schedule .views-field-count a.unflag-action:hover,
+    .view-cod-schedule .views-field-ops a.unflag-action:hover {
+      background: #fff; }
 
 /* hide extraneous exposed filters on each timeslot view */
-/* line 141, ../sass/components/_schedule.scss */
+/* line 156, ../sass/components/_schedule.scss */
 form#views-exposed-form-cod-schedule-content-default {
   display: none; }
+
+/* fake tabs for my schedule and bof schedule */
+/* hide active button */
+/* line 164, ../sass/components/_schedule.scss */
+.page-node-schedule h1,
+.page-node-bofs h1 {
+  margin-bottom: 0; }
+/* line 168, ../sass/components/_schedule.scss */
+.page-node-schedule .pane-custom.pane-1 a.button.btn-big, .page-node-schedule .pane-custom.pane-1 .more-link a.btn-big, .more-link .page-node-schedule .pane-custom.pane-1 a.btn-big, .page-node-schedule .pane-custom.pane-1 .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li a, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-schedule .pane-custom.pane-1 a,
+.page-node-schedule .pane-custom.pane-1 .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li a,
+.view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-schedule .pane-custom.pane-1 a,
+.page-node-schedule .pane-custom.pane-1 .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li a,
+.view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-schedule .pane-custom.pane-1 a, .page-node-schedule .pane-custom.pane-1 .view-cod-session-schedule .views-field-count a.btn-big, .view-cod-session-schedule .views-field-count .page-node-schedule .pane-custom.pane-1 a.btn-big, .page-node-schedule .pane-custom.pane-1 .view-cod-session-schedule .views-field-ops a.btn-big, .view-cod-session-schedule .views-field-ops .page-node-schedule .pane-custom.pane-1 a.btn-big,
+.page-node-schedule .pane-custom.pane-1 .view-cod-bof-schedule .views-field-count a.btn-big,
+.view-cod-bof-schedule .views-field-count .page-node-schedule .pane-custom.pane-1 a.btn-big,
+.page-node-schedule .pane-custom.pane-1 .view-cod-bof-schedule .views-field-ops a.btn-big,
+.view-cod-bof-schedule .views-field-ops .page-node-schedule .pane-custom.pane-1 a.btn-big,
+.page-node-schedule .pane-custom.pane-1 .view-cod-schedule .views-field-count a.btn-big,
+.view-cod-schedule .views-field-count .page-node-schedule .pane-custom.pane-1 a.btn-big,
+.page-node-schedule .pane-custom.pane-1 .view-cod-schedule .views-field-ops a.btn-big,
+.view-cod-schedule .views-field-ops .page-node-schedule .pane-custom.pane-1 a.btn-big,
+.page-node-bofs .pane-custom.pane-1 a.button.btn-big,
+.page-node-bofs .pane-custom.pane-1 .more-link a.btn-big,
+.more-link .page-node-bofs .pane-custom.pane-1 a.btn-big,
+.page-node-bofs .pane-custom.pane-1 .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li a,
+.view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-bofs .pane-custom.pane-1 a,
+.page-node-bofs .pane-custom.pane-1 .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li a,
+.view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-bofs .pane-custom.pane-1 a,
+.page-node-bofs .pane-custom.pane-1 .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li a,
+.view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-bofs .pane-custom.pane-1 a,
+.page-node-bofs .pane-custom.pane-1 .view-cod-session-schedule .views-field-count a.btn-big,
+.view-cod-session-schedule .views-field-count .page-node-bofs .pane-custom.pane-1 a.btn-big,
+.page-node-bofs .pane-custom.pane-1 .view-cod-session-schedule .views-field-ops a.btn-big,
+.view-cod-session-schedule .views-field-ops .page-node-bofs .pane-custom.pane-1 a.btn-big,
+.page-node-bofs .pane-custom.pane-1 .view-cod-bof-schedule .views-field-count a.btn-big,
+.view-cod-bof-schedule .views-field-count .page-node-bofs .pane-custom.pane-1 a.btn-big,
+.page-node-bofs .pane-custom.pane-1 .view-cod-bof-schedule .views-field-ops a.btn-big,
+.view-cod-bof-schedule .views-field-ops .page-node-bofs .pane-custom.pane-1 a.btn-big,
+.page-node-bofs .pane-custom.pane-1 .view-cod-schedule .views-field-count a.btn-big,
+.view-cod-schedule .views-field-count .page-node-bofs .pane-custom.pane-1 a.btn-big,
+.page-node-bofs .pane-custom.pane-1 .view-cod-schedule .views-field-ops a.btn-big,
+.view-cod-schedule .views-field-ops .page-node-bofs .pane-custom.pane-1 a.btn-big {
+  background: #095380;
+  margin-bottom: 4px;
+  display: inline-block;
+  white-space: no-wrap; }
+  /* line 173, ../sass/components/_schedule.scss */
+  .page-node-schedule .pane-custom.pane-1 a.button.btn-big:hover, .page-node-schedule .pane-custom.pane-1 .more-link a.btn-big:hover, .more-link .page-node-schedule .pane-custom.pane-1 a.btn-big:hover, .page-node-schedule .pane-custom.pane-1 .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:hover, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-schedule .pane-custom.pane-1 a:hover,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:hover,
+  .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-schedule .pane-custom.pane-1 a:hover,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:hover,
+  .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-schedule .pane-custom.pane-1 a:hover, .page-node-schedule .pane-custom.pane-1 .view-cod-session-schedule .views-field-count a.btn-big:hover, .view-cod-session-schedule .views-field-count .page-node-schedule .pane-custom.pane-1 a.btn-big:hover, .page-node-schedule .pane-custom.pane-1 .view-cod-session-schedule .views-field-ops a.btn-big:hover, .view-cod-session-schedule .views-field-ops .page-node-schedule .pane-custom.pane-1 a.btn-big:hover,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-bof-schedule .views-field-count a.btn-big:hover,
+  .view-cod-bof-schedule .views-field-count .page-node-schedule .pane-custom.pane-1 a.btn-big:hover,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-bof-schedule .views-field-ops a.btn-big:hover,
+  .view-cod-bof-schedule .views-field-ops .page-node-schedule .pane-custom.pane-1 a.btn-big:hover,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-schedule .views-field-count a.btn-big:hover,
+  .view-cod-schedule .views-field-count .page-node-schedule .pane-custom.pane-1 a.btn-big:hover,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-schedule .views-field-ops a.btn-big:hover,
+  .view-cod-schedule .views-field-ops .page-node-schedule .pane-custom.pane-1 a.btn-big:hover, .page-node-schedule .pane-custom.pane-1 a.button.btn-big:focus, .page-node-schedule .pane-custom.pane-1 .more-link a.btn-big:focus, .more-link .page-node-schedule .pane-custom.pane-1 a.btn-big:focus, .page-node-schedule .pane-custom.pane-1 .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:focus, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-schedule .pane-custom.pane-1 a:focus,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:focus,
+  .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-schedule .pane-custom.pane-1 a:focus,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:focus,
+  .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-schedule .pane-custom.pane-1 a:focus, .page-node-schedule .pane-custom.pane-1 .view-cod-session-schedule .views-field-count a.btn-big:focus, .view-cod-session-schedule .views-field-count .page-node-schedule .pane-custom.pane-1 a.btn-big:focus, .page-node-schedule .pane-custom.pane-1 .view-cod-session-schedule .views-field-ops a.btn-big:focus, .view-cod-session-schedule .views-field-ops .page-node-schedule .pane-custom.pane-1 a.btn-big:focus,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-bof-schedule .views-field-count a.btn-big:focus,
+  .view-cod-bof-schedule .views-field-count .page-node-schedule .pane-custom.pane-1 a.btn-big:focus,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-bof-schedule .views-field-ops a.btn-big:focus,
+  .view-cod-bof-schedule .views-field-ops .page-node-schedule .pane-custom.pane-1 a.btn-big:focus,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-schedule .views-field-count a.btn-big:focus,
+  .view-cod-schedule .views-field-count .page-node-schedule .pane-custom.pane-1 a.btn-big:focus,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-schedule .views-field-ops a.btn-big:focus,
+  .view-cod-schedule .views-field-ops .page-node-schedule .pane-custom.pane-1 a.btn-big:focus, .page-node-schedule .pane-custom.pane-1 a.button.btn-big:active, .page-node-schedule .pane-custom.pane-1 .more-link a.btn-big:active, .more-link .page-node-schedule .pane-custom.pane-1 a.btn-big:active, .page-node-schedule .pane-custom.pane-1 .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:active, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-schedule .pane-custom.pane-1 a:active,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:active,
+  .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-schedule .pane-custom.pane-1 a:active,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:active,
+  .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-schedule .pane-custom.pane-1 a:active, .page-node-schedule .pane-custom.pane-1 .view-cod-session-schedule .views-field-count a.btn-big:active, .view-cod-session-schedule .views-field-count .page-node-schedule .pane-custom.pane-1 a.btn-big:active, .page-node-schedule .pane-custom.pane-1 .view-cod-session-schedule .views-field-ops a.btn-big:active, .view-cod-session-schedule .views-field-ops .page-node-schedule .pane-custom.pane-1 a.btn-big:active,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-bof-schedule .views-field-count a.btn-big:active,
+  .view-cod-bof-schedule .views-field-count .page-node-schedule .pane-custom.pane-1 a.btn-big:active,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-bof-schedule .views-field-ops a.btn-big:active,
+  .view-cod-bof-schedule .views-field-ops .page-node-schedule .pane-custom.pane-1 a.btn-big:active,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-schedule .views-field-count a.btn-big:active,
+  .view-cod-schedule .views-field-count .page-node-schedule .pane-custom.pane-1 a.btn-big:active,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-schedule .views-field-ops a.btn-big:active,
+  .view-cod-schedule .views-field-ops .page-node-schedule .pane-custom.pane-1 a.btn-big:active,
+  .page-node-bofs .pane-custom.pane-1 a.button.btn-big:hover,
+  .page-node-bofs .pane-custom.pane-1 .more-link a.btn-big:hover,
+  .more-link .page-node-bofs .pane-custom.pane-1 a.btn-big:hover,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:hover,
+  .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-bofs .pane-custom.pane-1 a:hover,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:hover,
+  .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-bofs .pane-custom.pane-1 a:hover,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:hover,
+  .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-bofs .pane-custom.pane-1 a:hover,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-session-schedule .views-field-count a.btn-big:hover,
+  .view-cod-session-schedule .views-field-count .page-node-bofs .pane-custom.pane-1 a.btn-big:hover,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-session-schedule .views-field-ops a.btn-big:hover,
+  .view-cod-session-schedule .views-field-ops .page-node-bofs .pane-custom.pane-1 a.btn-big:hover,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-bof-schedule .views-field-count a.btn-big:hover,
+  .view-cod-bof-schedule .views-field-count .page-node-bofs .pane-custom.pane-1 a.btn-big:hover,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-bof-schedule .views-field-ops a.btn-big:hover,
+  .view-cod-bof-schedule .views-field-ops .page-node-bofs .pane-custom.pane-1 a.btn-big:hover,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-schedule .views-field-count a.btn-big:hover,
+  .view-cod-schedule .views-field-count .page-node-bofs .pane-custom.pane-1 a.btn-big:hover,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-schedule .views-field-ops a.btn-big:hover,
+  .view-cod-schedule .views-field-ops .page-node-bofs .pane-custom.pane-1 a.btn-big:hover,
+  .page-node-bofs .pane-custom.pane-1 a.button.btn-big:focus,
+  .page-node-bofs .pane-custom.pane-1 .more-link a.btn-big:focus,
+  .more-link .page-node-bofs .pane-custom.pane-1 a.btn-big:focus,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:focus,
+  .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-bofs .pane-custom.pane-1 a:focus,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:focus,
+  .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-bofs .pane-custom.pane-1 a:focus,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:focus,
+  .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-bofs .pane-custom.pane-1 a:focus,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-session-schedule .views-field-count a.btn-big:focus,
+  .view-cod-session-schedule .views-field-count .page-node-bofs .pane-custom.pane-1 a.btn-big:focus,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-session-schedule .views-field-ops a.btn-big:focus,
+  .view-cod-session-schedule .views-field-ops .page-node-bofs .pane-custom.pane-1 a.btn-big:focus,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-bof-schedule .views-field-count a.btn-big:focus,
+  .view-cod-bof-schedule .views-field-count .page-node-bofs .pane-custom.pane-1 a.btn-big:focus,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-bof-schedule .views-field-ops a.btn-big:focus,
+  .view-cod-bof-schedule .views-field-ops .page-node-bofs .pane-custom.pane-1 a.btn-big:focus,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-schedule .views-field-count a.btn-big:focus,
+  .view-cod-schedule .views-field-count .page-node-bofs .pane-custom.pane-1 a.btn-big:focus,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-schedule .views-field-ops a.btn-big:focus,
+  .view-cod-schedule .views-field-ops .page-node-bofs .pane-custom.pane-1 a.btn-big:focus,
+  .page-node-bofs .pane-custom.pane-1 a.button.btn-big:active,
+  .page-node-bofs .pane-custom.pane-1 .more-link a.btn-big:active,
+  .more-link .page-node-bofs .pane-custom.pane-1 a.btn-big:active,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:active,
+  .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-bofs .pane-custom.pane-1 a:active,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:active,
+  .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-bofs .pane-custom.pane-1 a:active,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li a:active,
+  .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-bofs .pane-custom.pane-1 a:active,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-session-schedule .views-field-count a.btn-big:active,
+  .view-cod-session-schedule .views-field-count .page-node-bofs .pane-custom.pane-1 a.btn-big:active,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-session-schedule .views-field-ops a.btn-big:active,
+  .view-cod-session-schedule .views-field-ops .page-node-bofs .pane-custom.pane-1 a.btn-big:active,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-bof-schedule .views-field-count a.btn-big:active,
+  .view-cod-bof-schedule .views-field-count .page-node-bofs .pane-custom.pane-1 a.btn-big:active,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-bof-schedule .views-field-ops a.btn-big:active,
+  .view-cod-bof-schedule .views-field-ops .page-node-bofs .pane-custom.pane-1 a.btn-big:active,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-schedule .views-field-count a.btn-big:active,
+  .view-cod-schedule .views-field-count .page-node-bofs .pane-custom.pane-1 a.btn-big:active,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-schedule .views-field-ops a.btn-big:active,
+  .view-cod-schedule .views-field-ops .page-node-bofs .pane-custom.pane-1 a.btn-big:active {
+    background: #fff; }
+/* line 175, ../sass/components/_schedule.scss */
+.page-node-schedule .pane-custom.pane-1 a.button.btn-big[href=""], .page-node-schedule .pane-custom.pane-1 .more-link a.btn-big[href=""], .more-link .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""], .page-node-schedule .pane-custom.pane-1 .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li a[href=""], .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-schedule .pane-custom.pane-1 a[href=""],
+.page-node-schedule .pane-custom.pane-1 .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li a[href=""],
+.view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-schedule .pane-custom.pane-1 a[href=""],
+.page-node-schedule .pane-custom.pane-1 .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li a[href=""],
+.view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-schedule .pane-custom.pane-1 a[href=""], .page-node-schedule .pane-custom.pane-1 .view-cod-session-schedule .views-field-count a.btn-big[href=""], .view-cod-session-schedule .views-field-count .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""], .page-node-schedule .pane-custom.pane-1 .view-cod-session-schedule .views-field-ops a.btn-big[href=""], .view-cod-session-schedule .views-field-ops .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""],
+.page-node-schedule .pane-custom.pane-1 .view-cod-bof-schedule .views-field-count a.btn-big[href=""],
+.view-cod-bof-schedule .views-field-count .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""],
+.page-node-schedule .pane-custom.pane-1 .view-cod-bof-schedule .views-field-ops a.btn-big[href=""],
+.view-cod-bof-schedule .views-field-ops .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""],
+.page-node-schedule .pane-custom.pane-1 .view-cod-schedule .views-field-count a.btn-big[href=""],
+.view-cod-schedule .views-field-count .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""],
+.page-node-schedule .pane-custom.pane-1 .view-cod-schedule .views-field-ops a.btn-big[href=""],
+.view-cod-schedule .views-field-ops .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""],
+.page-node-bofs .pane-custom.pane-1 a.button.btn-big[href=""],
+.page-node-bofs .pane-custom.pane-1 .more-link a.btn-big[href=""],
+.more-link .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""],
+.page-node-bofs .pane-custom.pane-1 .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li a[href=""],
+.view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-bofs .pane-custom.pane-1 a[href=""],
+.page-node-bofs .pane-custom.pane-1 .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li a[href=""],
+.view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-bofs .pane-custom.pane-1 a[href=""],
+.page-node-bofs .pane-custom.pane-1 .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li a[href=""],
+.view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-bofs .pane-custom.pane-1 a[href=""],
+.page-node-bofs .pane-custom.pane-1 .view-cod-session-schedule .views-field-count a.btn-big[href=""],
+.view-cod-session-schedule .views-field-count .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""],
+.page-node-bofs .pane-custom.pane-1 .view-cod-session-schedule .views-field-ops a.btn-big[href=""],
+.view-cod-session-schedule .views-field-ops .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""],
+.page-node-bofs .pane-custom.pane-1 .view-cod-bof-schedule .views-field-count a.btn-big[href=""],
+.view-cod-bof-schedule .views-field-count .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""],
+.page-node-bofs .pane-custom.pane-1 .view-cod-bof-schedule .views-field-ops a.btn-big[href=""],
+.view-cod-bof-schedule .views-field-ops .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""],
+.page-node-bofs .pane-custom.pane-1 .view-cod-schedule .views-field-count a.btn-big[href=""],
+.view-cod-schedule .views-field-count .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""],
+.page-node-bofs .pane-custom.pane-1 .view-cod-schedule .views-field-ops a.btn-big[href=""],
+.view-cod-schedule .views-field-ops .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""] {
+  background: #e02d3b; }
+  /* line 177, ../sass/components/_schedule.scss */
+  .page-node-schedule .pane-custom.pane-1 a.button.btn-big[href=""]:hover, .page-node-schedule .pane-custom.pane-1 .more-link a.btn-big[href=""]:hover, .more-link .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""]:hover, .page-node-schedule .pane-custom.pane-1 .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li a[href=""]:hover, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-schedule .pane-custom.pane-1 a[href=""]:hover,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li a[href=""]:hover,
+  .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-schedule .pane-custom.pane-1 a[href=""]:hover,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li a[href=""]:hover,
+  .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-schedule .pane-custom.pane-1 a[href=""]:hover, .page-node-schedule .pane-custom.pane-1 .view-cod-session-schedule .views-field-count a.btn-big[href=""]:hover, .view-cod-session-schedule .views-field-count .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""]:hover, .page-node-schedule .pane-custom.pane-1 .view-cod-session-schedule .views-field-ops a.btn-big[href=""]:hover, .view-cod-session-schedule .views-field-ops .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""]:hover,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-bof-schedule .views-field-count a.btn-big[href=""]:hover,
+  .view-cod-bof-schedule .views-field-count .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""]:hover,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-bof-schedule .views-field-ops a.btn-big[href=""]:hover,
+  .view-cod-bof-schedule .views-field-ops .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""]:hover,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-schedule .views-field-count a.btn-big[href=""]:hover,
+  .view-cod-schedule .views-field-count .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""]:hover,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-schedule .views-field-ops a.btn-big[href=""]:hover,
+  .view-cod-schedule .views-field-ops .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""]:hover, .page-node-schedule .pane-custom.pane-1 a.button.btn-big[href=""]:focus, .page-node-schedule .pane-custom.pane-1 .more-link a.btn-big[href=""]:focus, .more-link .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""]:focus, .page-node-schedule .pane-custom.pane-1 .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li a[href=""]:focus, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-schedule .pane-custom.pane-1 a[href=""]:focus,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li a[href=""]:focus,
+  .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-schedule .pane-custom.pane-1 a[href=""]:focus,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li a[href=""]:focus,
+  .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-schedule .pane-custom.pane-1 a[href=""]:focus, .page-node-schedule .pane-custom.pane-1 .view-cod-session-schedule .views-field-count a.btn-big[href=""]:focus, .view-cod-session-schedule .views-field-count .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""]:focus, .page-node-schedule .pane-custom.pane-1 .view-cod-session-schedule .views-field-ops a.btn-big[href=""]:focus, .view-cod-session-schedule .views-field-ops .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""]:focus,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-bof-schedule .views-field-count a.btn-big[href=""]:focus,
+  .view-cod-bof-schedule .views-field-count .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""]:focus,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-bof-schedule .views-field-ops a.btn-big[href=""]:focus,
+  .view-cod-bof-schedule .views-field-ops .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""]:focus,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-schedule .views-field-count a.btn-big[href=""]:focus,
+  .view-cod-schedule .views-field-count .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""]:focus,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-schedule .views-field-ops a.btn-big[href=""]:focus,
+  .view-cod-schedule .views-field-ops .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""]:focus, .page-node-schedule .pane-custom.pane-1 a.button.btn-big[href=""]:active, .page-node-schedule .pane-custom.pane-1 .more-link a.btn-big[href=""]:active, .more-link .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""]:active, .page-node-schedule .pane-custom.pane-1 .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li a[href=""]:active, .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-schedule .pane-custom.pane-1 a[href=""]:active,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li a[href=""]:active,
+  .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-schedule .pane-custom.pane-1 a[href=""]:active,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li a[href=""]:active,
+  .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-schedule .pane-custom.pane-1 a[href=""]:active, .page-node-schedule .pane-custom.pane-1 .view-cod-session-schedule .views-field-count a.btn-big[href=""]:active, .view-cod-session-schedule .views-field-count .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""]:active, .page-node-schedule .pane-custom.pane-1 .view-cod-session-schedule .views-field-ops a.btn-big[href=""]:active, .view-cod-session-schedule .views-field-ops .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""]:active,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-bof-schedule .views-field-count a.btn-big[href=""]:active,
+  .view-cod-bof-schedule .views-field-count .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""]:active,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-bof-schedule .views-field-ops a.btn-big[href=""]:active,
+  .view-cod-bof-schedule .views-field-ops .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""]:active,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-schedule .views-field-count a.btn-big[href=""]:active,
+  .view-cod-schedule .views-field-count .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""]:active,
+  .page-node-schedule .pane-custom.pane-1 .view-cod-schedule .views-field-ops a.btn-big[href=""]:active,
+  .view-cod-schedule .views-field-ops .page-node-schedule .pane-custom.pane-1 a.btn-big[href=""]:active,
+  .page-node-bofs .pane-custom.pane-1 a.button.btn-big[href=""]:hover,
+  .page-node-bofs .pane-custom.pane-1 .more-link a.btn-big[href=""]:hover,
+  .more-link .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""]:hover,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li a[href=""]:hover,
+  .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-bofs .pane-custom.pane-1 a[href=""]:hover,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li a[href=""]:hover,
+  .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-bofs .pane-custom.pane-1 a[href=""]:hover,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li a[href=""]:hover,
+  .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-bofs .pane-custom.pane-1 a[href=""]:hover,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-session-schedule .views-field-count a.btn-big[href=""]:hover,
+  .view-cod-session-schedule .views-field-count .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""]:hover,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-session-schedule .views-field-ops a.btn-big[href=""]:hover,
+  .view-cod-session-schedule .views-field-ops .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""]:hover,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-bof-schedule .views-field-count a.btn-big[href=""]:hover,
+  .view-cod-bof-schedule .views-field-count .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""]:hover,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-bof-schedule .views-field-ops a.btn-big[href=""]:hover,
+  .view-cod-bof-schedule .views-field-ops .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""]:hover,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-schedule .views-field-count a.btn-big[href=""]:hover,
+  .view-cod-schedule .views-field-count .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""]:hover,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-schedule .views-field-ops a.btn-big[href=""]:hover,
+  .view-cod-schedule .views-field-ops .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""]:hover,
+  .page-node-bofs .pane-custom.pane-1 a.button.btn-big[href=""]:focus,
+  .page-node-bofs .pane-custom.pane-1 .more-link a.btn-big[href=""]:focus,
+  .more-link .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""]:focus,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li a[href=""]:focus,
+  .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-bofs .pane-custom.pane-1 a[href=""]:focus,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li a[href=""]:focus,
+  .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-bofs .pane-custom.pane-1 a[href=""]:focus,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li a[href=""]:focus,
+  .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-bofs .pane-custom.pane-1 a[href=""]:focus,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-session-schedule .views-field-count a.btn-big[href=""]:focus,
+  .view-cod-session-schedule .views-field-count .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""]:focus,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-session-schedule .views-field-ops a.btn-big[href=""]:focus,
+  .view-cod-session-schedule .views-field-ops .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""]:focus,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-bof-schedule .views-field-count a.btn-big[href=""]:focus,
+  .view-cod-bof-schedule .views-field-count .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""]:focus,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-bof-schedule .views-field-ops a.btn-big[href=""]:focus,
+  .view-cod-bof-schedule .views-field-ops .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""]:focus,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-schedule .views-field-count a.btn-big[href=""]:focus,
+  .view-cod-schedule .views-field-count .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""]:focus,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-schedule .views-field-ops a.btn-big[href=""]:focus,
+  .view-cod-schedule .views-field-ops .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""]:focus,
+  .page-node-bofs .pane-custom.pane-1 a.button.btn-big[href=""]:active,
+  .page-node-bofs .pane-custom.pane-1 .more-link a.btn-big[href=""]:active,
+  .more-link .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""]:active,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li a[href=""]:active,
+  .view-cod-session-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-bofs .pane-custom.pane-1 a[href=""]:active,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li a[href=""]:active,
+  .view-cod-bof-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-bofs .pane-custom.pane-1 a[href=""]:active,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li a[href=""]:active,
+  .view-cod-schedule ul.quicktabs-tabs.quicktabs-style-zen li .page-node-bofs .pane-custom.pane-1 a[href=""]:active,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-session-schedule .views-field-count a.btn-big[href=""]:active,
+  .view-cod-session-schedule .views-field-count .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""]:active,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-session-schedule .views-field-ops a.btn-big[href=""]:active,
+  .view-cod-session-schedule .views-field-ops .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""]:active,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-bof-schedule .views-field-count a.btn-big[href=""]:active,
+  .view-cod-bof-schedule .views-field-count .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""]:active,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-bof-schedule .views-field-ops a.btn-big[href=""]:active,
+  .view-cod-bof-schedule .views-field-ops .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""]:active,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-schedule .views-field-count a.btn-big[href=""]:active,
+  .view-cod-schedule .views-field-count .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""]:active,
+  .page-node-bofs .pane-custom.pane-1 .view-cod-schedule .views-field-ops a.btn-big[href=""]:active,
+  .view-cod-schedule .views-field-ops .page-node-bofs .pane-custom.pane-1 a.btn-big[href=""]:active {
+    color: #fff; }
 
 /* line 2, ../sass/components/_sessions.scss */
 .view-id-dgc_sessions.view-display-id-attachment_1 .views-field-og-vocabulary .field-content {
@@ -1970,7 +2351,15 @@ article.node-teaser {
   min-width: 0 !important; }
 
 /* line 7, ../sass/components/_twitter-timeline.scss */
-.twitter-timeline__header a.button, .twitter-timeline__header .more-link a, .more-link .twitter-timeline__header a {
+.twitter-timeline__header a.button, .twitter-timeline__header .more-link a, .more-link .twitter-timeline__header a, .twitter-timeline__header .view-cod-session-schedule .views-field-count a, .view-cod-session-schedule .views-field-count .twitter-timeline__header a, .twitter-timeline__header .view-cod-session-schedule .views-field-ops a, .view-cod-session-schedule .views-field-ops .twitter-timeline__header a,
+.twitter-timeline__header .view-cod-bof-schedule .views-field-count a,
+.view-cod-bof-schedule .views-field-count .twitter-timeline__header a,
+.twitter-timeline__header .view-cod-bof-schedule .views-field-ops a,
+.view-cod-bof-schedule .views-field-ops .twitter-timeline__header a,
+.twitter-timeline__header .view-cod-schedule .views-field-count a,
+.view-cod-schedule .views-field-count .twitter-timeline__header a,
+.twitter-timeline__header .view-cod-schedule .views-field-ops a,
+.view-cod-schedule .views-field-ops .twitter-timeline__header a {
   float: right; }
 
 /* line 25, ../sass/govcon.styles.scss */
