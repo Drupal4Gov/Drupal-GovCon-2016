@@ -134,6 +134,11 @@ ul.tier-two {
 		}
 		li {
 			position: relative;
+      a[href="/drupal-govcon-2015/schedule"] {
+        @include breakpoint($tab, true) {
+          display: none;
+        }
+      }
       a[href="/drupal-govcon-2015/registration"] { 
         top: 62px;
         right: 10px;
