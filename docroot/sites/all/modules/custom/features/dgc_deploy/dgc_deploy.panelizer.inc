@@ -212,7 +212,7 @@ function dgc_deploy_panelizer_defaults() {
     $pane->panel = 'preface';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => 'Ticket button',
@@ -235,6 +235,34 @@ function dgc_deploy_panelizer_defaults() {
     $pane->uuid = '9e7be924-0930-4ef1-b0a8-4dc4da59caa4';
     $display->content['new-9e7be924-0930-4ef1-b0a8-4dc4da59caa4'] = $pane;
     $display->panels['preface'][1] = 'new-9e7be924-0930-4ef1-b0a8-4dc4da59caa4';
+    $pane = new stdClass();
+    $pane->pid = 'new-00e24811-7d48-46dd-95a6-b8aee80eb12d';
+    $pane->panel = 'preface';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Big schedule star button',
+      'title' => '',
+      'body' => '<div class="schedule-star"><a href="/drupal-govcon-2015/schedule" title="See the schedule">Schedule</a></div>',
+      'format' => 'full_html',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'schedule-star-pane',
+    );
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '00e24811-7d48-46dd-95a6-b8aee80eb12d';
+    $display->content['new-00e24811-7d48-46dd-95a6-b8aee80eb12d'] = $pane;
+    $display->panels['preface'][2] = 'new-00e24811-7d48-46dd-95a6-b8aee80eb12d';
     $pane = new stdClass();
     $pane->pid = 'new-d815d2ff-886c-4b1f-8b13-7925adc949e0';
     $pane->panel = 'preface';
@@ -264,11 +292,11 @@ function dgc_deploy_panelizer_defaults() {
       'css_class' => 'sponsors-featured bevel',
     );
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
     $pane->uuid = 'd815d2ff-886c-4b1f-8b13-7925adc949e0';
     $display->content['new-d815d2ff-886c-4b1f-8b13-7925adc949e0'] = $pane;
-    $display->panels['preface'][2] = 'new-d815d2ff-886c-4b1f-8b13-7925adc949e0';
+    $display->panels['preface'][3] = 'new-d815d2ff-886c-4b1f-8b13-7925adc949e0';
     $pane = new stdClass();
     $pane->pid = 'new-3c1c06e3-2060-411a-b4eb-ce6f3218e20b';
     $pane->panel = 'preface';
@@ -295,11 +323,11 @@ function dgc_deploy_panelizer_defaults() {
       'css_class' => 'bevel featured-keynote',
     );
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 4;
     $pane->locks = array();
     $pane->uuid = '3c1c06e3-2060-411a-b4eb-ce6f3218e20b';
     $display->content['new-3c1c06e3-2060-411a-b4eb-ce6f3218e20b'] = $pane;
-    $display->panels['preface'][3] = 'new-3c1c06e3-2060-411a-b4eb-ce6f3218e20b';
+    $display->panels['preface'][4] = 'new-3c1c06e3-2060-411a-b4eb-ce6f3218e20b';
     $pane = new stdClass();
     $pane->pid = 'new-c07e2a66-10f9-4539-a9c0-da58f8e72531';
     $pane->panel = 'preface';
@@ -337,11 +365,11 @@ function dgc_deploy_panelizer_defaults() {
       'css_class' => '',
     );
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 5;
     $pane->locks = array();
     $pane->uuid = 'c07e2a66-10f9-4539-a9c0-da58f8e72531';
     $display->content['new-c07e2a66-10f9-4539-a9c0-da58f8e72531'] = $pane;
-    $display->panels['preface'][4] = 'new-c07e2a66-10f9-4539-a9c0-da58f8e72531';
+    $display->panels['preface'][5] = 'new-c07e2a66-10f9-4539-a9c0-da58f8e72531';
     $pane = new stdClass();
     $pane->pid = 'new-b7f97f39-e53f-4356-8dea-f36c0e63ad6b';
     $pane->panel = 'preface';
@@ -363,11 +391,11 @@ function dgc_deploy_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 6;
     $pane->locks = array();
     $pane->uuid = 'b7f97f39-e53f-4356-8dea-f36c0e63ad6b';
     $display->content['new-b7f97f39-e53f-4356-8dea-f36c0e63ad6b'] = $pane;
-    $display->panels['preface'][5] = 'new-b7f97f39-e53f-4356-8dea-f36c0e63ad6b';
+    $display->panels['preface'][6] = 'new-b7f97f39-e53f-4356-8dea-f36c0e63ad6b';
     $pane = new stdClass();
     $pane->pid = 'new-14b8468f-8685-4a64-9a72-df5156bdfec1';
     $pane->panel = 'top_right_content';
