@@ -1,0 +1,15 @@
+diff --git a/docroot/profiles/cod/modules/contrib/cod_support/cod_bof/cod_bof.module b/docroot/profiles/cod/modules/contrib/cod_support/cod_bof/cod_bof.module
+index f2ca79c..435ce7b 100755
+--- a/docroot/profiles/cod/modules/contrib/cod_support/cod_bof/cod_bof.module
++++ b/docroot/profiles/cod/modules/contrib/cod_support/cod_bof/cod_bof.module
+@@ -63,6 +63,10 @@ function cod_bof_get_bof_link($time_slot_entity, $result, $capacity = 0, $event_
+ 
+   $bof_allowed = FALSE;
+ 
++  // instead of the capacity, we really just want to know how many BoFs are allowed 
++  // force it to 1 BoF allowed per room
++  $capacity = 1;
++
+   if ($capacity > 0 && $result < $capacity) {
+     $bof_allowed = TRUE;
+   }
