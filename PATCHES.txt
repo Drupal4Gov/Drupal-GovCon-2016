@@ -7,3 +7,8 @@ https://www.drupal.org/files/issues/cod_support-features-overridden-beta8-245881
 Time entity do not compute offset to store label
 https://www.drupal.org/node/2407607#comment-9999695
 https://www.drupal.org/files/issues/cod_support-remove_offset_from_time_label-2407607-3.patch
+
+COD BoF Module was checking room capacity instead of number of BoFs allowed to determine
+if a Create a BoF button was allowed. We are patching to set this to 1 BoF allowed per room.
+cod_support > cod_bof
+cod-bof_set-bof-capacity_to-1.patch
