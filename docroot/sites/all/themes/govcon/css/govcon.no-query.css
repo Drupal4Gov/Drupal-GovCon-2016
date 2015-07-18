@@ -24,8 +24,7 @@ table {
     background-color: #efede9; }
   /* line 18, ../sass/base/_tables.scss */
   table td {
-    padding: 0.5em;
-    width: 99%; }
+    padding: 0.5em; }
 
 /* line 1, ../sass/base/_typography.scss */
 body {
@@ -599,7 +598,7 @@ a.button.btn-big, .more-link a.btn-big, .view-cod-session-schedule ul.quicktabs-
     padding: 20px; }
   /* line 10, ../sass/components/_checkin.scss */
   .view-id-dgc_registration_check_in .views-field-ops {
-    min-width: 90px; }
+    width: 90px; }
     /* line 12, ../sass/components/_checkin.scss */
     .view-id-dgc_registration_check_in .views-field-ops .flag-wrapper {
       width: 30px;
