@@ -46,7 +46,7 @@ function dgc_deploy_features_override_default_overrides() {
         'admin_title' => 'Schedule links',
         'title' => '',
         'body' => '<p><a class="button btn-big" href="%node:url/schedule">Conference Schedule</a> <a class="button btn-big" href="%node:url/schedule/mine">My Schedule</a> <a class="button btn-big" href="">BoFs</a> <a class="button btn-big" href="%node:url/floor-layouts">Floor Layouts</a></p>
-                    ',
+                                ',
         'format' => 'filtered_html',
         'substitute' => 1,
       ),
@@ -90,80 +90,6 @@ function dgc_deploy_features_override_default_overrides() {
     );
   $overrides["page_manager_pages.community.default_handlers|page_community_panel_context|conf|display|content|new-dafcfd0f-4f89-4ace-b9b7-bee77657b467|shown"] = FALSE;
   $overrides["page_manager_pages.community.default_handlers|page_community_panel_context|conf|display|panels|center|2"] = 'new-bc2d3d3f-97e4-418e-ba6e-a16d3552bbe3';
-  $overrides["page_manager_pages.event_registration.default_handlers|page_event_registration_panel_context|conf|contexts|0"] = array(
-    'identifier' => 'User',
-    'keyword' => 'user',
-    'name' => 'user',
-    'type' => 'current',
-    'uid' => '',
-    'id' => 1,
-  );
-  $overrides["page_manager_pages.event_registration.default_handlers|page_event_registration_panel_context|conf|display|content|new-02126803-99cb-4ce3-9f6d-bd9f7f49b9fe"] = (object) array(
-      'pid' => 'new-02126803-99cb-4ce3-9f6d-bd9f7f49b9fe',
-      'panel' => 'top_right_content',
-      'type' => 'views_panes',
-      'subtype' => 'ticket_attendee-panel_pane_1',
-      'shown' => TRUE,
-      'access' => array(),
-      'configuration' => array(
-        'context' => array(
-          0 => 'context_user_1',
-        ),
-        'override_title' => 1,
-        'override_title_text' => 'Tickets registered for you',
-        'override_title_heading' => 'h2',
-      ),
-      'cache' => array(),
-      'style' => array(
-        'settings' => NULL,
-      ),
-      'css' => array(),
-      'extras' => array(),
-      'position' => 0,
-      'locks' => array(),
-      'uuid' => '02126803-99cb-4ce3-9f6d-bd9f7f49b9fe',
-    );
-  $overrides["page_manager_pages.event_registration.default_handlers|page_event_registration_panel_context|conf|display|content|new-3178de0d-bb32-46c5-81c3-c7580e3d80b8"] = (object) array(
-      'pid' => 'new-3178de0d-bb32-46c5-81c3-c7580e3d80b8',
-      'panel' => 'left_content',
-      'type' => 'views_panes',
-      'subtype' => 'ticket_user-panel_pane_1',
-      'shown' => TRUE,
-      'access' => array(),
-      'configuration' => array(
-        'context' => array(
-          0 => 'context_user_1',
-        ),
-        'override_title' => 1,
-        'override_title_text' => 'Tickets registered by you',
-        'override_title_heading' => 'h2',
-      ),
-      'cache' => array(),
-      'style' => array(
-        'settings' => NULL,
-      ),
-      'css' => array(),
-      'extras' => array(),
-      'position' => 0,
-      'locks' => array(),
-      'uuid' => '3178de0d-bb32-46c5-81c3-c7580e3d80b8',
-    );
-  $overrides["page_manager_pages.event_registration.default_handlers|page_event_registration_panel_context|conf|display|content|new-54e43e9a-96ee-4a66-ba91-b05ca3b2c688|panel"] = 'preface';
-  $overrides["page_manager_pages.event_registration.default_handlers|page_event_registration_panel_context|conf|display|content|new-54e43e9a-96ee-4a66-ba91-b05ca3b2c688|style|settings"] = NULL;
-  $overrides["page_manager_pages.event_registration.default_handlers|page_event_registration_panel_context|conf|display|layout"] = 'hydra';
-  $overrides["page_manager_pages.event_registration.default_handlers|page_event_registration_panel_context|conf|display|panel_settings|style_settings|bottom_right_content"] = NULL;
-  $overrides["page_manager_pages.event_registration.default_handlers|page_event_registration_panel_context|conf|display|panel_settings|style_settings|left_content"] = NULL;
-  $overrides["page_manager_pages.event_registration.default_handlers|page_event_registration_panel_context|conf|display|panel_settings|style_settings|top_right_content"] = NULL;
-  $overrides["page_manager_pages.event_registration.default_handlers|page_event_registration_panel_context|conf|display|panels|content"]["DELETED"] = TRUE;
-  $overrides["page_manager_pages.event_registration.default_handlers|page_event_registration_panel_context|conf|display|panels|left_content"] = array(
-    0 => 'new-3178de0d-bb32-46c5-81c3-c7580e3d80b8',
-  );
-  $overrides["page_manager_pages.event_registration.default_handlers|page_event_registration_panel_context|conf|display|panels|preface"] = array(
-    0 => 'new-54e43e9a-96ee-4a66-ba91-b05ca3b2c688',
-  );
-  $overrides["page_manager_pages.event_registration.default_handlers|page_event_registration_panel_context|conf|display|panels|top_right_content"] = array(
-    0 => 'new-02126803-99cb-4ce3-9f6d-bd9f7f49b9fe',
-  );
 
   // Exported overrides for: panelizer_defaults
   $overrides["panelizer_defaults.node:bof_session:default:default.display|content|new-c7e47058-062c-41b1-9053-c3682255164e"] = (object) array(
@@ -191,8 +117,7 @@ function dgc_deploy_features_override_default_overrides() {
       'uuid' => 'c7e47058-062c-41b1-9053-c3682255164e',
     );
   $overrides["panelizer_defaults.node:bof_session:default:default.display|content|new-e975fc00-3daf-43bf-bdb3-edbb829493b6|position"] = 1;
-  $overrides["panelizer_defaults.node:bof_session:default:default.display|panels|top_right_content|0"] = 'new-c7e47058-062c-41b1-9053-c3682255164e';
-  $overrides["panelizer_defaults.node:bof_session:default:default.display|panels|top_right_content|1"] = 'new-e975fc00-3daf-43bf-bdb3-edbb829493b6';
+  $overrides["panelizer_defaults.node:bof_session:default:default.display|panels|top_right_content|1"] = 'new-c7e47058-062c-41b1-9053-c3682255164e';
   $overrides["panelizer_defaults.node:bof_session:default:default.pipeline"] = 'standard';
   $overrides["panelizer_defaults.node:session:default:default.display|content|new-0da34661-2455-4e0b-918b-5c11fd44fd6a|position"] = 1;
   $overrides["panelizer_defaults.node:session:default:default.display|content|new-604f1c98-aefd-4044-ad5a-d566a6a28303"] = (object) array(
