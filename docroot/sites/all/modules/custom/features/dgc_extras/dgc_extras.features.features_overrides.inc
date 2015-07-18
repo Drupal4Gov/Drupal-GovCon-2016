@@ -89,7 +89,7 @@ function dgc_extras_features_override_default_overrides() {
         'admin_title' => 'Schedule links',
         'title' => '',
         'body' => '<p><a class="button btn-big" href="">Conference Schedule</a> <a class="button btn-big" href="%node:url/schedule/mine">My Schedule</a> <a class="button btn-big" href="%node:url/bofs">BoFs</a> <a class="button btn-big" href="%node:url/floor-layouts">Floor Layouts</a></p>
-                                ',
+                                            ',
         'format' => 'filtered_html',
         'substitute' => 1,
       ),
@@ -104,8 +104,7 @@ function dgc_extras_features_override_default_overrides() {
       'uuid' => '9e8372a0-8ecc-47e1-9a24-f1442c15066f',
     );
   $overrides["page_manager_pages.cod_schedule_public.default_handlers|page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b|conf|display|content|new-da4f4f1a-2b55-4e8e-95ce-e40a92a0dbfb|position"] = 1;
-  $overrides["page_manager_pages.cod_schedule_public.default_handlers|page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b|conf|display|panels|content|0"] = 'new-57a703d0-e549-4b24-8ca2-634eb677c6d7';
-  $overrides["page_manager_pages.cod_schedule_public.default_handlers|page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b|conf|display|panels|content|1"] = 'new-da4f4f1a-2b55-4e8e-95ce-e40a92a0dbfb';
+  $overrides["page_manager_pages.cod_schedule_public.default_handlers|page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b|conf|display|panels|content|1"] = 'new-57a703d0-e549-4b24-8ca2-634eb677c6d7';
   $overrides["page_manager_pages.cod_schedule_public.default_handlers|page_cod_schedule_public__panel_context_931cc9dd-ba60-4165-9530-0abad52c7c4b|conf|display|panels|preface"] = array(
     0 => 'new-9e8372a0-8ecc-47e1-9a24-f1442c15066f',
   );
