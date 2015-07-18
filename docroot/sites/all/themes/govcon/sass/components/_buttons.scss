@@ -95,6 +95,41 @@ a.button.btn-big, .form-actions input[type=submit],
   }
 }
 
+/* Big star schedule button */
+.panel-layout .schedule-star-pane {
+  text-align: center;
+  margin: -50px 0 -60px;
+}
+.schedule-star a {
+  display: inline-block;
+  background: url('../images/gold_star.svg') no-repeat;
+  background-size: contain;
+  height: 340px;
+  width: 340px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  padding-top: 158px;
+  -webkit-transform: rotate(-4deg);
+  -moz-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  opacity: 0.7;
+    &:hover {
+      -webkit-transform: rotate(3deg);
+      -moz-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+      -o-transform: rotate(3deg);
+      text-decoration: none;
+      opacity: 1;
+    }
+}
+
 @include breakpoint($tab, true) {
 	.panel-pane.tickets {
 		margin-top: 0;
@@ -109,6 +144,21 @@ a.button.btn-big, .form-actions input[type=submit],
 	  	font-size: 1.4em;
 		}
 	}
+  .panel-layout .container {
+    overflow: visible;
+  }
+  .panel-layout .schedule-star-pane {
+    margin-top: 0;
+    position: absolute;
+    left: -90px;
+    top: -100px;
+    a {
+      height: 300px;
+      width: 300px;
+      padding-top: 140px;
+      font-size: 1.2em;
+    }
+  }
 }
 @include breakpoint($desk, true) {
 	.panel-pane.tickets {
@@ -121,4 +171,16 @@ a.button.btn-big, .form-actions input[type=submit],
 	  	font-size: 2em;
 		}
 	}
+  .panel-layout .schedule-star-pane {
+    margin-top: 0;
+    position: absolute;
+    left: -120px;
+    top: -140px;
+    a {
+      height: 400px;
+      width: 400px;
+      padding-top: 190px;
+      font-size: 1.6em;
+    }
+  }
 }
