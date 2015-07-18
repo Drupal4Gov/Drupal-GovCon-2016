@@ -100,7 +100,7 @@ function dgc_deploy_default_page_manager_pages_alter(&$data) {
             'admin_title' => 'Schedule links',
             'title' => '',
             'body' => '<p><a class="button btn-big" href="%node:url/schedule">Conference Schedule</a> <a class="button btn-big" href="%node:url/schedule/mine">My Schedule</a> <a class="button btn-big" href="">BoFs</a> <a class="button btn-big" href="%node:url/floor-layouts">Floor Layouts</a></p>
-                                                ',
+                                                            ',
             'format' => 'filtered_html',
             'substitute' => 1,
           ),
