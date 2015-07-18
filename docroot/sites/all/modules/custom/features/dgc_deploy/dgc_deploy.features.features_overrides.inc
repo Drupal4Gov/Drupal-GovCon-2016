@@ -46,7 +46,7 @@ function dgc_deploy_features_override_default_overrides() {
         'admin_title' => 'Schedule links',
         'title' => '',
         'body' => '<p><a class="button btn-big" href="%node:url/schedule">Conference Schedule</a> <a class="button btn-big" href="%node:url/schedule/mine">My Schedule</a> <a class="button btn-big" href="">BoFs</a> <a class="button btn-big" href="%node:url/floor-layouts">Floor Layouts</a></p>
-        ',
+                                                        ',
         'format' => 'filtered_html',
         'substitute' => 1,
       ),
@@ -92,6 +92,32 @@ function dgc_deploy_features_override_default_overrides() {
   $overrides["page_manager_pages.community.default_handlers|page_community_panel_context|conf|display|panels|center|2"] = 'new-bc2d3d3f-97e4-418e-ba6e-a16d3552bbe3';
 
   // Exported overrides for: panelizer_defaults
+  $overrides["panelizer_defaults.node:bof_session:default:default.display|content|new-c7e47058-062c-41b1-9053-c3682255164e"] = (object) array(
+      'pid' => 'new-c7e47058-062c-41b1-9053-c3682255164e',
+      'panel' => 'top_right_content',
+      'type' => 'flag_link',
+      'subtype' => 'node',
+      'shown' => TRUE,
+      'access' => array(),
+      'configuration' => array(
+        'flag_name' => 'session_schedule',
+        'context' => 'panelizer',
+        'override_title' => 1,
+        'override_title_text' => '',
+        'override_title_heading' => 'h2',
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 0,
+      'locks' => array(),
+      'uuid' => 'c7e47058-062c-41b1-9053-c3682255164e',
+    );
+  $overrides["panelizer_defaults.node:bof_session:default:default.display|content|new-e975fc00-3daf-43bf-bdb3-edbb829493b6|position"] = 1;
+  $overrides["panelizer_defaults.node:bof_session:default:default.display|panels|top_right_content|1"] = 'new-c7e47058-062c-41b1-9053-c3682255164e';
   $overrides["panelizer_defaults.node:bof_session:default:default.pipeline"] = 'standard';
   $overrides["panelizer_defaults.node:session:default:default.display|content|new-0da34661-2455-4e0b-918b-5c11fd44fd6a|position"] = 1;
   $overrides["panelizer_defaults.node:session:default:default.display|content|new-604f1c98-aefd-4044-ad5a-d566a6a28303"] = (object) array(
@@ -167,6 +193,37 @@ function dgc_deploy_features_override_default_overrides() {
   $overrides["variable.subpathauto_depth.value"] = 3;
 
   // Exported overrides for: views_view
+  $overrides["views_view.cod_bof_schedule_content.display|default|display_options|fields|count"] = array(
+    'id' => 'count',
+    'table' => 'flag_counts',
+    'field' => 'count',
+    'relationship' => 'flag_count_rel',
+    'label' => 'Attending',
+  );
+  $overrides["views_view.cod_bof_schedule_content.display|default|display_options|fields|ops"] = array(
+    'id' => 'ops',
+    'table' => 'flagging',
+    'field' => 'ops',
+    'relationship' => 'flag_content_rel',
+    'label' => '',
+    'element_label_colon' => FALSE,
+  );
+  $overrides["views_view.cod_bof_schedule_content.display|default|display_options|relationships|flag_content_rel"] = array(
+    'id' => 'flag_content_rel',
+    'table' => 'node',
+    'field' => 'flag_content_rel',
+    'label' => 'session attending',
+    'required' => 0,
+    'flag' => 'session_schedule',
+  );
+  $overrides["views_view.cod_bof_schedule_content.display|default|display_options|relationships|flag_count_rel"] = array(
+    'id' => 'flag_count_rel',
+    'table' => 'node',
+    'field' => 'flag_count_rel',
+    'label' => 'attending counter',
+    'required' => 0,
+    'flag' => 'session_schedule',
+  );
   $overrides["views_view.cod_news.display|default|display_options|pager|options|id"]["DELETED"] = TRUE;
   $overrides["views_view.cod_news.display|default|display_options|pager|options|items_per_page"]["DELETED"] = TRUE;
   $overrides["views_view.cod_news.display|default|display_options|pager|type"] = 'none';
@@ -199,7 +256,8 @@ function dgc_deploy_features_override_default_overrides() {
   );
   $overrides["views_view.cod_sponsors.display|panel_pane_1"] = unserialize('O:13:"views_display":7:{s:15:"display_options";a:13:{s:5:"query";a:2:{s:4:"type";s:11:"views_query";s:7:"options";a:0:{}}s:8:"defaults";a:10:{s:12:"style_plugin";b:0;s:13:"style_options";b:0;s:10:"row_plugin";b:0;s:11:"row_options";b:0;s:13:"relationships";b:0;s:6:"fields";b:0;s:5:"sorts";b:0;s:9:"arguments";b:0;s:13:"filter_groups";b:0;s:7:"filters";b:0;}s:12:"style_plugin";s:4:"list";s:13:"style_options";a:1:{s:8:"grouping";a:1:{i:0;a:3:{s:5:"field";s:31:"field_sponsor_sponsorship_level";s:8:"rendered";i:1;s:14:"rendered_strip";i:0;}}}s:10:"row_plugin";s:6:"fields";s:13:"relationships";a:2:{s:17:"og_membership_rel";a:4:{s:2:"id";s:17:"og_membership_rel";s:5:"table";s:4:"node";s:5:"field";s:17:"og_membership_rel";s:5:"label";s:10:"Conference";}s:35:"field_sponsor_sponsorship_level_tid";a:4:{s:2:"id";s:35:"field_sponsor_sponsorship_level_tid";s:5:"table";s:42:"field_data_field_sponsor_sponsorship_level";s:5:"field";s:35:"field_sponsor_sponsorship_level_tid";s:5:"label";s:17:"Sponsorship Level";}}s:6:"fields";a:4:{s:5:"title";a:7:{s:2:"id";s:5:"title";s:5:"table";s:4:"node";s:5:"field";s:5:"title";s:5:"label";s:0:"";s:7:"exclude";b:1;s:5:"alter";a:2:{s:13:"word_boundary";b:0;s:8:"ellipsis";b:0;}s:19:"element_label_colon";b:0;}s:17:"field_sponsor_url";a:8:{s:2:"id";s:17:"field_sponsor_url";s:5:"table";s:28:"field_data_field_sponsor_url";s:5:"field";s:17:"field_sponsor_url";s:5:"label";s:0:"";s:7:"exclude";b:1;s:19:"element_label_colon";b:0;s:17:"click_sort_column";s:3:"url";s:4:"type";s:13:"link_absolute";}s:18:"field_sponsor_logo";a:8:{s:2:"id";s:18:"field_sponsor_logo";s:5:"table";s:29:"field_data_field_sponsor_logo";s:5:"field";s:18:"field_sponsor_logo";s:5:"label";s:0:"";s:5:"alter";a:3:{s:9:"make_link";b:1;s:4:"path";s:19:"[field_sponsor_url]";s:3:"alt";s:7:"[title]";}s:19:"element_label_colon";b:0;s:17:"click_sort_column";s:3:"fid";s:8:"settings";a:2:{s:11:"image_style";s:12:"cod_sponsors";s:10:"image_link";s:0:"";}}s:31:"field_sponsor_sponsorship_level";a:8:{s:2:"id";s:31:"field_sponsor_sponsorship_level";s:5:"table";s:42:"field_data_field_sponsor_sponsorship_level";s:5:"field";s:31:"field_sponsor_sponsorship_level";s:5:"label";s:0:"";s:7:"exclude";b:1;s:5:"alter";a:2:{s:10:"alter_text";b:1;s:4:"text";s:42:"[field_sponsor_sponsorship_level] Sponsors";}s:19:"element_label_colon";b:0;s:4:"type";s:29:"taxonomy_term_reference_plain";}}s:5:"sorts";a:1:{s:6:"weight";a:4:{s:2:"id";s:6:"weight";s:5:"table";s:18:"taxonomy_term_data";s:5:"field";s:6:"weight";s:12:"relationship";s:35:"field_sponsor_sponsorship_level_tid";}}s:9:"arguments";a:1:{s:3:"gid";a:11:{s:2:"id";s:3:"gid";s:5:"table";s:13:"og_membership";s:5:"field";s:3:"gid";s:12:"relationship";s:17:"og_membership_rel";s:14:"default_action";s:5:"empty";s:21:"default_argument_type";s:5:"fixed";s:7:"summary";a:2:{s:17:"number_of_records";s:1:"0";s:6:"format";s:15:"default_summary";}s:15:"summary_options";a:1:{s:14:"items_per_page";s:2:"25";}s:18:"specify_validation";b:1;s:8:"validate";a:2:{s:4:"type";s:4:"node";s:4:"fail";s:5:"empty";}s:16:"validate_options";a:2:{s:5:"types";a:1:{s:5:"event";s:5:"event";}s:6:"access";b:1;}}}s:7:"filters";a:3:{s:6:"status";a:6:{s:2:"id";s:6:"status";s:5:"table";s:4:"node";s:5:"field";s:6:"status";s:5:"value";i:1;s:5:"group";i:1;s:6:"expose";a:1:{s:8:"operator";b:0;}}s:4:"type";a:4:{s:2:"id";s:4:"type";s:5:"table";s:4:"node";s:5:"field";s:4:"type";s:5:"value";a:1:{s:7:"sponsor";s:7:"sponsor";}}s:35:"field_sponsor_sponsorship_level_tid";a:8:{s:2:"id";s:35:"field_sponsor_sponsorship_level_tid";s:5:"table";s:42:"field_data_field_sponsor_sponsorship_level";s:5:"field";s:35:"field_sponsor_sponsorship_level_tid";s:7:"exposed";b:1;s:6:"expose";a:6:{s:11:"operator_id";s:38:"field_sponsor_sponsorship_level_tid_op";s:5:"label";s:17:"Sponsorship Level";s:8:"operator";s:38:"field_sponsor_sponsorship_level_tid_op";s:10:"identifier";s:35:"field_sponsor_sponsorship_level_tid";s:8:"multiple";b:1;s:14:"remember_roles";a:7:{i:2;s:1:"2";i:1;i:0;i:21;i:0;i:11;i:0;i:26;i:0;i:31;i:0;i:16;i:0;}}s:4:"type";s:6:"select";s:10:"vocabulary";s:17:"sponsorship_level";s:13:"error_message";b:0;}}s:10:"pane_title";s:37:"Sponsors grouped by sponsorship level";s:5:"allow";a:9:{s:9:"use_pager";i:0;s:14:"items_per_page";i:0;s:6:"offset";i:0;s:12:"link_to_view";i:0;s:9:"more_link";i:0;s:13:"path_override";i:0;s:14:"title_override";s:14:"title_override";s:12:"exposed_form";s:12:"exposed_form";s:15:"fields_override";i:0;}s:14:"argument_input";a:1:{s:3:"gid";a:6:{s:4:"type";s:7:"context";s:7:"context";s:15:"entity:node.nid";s:16:"context_optional";i:0;s:5:"panel";s:1:"0";s:5:"fixed";s:0:"";s:5:"label";s:23:"OG membership: Group ID";}}}s:8:"db_table";s:13:"views_display";s:3:"vid";i:0;s:2:"id";s:12:"panel_pane_1";s:13:"display_title";s:27:"Sponsor pane group by level";s:14:"display_plugin";s:10:"panel_pane";s:8:"position";i:0;}');
   $overrides["views_view.cod_sponsors.display|panel_pane_2"] = unserialize('O:13:"views_display":7:{s:15:"display_options";a:12:{s:5:"query";a:2:{s:4:"type";s:11:"views_query";s:7:"options";a:0:{}}s:8:"defaults";a:10:{s:12:"style_plugin";b:0;s:13:"style_options";b:0;s:10:"row_plugin";b:0;s:11:"row_options";b:0;s:13:"relationships";b:0;s:6:"fields";b:0;s:5:"sorts";b:0;s:9:"arguments";b:0;s:13:"filter_groups";b:0;s:7:"filters";b:0;}s:12:"style_plugin";s:4:"list";s:10:"row_plugin";s:6:"fields";s:13:"relationships";a:2:{s:17:"og_membership_rel";a:4:{s:2:"id";s:17:"og_membership_rel";s:5:"table";s:4:"node";s:5:"field";s:17:"og_membership_rel";s:5:"label";s:10:"Conference";}s:35:"field_sponsor_sponsorship_level_tid";a:4:{s:2:"id";s:35:"field_sponsor_sponsorship_level_tid";s:5:"table";s:42:"field_data_field_sponsor_sponsorship_level";s:5:"field";s:35:"field_sponsor_sponsorship_level_tid";s:5:"label";s:17:"Sponsorship Level";}}s:6:"fields";a:4:{s:5:"title";a:7:{s:2:"id";s:5:"title";s:5:"table";s:4:"node";s:5:"field";s:5:"title";s:5:"label";s:0:"";s:7:"exclude";b:1;s:5:"alter";a:2:{s:13:"word_boundary";b:0;s:8:"ellipsis";b:0;}s:19:"element_label_colon";b:0;}s:17:"field_sponsor_url";a:8:{s:2:"id";s:17:"field_sponsor_url";s:5:"table";s:28:"field_data_field_sponsor_url";s:5:"field";s:17:"field_sponsor_url";s:5:"label";s:0:"";s:7:"exclude";b:1;s:19:"element_label_colon";b:0;s:17:"click_sort_column";s:3:"url";s:4:"type";s:13:"link_absolute";}s:18:"field_sponsor_logo";a:8:{s:2:"id";s:18:"field_sponsor_logo";s:5:"table";s:29:"field_data_field_sponsor_logo";s:5:"field";s:18:"field_sponsor_logo";s:5:"label";s:0:"";s:5:"alter";a:3:{s:9:"make_link";b:1;s:4:"path";s:19:"[field_sponsor_url]";s:3:"alt";s:7:"[title]";}s:19:"element_label_colon";b:0;s:17:"click_sort_column";s:3:"fid";s:8:"settings";a:2:{s:11:"image_style";s:12:"cod_sponsors";s:10:"image_link";s:0:"";}}s:31:"field_sponsor_sponsorship_level";a:7:{s:2:"id";s:31:"field_sponsor_sponsorship_level";s:5:"table";s:42:"field_data_field_sponsor_sponsorship_level";s:5:"field";s:31:"field_sponsor_sponsorship_level";s:5:"label";s:0:"";s:7:"exclude";b:1;s:19:"element_label_colon";b:0;s:4:"type";s:29:"taxonomy_term_reference_plain";}}s:5:"sorts";a:1:{s:6:"weight";a:4:{s:2:"id";s:6:"weight";s:5:"table";s:18:"taxonomy_term_data";s:5:"field";s:6:"weight";s:12:"relationship";s:35:"field_sponsor_sponsorship_level_tid";}}s:9:"arguments";a:1:{s:3:"gid";a:11:{s:2:"id";s:3:"gid";s:5:"table";s:13:"og_membership";s:5:"field";s:3:"gid";s:12:"relationship";s:17:"og_membership_rel";s:14:"default_action";s:5:"empty";s:21:"default_argument_type";s:5:"fixed";s:7:"summary";a:2:{s:17:"number_of_records";s:1:"0";s:6:"format";s:15:"default_summary";}s:15:"summary_options";a:1:{s:14:"items_per_page";s:2:"25";}s:18:"specify_validation";b:1;s:8:"validate";a:2:{s:4:"type";s:4:"node";s:4:"fail";s:5:"empty";}s:16:"validate_options";a:2:{s:5:"types";a:1:{s:5:"event";s:5:"event";}s:6:"access";b:1;}}}s:7:"filters";a:3:{s:6:"status";a:6:{s:2:"id";s:6:"status";s:5:"table";s:4:"node";s:5:"field";s:6:"status";s:5:"value";i:1;s:5:"group";i:1;s:6:"expose";a:1:{s:8:"operator";b:0;}}s:4:"type";a:4:{s:2:"id";s:4:"type";s:5:"table";s:4:"node";s:5:"field";s:4:"type";s:5:"value";a:1:{s:7:"sponsor";s:7:"sponsor";}}s:35:"field_sponsor_sponsorship_level_tid";a:8:{s:2:"id";s:35:"field_sponsor_sponsorship_level_tid";s:5:"table";s:42:"field_data_field_sponsor_sponsorship_level";s:5:"field";s:35:"field_sponsor_sponsorship_level_tid";s:7:"exposed";b:1;s:6:"expose";a:6:{s:11:"operator_id";s:38:"field_sponsor_sponsorship_level_tid_op";s:5:"label";s:17:"Sponsorship Level";s:8:"operator";s:38:"field_sponsor_sponsorship_level_tid_op";s:10:"identifier";s:35:"field_sponsor_sponsorship_level_tid";s:8:"multiple";b:1;s:14:"remember_roles";a:7:{i:2;s:1:"2";i:1;i:0;i:21;i:0;i:11;i:0;i:26;i:0;i:31;i:0;i:16;i:0;}}s:4:"type";s:6:"select";s:10:"vocabulary";s:17:"sponsorship_level";s:13:"error_message";b:0;}}s:10:"pane_title";s:20:"Sponsors not grouped";s:5:"allow";a:9:{s:9:"use_pager";i:0;s:14:"items_per_page";i:0;s:6:"offset";i:0;s:12:"link_to_view";i:0;s:9:"more_link";i:0;s:13:"path_override";i:0;s:14:"title_override";s:14:"title_override";s:12:"exposed_form";s:12:"exposed_form";s:15:"fields_override";i:0;}s:14:"argument_input";a:1:{s:3:"gid";a:6:{s:4:"type";s:7:"context";s:7:"context";s:15:"entity:node.nid";s:16:"context_optional";i:0;s:5:"panel";s:1:"0";s:5:"fixed";s:0:"";s:5:"label";s:23:"OG membership: Group ID";}}}s:8:"db_table";s:13:"views_display";s:3:"vid";i:0;s:2:"id";s:12:"panel_pane_2";s:13:"display_title";s:24:"Sponsor pane no grouping";s:14:"display_plugin";s:10:"panel_pane";s:8:"position";i:0;}');
-  $overrides["views_view.ticket_attendee.display|panel_pane_1"] = unserialize('O:13:"views_display":7:{s:15:"display_options";a:6:{s:5:"query";a:2:{s:4:"type";s:11:"views_query";s:7:"options";a:0:{}}s:8:"defaults";a:2:{s:5:"empty";b:0;s:6:"fields";b:0;}s:5:"empty";a:1:{s:4:"area";a:6:{s:2:"id";s:4:"area";s:5:"table";s:5:"views";s:5:"field";s:4:"area";s:5:"empty";b:1;s:7:"content";s:27:"You haven\'t registered yet!";s:6:"format";s:13:"filtered_html";}}s:6:"fields";a:4:{s:6:"entity";a:5:{s:2:"id";s:6:"entity";s:5:"table";s:11:"ticket_type";s:5:"field";s:6:"entity";s:12:"relationship";s:16:"ticket_type_ttid";s:5:"label";s:5:"Event";}s:17:"ticket_type_label";a:4:{s:2:"id";s:17:"ticket_type_label";s:5:"table";s:28:"field_data_ticket_type_label";s:5:"field";s:17:"ticket_type_label";s:12:"relationship";s:16:"ticket_type_ttid";}s:4:"name";a:5:{s:2:"id";s:4:"name";s:5:"table";s:5:"users";s:5:"field";s:4:"name";s:12:"relationship";s:10:"author_uid";s:5:"label";s:10:"Registrant";}s:7:"created";a:4:{s:2:"id";s:7:"created";s:5:"table";s:19:"ticket_registration";s:5:"field";s:7:"created";s:11:"date_format";s:4:"long";}}s:5:"allow";a:9:{s:9:"use_pager";i:0;s:14:"items_per_page";i:0;s:6:"offset";i:0;s:12:"link_to_view";i:0;s:9:"more_link";i:0;s:13:"path_override";i:0;s:14:"title_override";s:14:"title_override";s:12:"exposed_form";i:0;s:15:"fields_override";i:0;}s:14:"argument_input";a:1:{s:8:"user_uid";a:6:{s:4:"type";s:7:"context";s:7:"context";s:15:"entity:user.uid";s:16:"context_optional";i:0;s:5:"panel";s:1:"0";s:5:"fixed";s:0:"";s:5:"label";s:29:"Ticket registration: User_uid";}}}s:8:"db_table";s:13:"views_display";s:3:"vid";i:0;s:2:"id";s:12:"panel_pane_1";s:13:"display_title";s:12:"Content pane";s:14:"display_plugin";s:10:"panel_pane";s:8:"position";i:0;}');
+  $overrides["views_view.ticket_attendee.display|default|display_options|empty"]["DELETED"] = TRUE;
+  $overrides["views_view.ticket_attendee.display|panel_pane_1"] = unserialize('O:13:"views_display":7:{s:15:"display_options";a:5:{s:5:"query";a:2:{s:4:"type";s:11:"views_query";s:7:"options";a:0:{}}s:8:"defaults";a:2:{s:5:"empty";b:0;s:6:"fields";b:0;}s:6:"fields";a:4:{s:6:"entity";a:5:{s:2:"id";s:6:"entity";s:5:"table";s:11:"ticket_type";s:5:"field";s:6:"entity";s:12:"relationship";s:16:"ticket_type_ttid";s:5:"label";s:5:"Event";}s:17:"ticket_type_label";a:4:{s:2:"id";s:17:"ticket_type_label";s:5:"table";s:28:"field_data_ticket_type_label";s:5:"field";s:17:"ticket_type_label";s:12:"relationship";s:16:"ticket_type_ttid";}s:4:"name";a:5:{s:2:"id";s:4:"name";s:5:"table";s:5:"users";s:5:"field";s:4:"name";s:12:"relationship";s:10:"author_uid";s:5:"label";s:10:"Registrant";}s:7:"created";a:4:{s:2:"id";s:7:"created";s:5:"table";s:19:"ticket_registration";s:5:"field";s:7:"created";s:11:"date_format";s:4:"long";}}s:5:"allow";a:9:{s:9:"use_pager";i:0;s:14:"items_per_page";i:0;s:6:"offset";i:0;s:12:"link_to_view";i:0;s:9:"more_link";i:0;s:13:"path_override";i:0;s:14:"title_override";s:14:"title_override";s:12:"exposed_form";i:0;s:15:"fields_override";i:0;}s:14:"argument_input";a:1:{s:8:"user_uid";a:6:{s:4:"type";s:7:"context";s:7:"context";s:15:"entity:user.uid";s:16:"context_optional";i:0;s:5:"panel";s:1:"0";s:5:"fixed";s:0:"";s:5:"label";s:29:"Ticket registration: User_uid";}}}s:8:"db_table";s:13:"views_display";s:3:"vid";i:0;s:2:"id";s:12:"panel_pane_1";s:13:"display_title";s:12:"Content pane";s:14:"display_plugin";s:10:"panel_pane";s:8:"position";i:0;}');
   $overrides["views_view.ticket_registration.display|default|display_options|fields|field_profile_first"] = array(
     'id' => 'field_profile_first',
     'table' => 'field_data_field_profile_first',
@@ -491,6 +549,7 @@ function dgc_deploy_features_override_default_overrides() {
     'field' => 'user_uid',
   );
   $overrides["views_view.ticket_user.display|default|display_options|fields|name|hide_alter_empty"]["DELETED"] = TRUE;
+  $overrides["views_view.ticket_user.display|default|display_options|filters"]["DELETED"] = TRUE;
   $overrides["views_view.ticket_user.display|panel_pane_1"] = unserialize('O:13:"views_display":7:{s:15:"display_options";a:4:{s:5:"query";a:2:{s:4:"type";s:11:"views_query";s:7:"options";a:0:{}}s:8:"defaults";a:1:{s:5:"empty";b:0;}s:5:"allow";a:9:{s:9:"use_pager";i:0;s:14:"items_per_page";i:0;s:6:"offset";i:0;s:12:"link_to_view";i:0;s:9:"more_link";i:0;s:13:"path_override";i:0;s:14:"title_override";s:14:"title_override";s:12:"exposed_form";i:0;s:15:"fields_override";i:0;}s:14:"argument_input";a:1:{s:10:"author_uid";a:6:{s:4:"type";s:7:"context";s:7:"context";s:15:"entity:user.uid";s:16:"context_optional";i:0;s:5:"panel";s:1:"0";s:5:"fixed";s:0:"";s:5:"label";s:31:"Ticket registration: Author_uid";}}}s:8:"db_table";s:13:"views_display";s:3:"vid";i:0;s:2:"id";s:12:"panel_pane_1";s:13:"display_title";s:12:"Content pane";s:14:"display_plugin";s:10:"panel_pane";s:8:"position";i:0;}');
 
  return $overrides;

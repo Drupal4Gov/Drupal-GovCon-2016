@@ -27,6 +27,7 @@ function dgc_deploy_default_page_manager_pages() {
       'identifier' => 'Conference',
       'name' => 'entity_id:node',
       'settings' => array(),
+      'keyword' => 'node',
     ),
   );
   $page->conf = array(
