@@ -147,6 +147,7 @@ installed_extras:
 # Add any extra apt or yum packages you would like installed.
 extra_packages:
   - unzip
+  - libapache2-mod-php5
 
 # `nodejs` must be in installed_extras for this to work.
 nodejs_version: "0.12"
