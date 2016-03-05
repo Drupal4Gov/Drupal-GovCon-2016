@@ -5,7 +5,7 @@ api: 2
 # variable inside config.yml if you change the major version in this file.
 
 # Drupal core (major version, e.g. 6.x, 7.x, 8.x).
-core: "7.x"
+core: "8.x"
 
 projects:
 
@@ -14,7 +14,7 @@ projects:
     type: "core"
     download:
       # Drupal core branch (e.g. "6.x", "7.x", "8.0.x").
-      branch: "7.0.x"
+      branch: "8.0.x"
       working-copy: true
 
   # Other modules.
