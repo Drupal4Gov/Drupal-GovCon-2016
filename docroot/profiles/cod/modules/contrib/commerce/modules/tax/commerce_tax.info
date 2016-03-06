@@ -12,9 +12,10 @@ core = 7.x
 ; Simple tests
 ;files[] = tests/commerce_tax.test
 
-; Information added by Drupal.org packaging script on 2015-01-16
-version = "7.x-1.11"
+
+; Information added by drush on 2016-02-24
+version = "7.x-1.11+45-dev"
 core = "7.x"
 project = "commerce"
-datestamp = "1421426596"
+datestamp = "1456347570"
 

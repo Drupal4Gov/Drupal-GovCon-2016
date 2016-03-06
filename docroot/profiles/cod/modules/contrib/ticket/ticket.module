@@ -605,6 +605,7 @@ function ticket_get_admin_path($type) {
 function ticket_admin_paths() {
   $paths = array(
     'ticket_registration/manage/*' => TRUE,
+    'tickets/manage/*' => TRUE,
   );
   return $paths;
 }
@@ -756,6 +757,9 @@ function ticket_registration_get_properties($entity, array $options, $name, $typ
 
     case 'entity':
       return $entity->host();
+
+    case 'host_entity':
+      return $entity->host_entity();
 
     case 'user':
       return $entity->attendee();

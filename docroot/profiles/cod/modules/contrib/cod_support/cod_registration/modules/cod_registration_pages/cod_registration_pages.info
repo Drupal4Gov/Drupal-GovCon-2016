@@ -4,14 +4,18 @@ package = COD Pages
 dependencies[] = ctools
 dependencies[] = cod_registration
 dependencies[] = page_manager
+dependencies[] = panelizer
 features[ctools][] = page_manager:pages_default:1
+features[ctools][] = panelizer:panelizer:1
 features[features_api][] = api:2
 features[page_manager_pages][] = event_registration
+features[panelizer_defaults][] = node:page:registration:default
+features[variable][] = panelizer_node:page:default_selection
 
 
-; Information added by drush on 2015-10-22
-version = "7.x-2.0-alpha2+0-dev"
+; Information added by drush on 2016-02-24
+version = "7.x-2.0-alpha4+3-dev"
 core = "7.x"
 project = "cod_support"
-datestamp = "1445472274"
+datestamp = "1456347571"
 

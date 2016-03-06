@@ -572,7 +572,7 @@ function ticket_type_get_entity(&$item) {
   elseif (isset($item['value'])) {
     // By default always load the default revision, so caches get used.
     $entity = entity_load_single('ticket_type', $item['value']);
-    if ($entity->revision_id != $item['revision_id']) {
+    if (isset($item['revision_id']) && $entity->revision_id != $item['revision_id']) {
       // A non-default revision is a referenced, so load this one.
       // TODO: revisioning should be tested. I don't think this works
       // at the moment.

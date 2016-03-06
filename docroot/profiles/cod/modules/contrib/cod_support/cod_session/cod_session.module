@@ -96,7 +96,8 @@ function cod_session_menu() {
 }
 
 function cod_session_module_implements_alter(&$implementations, $hook) {
-  if ($hook == 'views_data_alter') {
+  if ($hook == 'views_data_alter' ||
+      $hook == 'views_plugins_alter') {
     // Move views_pre_render() to the end of the list. module_implements()
     // iterates through $implementations with a foreach loop which PHP iterates
     // in the order that the items were added, so to move an item to the end of

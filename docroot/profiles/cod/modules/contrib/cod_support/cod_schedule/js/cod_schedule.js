@@ -49,7 +49,8 @@
 
             $("#schedule-items-type-select", context).change(function() {
                 var type = $( this ).val();
-                $.post( Drupal.settings.basePath + "ajax/cod-schedule/items/" + type, { }, function( data ) {
+                var eventid = window.location.href.match(/admin\/conference\/([0-9]*)\//).pop();
+                $.post( Drupal.settings.basePath + "ajax/cod-schedule/items/" + eventid + "/" + type, { }, function( data ) {
                     $('#cod-schedule-wrapper .panel-col-last .sortable-sessions').replaceWith(data);
                     Drupal.attachBehaviors('#cod-schedule-wrapper');
                 }, "json");

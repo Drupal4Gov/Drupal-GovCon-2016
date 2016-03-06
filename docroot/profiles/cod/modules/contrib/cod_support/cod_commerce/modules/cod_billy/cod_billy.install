@@ -1,0 +1,10 @@
+<?php
+
+/**
+ * @file
+ * Installs necessary fields for conference integration.
+ */
+
+/**
+ * Field setup
+ */

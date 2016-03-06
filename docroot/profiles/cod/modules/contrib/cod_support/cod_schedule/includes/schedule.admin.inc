@@ -45,8 +45,19 @@ function cod_event_room_form($form, &$form_state, CodEventRoom $cod_event_room, 
     $submit += $form['#submit'];
   }
 
-  if (isset($conference) && is_object($conference)) {
-    $form['og_group_ref'][LANGUAGE_NONE][0]['default']['#default_value'] = $conference->nid;
+  // Set the default conference on add
+  if (isset($conference) && is_object($conference) && $op == 'add') {
+    // og select widget
+    if (isset($form['og_group_ref'][LANGUAGE_NONE][0])) {
+      $form['og_group_ref'][LANGUAGE_NONE][0]['default']['#default_value'] = $conference->nid;
+    }
+    // standard select widget
+    else {
+      $form['og_group_ref'][LANGUAGE_NONE]['#default_value'] = $conference->nid;
+    }
+  }
+  // Remove the group reference field if the user isn't a site admin.
+  if (!user_access('administer conferences')) {
     $form['og_group_ref']['#access'] = FALSE;
   }
 
@@ -176,8 +187,19 @@ function cod_event_time_form($form, &$form_state, CodEventTime $cod_event_time, 
   }
 */
 
-  if (isset($conference) && is_object($conference)) {
-    $form['og_group_ref'][LANGUAGE_NONE][0]['default']['#default_value'] = $conference->nid;
+  // Set the default conference on add
+  if (isset($conference) && is_object($conference) && $op == 'add') {
+    // og select widget
+    if (isset($form['og_group_ref'][LANGUAGE_NONE][0])) {
+      $form['og_group_ref'][LANGUAGE_NONE][0]['default']['#default_value'] = $conference->nid;
+    }
+    // standard select widget
+    else {
+      $form['og_group_ref'][LANGUAGE_NONE]['#default_value'] = $conference->nid;
+    }
+  }
+  // Remove the group reference field if the user isn't a site admin.
+  if (!user_access('administer conferences')) {
     $form['og_group_ref']['#access'] = FALSE;
   }
 
@@ -461,6 +483,13 @@ function cod_schedule_schedule_grid_item($event, $time, $room, $reset = FALSE, $
     );
 
     $output = array(
+      'dropdown' => array(
+        '#links' => $items,
+        '#theme' => 'ctools_dropdown',
+        '#attributes' => array(
+          'class' => 'cod-events-schedule-timeslot-' . $time . '-' . $room,
+        ),
+      ),
       'sessions' => array(
         '#items' => $sessions,
         '#theme' => 'item_list',

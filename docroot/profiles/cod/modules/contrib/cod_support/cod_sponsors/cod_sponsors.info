@@ -2,7 +2,7 @@ name = COD Sponsors
 description = Sponsorship features
 core = 7.x
 package = COD
-project = cod_sponsors
+project = cod_support
 dependencies[] = cod_base
 dependencies[] = cod_events
 dependencies[] = conditional_fields
@@ -66,9 +66,9 @@ features[views_view][] = cod_sponsors_admin
 features[views_view][] = cod_sponsors_levels
 
 
-; Information added by drush on 2015-10-22
-version = "7.x-2.0-alpha2+0-dev"
+; Information added by drush on 2016-02-24
+version = "7.x-2.0-alpha4+3-dev"
 core = "7.x"
 project = "cod_support"
-datestamp = "1445472274"
+datestamp = "1456347571"
 

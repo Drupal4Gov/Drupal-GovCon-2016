@@ -263,6 +263,26 @@ function cod_events_ctools_plugin_directory($module, $plugin) {
 }
 
 /**
+ * Wrapper function for og_group_ref to return the correct og_group_ref
+ * value based on if its a select widget or a og selector.
+ *
+ * @param $object -- could be a node or form element.
+ */
+function cod_events_get_event($entity_type, $entity) {
+  // If its a stdClass we can assume its probably an entity
+  if (!empty($entity->og_group_ref)) {
+    $wrapper = entity_metadata_wrapper($entity_type, $entity);
+    $events = $wrapper->og_group_ref->value();
+    return array_shift($events);
+  }
+  // If empty its a new item, return og_context.
+  else {
+    return og_context();
+  }
+}
+
+
+/**
  * Implements hook_og_user_access_alter().
  *
  * Borrowed from commons_groups.

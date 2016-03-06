@@ -6,8 +6,8 @@ dependencies[] = views_bulk_operations
 core = 7.x
 
 
-; Information added by drush on 2015-10-22
+; Information added by drush on 2016-02-24
 version = ""
 project = "commerce_coupon_batch"
-datestamp = "1445472272"
+datestamp = "1456347558"
 

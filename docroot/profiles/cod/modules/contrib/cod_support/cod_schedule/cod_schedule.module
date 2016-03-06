@@ -129,9 +129,9 @@ function cod_schedule_menu() {
     'access callback' => TRUE,
   );
 
-  $items['ajax/cod-schedule/items/%'] = array(
+  $items['ajax/cod-schedule/items/%/%'] = array(
     'page callback' => 'cod_schedule_ajax_fetch_items',
-    'page arguments' => array(3),
+    'page arguments' => array(3, 4),
     'access callback' => TRUE,
   );
 
@@ -203,24 +203,32 @@ function cod_schedule_og_permission() {
 }
 
 function cod_schedule_form_node_form_alter(&$form, &$form_state) {
+  // Get current event if it exists.
+  if (isset($form['#node'])) {
+    $event = cod_events_get_event('node', $form['#node']);
+  }
+
+  // Don't show the timeslots on the event edit page
   if (isset($form['#node_edit_form']) && isset($form['field_event_timeslots'])) {
     $form['field_event_timeslots']['#access'] = FALSE;
   }
 
-  if (isset($form['field_session_timeslot']) && !empty($form['og_group_ref'][LANGUAGE_NONE][0]['default']['#default_value'])) {
-    $form = _cod_schedule_timeslot_view_widget($form, $form['og_group_ref'][LANGUAGE_NONE][0]['default']['#default_value'][0], $form['#bundle']);
-  }
-
+  // By default, no one should directly edit the session timeslot
   if (isset($form['field_session_timeslot'])) {
     $form['field_session_timeslot']['#access'] = FALSE;
   }
 
-  if (isset($form['field_session_timeslot']) && $form['og_group_ref']['#access'] == TRUE) {
+  if (isset($form['field_session_timeslot']) && !empty($event)) {
+    $form = _cod_schedule_timeslot_view_widget($form, $event, $form['#bundle']);
+  }
+
+  if (isset($form['field_session_timeslot']) && (og_user_access('node', $event->nid, 'administer schedule') || user_access('administer schedule'))) {
     // TODO: Set the notice so when you change the event, it changes the link.
     // TODO: Show the current timeslot if one is set.
+    $form['field_session_timeslot']['#access'] = TRUE;
     $form['field_session_timeslot_notice'] = array(
       '#title' => t("Timeslots"),
-      '#markup' => t('Use the !scheduler to assign this !session_type to a timeslot.', array('!session_type' => $form['#node']->type, '!scheduler' => l('conference scheduler', '/admin/conference/' . $form['og_group_ref'][LANGUAGE_NONE]['#default_value'][0] . '/schedule'))),
+      '#markup' => t('It is recommended to use the !scheduler to assign this !session_type to a timeslot. Only select timeslots here when this !session_type is scheduled multiple times for the event. Not seeing a desired timeslot? Make sure the blank timeslot has been created with the scheduler.', array('!session_type' => $form['#node']->type, '!scheduler' => l('conference scheduler', '/admin/conference/' . $event->nid . '/schedule'))),
       '#weight' => 33,
     );
     $form['#group_children']['field_session_timeslot_notice'] = 'group_schedule';
@@ -303,9 +311,9 @@ function cod_schedule_update_session() {
   drupal_json_output($timeslot_id);
 }
 
-function cod_schedule_ajax_fetch_items($type = 'session') {
+function cod_schedule_ajax_fetch_items($eventid, $type = 'session') {
   $content = array();
-  $sessions = cod_schedule_get_unscheduled_sessions(1, $type);
+  $sessions = cod_schedule_get_unscheduled_sessions($eventid, $type);
   $session_items = cod_schedule_format_unscheduled_sessions($sessions);
 
   if(empty($session_items)) {
@@ -669,7 +677,7 @@ function cod_schedule_get_unscheduled_sessions($event_id, $type) {
     $query->entityCondition('entity_type', 'node');
     $query->entityCondition('bundle', $type);
     $query->propertyCondition('status', '1');
-    // $query->fieldCondition('og_group_ref', 'target_id', $event_id);
+    $query->fieldCondition('og_group_ref', 'target_id', $event_id);
 
     if($type != 'bof_session') {
         $query->fieldCondition('field_accepted', 'value', 'accepted', '=');
@@ -763,8 +771,8 @@ function cod_schedule_cod_event_ajax_elements($form, $nid, $bundle) {
  * Set the timeslot widget with proper view arguments based on page context.
  * @return string
  */
-function _cod_schedule_timeslot_view_widget($form, $event_nid, $bundle) {
-  $args = array($event_nid, $bundle);
+function _cod_schedule_timeslot_view_widget($form, $event, $bundle) {
+  $args = array($event->nid, $bundle);
   $view = views_get_view('cod_schedule_timeslot_widget');
   $display_name = 'entityreference_1';
 

@@ -18,9 +18,9 @@ features_exclude[dependencies][page_manager] = page_manager
 install_option = cod
 
 
-; Information added by drush on 2015-10-22
-version = "7.x-2.0-alpha2+0-dev"
+; Information added by drush on 2016-02-24
+version = "7.x-2.0-alpha4+3-dev"
 core = "7.x"
 project = "cod_support"
-datestamp = "1445472274"
+datestamp = "1456347571"
 

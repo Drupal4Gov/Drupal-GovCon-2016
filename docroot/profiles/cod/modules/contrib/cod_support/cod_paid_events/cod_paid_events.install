@@ -58,3 +58,10 @@ function cod_paid_events_7002() {
   );
   features_revert($revert);
 }
+
+/**
+ * Cod commerce module is required. Enable the module.
+ */
+function cod_paid_events_7003() {
+  module_enable(array('cod_commerce'));
+}

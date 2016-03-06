@@ -4,12 +4,22 @@ core = 7.x
 package = COD
 dependencies[] = cod_events
 dependencies[] = cod_session
+dependencies[] = ctools
+dependencies[] = entityreference
+dependencies[] = features
+dependencies[] = field_extrawidgets
+dependencies[] = options
+dependencies[] = og
+dependencies[] = page_manager
+dependencies[] = strongarm
 dependencies[] = views
 dependencies[] = views_content
 features[ctools][] = page_manager:pages_default:1
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
+features[field_base][] = field_page_type
+features[field_instance][] = node-page-field_page_type
 features[field_instance][] = node-page-og_group_ref
 features[node][] = page
 features[page_manager_pages][] = cod_basic_pages
@@ -17,18 +27,12 @@ features[variable][] = field_bundle_settings_node__page
 features[variable][] = panelizer_defaults_node_page
 features[variable][] = pathauto_node_page_pattern
 features[views_view][] = cod_basic_pages_admin_listing
-features_exclude[dependencies][ctools] = ctools
-features_exclude[dependencies][entityreference] = entityreference
-features_exclude[dependencies][features] = features
-features_exclude[dependencies][og] = og
-features_exclude[dependencies][page_manager] = page_manager
-features_exclude[dependencies][strongarm] = strongarm
 install_option = cod
 
 
-; Information added by drush on 2015-10-22
-version = "7.x-2.0-alpha2+0-dev"
+; Information added by drush on 2016-02-24
+version = "7.x-2.0-alpha4+3-dev"
 core = "7.x"
 project = "cod_support"
-datestamp = "1445472274"
+datestamp = "1456347571"
 

@@ -646,3 +646,12 @@ function _og_context_views_page_access($group_type, $perm, $group_id_arg = FALSE
     return og_user_access($group_type, $group['gid'], $perm);
   }
 }
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function og_context_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'ctools') {
+    return 'plugins/' . $plugin;
+  }
+}

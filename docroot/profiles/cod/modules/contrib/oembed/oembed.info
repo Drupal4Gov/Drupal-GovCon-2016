@@ -11,9 +11,9 @@ files[] = OEmbedStreamWrapper.inc
 files[] = MediaInternetOEmbedHandler.inc
 
 
-; Information added by drush on 2015-10-22
+; Information added by drush on 2016-02-24
 version = "7.x-1.0-rc2+15-dev"
 core = "7.x"
 project = "oembed"
-datestamp = "1445472264"
+datestamp = "1456347501"
 

@@ -763,13 +763,21 @@ function og_vocab_relation_get($vid) {
 /**
  * Get all Vocabularies related to a group.
  */
-function og_vocab_relation_get_by_group($group_type, $gid) {
-  return db_select('og_vocab_relation', 'ogr')
-    ->fields('ogr')
-    ->condition('group_type', $group_type)
-    ->condition('gid', $gid)
-    ->execute()
-    ->fetchAll();
+function og_vocab_relation_get_by_group($group_type, $gid, $ids = FALSE) {
+  $ogr = db_select('og_vocab_relation', 'ogr');
+  if ($ids) {
+    $ogr->fields('ogr', array('vid'));
+  } else {
+    $ogr->fields('ogr');
+  }
+  $ogr->condition('group_type', $group_type)
+    ->condition('gid', $gid);
+  if ($ids) {
+    return $ogr->execute()->fetchCol();
+  }
+  else {
+    return $ogr->execute()->fetchAll();
+  }
 }
 
 /**
