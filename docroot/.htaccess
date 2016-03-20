@@ -126,7 +126,7 @@ DirectoryIndex index.html index.htm index.php
   # Don't loop anything targeting the actual mask directory or old site static directory, to allow
   # for linked scripts, stylesheets etc in the static HTML
   RewriteCond %{REQUEST_URI} !/splash-page(|/.*) [NC]
-  RewriteCond %{REQUEST_URI} !^/drupal-govcon-2015(|/.*) [NC]
+  RewriteCond %{REQUEST_URI} !^/2015(|/.*) [NC]
   # Any requests that made it this far are redirected to the splash-page directory
   RewriteRule ^(.*)$ /splash-page/ [R=302,L]
 
