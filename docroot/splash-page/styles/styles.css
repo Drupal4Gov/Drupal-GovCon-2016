@@ -231,7 +231,8 @@ nav a:hover {
 }
 
 a.bodybutton:link,
-a.bodybutton:visited {
+a.bodybutton:visited,
+input#mc-embedded-subscribe.button {
 	color: rgba(255,255,255,1);
 	text-decoration: none;
 	display: inline-block;
@@ -243,12 +244,36 @@ a.bodybutton:visited {
 
 }
 
-a.bodybutton:hover {
+a.bodybutton:hover,
+input#mc-embedded-subscribe.button:hover {
 	color: rgba(255,255,255,1);
 	text-decoration: none;
 	background-color: rgba(68,91,73,1);
 
 }
+
+input#mc-embedded-subscribe.button {
+	font-size: 1.2em;
+	font-family: 'Alegreya Sans', sans-serif;
+}
+
+#mc_embed_signup_scroll label {
+	font-size: 1.2em;
+	width: 100%;
+	display: block;
+}
+
+#mc_embed_signup_scroll input#mce-EMAIL.email {
+	font-size: 1.2em;
+	font-family: 'Alegreya Sans', sans-serif;
+	border-radius: 0.25em;
+	padding: 0.125em;
+	border: 1px solid rgba(68,91,73,1);
+	background: rgba(255,255,255,0.75);
+	display: block;
+	width: 100%;
+}
+
 
 /* End Main Content Styling */
 
@@ -379,6 +404,10 @@ img.sm-icons:hover {
 			margin: 0 0 0 1em;
 			display: inline; /* To center for mobile */
 			text-align: right; /* To center for mobile */
+		}
+
+		#mc_embed_signup_scroll input#mce-EMAIL.email {
+			width: 33%;
 		}	
 
 	}
@@ -424,6 +453,10 @@ img.sm-icons:hover {
 			margin: 0 0 0 1em;
 			display: inline; /* To center for mobile */
 			text-align: right; /* To center for mobile */
+		}	
+
+		#mc_embed_signup_scroll input#mce-EMAIL.email {
+			width: 33%;
 		}		
 
 	}
