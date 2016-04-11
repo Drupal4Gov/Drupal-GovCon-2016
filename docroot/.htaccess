@@ -17,7 +17,7 @@ Options +FollowSymLinks
 ErrorDocument 404 /index.php
 
 # Set the default handler.
-DirectoryIndex index.php index.html index.htm
+DirectoryIndex index.html index.htm index.php
 
 # Override PHP settings that cannot be changed at runtime. See
 # sites/default/default.settings.php and drupal_environment_initialize() in
@@ -109,24 +109,34 @@ DirectoryIndex index.php index.html index.htm
   # uncomment the following line:
   # RewriteBase /
 
+
+## Could not get this working well for a subdomain, so just add the site code to the repo at it's old path and get rid of all this junk.
+#  # Specifically redirect last year page.
+#  #RewriteCond %{HTTP_HOST} !2015\.drupalgovcon\.org$
+#  #RewriteRule ^drupal-govcon-2015(|/.*)$ http://2015.drupalgovcon.org/index.html [R=301,L]
+#
+#  # Only serve the static site for a particular host. 
+#  #RewriteCond %{HTTP_HOST} ^2015\.drupalgovcon\.org$
+#  # Don't loop anything targeting the actual mask directory, to allow
+#  # for linked scripts, stylesheets etc in the static HTML
+#  #RewriteCond %{REQUEST_URI} !^/2015\.drupalgovcon\.org(|/.*) [NC]
+#  #Any requests that made it this far are served from the /static/ directory
+#  #RewriteRule ^drupal-govcon-2015(|/.*)$ /2015.drupalgovcon.org/$1 [R,L]
+##  
+  # Don't loop anything targeting the actual mask directory or old site static directory, to allow
+  # for linked scripts, stylesheets etc in the static HTML
+  RewriteCond %{REQUEST_URI} !/splash-page(|/.*) [NC]
+  RewriteCond %{REQUEST_URI} !^/2015(|/.*) [NC]
+  # Any requests that made it this far are redirected to the splash-page directory
+  RewriteRule ^(.*)$ /splash-page/ [R=302,L]
+
+# Drupal default stuff
   # Pass all requests not referring directly to files in the filesystem to
   # index.php. Clean URLs are handled in drupal_environment_initialize().
-  # RewriteCond %{REQUEST_FILENAME} !-f
-  # RewriteCond %{REQUEST_FILENAME} !-d
-  # RewriteCond %{REQUEST_URI} !=/favicon.ico
-  # RewriteRule ^ index.php [L]
-
-  # Instead of any of these, serve static html site from subdir.
-  RewriteCond %{HTTP_HOST} ^(www.|)(drupalgovcon|capitalcamp|drupalgovdays|drupalforgov|capitalcampandgovdays|capitalcamp.prod.acquia-sites)(.org|.com) [NC]
-
-  # Specifically redirect last year page.
-  RewriteRule ^drupal-govcon-2015$ /splash-page/$1 [R=301,L]
-  
-  # Don't loop anything targeting the actual mask directory, to allow
-  # for linked scripts, stylesheets etc in the static HTML
-  RewriteCond %{REQUEST_URI} !^/splash-page/
-  #Any requests that made it this far are served from the /static/ directory
-  RewriteRule ^(.*)$ /splash-page/$1 [PT]
+   RewriteCond %{REQUEST_FILENAME} !-f
+   RewriteCond %{REQUEST_FILENAME} !-d
+   RewriteCond %{REQUEST_URI} !=/favicon.ico
+   RewriteRule ^ index.php [L]
 
   # Rules to correctly serve gzip compressed CSS and JS files.
   # Requires both mod_rewrite and mod_headers to be enabled.
