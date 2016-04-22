@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * @file
+ * DGC Config installation functions.
+ */
+
+/*################################################
+ *
+ * UPDATE HOOK - using code to update configuration
+ * settings in your site.
+ * Make your configuration changes in local development enviroment and
+ * then use UPDATE HOOKS to deploy these changes to other environments.
+ *
+ * Some examples follow
+ *
+ *#################################################
+ */
+
+ /*
+ * **********************************
+ * Example - how to enable a module
+ * **********************************
+ * Enable module foo
+function dgc_config_update_7001(){
+  module_enable(array('foo'));
+}
+ */
+ /*
+ * **********************************
+ * Example - how to disable a module
+ * **********************************
+ * Disable module foo
+function dgc_config_update_7002(){
+  module_disable(array('foo'));
+}
+ */
+/*
+ * **********************************
+ * Example - how to set a variable
+ * **********************************
+ * Set a variable foo to value 0
+function dgc_config_update_7003() {
+  variable_set('foo', 0);
+}
+
+
+ /*
+ * Enable module dgc_breakpoints
+*/
+
+ function dgc_config_update_7001(){
+  module_enable(array('dgc_breakpoints'));
+}
