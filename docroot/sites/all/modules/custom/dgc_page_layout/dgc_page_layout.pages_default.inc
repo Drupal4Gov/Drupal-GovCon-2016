@@ -230,15 +230,15 @@ function dgc_page_layout_default_page_manager_handlers() {
   $display->content['new-4d793f03-7e9a-42f5-8af6-32a55e0255bb'] = $pane;
   $display->panels['lower_second'][0] = 'new-4d793f03-7e9a-42f5-8af6-32a55e0255bb';
   $pane = new stdClass();
-  $pane->pid = 'new-1a4ec08f-f4c9-4975-af05-a3e4d182187d';
+  $pane->pid = 'new-1dbf65ae-da59-41aa-b7d3-f85fd41af2a1';
   $pane->panel = 'navigation';
   $pane->type = 'block';
-  $pane->subtype = 'system-main-menu';
+  $pane->subtype = 'menu-main-menu-govcon-2016';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
     'override_title' => 1,
-    'override_title_text' => '',
+    'override_title_text' => '<none>',
     'override_title_heading' => 'h2',
   );
   $pane->cache = array();
@@ -249,11 +249,11 @@ function dgc_page_layout_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = '1a4ec08f-f4c9-4975-af05-a3e4d182187d';
-  $display->content['new-1a4ec08f-f4c9-4975-af05-a3e4d182187d'] = $pane;
-  $display->panels['navigation'][0] = 'new-1a4ec08f-f4c9-4975-af05-a3e4d182187d';
+  $pane->uuid = '1dbf65ae-da59-41aa-b7d3-f85fd41af2a1';
+  $display->content['new-1dbf65ae-da59-41aa-b7d3-f85fd41af2a1'] = $pane;
+  $display->panels['navigation'][0] = 'new-1dbf65ae-da59-41aa-b7d3-f85fd41af2a1';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1a4ec08f-f4c9-4975-af05-a3e4d182187d';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['site_template__panel_context_1cbf1e90-2219-4dbc-9dd1-8de9961d3591'] = $handler;
 
