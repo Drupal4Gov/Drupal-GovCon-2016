@@ -47,10 +47,6 @@ function dgc_config_update_7003() {
 
 /**
  * Enables main configuration for dgc site.
- *
- * Enable govcon_2016 theme, dgc_breakpoints, dgc_banner_image, dgc_banner_image_content,
- * dgc_file_entity_additions, dgc_location_maps, dgc_location_of_interest,
- * and dgc_page_layout.
  */
 function dgc_config_install() {
   // Enable the correct theme for 2016.
