@@ -85,7 +85,6 @@
       <option name="concurrency">10</option>
       <option name="no-gitinfofile"/>
       <option name="no-patch-txt"/>
-      <option name="no-recursion"></option>
     </drush>
   </target>
 

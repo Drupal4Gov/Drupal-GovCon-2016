@@ -31,7 +31,6 @@
       <param>"${repo.root}/${project.make_file}"</param>
       <param>"${docroot}"</param>
       <option name="no-core"></option>
-      <option name="no-recursion"></option>
       <option name="no-gitinfofile"></option>
       <option name="contrib-destination">sites/all</option>
     </drush>

@@ -1,9 +1,6 @@
 api: 2
 core: 7.x
 
-includes:
-  - cod_make.yml
-
 defaults:
   projects:
     subdir: contrib
@@ -35,38 +32,69 @@ projects:
 
   # For all projects, always specify the exact version that is to be used.
   # For any project using a dev branch, always specify the revision id.
-
+  cod:
+      version: '1.3'
+      type: profile
+      subdir: ''
   acquia_purge:
+    version: '1.3'
+  back_to_top:
+    version: '1.5'
+  captcha:
     version: '1.3'
   fast_404:
     version: '1.5'
+  features_override:
+    version: '2.0-rc3'
   focal_point:
     version: '1.0-beta6'
+  form_builder:
+    version: '1.17'
   genpass:
     version: '1.0'
   geofield:
     version: '2.3'
   geophp:
     version: '1.7'
+  google_analytics:
+    version: '2.2'
   honeypot:
     version: '1.21'
   ip_geoloc:
     version: '1.29'
+  logintoboggan:
+    version: '1.5'
   memcache:
     version: '1.5'
+  modernizr:
+    version: '3.9'
   leaflet:
     version: '1.3'
   mailchimp:
     version: '4.0'
+  options_element:
+    version: '1.12'
   panels_everywhere:
     version: '1.0-rc2'
   picture:
     version: '2.13'
+  recaptcha:
+    version: '2.1'
+  redirect:
+    version: '1.0-rc3'
   responsive_menus:
     download:
       type: git
       branch: '1.x-dev'
       revision: '1d829b177e6bc2f4bd43c3cc6a4bd976e51ded2c'
+  responsive_dropdown_menus:
+    version: '1.1'
+  seckit:
+    version: '1.9'
+  security_review:
+    version: '1.2'
+  super_login:
+    version: '1.1'
 
 libraries:
   leaflet:
