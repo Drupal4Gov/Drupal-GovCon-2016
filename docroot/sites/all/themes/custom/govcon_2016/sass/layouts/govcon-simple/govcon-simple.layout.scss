@@ -15,6 +15,10 @@
   margin-bottom: $vert-spacing-unit;
 }
 
+.l-footer {
+  margin-bottom: 0; // Removes margin at footer bottom
+}
+
 .l-region--highlighted,
 .l-region--help,
 .l-region--sidebar-first,
@@ -44,6 +48,14 @@
 
 .l-content p {
   font-size: 1.2em;
+}
+
+body {
+  //background: rgba(68,91,73,1);
+}
+
+.mainwrapper {
+  //background-color: rgba(210,195,179,1);
 }
 
 // Breakpoint Styling Below
