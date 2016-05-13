@@ -12,7 +12,7 @@
       height: 170px;
     }
     li.views-row.Organizer {
-      background: $texture $pale-blue;
+      background: $texture $gold;
     }
   }
   .views-field-picture {
@@ -45,6 +45,31 @@
     display: inline; 
     div { display: inline; }
   }
+  .views-field-field-profile-first a:link,
+  .views-field-field-profile-last a:link,
+  .views-field-field-profile-first a:visited,
+  .views-field-field-profile-last a:visited {
+    color: $green;
+    font-family: $serif;
+  }
+  .views-field-field-profile-first a:hover,
+  .views-field-field-profile-last a:hover {
+    text-decoration: none;
+    opacity: 0.7;
+  }
+  .views-field.views-field-flagged a:link,
+  .views-field.views-field-flagged a:visited {
+    color: $dark-gray;
+    font-family: $sans-serif;
+    font-style: italic;
+
+  }
+  .views-field.views-field-flagged a:hover {
+    text-decoration: none;
+    opacity: 0.7;
+  }
+
+
 }
 
 @include breakpoint($tab, true) {
