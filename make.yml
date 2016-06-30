@@ -8,7 +8,7 @@ defaults:
 projects:
   drupal:
     type: core
-    version: '7.43'
+    version: '7.44'
     patch:
       # Scale and crop image effect needs anchor option.
       # https://www.drupal.org/node/1252606#comment-8305805
@@ -101,6 +101,12 @@ projects:
     version: '1.2'
   super_login:
     version: '1.1'
+  views:
+     version: '3.14'
+     type: module
+     subdir: contrib
+     patch:
+       - 'https://www.drupal.org/files/issues/views-taxonomy-name-case-transform-1.patch'
 
 libraries:
   leaflet:
